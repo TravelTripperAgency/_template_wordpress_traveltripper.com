@@ -1,0 +1,471 @@
+.section-title {
+  margin-top: 0;
+  font-family: $recta;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.client-slider.owl-carousel {
+
+  .item:before {
+    display: block;
+    padding-top: 80%;
+    content: '';
+  }
+
+  .owl-nav {
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 26px;
+      color: #fff;
+      background-color: rgba(58, 117, 162, .61);
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+      span {
+        position: absolute;
+        top: -8%;
+        right: 0;
+        left: 0;
+      }
+
+    }
+
+    .owl-prev {
+      left: 16px;
+    }
+
+    .owl-next {
+      right: 16px;
+    }
+
+  }
+
+}
+
+.testimonial {
+  position: relative;
+  max-width: 465px;
+  margin: 0 auto;
+  color: $blue-light;
+  border: 1px solid $blue-light;
+  @include breakpoint($lg) {
+    max-width: 408px;
+  }
+  @include breakpoint($xl) {
+    max-width: 465px;
+  }
+
+  .quote {
+    margin: 0;
+    padding: 32px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .cite {
+    position: absolute;
+    right: 23px;
+    bottom: -18px;
+    margin: 0;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    background-color: #fff;
+    border: 1px solid $blue-light;
+  }
+
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  .sidebar & {
+    margin-top: 56px;
+    margin-bottom: 56px;
+    @include breakpoint($sm) {
+      margin-bottom: 22px;
+    }
+    @include breakpoint($md) {
+      margin-top: 48px;
+    }
+  }
+
+  .wrap {
+    padding-right: 72px;
+    padding-left: 72px;
+    @include breakpoint($sm) {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    .sidebar & {
+      padding-right: 16px;
+      padding-left: 16px;
+      @include breakpoint($md) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  .events__title {
+    display: flex;
+
+    h3 {
+      margin: 0 0 24px;
+      padding-bottom: 4px;
+      font-family: $recta;
+      font-size: 24px;
+      font-weight: 700;
+      color: $gray-dark;
+      border-bottom: 1px solid $gray-dark;
+    }
+
+  }
+
+  .event {
+    width: 100%;
+    margin-bottom: 32px;
+    margin-left: 0;
+    @include breakpoint($sm) {
+      flex: 0 0 span(1 of 2);
+      max-width: span(1 of 2);
+    }
+    @include breakpoint($md) {
+      flex: 0 0 span(1 of 4);
+      max-width: span(1 of 4);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar & {
+      @include breakpoint($xs) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+      }
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 4);
+        max-width: span(1 of 4);
+      }
+      @include breakpoint($md) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .event__date {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: $red;
+    text-transform: uppercase;
+  }
+
+  .event__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 23px;
+    color: $blue-light;
+    text-transform: uppercase;
+  }
+
+  .event__location {
+    position: relative;
+    margin-bottom: 16px;
+    padding-left: 19px;
+    font-family: $recta;
+    font-size: 14px;
+    line-height: 23px;
+    color: $gray-dark;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      width: 11px;
+      height: 20px;
+      content: '';
+      background-image: url('images/icons/icon-location.svg');
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+    }
+
+  }
+
+  .event__time {
+    @extend .event__location;
+    padding-left: 24px;
+
+    &:before {
+      width: 18px;
+      height: 18px;
+      background-image: url('images/icons/icon-time.svg');
+    }
+
+  }
+
+}
+
+.pre-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  @include breakpoint($md) {
+    min-height: 328px;
+  }
+
+  .pre-footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $background-white;
+    border-top: .5px solid $gray-dark;
+    @include breakpoint($md) {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    + .pre-footer-link {
+      @include breakpoint($md) {
+        border-left: .5px solid $gray-dark;
+      }
+    }
+
+  }
+
+  .pre-footer-link__wrapper {
+    max-width: 540px;
+    padding: 73px 44px 64px;
+    @include breakpoint($xs) {
+      padding: 73px 88px 64px;
+    }
+    @include breakpoint($sm) {
+      padding: 73px 0 64px;
+    }
+    @include breakpoint($md) {
+      max-width: 348px;
+      padding: 0;
+    }
+  }
+
+  .pre-footer-link__image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .pre-footer-link__headline {
+    margin-bottom: 8px;
+    font-family: $recta;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 21px;
+    color: $red;
+  }
+
+  .pre-footer-link__description {
+    position: relative;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $gray-dark;
+
+    span {
+      position: absolute;
+      bottom: 4px;
+      display: inline-block;
+      width: 40px;
+      height: 16px;
+      margin-left: 8px;
+      background-image: url('images/icons/icon-arrow.svg');
+      background-repeat: no-repeat;
+    }
+
+  }
+
+}
+
+.featured-resources {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  .wrap {
+    padding-right: 72px;
+    padding-left: 72px;
+    @include breakpoint($sm) {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+
+  .featured-resources__title {
+    display: flex;
+
+    h3 {
+      margin: 0 0 24px;
+      padding-bottom: 4px;
+      font-family: $recta;
+      font-size: 24px;
+      font-weight: 700;
+      color: $gray-dark;
+      border-bottom: 1px solid $gray-dark;
+    }
+
+  }
+
+  .featured-resources__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .resource {
+    width: 100%;
+    margin-bottom: 48px;
+    margin-left: 0;
+    @include breakpoint($sm) {
+      flex: 0 0 span(1 of 2);
+      max-width: span(1 of 2);
+    }
+    @include breakpoint($md) {
+      flex: 0 0 span(1 of 4);
+      max-width: span(1 of 4);
+    }
+
+    img {
+      margin-bottom: 27px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+    }
+
+    p {
+      margin-bottom: 0;
+      font-family: $recta;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 25px;
+      color: $blue-light;
+
+      a {
+        color: inherit;
+      }
+
+    }
+
+  }
+
+  .btn-wrap {
+    text-align: center;
+  }
+
+}
+
+.featured-webinar {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  background-color: $gray-dark;
+
+  .col-left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 475px;
+    @include breakpoint($md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 489px;
+    }
+    @include breakpoint($lg) {
+      justify-content: flex-end;
+    }
+    @include breakpoint($xl) {
+      justify-content: center;
+    }
+  }
+
+  .col-left__inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 830px;
+    padding: 0 32px;
+    @include breakpoint($lg) {
+      max-width: 568px;
+    }
+  }
+
+  .type {
+    margin-bottom: 24px;
+    padding: 8px 14px 7px;
+    font-family: $recta;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 11.4px;
+    text-transform: uppercase;
+    letter-spacing: .95px;
+    background-color: $blue-dark;
+  }
+
+  .title {
+    margin-bottom: 16px;
+    font-family: $recta;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36.1px;
+  }
+
+  .time {
+    margin-bottom: 16px;
+    padding: 11px 24px 11px 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 11.4px;
+    text-transform: uppercase;
+    letter-spacing: .95px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  .col-right {
+    position: relative;
+    width: 100%;
+    min-height: 228px;
+    background-image: url('images/WWS-partners-webinar.jpg');
+    @include breakpoint($sm) {
+      min-height: 340px;
+    }
+    @include breakpoint($md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      order: 2;
+    }
+  }
+
+}

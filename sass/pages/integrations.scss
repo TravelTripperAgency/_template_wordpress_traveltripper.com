@@ -1,0 +1,68 @@
+.page-template-integrations {
+
+  .page-header {
+    margin-bottom: 72px;
+  }
+
+  .pms-integrations,
+  .distribution-partners,
+  .revenue-management,
+  .payment-gateways,
+  .additional-connections {
+    margin-bottom: 80px;
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($lg) {
+        flex: 0 0 span(1 of 4, $double-gutters);
+        max-width: span(1 of 4, $double-gutters);
+      }
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      @include breakpoint($lg) {
+        flex: 0 0 span(3 of 4, $double-gutters);
+        max-width: span(3 of 4, $double-gutters);
+      }
+    }
+
+  }
+
+  .integrations__logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 32px;
+    @include breakpoint($xs) {
+      flex: 0 0 span(1 of 3);
+      max-width: span(1 of 3);
+    }
+    @include breakpoint($sm) {
+      flex: 0 0 span(1 of 5);
+      max-width: span(1 of 5);
+    }
+    @include breakpoint($md) {
+      flex: 0 0 span(1 of 6);
+      max-width: span(1 of 6);
+    }
+
+    + .integrations__logo {
+      @include breakpoint($md) {
+        margin-left: 32px;
+      }
+    }
+
+    &:nth-of-type(6n+7) {
+      @include breakpoint($md) {
+        margin-left: 0;
+      }
+    }
+
+  }
+
+}

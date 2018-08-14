@@ -1,0 +1,54 @@
+// The designer has based most paddings, margins, etc on multiples of 8px.
+// This is a spacer to be used when multiples are needed.
+$spacer: 8px;
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 32px,
+  'spread': 'narrow',
+  'container-spread': 'narrow'
+);
+
+$no-gutters: (
+  'columns': susy-repeat(12),
+  'gutters': 0,
+  'spread': 'narrow',
+  'container-spread': 'narrow'
+);
+
+$double-gutters: (
+  'columns': susy-repeat(12),
+  'gutters': 64px,
+  'spread': 'narrow',
+  'container-spread': 'narrow'
+);
+
+$triple-gutters: (
+  'columns': susy-repeat(12),
+  'gutters': 96px,
+  'spread': 'narrow',
+  'container-spread': 'narrow'
+);
+
+// Font Families
+$source-sans: 'Source Sans Pro', sans-serif;
+$recta: Recta, sans-serif;
+
+// Colors
+$red: #ff533d;
+$blue-dark: #303e60;
+$blue-light: #3a75a2;
+$gray-dark: #4a4a4a;
+$gray-light: #838383;
+$background-white: #f8f8f8;
+
+// Media Query Breakpoints
+$xs: 600px;
+$sm: 900px;
+$md: 1200px;
+$lg: 1440px;
+$xl: 1800px;
+// Usage:
+//  @include breakpoint($lg) {
+//    code
+//  }

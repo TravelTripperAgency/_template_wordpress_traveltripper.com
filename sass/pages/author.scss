@@ -1,0 +1,33 @@
+.author {
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .post {
+    position: relative;
+    width: 100%;
+    margin-bottom: 64px;
+    @include breakpoint($xs) {
+      flex: 0 0 span(1 of 2);
+      max-width: span(1 of 2);
+    }
+    @include breakpoint($sm) {
+      flex: 0 0 span(1 of 3);
+      max-width: span(1 of 3);
+    }
+
+    a {
+      font-family: $recta;
+      color: $blue-light;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+  }
+
+}

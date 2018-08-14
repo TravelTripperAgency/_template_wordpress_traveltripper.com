@@ -1,0 +1,57 @@
+/*!
+Theme Name: Travel Tripper
+Theme URI: http://traveltripper.com/
+Author: Brad West
+Author URI: https://bradonomics.com/
+Description: Travel Tripper Theme
+Version: 1.0.0
+License: GNU General Public License v2
+License URI: LICENSE
+*/
+
+@import 'node_modules/susy/sass/susy';
+@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+@import 'sass/variables';
+
+@import 'sass/base';
+@import 'sass/structure';
+@import 'sass/utilities-display';
+@import 'sass/utilities-grid';
+@import 'sass/utilities-text';
+@import 'sass/sidebars';
+@import 'sass/widgets';
+@import 'sass/owl-carousel';
+@import 'sass/images';
+@import 'sass/buttons';
+@import 'sass/header';
+@import 'sass/navigation';
+@import 'sass/navigation-mobile';
+@import 'sass/footer';
+
+@import 'sass/pages/components';
+@import 'sass/pages/home';
+@import 'sass/pages/about';
+@import 'sass/pages/contact';
+@import 'sass/pages/partners';
+@import 'sass/pages/news';
+@import 'sass/pages/news-single';
+@import 'sass/pages/blog';
+@import 'sass/pages/single';
+@import 'sass/pages/archive';
+@import 'sass/pages/author';
+@import 'sass/pages/solutions';
+@import 'sass/pages/reztrip';
+@import 'sass/pages/ttweb';
+@import 'sass/pages/who-we-serve';
+@import 'sass/pages/resources';
+@import 'sass/pages/integrations';
+@import 'sass/pages/independents';
+@import 'sass/pages/casinos';
+@import 'sass/pages/digital-marketing';
+@import 'sass/pages/management-companies';
+// @import '';
+
+// @import 'sass/susy-testing';
+
+@import 'sass/shame';

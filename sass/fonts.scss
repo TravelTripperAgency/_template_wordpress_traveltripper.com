@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Recta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/recta.eot?#iefix');
+  src: url('/fonts/recta.eot?#iefix') format("eot"),
+       url('/fonts/recta.woff2') format("woff2"),
+       url('/fonts/recta.woff') format("woff"),
+       url('/fonts/recta.ttf') format("truetype"),
+       url('/fonts/recta.svg#recta') format("svg");
+}
+
+@font-face {
+  font-family: 'Recta';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/recta-italic.eot?#iefix');
+  src: url('/fonts/recta-italic.eot?#iefix') format("eot"),
+       url('/fonts/recta-italic.woff2') format("woff2"),
+       url('/fonts/recta-italic.woff') format("woff"),
+       url('/fonts/recta-italic.ttf') format("truetype"),
+       url('/fonts/recta-italic.svg#recta-italic') format("svg");
+}
+
+@font-face {
+  font-family: 'Recta';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/recta-bold.eot?#iefix');
+  src: url('/fonts/recta-bold.eot?#iefix') format("eot"),
+       url('/fonts/recta-bold.woff2') format("woff2"),
+       url('/fonts/recta-bold.woff') format("woff"),
+       url('/fonts/recta-bold.ttf') format("truetype"),
+       url('/fonts/recta-bold.svg#recta-bold') format("svg");
+}

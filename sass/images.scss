@@ -1,0 +1,39 @@
+figure {
+  margin: 0 0 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-caption img {
+  margin-bottom: 12px;
+}
+
+.wp-caption-text {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+// Background Images
+.background-image {
+  padding-right: 0;
+  padding-left: 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+
+  > .caption {
+    align-self: flex-end;
+    margin-bottom: 0;
+    margin-left: 12px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 36px;
+    color: #fff;
+  }
+
+}

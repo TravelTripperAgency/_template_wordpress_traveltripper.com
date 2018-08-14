@@ -1,0 +1,102 @@
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+  margin-bottom: 80px;
+
+  .email {
+    position: relative;
+    width: 100%;
+    @include breakpoint($md) {
+      flex: 0 0 span(1 of 2);
+      max-width: span(1 of 2);
+    }
+
+    > div {
+      margin-bottom: 32px;
+    }
+
+    .title {
+      font-family: $recta;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 32px;
+      color: $gray-dark;
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
+
+  }
+
+  .form {
+    position: relative;
+    width: 100%;
+    @include breakpoint($md) {
+      flex: 0 0 span(1 of 2);
+      max-width: span(1 of 2);
+    }
+
+    p {
+      font-family: $recta;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+  }
+
+}
+
+.locations {
+
+  .section-title {
+    line-height: 21px;
+  }
+
+  .location__wrap {
+    margin-left: 69px;
+    @include breakpoint($sm) {
+      margin-left: 0;
+    }
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 270px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    @include breakpoint($sm) {
+      flex: 1;
+      justify-content: center;
+      min-height: 388px;
+    }
+
+    .title {
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+  }
+
+  .america {
+    background-image: url('images/contact-North-America-min.png');
+  }
+
+  .europe {
+    background-image: url('images/contact-Europe-min.png');
+  }
+
+  .asia {
+    background-image: url('images/contact-Asia-India-min.png');
+  }
+
+}

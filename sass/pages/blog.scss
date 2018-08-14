@@ -1,0 +1,165 @@
+.blog {
+
+  h2 {
+    margin-top: 0;
+    font-family: $recta;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+    color: $gray-dark;
+  }
+
+  .featured-articles {
+    display: flex;
+    flex-direction: column;
+    max-width: 395px;
+    margin: 0 auto 88px;
+    @include breakpoint($sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 100%;
+      margin-bottom: 48px;
+    }
+    @include breakpoint($sm) {
+      margin-bottom: 64px;
+    }
+  }
+
+  .featured-articles__title,
+  .latest-articles__title {
+    width: 100%;
+    text-align: center;
+    @include breakpoint($sm) {
+      text-align: left;
+    }
+  }
+
+  .featured-articles__item {
+    @include breakpoint($sm) {
+      flex: 0 0 span(1 of 2);
+      max-width: span(1 of 2);
+    }
+    @include breakpoint($lg) {
+      margin-bottom: 54px;
+    }
+
+    &.last {
+      margin-bottom: 32px;
+      @include breakpoint($sm) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(n+4) {
+      @include breakpoint($lg) {
+        flex: 0 0 span(1 of 3);
+        max-width: span(1 of 3);
+      }
+    }
+
+    img {
+      margin-bottom: 16px;
+    }
+
+    .entry-meta {
+      margin-bottom: 8px;
+      font-family: $recta;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 12px;
+      color: $blue-dark;
+      text-transform: uppercase;
+    }
+
+    .entry-title {
+      margin-bottom: 0;
+      font-family: $recta;
+      font-size: 21px;
+      line-height: 25px;
+
+      a {
+        color: $blue-light;
+      }
+    }
+
+  }
+
+  .latest-articles__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 395px;
+    margin: 0 auto 80px;
+    @include breakpoint($sm) {
+      max-width: 100%;
+      margin-bottom: 72px;
+    }
+
+    .featured-image {
+      margin-bottom: 16px;
+      @include breakpoint($sm) {
+        margin-bottom: 0;
+      }
+    }
+
+    .entry-time {
+      margin-bottom: 12px;
+      font-family: $recta;
+      font-size: 14px;
+      font-weight: 700;
+      color: $gray-light;
+    }
+
+    .entry-category {
+      margin-bottom: 8px;
+      font-family: $recta;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 12px;
+      color: $blue-dark;
+      text-transform: uppercase;
+    }
+
+    .entry-title {
+      margin-bottom: 8px;
+      font-family: $recta;
+      font-size: 21px;
+      line-height: 25px;
+
+      a {
+        color: $blue-light;
+      }
+    }
+
+    .entry-content {
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .entry-author {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      font-family: $recta;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 12px;
+      color: $gray-light;
+
+      a {
+        color: $gray-light;
+      }
+
+      img {
+        margin-right: 8px;
+        border-radius: 50%;
+      }
+
+    }
+
+  }
+
+}

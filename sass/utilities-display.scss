@@ -1,0 +1,53 @@
+// Display
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.justify-content-start {
+  -webkit-box-pack: start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-sm-inline {
+  @include breakpoint($sm) {
+    display: inline !important;
+  }
+}
+
+.d-md-none {
+  @include breakpoint($md) {
+    display: none !important;
+  }
+}
+
+.d-md-block {
+  @include breakpoint($md) {
+    display: block !important;
+  }
+}
+
+.d-md-inline-block {
+  @include breakpoint($md) {
+    display: inline-block !important;
+  }
+}

@@ -1,0 +1,272 @@
+// Below is only the site-header__nav div
+// All other site-header code is in header.scss
+
+.site-header__nav {
+  display: none;
+  margin-right: 36px;
+  margin-left: auto;
+  @include breakpoint($md) {
+    display: flex;
+  }
+
+  > ul {
+    z-index: 1;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-item {
+    list-style: none;
+
+    &:hover {
+      @include breakpoint($md) {
+        background-color: #fff;
+      }
+
+      a {
+        color: $blue-dark;
+      }
+
+      .sub-menu {
+        display: flex;
+
+        &:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          content: '';
+          box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+        }
+
+        .sticky-header & .menu-item {
+          box-shadow: none;
+        }
+
+      }
+
+    }
+
+    a {
+      display: inline-block;
+      padding: 8px 16px;
+      font-weight: bold;
+      line-height: 21px;
+      color: #fff;
+      text-decoration: none;
+
+      .sticky-header & {
+        color: $blue-dark;
+      }
+
+    }
+
+    .sticky-header & {
+      &:hover {
+        box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+        @include breakpoint($md) {
+          background-color: $background-white;
+        }
+      }
+    }
+
+  }
+
+  .sub-menu {
+    position: absolute;
+    // z-index: 1;
+    display: none;
+    flex-direction: column;
+    max-width: 385px;
+    padding: 0 32px 0 16px;
+    background-color: #fff;
+
+    .menu-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #d8d8d8;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      a {
+        display: flex;
+        // margin: 16px 32px 16px 16px;
+        padding: 0;
+
+        &:hover {
+          color: $blue-light;
+        }
+
+      }
+
+    }
+
+    .sticky-header & {
+      // z-index: unset;
+      background-color: $background-white;
+    }
+
+  }
+
+  .sub-menu__icon {
+    display: none;
+    align-items: center;
+    padding-right: 32px;
+    @include breakpoint($md) {
+      display: flex;
+    }
+
+    .background-icon {
+      width: 40px;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: contain;
+    }
+
+    .reztrip {
+      background-image: url('images/icons/icon-reztrip.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .reztrip {
+        background-image: url('images/icons/icon-reztrip-hover.svg');
+      }
+
+    }
+
+    .ttweb {
+      background-image: url('images/icons/icon-ttweb.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .ttweb {
+        background-image: url('images/icons/icon-ttweb-hover.svg');
+      }
+
+    }
+
+    .digital-marketing {
+      background-image: url('images/icons/icon-digital-marketing.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .digital-marketing {
+        background-image: url('images/icons/icon-digital-marketing-hover.svg');
+      }
+
+    }
+
+    .express-suite {
+      background-image: url('images/icons/icon-express-suite.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .express-suite {
+        background-image: url('images/icons/icon-express-suite-hover.svg');
+      }
+
+    }
+
+    .rate-match {
+      background-image: url('images/icons/icon-rate-match.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .rate-match {
+        background-image: url('images/icons/icon-rate-match-hover.svg');
+      }
+
+    }
+
+    .hotel-groups {
+      background-image: url('images/icons/icon-hotel-groups.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .hotel-groups {
+        background-image: url('images/icons/icon-hotel-groups-hover.svg');
+      }
+
+    }
+
+    .casinos {
+      background-image: url('images/icons/icon-casinos.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .casinos {
+        background-image: url('images/icons/icon-casinos-hover.svg');
+      }
+
+    }
+
+    .independent-hotels {
+      background-image: url('images/icons/icon-independent-hotels.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .independent-hotels {
+        background-image: url('images/icons/icon-independent-hotels-hover.svg');
+      }
+
+    }
+
+    .partners {
+      background-image: url('images/icons/icon-partners.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .partners {
+        background-image: url('images/icons/icon-partners-hover.svg');
+      }
+
+    }
+
+    .webinar {
+      background-image: url('images/icons/icon-webinar.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .webinar {
+        background-image: url('images/icons/icon-webinar-hover.svg');
+      }
+
+    }
+
+    .case-studies {
+      background-image: url('images/icons/icon-case-studies.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .case-studies {
+        background-image: url('images/icons/icon-case-studies-hover.svg');
+      }
+
+    }
+
+    .infographic {
+      background-image: url('images/icons/icon-infographic.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .infographic {
+        background-image: url('images/icons/icon-infographic-hover.svg');
+      }
+
+    }
+
+    .slideshare {
+      background-image: url('images/icons/icon-slideshare.svg');
+
+      @at-root .site-header__nav a:hover .sub-menu__icon .slideshare {
+        background-image: url('images/icons/icon-slideshare-hover.svg');
+      }
+
+    }
+
+  }
+
+  .sub-menu__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sub-menu__link-text {
+    margin: 0;
+    font-family: $recta;
+  }
+
+  .sub-menu__link-description {
+    display: none;
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    @include breakpoint($md) {
+      display: block;
+    }
+  }
+
+}

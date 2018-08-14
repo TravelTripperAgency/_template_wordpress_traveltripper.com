@@ -1,0 +1,403 @@
+.page-template-management-companies {
+
+  .intro {
+    margin-top: 64px;
+    margin-bottom: 48px;
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
+      }
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+      }
+    }
+
+    p {
+      font-weight: 300;
+      line-height: 36px;
+    }
+
+    a {
+      font-weight: 400;
+    }
+
+  }
+
+  .feature {
+    margin-bottom: 72px;
+
+    figure {
+      text-align: center;
+    }
+
+  }
+
+  .services {
+    margin-bottom: 64px;
+
+    .col {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 3);
+        max-width: span(1 of 3);
+      }
+
+      + .col {
+        margin-top: 40px;
+        @include breakpoint($md) {
+          margin-top: 0;
+        }
+      }
+
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid $gray-light;
+
+      img {
+        height: 25px;
+      }
+
+    }
+
+    .column-title {
+      margin: 0 0 0 8px;
+      font-family: Recta;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    li {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+  }
+
+  .clients {
+    margin-bottom: 80px;
+
+    .section-title {
+      position: relative;
+      max-width: 717px;
+      margin: 0 auto 32px;
+      padding: 0 16px 16px;
+      text-align: center;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 241px;
+        height: 1px;
+        margin: 0 auto;
+        content: '';
+        background-color: $gray-light;
+        opacity: .39;
+      }
+
+    }
+
+  }
+
+  .testimonials {
+    margin-bottom: 56px;
+    @include breakpoint($md) {
+      margin-bottom: 0;
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      padding-right: 16px;
+      padding-left: 16px;
+      @include breakpoint($md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+
+    .testimonial {
+      max-width: 613px;
+      @include breakpoint($md) {
+        max-width: 485px;
+      }
+      @include breakpoint($xl) {
+        max-width: 613px;
+      }
+    }
+
+  }
+
+  .conversions {
+    @include breakpoint($md) {
+      margin-top: -40px;
+    }
+    @include breakpoint($lg) {
+      margin-top: -160px;
+    }
+
+    .col-right {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-left: auto;
+      }
+    }
+
+    .showcase {
+      position: absolute;
+      top: 50%;
+      display: flex;
+      flex-direction: column;
+      max-width: 90%;
+      padding: 24px;
+      background-color: #fff;
+      box-shadow: 0 0 29px rgba(0, 0, 0, .3);
+      transform: translateY(-50%);
+      @include breakpoint($xs) {
+        flex-direction: row;
+      }
+      @include breakpoint($sm) {
+        max-width: 756px;
+      }
+      @include breakpoint($lg) {
+        padding-top: 32px;
+        padding-right: 64px;
+        padding-bottom: 32px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 17px;
+        @include breakpoint($sm) {
+          font-size: 23px;
+        }
+      }
+
+      .showcase__right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 186px;
+        margin-bottom: 24px;
+        @include breakpoint($xs) {
+          margin-bottom: 0;
+        }
+
+        .btn {
+          @include breakpoint($xs) {
+            position: absolute;
+            bottom: -45px;
+          }
+          @include breakpoint($lg) {
+            bottom: -52px;
+          }
+        }
+
+      }
+
+      .showcase__increase {
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 55.89px;
+        color: $blue-light;
+        @include breakpoint($sm) {
+          font-size: 78px;
+        }
+
+        span {
+          font-size: 45px;
+          @include breakpoint($sm) {
+            font-size: 61px;
+          }
+        }
+
+      }
+
+      .showcase__revenue {
+        margin-bottom: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 19.87px;
+        color: $blue-light;
+        text-align: center;
+        text-transform: uppercase;
+        @include breakpoint($sm) {
+          font-size: 15px;
+        }
+      }
+
+      .showcase__left {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+        margin-left: 24px;
+        text-align: center;
+        @include breakpoint($xs) {
+          text-align: left;
+        }
+      }
+
+    }
+
+  }
+
+  .integrations {
+    display: flex;
+    align-items: flex-end;
+    min-height: 1900px;
+    margin-top: -600px;
+    color: #fff;
+    background-image: url('images/background-blue-2.png');
+    @include breakpoint($xs) {
+      min-height: 1350px;
+    }
+    @include breakpoint($sm) {
+      min-height: 1230px;
+    }
+    @include breakpoint($md) {
+      min-height: 1130px;
+    }
+    @include breakpoint($lg) {
+      align-items: center;
+      min-height: 1267px;
+    }
+    @include breakpoint($lg) {
+      min-height: 1340px;
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      margin-bottom: 200px;
+      @include breakpoint($md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @include breakpoint($lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    .col-left__wrap {
+      max-width: 696px;
+      margin: 0 auto;
+      padding-right: 16px;
+      padding-left: 16px;
+      text-align: center;
+      @include breakpoint($xs) {
+        text-align: left;
+      }
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+      line-height: 44px;
+    }
+
+    .btn {
+      margin-bottom: 48px;
+    }
+
+    // .row {
+    //   &:after {
+    //     @include breakpoint($sm) {
+    //       flex: 0 0 span(1 of 3);
+    //       max-width: span(1 of 3);
+    //       content: '';
+    //     }
+    //     @include breakpoint($sm) {
+    //       flex: 0 0 span(2 of 4);
+    //       max-width: span(2 of 4);
+    //     }
+    // }
+
+    .img-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+      @include breakpoint($xs) {
+        flex: 0 0 span(1 of 3);
+        justify-content: normal;
+        max-width: span(1 of 3);
+      }
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 4);
+        max-width: span(1 of 4);
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 3);
+        max-width: span(1 of 3);
+      }
+    }
+
+  }
+
+  .express-suite {
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      margin-bottom: 64px;
+      @include breakpoint($md) {
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
+        margin-bottom: 0;
+        order: 2;
+      }
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+      }
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+  }
+
+}

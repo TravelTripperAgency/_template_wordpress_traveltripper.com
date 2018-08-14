@@ -1,0 +1,60 @@
+.resources {
+
+  .content {
+    @include breakpoint($sm) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .section-title {
+    width: 100%;
+    text-align: center;
+    @include breakpoint($sm) {
+      text-align: left;
+    }
+  }
+
+  .post {
+    position: relative;
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto 80px;
+    @include breakpoint($sm) {
+      flex: 0 0 span(1 of 2);
+      max-width: span(1 of 2);
+      margin: 0 0 80px;
+    }
+    @include breakpoint($lg) {
+      flex: 0 0 span(1 of 3);
+      max-width: span(1 of 3);
+    }
+  }
+
+  .featured-image {
+    margin-bottom: 8px;
+  }
+
+  .category {
+    margin-bottom: 8px;
+    font-family: Recta;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 12px;
+    color: $blue-dark;
+    text-transform: uppercase;
+  }
+
+  .post__title {
+    margin-bottom: 0;
+    font-family: Recta;
+    font-size: 21px;
+
+    a {
+      color: $blue-light;
+    }
+
+  }
+
+}

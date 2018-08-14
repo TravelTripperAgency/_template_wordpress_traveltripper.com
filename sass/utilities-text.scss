@@ -1,0 +1,24 @@
+// Screen Readers Only
+.screen-reader-text,
+.sr-only {
+  display: none !important;
+}
+
+// Spacing
+.mb-2 {
+  margin-bottom: $spacer * 2 !important;
+}
+
+// Text
+.font-weight-normal {
+  font-weight: 400 !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+// Color
+.text-white {
+  color: #fff;
+}

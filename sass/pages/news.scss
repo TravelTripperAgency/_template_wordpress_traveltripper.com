@@ -1,0 +1,113 @@
+.page-template-news {
+
+  .featured-news {
+    margin-top: 53px;
+    // margin-bottom is 72px, but needs the additional 56px due to the negitive
+    // margin on the last row.
+    margin-bottom: 128px;
+    @include breakpoint($sm) {
+      margin-top: 115px;
+    }
+    @include breakpoint($md) {
+      margin-top: 147px;
+    }
+    @include breakpoint($xl) {
+      margin-top: 56px;
+    }
+
+    .row {
+      max-width: 437px;
+      margin: 0 auto -56px;
+      padding-right: 16px;
+      padding-left: 16px;
+      @include breakpoint($sm) {
+        max-width: 856px;
+      }
+      @include breakpoint($md) {
+        max-width: 1112px;
+      }
+      @include breakpoint($lg) {
+        max-width: 1340px;
+      }
+      @include breakpoint($xl) {
+        max-width: 1440px;
+      }
+    }
+
+    .featured-news__item {
+      position: relative;
+      width: 100%;
+      margin-bottom: 56px;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 3);
+        max-width: span(1 of 3);
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+    }
+
+    a {
+      font-family: $recta;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      color: $blue-light;
+    }
+
+  }
+
+  .old-news {
+    max-width: 700px;
+    margin: 0 auto;
+
+    .old-news__title h2 {
+      font-family: $recta;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .old-news__item {
+      padding-top: 32px;
+      border-top: 1px solid $gray-dark;
+
+      a {
+        font-family: $recta;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        color: $blue-light;
+      }
+
+    }
+
+    .entry-meta {
+      margin-bottom: 8px;
+      font-family: $recta;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 12px;
+      color: #9b9b9b;
+    }
+
+    p {
+      margin-bottom: 32px;
+    }
+
+    .btn-holder {
+      text-align: center;
+    }
+
+    .btn {
+      margin: 80px 0;
+    }
+
+  }
+
+}

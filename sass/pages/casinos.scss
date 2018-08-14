@@ -1,0 +1,390 @@
+.page-template-casinos {
+
+  .page-header {
+    margin-bottom: 80px;
+  }
+
+  .intro {
+
+    .top {
+      margin-bottom: 48px;
+      @include breakpoint($md) {
+        margin-bottom: 64px;
+      }
+
+      .col-left {
+        position: relative;
+        width: 100%;
+        @include breakpoint($md) {
+          flex: 0 0 span(5 of 12, $double-gutters);
+          max-width: span(5 of 12, $double-gutters);
+        }
+      }
+
+      .col-right {
+        position: relative;
+        width: 100%;
+        @include breakpoint($md) {
+          flex: 0 0 span(7 of 12, $double-gutters);
+          max-width: span(7 of 12, $double-gutters);
+        }
+      }
+
+      .section-title {
+        margin-bottom: 16px;
+        line-height: 44px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-weight: 300;
+        line-height: 36px;
+      }
+
+    }
+
+    .bottom {
+
+      .col {
+        position: relative;
+        width: 100%;
+        @include breakpoint($sm) {
+          flex: 0 0 span(1 of 2, $double-gutters);
+          max-width: span(1 of 2, $double-gutters);
+        }
+
+        &:first-child {
+          margin-bottom: 40px;
+          @include breakpoint($sm) {
+            margin-bottom: 0;
+          }
+        }
+
+      }
+
+      .title-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid $gray-light;
+      }
+
+      .column-title {
+        margin: 0 0 0 8px;
+        font-family: Recta;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      li {
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+    }
+
+  }
+
+  .clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0 132px;
+    @include breakpoint($sm) {
+      min-height: 1244px;
+      margin: 0;
+      background-image: url('images/background-gray-double.png');
+    }
+    @include breakpoint($lg) {
+      min-height: 1386px;
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      text-align: center;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 241px;
+        height: 1px;
+        margin: 0 auto;
+        content: '';
+        background-color: $gray-light;
+        opacity: .39;
+      }
+
+    }
+
+  }
+
+  .casino-integrations {
+    margin-bottom: 160px;
+    @include breakpoint($sm) {
+      margin-bottom: 120px;
+    }
+    @include breakpoint($md) {
+      margin-bottom: 104px;
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 2, $double-gutters);
+        max-width: span(1 of 2, $double-gutters);
+        order: 2;
+      }
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 2, $double-gutters);
+        max-width: span(1 of 2, $double-gutters);
+      }
+    }
+
+    .integrations__logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 80px;
+      @include breakpoint($xs) {
+        flex: 0 0 span(1 of 3, $double-gutters);
+        max-width: span(1 of 3, $double-gutters);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:nth-last-of-type(-n+3) {
+        @include breakpoint($xs) {
+          margin-bottom: 0;
+        }
+      }
+
+      + .integrations__logo {
+        @include breakpoint($xs) {
+          margin-left: 32px;
+        }
+
+        &:nth-child(4) {
+          margin-left: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+  .testimonial-showcase {
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      margin-bottom: 144px;
+      @include breakpoint($lg) {
+        display: flex;
+        flex: 0 0 span(5 of 12);
+        align-items: center;
+        justify-content: center;
+        max-width: span(5 of 12);
+        margin-bottom: 0;
+      }
+    }
+
+    .col-right {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      @include breakpoint($lg) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+      }
+    }
+
+  }
+
+  .testimonial {
+    max-width: 724px;
+    @include breakpoint($lg) {
+      max-width: 485px;
+    }
+
+    .cite {
+      bottom: -32px;
+      max-width: 83%;
+      @include breakpoint($lg) {
+        max-width: 383px;
+      }
+    }
+
+  }
+
+  .showcase {
+    position: absolute;
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    padding: 24px;
+    background-color: #fff;
+    box-shadow: 0 0 29px rgba(0, 0, 0, .3);
+    transform: translateY(-40%);
+    @include breakpoint($xs) {
+      flex-direction: row;
+    }
+    @include breakpoint($sm) {
+      max-width: 756px;
+    }
+    @include breakpoint($lg) {
+      padding-top: 32px;
+      padding-right: 64px;
+      padding-bottom: 32px;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 17px;
+      @include breakpoint($sm) {
+        font-size: 23px;
+      }
+    }
+
+    .showcase__right {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 186px;
+      margin-bottom: 24px;
+      @include breakpoint($xs) {
+        margin-bottom: 0;
+      }
+
+      .btn {
+        @include breakpoint($xs) {
+          position: absolute;
+          bottom: -45px;
+        }
+        @include breakpoint($lg) {
+          bottom: -52px;
+        }
+      }
+
+    }
+
+    .showcase__increase {
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 55.89px;
+      color: $blue-light;
+      @include breakpoint($sm) {
+        font-size: 78px;
+      }
+
+      span {
+        font-size: 45px;
+        @include breakpoint($sm) {
+          font-size: 61px;
+        }
+      }
+
+    }
+
+    .showcase__revenue {
+      margin-bottom: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 19.87px;
+      color: $blue-light;
+      text-align: center;
+      text-transform: uppercase;
+      @include breakpoint($sm) {
+        font-size: 15px;
+      }
+    }
+
+    .showcase__left {
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+      margin-left: 24px;
+      text-align: center;
+      @include breakpoint($xs) {
+        text-align: left;
+      }
+    }
+
+  }
+
+  .team {
+    margin-top: -450px;
+    color: #fff;
+    background-image: url('images/background-blue-3.png');
+    @include breakpoint($sm) {
+      margin-top: -500px;
+    }
+    @include breakpoint($lg) {
+      margin-top: -300px;
+    }
+
+    .row {
+      padding-top: 650px;
+      padding-bottom: 88px;
+      @include breakpoint($sm) {
+        padding-top: 550px;
+      }
+      @include breakpoint($lg) {
+        padding-top: 400px;
+      }
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+      line-height: 44px;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 300;
+      line-height: 36px;
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      margin-bottom: 40px;
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 2, $double-gutters);
+        max-width: span(1 of 2, $double-gutters);
+        margin-bottom: 0;
+        order: 2;
+      }
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 2, $double-gutters);
+        max-width: span(1 of 2, $double-gutters);
+      }
+    }
+
+  }
+
+}

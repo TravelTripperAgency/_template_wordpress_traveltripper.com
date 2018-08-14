@@ -1,0 +1,158 @@
+.page-template-who-we-serve {
+
+  .intro {
+    margin-top: 208px;
+    margin-bottom: 80px;
+    @include breakpoint($sm) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 264px;
+    }
+    @include breakpoint($md) {
+      margin-top: 184px;
+    }
+
+    .col {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      margin-right: auto;
+      margin-bottom: 56px;
+      margin-left: auto;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 2, $double-gutters);
+        max-width: span(1 of 2, $double-gutters);
+        margin-right: initial;
+        margin-bottom: 80px;
+        margin-left: initial;
+      }
+      @include breakpoint($lg) {
+        flex: 0 0 span(1 of 4, $double-gutters);
+        max-width: span(1 of 4, $double-gutters);
+        margin-bottom: 0;
+      }
+
+      &:nth-last-of-type(-n+2) {
+        @include breakpoint($sm) {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+
+    img {
+      margin-bottom: 8px;
+    }
+
+    .title {
+      margin: 0;
+      font-family: $recta;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 27px;
+    }
+
+    .description {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 0;
+      padding-top: 8px;
+      line-height: 24px;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        content: '';
+        background-color: $blue-light;
+        opacity: .44;
+      }
+
+      span {
+        position: absolute;
+        bottom: 2px;
+        display: inline-block;
+        width: 40px;
+        height: 16px;
+        margin-left: 8px;
+        background-image: url('images/icons/icon-arrow.svg');
+        background-repeat: no-repeat;
+      }
+
+    }
+
+  }
+
+  .clientele {
+    padding-top: 96px;
+    padding-bottom: 112px;
+    color: #fff;
+    background-image: linear-gradient(to top, $blue-dark 0%, $blue-light 100%);
+
+    .wrap {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+
+    .section-header {
+      margin-bottom: 48px;
+      text-align: center;
+
+      img {
+        margin-bottom: 16px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .section-title {
+      margin-bottom: 12px;
+    }
+
+    .row {
+      margin-bottom: 24px;
+    }
+
+    .col {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 80px;
+      @include breakpoint($xs) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+      }
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 4);
+        max-width: span(1 of 4);
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 6);
+        max-width: span(1 of 6);
+      }
+    }
+
+    .testimonial {
+      max-width: 680px;
+      color: #fff;
+      border-color: #fff;
+
+      .cite {
+        background-color: #31486c;
+        border-color: #fff;
+      }
+
+    }
+
+  }
+
+}

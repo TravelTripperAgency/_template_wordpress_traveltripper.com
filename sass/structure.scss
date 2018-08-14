@@ -1,0 +1,65 @@
+%wrap {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  // @include breakpoint($xs) {
+  //   max-width: 568px;
+  // }
+  @include breakpoint($sm) {
+    max-width: 856px;
+  }
+  @include breakpoint($md) {
+    max-width: 1112px;
+  }
+  @include breakpoint($lg) {
+    max-width: 1340px;
+  }
+  @include breakpoint($xl) {
+    max-width: 1440px;
+  }
+}
+
+.wrap {
+  @extend %wrap;
+}
+
+.content-sidebar-wrap {
+  @extend %wrap;
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  @include breakpoint($md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  // .single &,
+  // .blog & {
+  //   // saving in case margin in .content-sidebar-wrap needs to be different on
+  //   // different pages.
+  // }
+
+  .content {
+    position: relative;
+    width: 100%;
+    @include breakpoint($md) {
+      flex: 0 0 span(3 of 4);
+      max-width: span(3 of 4);
+      order: 2;
+    }
+
+    .single & {
+      @include breakpoint($md) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+      }
+      @include breakpoint($lg) {
+        flex: 0 0 span(7 of 12, $double-gutters);
+        max-width: span(7 of 12, $double-gutters);
+      }
+    }
+
+  }
+
+}

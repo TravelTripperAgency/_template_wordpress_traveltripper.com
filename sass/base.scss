@@ -1,0 +1,48 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $source-sans;
+  font-size: 18px;
+  // line-height: 27px;
+  color: $gray-dark;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+a {
+  font-weight: 700;
+  color: $red;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+input {
+  font-family: $source-sans;
+  font-size: 18px;
+}
+
+blockquote {
+  margin-right: 30px;
+  margin-left: 53px;
+  padding-left: 14px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+  color: $blue-light;
+  border-left: 2px solid $blue-light;
+}

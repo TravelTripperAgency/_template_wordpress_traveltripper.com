@@ -1,0 +1,524 @@
+.home {
+
+  .intro {
+    margin-top: 54px;
+    @include breakpoint($sm) {
+      margin-top: 80px;
+    }
+    @include breakpoint($md) {
+      margin-top: 34px;
+      margin-bottom: -270px;
+    }
+    @include breakpoint($lg) {
+      margin-top: 84px;
+      margin-bottom: -430px;
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      margin-bottom: 64px;
+      padding-right: 16px;
+      padding-left: 16px;
+      @include breakpoint($sm) {
+        margin-bottom: 28px;
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
+        margin-bottom: 0;
+        order: 2;
+      }
+      @include breakpoint($lg) {
+        flex: 0 0 span(5 of 12, $double-gutters);
+        max-width: span(5 of 12, $double-gutters);
+      }
+
+      .col-right__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 580px;
+        margin: 0 auto;
+        @include breakpoint($sm) {
+          flex-direction: row;
+          max-width: 100%;
+        }
+        @include breakpoint($md) {
+          flex-direction: column;
+          max-width: 580px;
+        }
+      }
+
+      .col-right__col-left,
+      .col-right__col-right {
+        position: relative;
+        width: 100%;
+        @include breakpoint($sm) {
+          flex: 0 0 span(1 of 2);
+          max-width: span(1 of 2);
+        }
+        @include breakpoint($md) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+
+      .col-right__col-left {
+        p {
+          margin-bottom: 48px;
+          font-size: 21px;
+          font-weight: 300;
+          line-height: 36px;
+        }
+
+        a {
+          font-weight: 300;
+        }
+      }
+
+      .section-title {
+        margin-bottom: 16px;
+      }
+
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+      }
+      @include breakpoint($lg) {
+        flex: 0 0 span(7 of 12, $double-gutters);
+        max-width: span(7 of 12, $double-gutters);
+      }
+    }
+
+    // If this is to fly in on scroll, it will need to be an inline image.
+    // If it is to overhang the viewport without making it wider, it will need
+    // to be a background image.
+    // As far as I can figure, you can't have both.
+
+    // figure {
+    //   margin-right: -100px;
+    //   margin-left: -100px;
+    //   @include breakpoint($sm) {
+    //     margin-right: 0;
+    //     margin-left: -50px;
+    //   }
+    //   @include breakpoint($md) {
+    //     margin-left: -100px;
+    //   }
+    //   @include breakpoint($lg) {
+    //     margin-left: -40px;
+    //   }
+    //   @include breakpoint($xl) {
+    //     margin-left: 0;
+    //   }
+    // }
+
+    .showcase {
+      position: absolute;
+      top: 50%;
+      display: flex;
+      flex-direction: column;
+      max-width: 90%;
+      padding: 24px;
+      background-color: #fff;
+      box-shadow: 0 0 29px rgba(0, 0, 0, .3);
+      transform: translateY(-50%);
+      @include breakpoint($xs) {
+        flex-direction: row;
+        padding-right: 0;
+      }
+      @include breakpoint($sm) {
+        max-width: 756px;
+      }
+      @include breakpoint($lg) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 64px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 17px;
+        @include breakpoint($sm) {
+          font-size: 23px;
+        }
+      }
+
+      .showcase__left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 186px;
+        margin-bottom: 24px;
+        @include breakpoint($xs) {
+          margin-bottom: 0;
+        }
+
+        .btn {
+          @include breakpoint($xs) {
+            position: absolute;
+            bottom: -45px;
+          }
+          @include breakpoint($lg) {
+            bottom: -52px;
+          }
+        }
+
+      }
+
+      .showcase__increase {
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 55.89px;
+        color: $blue-light;
+        @include breakpoint($sm) {
+          font-size: 78px;
+        }
+
+        span {
+          font-size: 45px;
+          @include breakpoint($sm) {
+            font-size: 61px;
+          }
+        }
+
+      }
+
+      .showcase__revenue {
+        margin-bottom: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 19.87px;
+        color: $blue-light;
+        text-transform: uppercase;
+        @include breakpoint($xs) {
+          margin-bottom: 44px;
+        }
+        @include breakpoint($sm) {
+          font-size: 15px;
+        }
+      }
+
+      .showcase__right {
+        margin-right: 24px;
+        margin-left: 24px;
+        text-align: center;
+        @include breakpoint($xs) {
+          margin-right: 78px;
+          text-align: left;
+        }
+      }
+
+    }
+
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 1550px;
+    margin-top: -250px;
+    margin-bottom: -80px;
+    color: #fff;
+    background-image: url('images/background-blue-1.png');
+    @include breakpoint($xs) {
+      margin-top: -400px;
+    }
+    @include breakpoint($sm) {
+      min-height: 1170px;
+      margin-bottom: -30px;
+    }
+    @include breakpoint($md) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    @include breakpoint($lg) {
+      margin-bottom: 30px;
+    }
+    @include breakpoint($xl) {
+      margin-bottom: 80px;
+    }
+
+    .row {
+      max-width: 456px;
+      margin: 0 auto;
+      padding-right: 16px;
+      padding-left: 16px;
+      @include breakpoint($sm) {
+        max-width: 856px;
+      }
+      @include breakpoint($md) {
+        max-width: 1112px;
+      }
+      @include breakpoint($lg) {
+        max-width: 1340px;
+      }
+      @include breakpoint($xl) {
+        max-width: 1440px;
+      }
+    }
+
+    .section-title {
+      padding-right: 16px;
+      padding-left: 16px;
+      text-align: center;
+    }
+
+    .services__title {
+      position: relative;
+      margin-bottom: 48px;
+      padding-bottom: 16px;
+      font-family: $recta;
+      font-size: 32px;
+      font-weight: 700;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 241px;
+        height: 1px;
+        margin: 0 auto;
+        content: '';
+        background-color: #fff;
+        opacity: .39;
+      }
+
+    }
+
+    .service {
+      position: relative;
+      width: 100%;
+      margin-bottom: 32px;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 3);
+        max-width: span(1 of 3);
+        margin-bottom: 0;
+      }
+      @include breakpoint($lg) {
+        flex: 0 0 span(1 of 3, $double-gutters);
+        max-width: span(1 of 3, $double-gutters);
+      }
+
+      img {
+        margin-bottom: 14px;
+      }
+    }
+
+    .service__title {
+      margin-bottom: 0;
+      font-family: $recta;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 27px;
+
+      + .service__subtitle {
+        margin-top: 4px;
+      }
+
+    }
+
+    .service__subtitle {
+      margin-bottom: 0;
+      font-family: $recta;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+
+    .service__description {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 0;
+      padding-top: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        // margin: 0 auto;
+        content: '';
+        background-color: #fff;
+        opacity: .44;
+      }
+
+      span {
+        position: absolute;
+        bottom: 2px;
+        display: inline-block;
+        width: 40px;
+        height: 16px;
+        margin-left: 8px;
+        background-image: url('images/icons/icon-arrow-white.svg');
+        background-repeat: no-repeat;
+      }
+
+    }
+
+  }
+
+  .clients {
+
+    .section-title {
+      padding-right: 16px;
+      padding-left: 16px;
+      text-align: center;
+    }
+
+    .clients__title {
+      position: relative;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      font-family: $recta;
+      font-size: 32px;
+      font-weight: 700;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 241px;
+        height: 1px;
+        margin: 0 auto;
+        content: '';
+        background-color: $gray-light;
+        opacity: .39;
+      }
+
+    }
+
+  }
+
+  .spacer {
+    min-height: 280px;
+    background-image: url('images/background-gray-01.png');
+    background-position: bottom center;
+    @include breakpoint($sm) {
+      min-height: 360px;
+    }
+    @include breakpoint($lg) {
+      min-height: 430px;
+    }
+    @include breakpoint($xl) {
+      min-height: 500px;
+    }
+  }
+
+  .customers {
+    padding-bottom: 88px;
+    background-color: $background-white;
+
+    .section-title {
+      margin-bottom: 64px;
+      padding-right: 16px;
+      padding-left: 16px;
+      text-align: center;
+    }
+
+    .customers__title {
+      position: relative;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      font-family: $recta;
+      font-size: 32px;
+      font-weight: 700;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 241px;
+        height: 1px;
+        margin: 0 auto;
+        content: '';
+        background-color: $gray-light;
+        opacity: .39;
+      }
+
+    }
+
+    .customers__subtitle {
+      margin-bottom: 0;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .customer {
+      position: relative;
+      width: 100%;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 4);
+        max-width: span(1 of 4);
+      }
+
+      img {
+        margin-bottom: 16px;
+      }
+
+    }
+
+    .customer__title {
+      position: relative;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      font-family: $recta;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 25px;
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        content: '';
+        background-color: $blue-light;
+        opacity: .44;
+      }
+    }
+
+    .customer__description {
+      position: relative;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+
+      span {
+        position: absolute;
+        bottom: 2px;
+        display: inline-block;
+        width: 40px;
+        height: 16px;
+        margin-left: 8px;
+        background-image: url('images/icons/icon-arrow.svg');
+        background-repeat: no-repeat;
+      }
+
+    }
+
+  }
+
+}

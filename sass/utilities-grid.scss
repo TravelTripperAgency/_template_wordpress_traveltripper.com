@@ -1,0 +1,58 @@
+%row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row {
+  @extend %row;
+}
+
+// No stack on mobile
+// .col {
+//   flex-basis: 0;
+//   flex-grow: 1;
+//   max-width: 100%;
+// }
+
+// Make column ready
+// .col,
+// .col-md {
+//   position: relative;
+//   width: 100%;
+// }
+
+.col-sm-6 {
+  position: relative;
+  width: 100%;
+  @include breakpoint($sm) {
+    flex: 0 0 span(6 of 12);
+    max-width: span(6 of 12);
+  }
+}
+
+.col-lg-4 {
+  position: relative;
+  width: 100%;
+  @include breakpoint($lg) {
+    flex: 0 0 span(4 of 12);
+    max-width: span(4 of 12);
+  }
+}
+
+// .col-md-6 {
+//   position: relative;
+//   width: 100%;
+//   @include breakpoint($md) {
+//     flex: 0 0 span(6 of 12);
+//     max-width: span(6 of 12);
+//   }
+//
+//   &.no-gutters {
+//     @include breakpoint($md) {
+//       flex: 0 0 50%;
+//       max-width: 50%;
+//     }
+//   }
+//
+// }

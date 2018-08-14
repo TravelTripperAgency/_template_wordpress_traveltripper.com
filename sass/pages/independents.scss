@@ -1,0 +1,568 @@
+.page-template-independents {
+
+  .intro {
+    margin-bottom: 72px;
+    @include breakpoint($sm) {
+      margin-bottom: 120px;
+    }
+    @include breakpoint($md) {
+      margin-top: -80px;
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      margin-bottom: 48px;
+      @include breakpoint($sm) {
+        flex: 0 0 span(6 of 12);
+        max-width: span(6 of 12);
+        margin-bottom: 0;
+        order: 2;
+      }
+      @include breakpoint($md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .col-right__wrap {
+        @include breakpoint($md) {
+          display: inline-flex;
+          flex-wrap: wrap;
+        }
+      }
+
+      p {
+        position: relative;
+        margin-bottom: 32px;
+        margin-left: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: .79px;
+        @include breakpoint($md) {
+          flex: 1 0 36%;
+          align-self: center;
+        }
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: -28px;
+          width: 20px;
+          height: 2px;
+          content: '';
+          background-color: $red;
+          transform: translateY(-50%);
+        }
+
+        + p {
+          @include breakpoint($md) {
+            margin-left: 40px;
+          }
+        }
+
+        &:last-child {
+          margin-left: 30px;
+        }
+
+      }
+
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($sm) {
+        flex: 0 0 span(6 of 12);
+        max-width: span(6 of 12);
+      }
+
+      p {
+        font-weight: 300;
+        line-height: 36px;
+      }
+
+    }
+
+  }
+
+  .clients {
+    margin-bottom: 160px;
+
+    .section-title {
+      position: relative;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 241px;
+        height: 1px;
+        margin: 0 auto;
+        content: '';
+        background-color: $gray-dark;
+        opacity: .39;
+      }
+
+    }
+
+  }
+
+  .ecommerce {
+
+    .section-title {
+      line-height: 44px;
+    }
+
+    p {
+      font-weight: 300;
+      line-height: 36px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+    a {
+      font-weight: 400;
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      margin-bottom: 72px;
+      @include breakpoint($md) {
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
+        margin-bottom: 0;
+        order: 2;
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(4 of 12);
+        max-width: span(4 of 12);
+        order: 2;
+      }
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(8 of 12);
+        max-width: span(8 of 12);
+      }
+    }
+
+  }
+
+  .spacer {
+    min-height: 280px;
+    background-image: url('images/background-gray-01.png');
+    background-position: bottom center;
+    @include breakpoint($sm) {
+      min-height: 360px;
+    }
+    @include breakpoint($lg) {
+      min-height: 430px;
+    }
+    @include breakpoint($xl) {
+      min-height: 500px;
+    }
+  }
+
+  .solutions {
+    padding: 40px 0 80px;
+    background-color: $background-white;
+    @include breakpoint($lg) {
+      padding-bottom: 120px;
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 48px;
+      padding-bottom: 16px;
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 241px;
+        height: 1px;
+        margin: 0 auto;
+        content: '';
+        background-color: $gray-dark;
+        opacity: .39;
+      }
+
+    }
+
+    .service {
+      position: relative;
+      width: 100%;
+      margin-bottom: 32px;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 3);
+        max-width: span(1 of 3);
+        margin-bottom: 0;
+      }
+      @include breakpoint($lg) {
+        flex: 0 0 span(1 of 3, $double-gutters);
+        max-width: span(1 of 3, $double-gutters);
+      }
+
+      img {
+        margin-bottom: 14px;
+      }
+    }
+
+    .service__title {
+      margin-bottom: 0;
+      font-family: $recta;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 27px;
+
+      + .service__subtitle {
+        margin-top: 4px;
+      }
+
+    }
+
+    .service__subtitle {
+      margin-bottom: 0;
+      font-family: $recta;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+
+    .service__description {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 0;
+      padding-top: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        content: '';
+        background-color: $blue-light;
+        opacity: .44;
+      }
+
+      span {
+        position: absolute;
+        bottom: 2px;
+        display: inline-block;
+        width: 40px;
+        height: 16px;
+        margin-left: 8px;
+        background-image: url('images/icons/icon-arrow.svg');
+        background-repeat: no-repeat;
+      }
+
+    }
+
+  }
+
+  .integrations {
+    min-height: 2400px;
+    margin-bottom: 96px;
+    background: url('images/background-blue-2.png') no-repeat 50%, linear-gradient($background-white, #fff);
+    background-size: cover;
+    @include breakpoint($sm) {
+      min-height: 2000px;
+    }
+    @include breakpoint($md) {
+      min-height: 1450px;
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(7 of 12, $double-gutters);
+        max-width: span(7 of 12, $double-gutters);
+      }
+      @include breakpoint($lg) {
+        flex: 0 0 span(1 of 2, $triple-gutters);
+        max-width: span(1 of 2, $triple-gutters);
+      }
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      color: #fff;
+      @include breakpoint($md) {
+        flex: 0 0 span(5 of 12, $double-gutters);
+        max-width: span(5 of 12, $double-gutters);
+        padding-top: 120px;
+      }
+      @include breakpoint($lg) {
+        flex: 0 0 span(1 of 2, $triple-gutters);
+        max-width: span(1 of 2, $triple-gutters);
+        padding-top: 0;
+      }
+
+      .col-right__col-left {
+        position: relative;
+        align-self: flex-end;
+        width: 100%;
+        max-width: 447px;
+        margin: 0 auto 56px;
+        @include breakpoint($sm) {
+          flex: 0 0 span(1 of 2);
+          align-self: flex-start;
+          max-width: span(1 of 2);
+          margin-right: 0;
+          margin-left: 0;
+        }
+        @include breakpoint($md) {
+          flex: 0 0 100%;
+          align-self: flex-end;
+          max-width: 100%;
+        }
+      }
+
+      .col-right__col-right {
+        position: relative;
+        align-self: flex-start;
+        width: 100%;
+        max-width: 447px;
+        margin: 0 auto;
+        @include breakpoint($sm) {
+          flex: 0 0 span(1 of 2);
+          max-width: span(1 of 2);
+        }
+        @include breakpoint($md) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .integration-logo {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin-bottom: 40px;
+          @include breakpoint($xs) {
+            flex: 0 0 span(1 of 2, $double-gutters);
+            max-width: span(1 of 2, $double-gutters);
+          }
+          @include breakpoint($lg) {
+            flex: 0 0 span(1 of 3, $double-gutters);
+            max-width: span(1 of 3, $double-gutters);
+          }
+        }
+
+      }
+
+    }
+
+    .showcase {
+      position: absolute;
+      top: 50%;
+      display: flex;
+      flex-direction: column;
+      max-width: 90%;
+      padding: 24px;
+      background-color: #fff;
+      box-shadow: 0 0 29px rgba(0, 0, 0, .3);
+      transform: translateY(-50%);
+      @include breakpoint($xs) {
+        flex-direction: row;
+        padding-right: 0;
+      }
+      @include breakpoint($sm) {
+        max-width: 756px;
+      }
+      @include breakpoint($lg) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 64px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 17px;
+        @include breakpoint($sm) {
+          font-size: 23px;
+        }
+      }
+
+      .showcase__left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 186px;
+        margin-bottom: 24px;
+        @include breakpoint($xs) {
+          margin-bottom: 0;
+        }
+
+        .btn {
+          @include breakpoint($xs) {
+            position: absolute;
+            bottom: -45px;
+          }
+          @include breakpoint($lg) {
+            bottom: -52px;
+          }
+        }
+
+      }
+
+      .showcase__increase {
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 55.89px;
+        color: $blue-light;
+        @include breakpoint($sm) {
+          font-size: 78px;
+        }
+
+        span {
+          font-size: 45px;
+          @include breakpoint($sm) {
+            font-size: 61px;
+          }
+        }
+
+      }
+
+      .showcase__revenue {
+        margin-bottom: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 19.87px;
+        color: $blue-light;
+        text-transform: uppercase;
+        @include breakpoint($xs) {
+          text-align: center;
+        }
+        @include breakpoint($sm) {
+          font-size: 15px;
+        }
+      }
+
+      .showcase__right {
+        margin-right: 24px;
+        margin-left: 24px;
+        text-align: center;
+        @include breakpoint($xs) {
+          margin-right: 78px;
+          text-align: left;
+        }
+      }
+
+    }
+
+    .col-bottom {
+      flex-direction: column;
+      margin-top: 56px;
+      @include breakpoint($sm) {
+        flex-direction: row;
+        justify-content: center;
+      }
+      @include breakpoint($xl) {
+        margin-top: 0;
+      }
+
+      img {
+        align-self: center;
+        @include breakpoint($sm) {
+          margin-left: 56px;
+        }
+      }
+
+    }
+
+    .testimonial {
+      max-width: 490px;
+      margin-bottom: 84px;
+      color: #fff;
+      border-color: #fff;
+      @include breakpoint($sm) {
+        max-width: 560px;
+        margin-right: initial;
+        margin-bottom: 0;
+        margin-left: initial;
+      }
+
+      .cite {
+        background-color: #365f88;
+        border-color: #fff;
+        @include breakpoint($xs) {
+          background-color: #314c72;
+        }
+        @include breakpoint($sm) {
+          background-color: #386d99;
+        }
+        @include breakpoint($md) {
+          background-color: #37648d;
+        }
+      }
+
+    }
+
+  }
+
+  .express-suite {
+    margin-bottom: 120px;
+    @include breakpoint($lg) {
+      margin-bottom: 68px;
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      margin-bottom: 88px;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+        margin-bottom: 0;
+      }
+      @include breakpoint($sm) {
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
+      }
+    }
+
+    .col-right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      @include breakpoint($sm) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+      }
+      @include breakpoint($sm) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+      }
+    }
+
+  }
+
+}

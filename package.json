@@ -1,0 +1,27 @@
+{
+  "name": "traveltripper-com",
+  "version": "1.0.0",
+  "description": "traveltripper.com theme files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TravelTripperWeb-Sites/_ttio_templates-bedrock"
+  },
+  "author": "Brad West",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.24.6",
+    "node-sass": "^4.9.2",
+    "owl.carousel": "^2.3.4",
+    "parallelshell": "^3.0.2",
+    "susy": "^3.0.5",
+    "uglify-js": "^3.4.7"
+  },
+  "scripts": {
+    "browsersync": "browser-sync start --proxy 'localhost/traveltripper' --files '**/*'",
+    "css": "node-sass --output-style expanded sass/style.scss style.css",
+    "css:watch": "node-sass --output-style expanded --watch sass/style.scss style.css",
+    "js:uglify": "uglifyjs js/jquery-3.3.1.js js/owl.carousel.js js/main.js -c -m -o js/main.min.js",
+    "watch": "parallelshell 'npm run css:watch' 'npm run browsersync'"
+  }
+}

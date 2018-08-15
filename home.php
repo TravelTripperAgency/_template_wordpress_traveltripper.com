@@ -31,147 +31,40 @@ get_header(); ?>
 
     <main class="content"> <?php
 
-        // Featured Articles Query
-        $query_featured_args = array(
-            'posts_per_page' => 5,
-            'meta_query' => array(
-                array(
-                    'key' => 'featured-checkbox',
-                    'value' => 'yes'
-                )
-            )
-        );
-        $query_featured = new WP_Query( $query_featured_args );
+        // Call Featured Articles
+        if ( !is_paged() ) {
+            get_template_part( 'inc/template', 'featured-articles' );
+        } ?>
 
-        if ( $query_featured->have_posts() && !is_paged() ) { ?>
+        <div class="latest-articles__title"><h2>The Latest</h2></div> <?php
 
-            <section class="featured-articles">
+    	// Start the Loop
+    	while ( have_posts() ) : the_post();
 
-                <div class="featured-articles__title"><h2>Featured Articles</h2></div> <?php
+            // Get the first category
+            $categories = get_the_category();
+            $category = $categories[0]->cat_name; ?>
 
-                	// The Loop
-                	while ( $query_featured->have_posts() ) {
-                		$query_featured->the_post();
+            <article class="latest-articles__item post entry">
+                <div class="col-sm-6">
+                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                </div>
+                <div class="col-sm-6">
+                    <p class="entry-time"><time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time></p>
+                    <p class="entry-category"><?php echo $category; ?></p>
+                    <p class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                    <?php the_excerpt(); ?>
+                    <p class="entry-author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ), array('size'=>30)); ?>" alt="<?php the_author(); ?>"></a>by&nbsp;<span class="entry-author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p>
+                </div>
+            </article><?php
 
-                        // Get the first category
-                        $categories = get_the_category();
-                        $category = $categories[0]->cat_name; ?>
+    	endwhile;
 
-                        <article class="featured-articles__item post entry">
-                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                            <p class="entry-meta"><span class="entry-category"><?php echo $category; ?></span></p>
-                            <p class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                        </article> <?php
+    	// Restore original Post Data
+    	wp_reset_postdata();
 
-                	} ?>
-
-                <section class="widget widget-cta">
-                  <p class="widget-cta__type">Webinar</p>
-                  <h3 class="widget-title">Optimizing Distribution Channels for Independent Hotels</h3>
-                  <div class="widget-cta__time"><p>Friday February 2, 2017 @ 10:30AM EST</p></div>
-                  <a href="#" class="btn btn-primary">reserve your spot</a>
-                </section>
-
-            </section> <?php
-
-        	// Restore original Post Data
-        	wp_reset_postdata();
-        }
-
-        // All Posts Query
-        // $query2 = new WP_Query( $args2 );
-
-        // if ( $query2->have_posts() ) {
-        	// The 2nd Loop
-        	// while ( $query2->have_posts() ) {
-        	// 	$query2->the_post();
-        	// 	echo '<li>' . get_the_title( $query2->post->ID ) . '</li>';
-        	// }
-
-        	// Restore original Post Data
-        	// wp_reset_postdata();
-        // } ?>
-
-        <div class="latest-articles__title"><h2>The Latest</h2></div>
-
-        <article class="latest-articles__item post entry">
-          <div class="col-sm-6">
-            <a href="/post/"><img class="featured-image" src="/images/437x255.png" alt="437x255"></a>
-          </div>
-          <div class="col-sm-6">
-            <p class="entry-time"><time datetime="2018-02-06T01:57:18+00:00">February 6, 2018</time></p>
-            <p class="entry-category">Revenue Strategy</p>
-            <p class="entry-title"><a href="/post/">6 hotel booking trends we're watching in 2018</a></p>
-            <p class="entry-content">There’s been a lot of buzz about blockchain in recent years—a topic we summarized in our booking trends for 2018 post. Yet despite the hype, the majority of people...</p>
-            <p class="entry-author"><a href="/blog-author/"><img src="/images/blog-author-30x30.jpg" alt=""></a>by&nbsp;<span class="entry-author-name"><a href="/blog-author/">Nate Lane</a></span></p>
-          </div>
-        </article>
-
-        <article class="latest-articles__item post entry">
-          <div class="col-sm-6">
-            <a href="/post/"><img class="featured-image" src="/images/437x255.png" alt="437x255"></a>
-          </div>
-          <div class="col-sm-6">
-            <p class="entry-time"><time datetime="2018-02-06T01:57:18+00:00">February 6, 2018</time></p>
-            <p class="entry-category">Revenue Strategy</p>
-            <p class="entry-title"><a href="/post/">6 hotel booking trends we're watching in 2018</a></p>
-            <p class="entry-content">There’s been a lot of buzz about blockchain in recent years—a topic we summarized in our booking trends for 2018 post. Yet despite the hype, the majority of people...</p>
-            <p class="entry-author"><a href="/blog-author/"><img src="/images/blog-author-30x30.jpg" alt=""></a>by&nbsp;<span class="entry-author-name"><a href="/blog-author/">Nate Lane</a></span></p>
-          </div>
-        </article>
-
-        <article class="latest-articles__item post entry">
-          <div class="col-sm-6">
-            <a href="/post/"><img class="featured-image" src="/images/437x255.png" alt="437x255"></a>
-          </div>
-          <div class="col-sm-6">
-            <p class="entry-time"><time datetime="2018-02-06T01:57:18+00:00">February 6, 2018</time></p>
-            <p class="entry-category">Revenue Strategy</p>
-            <p class="entry-title"><a href="/post/">6 hotel booking trends we're watching in 2018</a></p>
-            <p class="entry-content">There’s been a lot of buzz about blockchain in recent years—a topic we summarized in our booking trends for 2018 post. Yet despite the hype, the majority of people...</p>
-            <p class="entry-author"><a href="/blog-author/"><img src="/images/blog-author-30x30.jpg" alt=""></a>by&nbsp;<span class="entry-author-name"><a href="/blog-author/">Nate Lane</a></span></p>
-          </div>
-        </article>
-
-        <article class="latest-articles__item post entry">
-          <div class="col-sm-6">
-            <a href="/post/"><img class="featured-image" src="/images/437x255.png" alt="437x255"></a>
-          </div>
-          <div class="col-sm-6">
-            <p class="entry-time"><time datetime="2018-02-06T01:57:18+00:00">February 6, 2018</time></p>
-            <p class="entry-category">Revenue Strategy</p>
-            <p class="entry-title"><a href="/post/">6 hotel booking trends we're watching in 2018</a></p>
-            <p class="entry-content">There’s been a lot of buzz about blockchain in recent years—a topic we summarized in our booking trends for 2018 post. Yet despite the hype, the majority of people...</p>
-            <p class="entry-author"><a href="/blog-author/"><img src="/images/blog-author-30x30.jpg" alt=""></a>by&nbsp;<span class="entry-author-name"><a href="/blog-author/">Nate Lane</a></span></p>
-          </div>
-        </article>
-
-        <article class="latest-articles__item post entry">
-          <div class="col-sm-6">
-            <a href="/post/"><img class="featured-image" src="/images/437x255.png" alt="437x255"></a>
-          </div>
-          <div class="col-sm-6">
-            <p class="entry-time"><time datetime="2018-02-06T01:57:18+00:00">February 6, 2018</time></p>
-            <p class="entry-category">Revenue Strategy</p>
-            <p class="entry-title"><a href="/post/">6 hotel booking trends we're watching in 2018</a></p>
-            <p class="entry-content">There’s been a lot of buzz about blockchain in recent years—a topic we summarized in our booking trends for 2018 post. Yet despite the hype, the majority of people...</p>
-            <p class="entry-author"><a href="/blog-author/"><img src="/images/blog-author-30x30.jpg" alt=""></a>by&nbsp;<span class="entry-author-name"><a href="/blog-author/">Nate Lane</a></span></p>
-          </div>
-        </article>
-
-        <div class="archive-pagination pagination">
-          <ul>
-            <li class="pagination-prev"><a href="#"></a></li>
-            <li class="active"><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li class="pagination-omission">...</li>
-            <li><a href="#">29</a></li>
-            <li><a href="#">30</a></li>
-            <li><a href="#">31</a></li>
-            <li class="pagination-next"><a href="#"></a></li>
-          </ul>
-        </div>
+        // Call Pagination
+        the_posts_pagination(); ?>
 
     </main> <?php
 

@@ -26,6 +26,7 @@ function traveltripper_body_classes( $classes ) {
 	return $classes;
 }
 
+
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
@@ -36,10 +37,10 @@ function traveltripper_pingback_header() {
 	}
 }
 
+
 /**
  * Featured Posts
  */
-
 // Add featured meta hook
 add_action( 'add_meta_boxes', 'blog_featured_meta' );
 function blog_featured_meta() {
@@ -80,6 +81,47 @@ function blog_meta_save( $post_id ) {
         update_post_meta( $post_id, 'featured-checkbox', 'yes' );
     } else {
         update_post_meta( $post_id, 'featured-checkbox', 'no' );
+    }
+
+}
+
+
+/**
+ * Add class to `the_excerpt()`
+ */
+add_filter( "the_excerpt", "add_class_to_excerpt" );
+function add_class_to_excerpt( $excerpt ) {
+    return str_replace('<p', '<p class="entry-content"', $excerpt);
+}
+
+
+/**
+ * Exclude featured posts from the main query
+ *
+ * The filter works, but is breaking pagination so the add_action is commented.
+ * We are leaving it here for reference should we need it.
+ */
+// add_action( 'pre_get_posts', 'exclude_featured_post' );
+function exclude_featured_post( $query ) {
+    if ( $query->is_home() && $query->is_main_query()) {
+        if ( $query->is_main_query()) {
+            // In case there is already a meta query set somewhere else...
+            $meta_query = $query->get('meta_query')? : [];
+
+            // append this one.
+            $meta_query[] = [
+                'meta_query' => array(
+                    array(
+                        'key' => 'featured-checkbox',
+                        'value' => 'yes'
+                    )
+                )
+            ];
+
+            $query->set('meta_query', $meta_query);
+
+        }
+
     }
 
 }

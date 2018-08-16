@@ -7,7 +7,7 @@
  * @package Travel_Tripper
  */
 
-if ( ! function_exists( 'traveltripper_setup' ) ) :
+if ( ! function_exists( 'traveltripper_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -80,7 +80,7 @@ if ( ! function_exists( 'traveltripper_setup' ) ) :
 			'flex-height' => true,
 		) );
 	}
-endif;
+}
 add_action( 'after_setup_theme', 'traveltripper_setup' );
 
 /**
@@ -127,7 +127,7 @@ function traveltripper_widgets_init() {
 }
 
 /**
- * Allow PHP in the HTML widget.
+ * Allow PHP in the Text widget.
  */
 add_filter( 'widget_text', 'execute_php', 100 );
 function execute_php( $html ) {
@@ -180,6 +180,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Post Types
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
 
 /**
  * Load Jetpack compatibility file.

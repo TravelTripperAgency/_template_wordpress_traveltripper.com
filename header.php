@@ -229,7 +229,7 @@
         </div>
     </header> <?php
 
-    if ( is_single() ) { ?>
+    if ( is_single() && !is_singular( array( 'resources', 'news-and-press' ) ) ) { ?>
         <section id="skip-link-content" class="page-header">
             <div class="wrap row">
                 <div class="page-header__cta">

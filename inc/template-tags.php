@@ -120,17 +120,14 @@ if ( ! function_exists( 'traveltripper_post_thumbnail' ) ) :
 
         else : ?>
 
-		<a class="featured-image" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-			?>
-		</a>
+    		<a class="featured-image" href="<?php esc_url( the_permalink() ); ?>" aria-hidden="true" tabindex="-1"> <?php
+    			the_post_thumbnail( 'post-thumbnail', array(
+    				'alt' => the_title_attribute( array(
+    					'echo' => false,
+    				) ),
+    			) ); ?>
+    		</a> <?php
 
-		<?php
 		endif; // End is_singular().
 	}
 endif;

@@ -96,6 +96,16 @@ function add_class_to_excerpt( $excerpt ) {
 
 
 /**
+ * Add LinkedIn to user contact fields.
+ */
+add_filter( 'user_contactmethods', 'linkedin_contact_info' );
+function linkedin_contact_info( $fields ) {
+    $fields['linkedin'] = __( 'LinkedIn' );
+    return $fields;
+}
+
+
+/**
  * Exclude featured posts from the main query
  *
  * The filter works, but is breaking pagination so the add_action is commented.

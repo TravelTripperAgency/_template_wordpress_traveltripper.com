@@ -13,6 +13,7 @@ License URI: LICENSE
 @import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 @import 'sass/variables';
+@import 'sass/fonts';
 
 @import 'sass/base';
 @import 'sass/structure';
@@ -27,6 +28,7 @@ License URI: LICENSE
 @import 'sass/header';
 @import 'sass/navigation';
 @import 'sass/navigation-mobile';
+@import 'sass/pagination';
 @import 'sass/footer';
 
 @import 'sass/pages/components';
@@ -38,7 +40,6 @@ License URI: LICENSE
 @import 'sass/pages/news-single';
 @import 'sass/pages/blog';
 @import 'sass/pages/single';
-@import 'sass/pages/archive';
 @import 'sass/pages/author';
 @import 'sass/pages/solutions';
 @import 'sass/pages/reztrip';

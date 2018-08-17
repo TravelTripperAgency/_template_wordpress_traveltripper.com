@@ -47,21 +47,18 @@ get_header(); ?>
 
             <article class="latest-articles__item post entry">
                 <div class="col-sm-6">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                    <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
                 </div>
                 <div class="col-sm-6">
                     <p class="entry-time"><time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time></p>
                     <p class="entry-category"><?php echo $category; ?></p>
-                    <p class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                    <p class="entry-title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
                     <?php the_excerpt(); ?>
-                    <p class="entry-author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ), array('size'=>30)); ?>" alt="<?php the_author(); ?>"></a>by&nbsp;<span class="entry-author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p>
+                    <p class="entry-author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ), array( 'size'=>30 ) ); ?>" alt="<?php the_author(); ?>"></a>by&nbsp;<span class="entry-author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p>
                 </div>
             </article><?php
 
     	endwhile;
-
-    	// Restore original Post Data
-    	wp_reset_postdata();
 
         // Call Pagination
         the_posts_pagination(); ?>
@@ -70,31 +67,8 @@ get_header(); ?>
 
     get_sidebar( 'primary' ); ?>
 
-</div>
+</div> <?php
 
-<section class="pre-footer-links">
-  <a class="pre-footer-link" href="#">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="/images/icons/icon-resources.svg" alt="Resources icon">
-      <p class="pre-footer-link__headline">Resources</p>
-      <p class="pre-footer-link__description">Insights, knowledge, and information to help you dominate the online travel space.<span></span></p>
-    </div>
-  </a>
-  <a class="pre-footer-link" href="/blog/">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="/images/icons/icon-blog.svg" alt="Blog icon">
-      <p class="pre-footer-link__headline">Blog</p>
-      <p class="pre-footer-link__description">The latest in hotel marketing and distribution trends for independent hotels.<span></span></p>
-    </div>
-  </a>
-  <a class="pre-footer-link" href="/about/careers/">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="/images/icons/icon-careers.svg" alt="Careers icon">
-      <p class="pre-footer-link__headline">Careers</p>
-      <p class="pre-footer-link__description">We're always on the lookout for talented and ambitious individuals looking to join our growing team.<span></span></p>
-    </div>
-  </a>
-</section>
+get_template_part( 'template-parts/content', 'pre-footer-links' );
 
-<?php
 get_footer();

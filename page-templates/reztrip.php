@@ -13,9 +13,9 @@ get_header(); ?>
 <section id="skip-link-content" class="page-header">
   <div class="wrap row">
     <div class="page-header__title-area">
-      <h1 class="page-header__title">RezTrip</h1>
-      <p class="page-header__subtitle">Dynamic CRS & Booking Engine</p>
-      <p class="page-header__description">Supercharge your hotel’s e-commerce strategy with a powerful booking engine, reservations platform, and comprehensive online distribution solution through all channels.</p>
+      <h1 class="page-header__title"><?php the_title(); ?></h1>
+      <p class="page-header__subtitle"><?php the_field( 'header_subtitle' ); ?></p>
+      <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
       <div class="btn-holder">
         <a class="btn btn-primary" href="#">request a demo</a>
       </div>

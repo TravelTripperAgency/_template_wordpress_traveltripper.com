@@ -33,8 +33,8 @@ if ( have_posts() ) { ?>
 
                 if ($wp_query->current_post < 6) { ?>
                     <div class="featured-news__item">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                        <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                        <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
+                        <p><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
                     </div> <?php
                 }
 
@@ -51,40 +51,19 @@ if ( have_posts() ) { ?>
                 if ($wp_query->current_post > 5) { ?>
                     <div class="old-news__item">
                         <p class="entry-meta"><time class="entry-time" datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time></p>
-                        <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                        <p><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
                     </div> <?php
                 }
-        	endwhile; ?>
+        	endwhile;
 
-            <div class="btn-holder"><a href="#" class="btn btn-secondary-white">load more</a></div>
+            // If there are ever enough news items to warrent this, we'll add it.
+            // echo '<div class="btn-holder"><a href="#" class="btn btn-secondary-white">load more</a></div>'; ?>
 
         </div>
     </section> <?php
 
-} ?>
+}
 
-<section class="pre-footer-links">
-  <a class="pre-footer-link" href="#">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="/images/icons/icon-resources.svg" alt="Resources icon">
-      <p class="pre-footer-link__headline">Resources</p>
-      <p class="pre-footer-link__description">Insights, knowledge, and information to help you dominate the online travel space.<span></span></p>
-    </div>
-  </a>
-  <a class="pre-footer-link" href="/blog/">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="/images/icons/icon-blog.svg" alt="Blog icon">
-      <p class="pre-footer-link__headline">Blog</p>
-      <p class="pre-footer-link__description">The latest in hotel marketing and distribution trends for independent hotels.<span></span></p>
-    </div>
-  </a>
-  <a class="pre-footer-link" href="/about/careers/">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="/images/icons/icon-careers.svg" alt="Careers icon">
-      <p class="pre-footer-link__headline">Careers</p>
-      <p class="pre-footer-link__description">We're always on the lookout for talented and ambitious individuals looking to join our growing team.<span></span></p>
-    </div>
-  </a>
-</section> <?php
+get_template_part( 'template-parts/content', 'pre-footer-links' );
 
 get_footer();

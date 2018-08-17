@@ -7,47 +7,66 @@
  * @package Travel_Tripper
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section id="skip-link-content" class="page-header">
+  <div class="wrap row">
+    <div class="page-header__title-area">
+      <h1 class="page-header__title"><?php the_archive_title(); ?></h1>
+      <p class="page-header__description">The latest in marketing and distribution trends for hoteliers</p>
+    </div>
+    <div class="page-header__cta">
+      <p>Become an expert hotel marketer with our free resources.</p>
+      <div class="btn-holder">
+        <a class="btn btn-white" href="#">subscribe</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<?php if ( have_posts() ) : ?>
+<div class="content-sidebar-wrap">
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+    <main class="content"> <?php
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+		if ( have_posts() ) :
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+            // Start the Loop
+            while ( have_posts() ) : the_post();
 
-			endwhile;
+                // Get the first category
+                $categories = get_the_category();
+                $category = $categories[0]->cat_name; ?>
 
+                <article class="latest-articles__item post entry">
+                    <div class="col-sm-6">
+                        <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="entry-time"><time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time></p>
+                        <p class="entry-category"><?php echo $category; ?></p>
+                        <p class="entry-title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
+                        <?php the_excerpt(); ?>
+                        <p class="entry-author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ), array('size'=>30)); ?>" alt="<?php the_author(); ?>"></a>by&nbsp;<span class="entry-author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p>
+                    </div>
+                </article><?php
+
+            endwhile;
+
+            // Call Pagination
 			the_posts_navigation();
 
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
+		endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main> <?php
 
-<?php
-get_sidebar();
+    get_sidebar( 'primary' ); ?>
+
+</div> <?php
+
+get_template_part( 'template-parts/content', 'pre-footer-links' );
+
 get_footer();

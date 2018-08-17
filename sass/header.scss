@@ -6,14 +6,15 @@
   // top: 0;
   width: 100%;
 
-  .single-post & {
+  .single-post &,
+  .author & {
     background-image: url('images/background-header.png');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
   }
 
-  .resources & {
+  .post-type-archive-resources & {
     background-image: none;
   }
 
@@ -32,7 +33,8 @@
     justify-content: space-between;
     margin-top: 24px;
 
-    .single-post & {
+    .single-post &,
+    .author & {
       margin-bottom: 32px;
     }
 
@@ -166,13 +168,14 @@
     background-position: bottom center;
   }
 
-  .single-post & {
+  .single-post &,
+  .author & {
     padding-top: 101px;
     background-color: $background-white;
     background-image: none;
   }
 
-  .resources & {
+  .post-type-archive-resources & {
     background-image: url('images/background-header.png');
   }
 
@@ -251,7 +254,8 @@
     }
 
     .blog &,
-    .resources &,
+    .archive &,
+    .post-type-archive-resources &,
     .post-type-archive-news-and-press &,
     .news-and-press-template-default & {
       padding-bottom: 16px;
@@ -471,7 +475,8 @@
       text-align: right;
     }
 
-    .single-post & {
+    .single-post &,
+    .author & {
       padding-top: 19px;
       padding-bottom: 14px;
     }
@@ -482,11 +487,12 @@
         margin-bottom: 0;
       }
 
-      .single-post & {
+      .single-post &,
+      .author & {
         color: $blue-light;
       }
 
-      .resources & {
+      .post-type-archive-resources & {
         color: #fff;
       }
 

@@ -49,30 +49,8 @@ get_header(); ?>
 
     endwhile; ?>
 
-</main>
+</main> <?php
 
-<section class="pre-footer-links">
-    <a class="pre-footer-link" href="#">
-      <div class="pre-footer-link__wrapper">
-        <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-resources.svg" alt="Resources icon">
-        <p class="pre-footer-link__headline">Resources</p>
-        <p class="pre-footer-link__description">Insights, knowledge, and information to help you dominate the online travel space.<span></span></p>
-      </div>
-    </a>
-    <a class="pre-footer-link" href="/blog/">
-      <div class="pre-footer-link__wrapper">
-        <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-blog.svg" alt="Blog icon">
-        <p class="pre-footer-link__headline">Blog</p>
-        <p class="pre-footer-link__description">The latest in hotel marketing and distribution trends for independent hotels.<span></span></p>
-      </div>
-    </a>
-    <a class="pre-footer-link" href="/about/careers/">
-      <div class="pre-footer-link__wrapper">
-        <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-careers.svg" alt="Careers icon">
-        <p class="pre-footer-link__headline">Careers</p>
-        <p class="pre-footer-link__description">We're always on the lookout for talented and ambitious individuals looking to join our growing team.<span></span></p>
-      </div>
-    </a>
-</section> <?php
+get_template_part( 'template-parts/content', 'pre-footer-links' );
 
 get_footer();

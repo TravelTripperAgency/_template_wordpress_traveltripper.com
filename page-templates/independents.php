@@ -13,8 +13,8 @@ get_header(); ?>
 <section id="skip-link-content" class="page-header">
   <div class="wrap row">
     <div class="page-header__title-area">
-      <h1 class="page-header__title">Independent and Boutique Hotels</h1>
-      <p class="page-header__description">Power your hotel's e-commerce with a partner invested in your success.</p>
+      <h1 class="page-header__title"><?php the_title(); ?></h1>
+      <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
       <div class="btn-holder">
         <a class="btn btn-primary" href="#">request a demo</a>
       </div>
@@ -176,31 +176,9 @@ get_header(); ?>
     <img srcset="<?php echo get_template_directory_uri(); ?>/images/independent-express-suite.png, <?php echo get_template_directory_uri(); ?>/images/independent-express-suite@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/independent-express-suite@2x.png" alt="">
   </div>
 
-</section>
+</section> <?php
 
-<section class="pre-footer-links">
-  <a class="pre-footer-link" href="#">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-resources.svg" alt="Resources icon">
-      <p class="pre-footer-link__headline">Resources</p>
-      <p class="pre-footer-link__description">Insights, knowledge, and information to help you dominate the online travel space.<span></span></p>
-    </div>
-  </a>
-  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/blog/">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-blog.svg" alt="Blog icon">
-      <p class="pre-footer-link__headline">Blog</p>
-      <p class="pre-footer-link__description">The latest in hotel marketing and distribution trends for independent hotels.<span></span></p>
-    </div>
-  </a>
-  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/about/careers/">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-careers.svg" alt="Careers icon">
-      <p class="pre-footer-link__headline">Careers</p>
-      <p class="pre-footer-link__description">We're always on the lookout for talented and ambitious individuals looking to join our growing team.<span></span></p>
-    </div>
-  </a>
-</section>
+get_template_part( 'template-parts/content', 'pre-footer-links' ); ?>
 
 <section class="featured-webinar">
 

@@ -31,9 +31,9 @@ if ( $query_featured->have_posts() ) { ?>
                 $category = $categories[0]->cat_name; ?>
 
                 <article class="featured-articles__item post entry">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                    <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
                     <p class="entry-meta"><span class="entry-category"><?php echo $category; ?></span></p>
-                    <p class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                    <p class="entry-title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
                 </article> <?php
 
         	endwhile; ?>

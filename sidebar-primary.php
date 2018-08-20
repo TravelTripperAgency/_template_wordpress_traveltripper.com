@@ -12,11 +12,13 @@ if ( ! is_active_sidebar( 'sidebar-primary' ) ) {
 }
 ?>
 
-<!-- <aside id="secondary" class="widget-area"> -->
-	<?php //dynamic_sidebar( 'sidebar-primary' ); ?>
-<!-- </aside> -->
+<aside class="sidebar sidebar-primary widget-area"> <?php
+    dynamic_sidebar( 'sidebar-primary' ); ?>
+</aside>
 
-<aside class="sidebar sidebar-primary widget-area">
+<!-- TODO: Remove the below before pushing to production. -->
+
+<!-- <aside class="sidebar sidebar-primary widget-area">
 
   <section class="widget widget-search">
     <h3 class="widget-title">Blog Search</h3>
@@ -97,4 +99,4 @@ if ( ! is_active_sidebar( 'sidebar-primary' ) ) {
     </div>
   </section>
 
-</aside>
+</aside> -->

@@ -43,9 +43,12 @@ if ( ! function_exists( 'traveltripper_setup' ) ) {
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'traveltripper' ),
-		) );
+        // Should we decide to write a custom Walker, we might use this.
+		// register_nav_menus( array(
+		// 	'menu-primary' => esc_html__( 'Primary', 'traveltripper' ),
+		// 	'menu-mobile' => esc_html__( 'Mobile', 'traveltripper' ),
+		// 	'menu-footer' => esc_html__( 'Footer', 'traveltripper' ),
+		// ) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -151,6 +154,8 @@ function traveltripper_scripts() {
     wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,600i,700');
 
     wp_enqueue_script( 'traveltripper-javascript', get_template_directory_uri() . '/js/main.min.js', array(), null, true);
+
+    wp_enqueue_script( 'mobile-detect', get_template_directory_uri() . '/js/mobile.js', array(), null, true);
 
 	// wp_enqueue_script( 'traveltripper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

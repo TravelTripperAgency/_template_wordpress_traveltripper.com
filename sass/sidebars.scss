@@ -36,67 +36,6 @@
     }
   }
 
-  .widget {
-    position: relative;
-    width: 100%;
-  }
-
-  // .widget-category {
-  //   flex: 1;
-  //   background-color: $background-white;
-  //   @include breakpoint($md) {
-  //     flex: 0;
-  //     background-color: #fff;
-  //   }
-  // }
-
-  .widget-search {
-    input[type='submit'] {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-  }
-
-  .popular-content {
-
-    .popular-content__item {
-      position: relative;
-      width: 100%;
-      @include breakpoint($xs) {
-        flex: 0 0 span(1 of 2);
-        max-width: span(1 of 2);
-      }
-      @include breakpoint($sm) {
-        flex: 0 0 span(1 of 4);
-        max-width: span(1 of 4);
-      }
-      @include breakpoint($md) {
-        flex-basis: 100%;
-        max-width: 100%;
-        margin-bottom: 16px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid $gray-light;
-      }
-
-      p {
-        margin-bottom: 0;
-      }
-
-      a {
-        font-family: $recta;
-        font-size: 16px;
-        font-weight: 700;
-        color: $blue-light;
-      }
-    }
-
-  }
-
 }
 
 .sidebar-secondary {

@@ -40,6 +40,12 @@
   }
 }
 
+.d-sm-block {
+  @include breakpoint($sm) {
+    display: block !important;
+  }
+}
+
 .d-md-block {
   @include breakpoint($md) {
     display: block !important;

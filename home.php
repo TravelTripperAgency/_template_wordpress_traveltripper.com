@@ -6,7 +6,6 @@
  * Otherwise this template will be the actual front-page.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package Travel_Tripper
  */
 

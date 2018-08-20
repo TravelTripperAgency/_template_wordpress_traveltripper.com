@@ -106,6 +106,26 @@ function linkedin_contact_info( $fields ) {
 
 
 /**
+ * Edit default search widget in sidebar.
+ */
+add_filter( 'get_search_form', 'custom_search_form', 100 );
+function custom_search_form( $form ) {
+    $form = '<form role="search" method="get" class="search-form" action="' . home_url( '/' ) . '" >
+    <div class="search-form__wrap">
+        <label>
+            <span class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</span>
+            <input type="search" class="search-field" placeholder="Search" value="' . get_search_query() . '" name="s">
+        </label>
+        <button type="submit" class="search-submit" value="Search"><span class="screen-reader-text">Search button</span></button>
+        </div>
+    </form>';
+
+    return $form;
+}
+
+
+
+/**
  * Exclude featured posts from the main query
  *
  * The filter works, but is breaking pagination so the add_action is commented.

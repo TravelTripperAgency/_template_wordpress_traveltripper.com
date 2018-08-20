@@ -4,7 +4,11 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 80px;
+    padding-top: 40px;
     background-color: $background-white;
+    @include breakpoint($xs) {
+      padding-top: 0;
+    }
 
     .col-left {
       position: relative;

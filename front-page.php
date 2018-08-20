@@ -11,23 +11,28 @@
 get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
-  <div class="wrap row">
-    <div class="page-header__title-area">
-      <h1 class="page-header__title"><?php the_title(); ?></h1>
-      <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
-      <div class="btn-holder">
-        <a class="btn btn-primary" href="#">learn more</a>
-      </div>
+    <div class="wrap row">
+        <div class="page-header__title-area">
+            <h1 class="page-header__title"><?php the_title(); ?></h1>
+            <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
+            <div class="btn-holder">
+                <a class="btn btn-primary" href="#">learn more</a>
+            </div>
+        </div>
+        <div class="page-header__feature">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image">
+            <!-- <video class="d-sm-block" autoplay="autoplay" loop="loop" width="100%">
+                <source data-src="<?php // echo get_template_directory_uri(); ?>/video/home-header-video.mp4" src="" type="video/mp4">
+                <source data-src="<?php // echo get_template_directory_uri(); ?>/video/home-header-video.webm" src="" type="video/webm">
+                <img data-src="<?php // echo get_template_directory_uri(); ?>/images/home-header.png" src="" alt="Travel Tripper Demo Image">
+            </video> -->
+            <ul class="page-header__features">
+                <li>Generate Demand</li>
+                <li>Optimize Conversions</li>
+                <li>Maximize Revenue</li>
+            </ul>
+        </div>
     </div>
-    <div class="page-header__feature">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="">
-      <ul class="page-header__features">
-        <li>Generate Demand</li>
-        <li>Optimize Conversions</li>
-        <li>Maximize Revenue</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
 <section id="skip-link-content" class="intro">

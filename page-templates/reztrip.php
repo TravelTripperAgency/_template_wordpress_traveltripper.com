@@ -109,19 +109,22 @@ get_header(); ?>
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-roi-blue.svg" alt="ROI icon">
       <p class="title">Better ROI</p>
-      <p class="description">Shift bookings from high-commission channels to direct bookings through RezTrip tools<span></span></p>
+      <p class="description">Shift bookings from high-commission channels to direct bookings through RezTrip tools</p>
+      <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-lightbulb-blue.svg" alt="lightbulb icon">
       <p class="title">Better decisions</p>
-      <p class="description">Whether you operate one hotel or oversee many, easily make the smartest revenue strategy decisions for your hotel<span></span></p>
+      <p class="description">Whether you operate one hotel or oversee many, easily make the smartest revenue strategy decisions for your hotel</p>
+      <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-resources-blue.svg" alt="briefcase icon">
       <p class="title">Expert support</p>
-      <p class="description">Tap into a trove of expert resources to power your success<span></span></p>
+      <p class="description">Tap into a trove of expert resources to power your success</p>
+      <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
   </div>
@@ -248,14 +251,16 @@ get_header(); ?>
     <div class="pre-footer-link__wrapper">
       <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb.svg" alt="Hotel Websites icon">
       <p class="pre-footer-link__headline">Travel Tripper Web</p>
-      <p class="pre-footer-link__description">Boost direct bookings with beautiful hotel websites driving higher guest engagement and increased conversions across all devices.<span></span></p>
+      <p class="pre-footer-link__description">Boost direct bookings with beautiful hotel websites driving higher guest engagement and increased conversions across all devices.</p>
+      <p class="pre-footer-link__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
   </a>
   <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">
     <div class="pre-footer-link__wrapper">
       <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing.svg" alt="Digital Marketing icon">
       <p class="pre-footer-link__headline">Digital Marketing</p>
-      <p class="pre-footer-link__description">Drive qualified traffic to your hotel website and maximize direct bookings with smart campaigns managed by an expert team.<span></span></p>
+      <p class="pre-footer-link__description">Drive qualified traffic to your hotel website and maximize direct bookings with smart campaigns managed by an expert team.</p>
+      <p class="pre-footer-link__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
   </a>
 </section>

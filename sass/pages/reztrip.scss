@@ -281,7 +281,7 @@
 
       .title {
         position: relative;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
         padding-bottom: 8px;
         font-weight: 700;
         line-height: 27px;
@@ -302,19 +302,11 @@
 
       .description {
         position: relative;
+        margin-bottom: 8px;
+      }
+
+      .arrow {
         margin-bottom: 0;
-
-        span {
-          position: absolute;
-          bottom: 2px;
-          display: inline-block;
-          width: 40px;
-          height: 16px;
-          margin-left: 8px;
-          background-image: url('images/icons/icon-arrow.svg');
-          background-repeat: no-repeat;
-        }
-
       }
 
     }

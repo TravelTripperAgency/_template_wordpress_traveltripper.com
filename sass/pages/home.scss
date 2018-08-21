@@ -338,7 +338,7 @@
     .service__description {
       position: relative;
       margin-top: 8px;
-      margin-bottom: 0;
+      margin-bottom: 8px;
       padding-top: 8px;
       font-size: 16px;
       font-weight: 400;
@@ -357,17 +357,10 @@
         opacity: .44;
       }
 
-      span {
-        position: absolute;
-        bottom: 2px;
-        display: inline-block;
-        width: 40px;
-        height: 16px;
-        margin-left: 8px;
-        background-image: url('images/icons/icon-arrow-white.svg');
-        background-repeat: no-repeat;
-      }
+    }
 
+    .service__arrow {
+      margin-bottom: 0;
     }
 
   }
@@ -502,21 +495,14 @@
 
     .customer__description {
       position: relative;
+      margin-bottom: 8px;
       font-size: 16px;
       font-weight: 300;
       line-height: 24px;
+    }
 
-      span {
-        position: absolute;
-        bottom: 2px;
-        display: inline-block;
-        width: 40px;
-        height: 16px;
-        margin-left: 8px;
-        background-image: url('images/icons/icon-arrow.svg');
-        background-repeat: no-repeat;
-      }
-
+    .customer__arrow {
+      margin-bottom: 0;
     }
 
   }

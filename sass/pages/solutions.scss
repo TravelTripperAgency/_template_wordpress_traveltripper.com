@@ -65,7 +65,7 @@
     .description {
       position: relative;
       margin-top: 8px;
-      margin-bottom: 0;
+      margin-bottom: 8px;
       padding-top: 8px;
 
       &:before {
@@ -80,17 +80,10 @@
         opacity: .44;
       }
 
-      span {
-        position: absolute;
-        bottom: 2px;
-        display: inline-block;
-        width: 40px;
-        height: 16px;
-        margin-left: 8px;
-        background-image: url('images/icons/icon-arrow.svg');
-        background-repeat: no-repeat;
-      }
+    }
 
+    .arrow {
+      margin-bottom: 0;
     }
 
   }

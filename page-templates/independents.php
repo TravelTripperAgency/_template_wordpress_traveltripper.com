@@ -88,18 +88,21 @@ get_header(); ?>
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip-hover.svg" alt="">
       <p class="service__title">RezTrip</p>
       <p class="service__subtitle">CRS & Booking Engine</p>
-      <p class="service__description">Shift bookings from high-commission OTA channels to direct bookings using smart rate and revenue management tools.<span></span></p>
+      <p class="service__description">Shift bookings from high-commission OTA channels to direct bookings using smart rate and revenue management tools.</p>
+      <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
     <div class="service web">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-hover.svg" alt="">
       <p class="service__title">Travel Tripper Web</p>
       <p class="service__subtitle">Website Platform and Agency</p>
-      <p class="service__description">Change lookers into bookers with beautiful design and smart content like live rates and special offers.<span></span></p>
+      <p class="service__description">Change lookers into bookers with beautiful design and smart content like live rates and special offers.</p>
+      <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
     <div class="service dgs">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-hover.svg" alt="">
       <p class="service__title">Digital Marketing</p>
-      <p class="service__description">Maximize ROI across all online advertising channels with cutting edge technology and strategy, including our award-winning Real Time Ads for hotels.<span></span></p>
+      <p class="service__description">Maximize ROI across all online advertising channels with cutting edge technology and strategy, including our award-winning Real Time Ads for hotels.</p>
+      <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
   </div>
 

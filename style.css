@@ -2615,22 +2615,15 @@ img {
 
 .pre-footer-links .pre-footer-link__description {
   position: relative;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   font-size: 16px;
   font-weight: 400;
   line-height: 27px;
   color: #4a4a4a;
 }
 
-.pre-footer-links .pre-footer-link__description span {
-  position: absolute;
-  bottom: 4px;
-  display: inline-block;
-  width: 40px;
-  height: 16px;
-  margin-left: 8px;
-  background-image: url("images/icons/icon-arrow.svg");
-  background-repeat: no-repeat;
+.pre-footer-links .pre-footer-link__arrow {
+  margin-bottom: 0;
 }
 
 .featured-resources {
@@ -3227,7 +3220,7 @@ img {
 .home .services .service__description {
   position: relative;
   margin-top: 8px;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   padding-top: 8px;
   font-size: 16px;
   font-weight: 400;
@@ -3246,15 +3239,8 @@ img {
   opacity: .44;
 }
 
-.home .services .service__description span {
-  position: absolute;
-  bottom: 2px;
-  display: inline-block;
-  width: 40px;
-  height: 16px;
-  margin-left: 8px;
-  background-image: url("images/icons/icon-arrow-white.svg");
-  background-repeat: no-repeat;
+.home .services .service__arrow {
+  margin-bottom: 0;
 }
 
 .home .clients .section-title {
@@ -3396,20 +3382,14 @@ img {
 
 .home .customers .customer__description {
   position: relative;
+  margin-bottom: 8px;
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
 }
 
-.home .customers .customer__description span {
-  position: absolute;
-  bottom: 2px;
-  display: inline-block;
-  width: 40px;
-  height: 16px;
-  margin-left: 8px;
-  background-image: url("images/icons/icon-arrow.svg");
-  background-repeat: no-repeat;
+.home .customers .customer__arrow {
+  margin-bottom: 0;
 }
 
 .page-template-about .hoteliers {
@@ -4750,7 +4730,7 @@ img {
 .page-template-solutions .intro .description {
   position: relative;
   margin-top: 8px;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   padding-top: 8px;
 }
 
@@ -4766,15 +4746,8 @@ img {
   opacity: .44;
 }
 
-.page-template-solutions .intro .description span {
-  position: absolute;
-  bottom: 2px;
-  display: inline-block;
-  width: 40px;
-  height: 16px;
-  margin-left: 8px;
-  background-image: url("images/icons/icon-arrow.svg");
-  background-repeat: no-repeat;
+.page-template-solutions .intro .arrow {
+  margin-bottom: 0;
 }
 
 .page-template-solutions .choose {
@@ -5204,7 +5177,7 @@ img {
 
 .page-template-reztrip .why .col .title {
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   padding-bottom: 8px;
   font-weight: 700;
   line-height: 27px;
@@ -5224,18 +5197,11 @@ img {
 
 .page-template-reztrip .why .col .description {
   position: relative;
-  margin-bottom: 0;
+  margin-bottom: 8px;
 }
 
-.page-template-reztrip .why .col .description span {
-  position: absolute;
-  bottom: 2px;
-  display: inline-block;
-  width: 40px;
-  height: 16px;
-  margin-left: 8px;
-  background-image: url("images/icons/icon-arrow.svg");
-  background-repeat: no-repeat;
+.page-template-reztrip .why .col .arrow {
+  margin-bottom: 0;
 }
 
 .page-template-reztrip .conversion .col-right {
@@ -6433,7 +6399,7 @@ img {
 .page-template-who-we-serve .intro .description {
   position: relative;
   margin-top: 8px;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   padding-top: 8px;
   line-height: 24px;
 }
@@ -6450,15 +6416,8 @@ img {
   opacity: .44;
 }
 
-.page-template-who-we-serve .intro .description span {
-  position: absolute;
-  bottom: 2px;
-  display: inline-block;
-  width: 40px;
-  height: 16px;
-  margin-left: 8px;
-  background-image: url("images/icons/icon-arrow.svg");
-  background-repeat: no-repeat;
+.page-template-who-we-serve .intro .arrow {
+  margin-bottom: 0;
 }
 
 .page-template-who-we-serve .clientele {
@@ -6978,7 +6937,7 @@ img {
 .page-template-independents .solutions .service__description {
   position: relative;
   margin-top: 8px;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   padding-top: 8px;
   font-size: 16px;
   font-weight: 400;
@@ -6997,15 +6956,8 @@ img {
   opacity: .44;
 }
 
-.page-template-independents .solutions .service__description span {
-  position: absolute;
-  bottom: 2px;
-  display: inline-block;
-  width: 40px;
-  height: 16px;
-  margin-left: 8px;
-  background-image: url("images/icons/icon-arrow.svg");
-  background-repeat: no-repeat;
+.page-template-independents .solutions .service__arrow {
+  margin-bottom: 0;
 }
 
 .page-template-independents .integrations {

@@ -7,8 +7,7 @@
  * @package Travel_Tripper
  */
 
-get_header();
-?>
+get_header(); ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -36,20 +35,24 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', 'search' );
 
-			endwhile;
+			endwhile; ?>
 
-			the_posts_navigation();
+            <nav class="navigation pagination" role="navigation">
+                <h2 class="screen-reader-text">Posts navigation</h2>
+                <div class="nav-links"> <?php
+                    echo paginate_links(); ?>
+                </div>
+            </nav> <?php
 
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
+		endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+get_sidebar( 'primary' );
 get_footer();

@@ -27,21 +27,21 @@ if ( ! function_exists( 'traveltripper_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'traveltripper_posted_by' ) ) :
-	/**
-	 * Prints HTML with meta information for the current author.
-	 */
-	function traveltripper_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'traveltripper' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
-
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
-	}
-endif;
+// if ( ! function_exists( 'traveltripper_posted_by' ) ) :
+// 	/**
+// 	 * Prints HTML with meta information for the current author.
+// 	 */
+// 	function traveltripper_posted_by() {
+// 		$byline = sprintf(
+// 			/* translators: %s: post author. */
+// 			esc_html_x( 'by %s', 'post author', 'traveltripper' ),
+// 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+// 		);
+//
+// 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+//
+// 	}
+// endif;
 
 if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
 	/**
@@ -61,14 +61,12 @@ if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
 
             <p class="entry-meta"> <?php
 
-              /* translators: used between list items, there is a space after the comma */
               $categories_list = get_the_category_list( esc_html__( ' ', 'traveltripper' ) );
               if ( $categories_list ) {
                   /* translators: 1: list of categories. */
                   printf( '<span class="entry-categories">' . esc_html__( 'Categories: %1$s', 'traveltripper' ) . '</span>', $categories_list ); // WPCS: XSS OK.
               }
 
-              /* translators: used between list items, there is a space after the comma */
               $tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'traveltripper' ) );
               if ( $tags_list ) {
                   /* translators: 1: list of tags. */
@@ -97,37 +95,5 @@ if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
 			);
 			echo '</span>';
 		}
-	}
-endif;
-
-if ( ! function_exists( 'traveltripper_post_thumbnail' ) ) :
-	/**
-	 * Displays an optional post thumbnail.
-	 *
-	 * Wraps the post thumbnail in an anchor element on index views, or a div
-	 * element when on single views.
-	 */
-	function traveltripper_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-			return;
-		}
-
-		if ( is_singular() ) : ?>
-
-			<div class="featured-image"> <?php
-                the_post_thumbnail(); ?>
-			</div> <?php
-
-        else : ?>
-
-    		<a class="featured-image" href="<?php esc_url( the_permalink() ); ?>" aria-hidden="true" tabindex="-1"> <?php
-    			the_post_thumbnail( 'post-thumbnail', array(
-    				'alt' => the_title_attribute( array(
-    					'echo' => false,
-    				) ),
-    			) ); ?>
-    		</a> <?php
-
-		endif; // End is_singular().
 	}
 endif;

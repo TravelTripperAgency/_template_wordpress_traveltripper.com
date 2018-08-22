@@ -42,13 +42,18 @@ if ( ! function_exists( 'traveltripper_setup' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
-        // Should we decide to write a custom Walker, we might use this.
-		// register_nav_menus( array(
-		// 	'menu-primary' => esc_html__( 'Primary', 'traveltripper' ),
-		// 	'menu-mobile' => esc_html__( 'Mobile', 'traveltripper' ),
-		// 	'menu-footer' => esc_html__( 'Footer', 'traveltripper' ),
-		// ) );
+		/*
+         * Register navigation menu for use with wp_nav_menu()
+         */
+		register_nav_menus( array(
+			// 'menu-primary' => esc_html__( 'Primary', 'traveltripper' ),
+			// 'menu-mobile' => esc_html__( 'Mobile', 'traveltripper' ),
+			'menu-footer-1' => esc_html__( 'Footer Solutions', 'traveltripper' ),
+			'menu-footer-2' => esc_html__( 'Footer Who We Serve', 'traveltripper' ),
+			'menu-footer-3' => esc_html__( 'Footer About', 'traveltripper' ),
+			'menu-footer-4' => esc_html__( 'Footer Resources', 'traveltripper' ),
+			'menu-footer-bottom' => esc_html__( 'Footer Bottom', 'traveltripper' ),
+		) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

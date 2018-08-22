@@ -1,5 +1,27 @@
+.archive,
+.search {
+
+  .page-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .category-description {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+}
+
 .blog,
-.archive {
+.archive,
+.search {
 
   h2 {
     margin-top: 0;
@@ -86,7 +108,7 @@
 
   }
 
-  .latest-articles__item {
+  .post {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

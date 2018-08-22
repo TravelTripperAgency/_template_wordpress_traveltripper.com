@@ -33,11 +33,13 @@ get_header(); ?>
                 <a class="back" href="<?php echo get_site_url(); ?>/news-and-press/">← Back to the Newsroom</a>
                 <h1 class="entry-title"><?php the_title(); ?></h1>
                 <time class="entry-time" datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
-            </header>
+            </header> <?php
 
-            <figure> <?php
-                the_post_thumbnail(); ?>
-            </figure> <?php
+            if ( has_post_thumbnail() ) { ?>
+                <figure> <?php
+                    the_post_thumbnail(); ?>
+                </figure> <?php
+            }
 
             the_content(); ?>
 

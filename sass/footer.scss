@@ -126,6 +126,7 @@
       max-width: 1440px;
     }
 
+    > nav,
     > div {
       flex: 0 0 span(1 of 2);
       max-width: span(1 of 2);
@@ -137,11 +138,15 @@
 
   }
 
-  // .col + .col {
-  //   @include breakpoint($md) {
-  //     margin-left: 64px;
-  //   }
-  // }
+  .menu-footer-solutions-container,
+  .menu-footer-who-we-serve-container,
+  .menu-footer-about-container,
+  .menu-footer-resources-container {
+    display: none;
+    @include breakpoint($md) {
+      display: block;
+    }
+  }
 
   p {
     margin-bottom: $spacer;
@@ -165,6 +170,10 @@
         text-decoration: underline;
       }
 
+    }
+
+    &:first-child a {
+      font-weight: 700;
     }
 
   }

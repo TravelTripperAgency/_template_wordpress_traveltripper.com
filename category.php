@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for displaying archive pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Travel_Tripper
  */
@@ -11,9 +11,11 @@ get_header(); ?>
 
 <div class="content-sidebar-wrap">
 
-    <main class="content">
+    <main class="content"> <?php
 
-        <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'traveltripper' ), '<span>' . get_search_query() . '</span>' ); ?></h1> <?php
+        the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+
+        <p class="category-description"><?php echo category_description(); ?></p> <?php
 
 		if ( have_posts() ) :
 

@@ -11,20 +11,20 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-add_filter( 'body_class', 'traveltripper_body_classes' );
-function traveltripper_body_classes( $classes ) {
+// add_filter( 'body_class', 'traveltripper_body_classes' );
+// function traveltripper_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
+	// if ( ! is_singular() ) {
+	// 	$classes[] = 'hfeed';
+	// }
 
 	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
+	// if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	// 	$classes[] = 'no-sidebar';
+	// }
 
-	return $classes;
-}
+	// return $classes;
+// }
 
 
 /**
@@ -103,6 +103,27 @@ function linkedin_contact_info( $fields ) {
     $fields['linkedin'] = __( 'LinkedIn' );
     return $fields;
 }
+
+
+/**
+ * Add <strong> tags around category and tag titles.
+ */
+add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+function my_theme_archive_title( $title ) {
+    if ( is_category() ) {
+        $title = 'Category<strong>: ' . single_cat_title( '', false ) . '</strong>';
+    } elseif ( is_tag() ) {
+        $title = 'Tag<strong>: ' . single_tag_title( '', false ) . '</strong>';
+    }
+
+    return $title;
+}
+
+
+/**
+ * Remove paragraph tags from category_description().
+ */
+remove_filter('term_description','wpautop');
 
 
 /**

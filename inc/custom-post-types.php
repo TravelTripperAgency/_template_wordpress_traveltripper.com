@@ -109,3 +109,53 @@ function news_post_type() {
 		'capability_type'       => 'post',
 	) );
 }
+
+// Register Events Post Type
+add_action( 'init', 'events_post_type', 0 );
+function events_post_type() {
+
+	register_post_type( 'events', array(
+		'label'                 => __( 'Event', 'traveltripper' ),
+		'description'           => __( 'Post Type Description', 'traveltripper' ),
+		'labels'                => array(
+    		'name'                  => _x( 'Events', 'Post Type General Name', 'traveltripper' ),
+    		'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'traveltripper' ),
+    		'menu_name'             => __( 'Events', 'traveltripper' ),
+    		'name_admin_bar'        => __( 'Event', 'traveltripper' ),
+    		'archives'              => __( 'Event Archives', 'traveltripper' ),
+    		'attributes'            => __( 'Event Attributes', 'traveltripper' ),
+    		'parent_item_colon'     => __( 'Parent Event:', 'traveltripper' ),
+    		'all_items'             => __( 'All Events', 'traveltripper' ),
+    		'add_new_item'          => __( 'Add New Event', 'traveltripper' ),
+    		'add_new'               => __( 'Add New', 'traveltripper' ),
+    		'new_item'              => __( 'New Event', 'traveltripper' ),
+    		'edit_item'             => __( 'Edit Event', 'traveltripper' ),
+    		'update_item'           => __( 'Update Event', 'traveltripper' ),
+    		'view_item'             => __( 'View Event', 'traveltripper' ),
+    		'view_items'            => __( 'View Events', 'traveltripper' ),
+    		'search_items'          => __( 'Search Event', 'traveltripper' ),
+    		'not_found'             => __( 'Not found', 'traveltripper' ),
+    		'not_found_in_trash'    => __( 'Not found in Trash', 'traveltripper' ),
+    		'insert_into_item'      => __( 'Insert into Event', 'traveltripper' ),
+    		'uploaded_to_this_item' => __( 'Uploaded to this Event', 'traveltripper' ),
+    		'items_list'            => __( 'Events list', 'traveltripper' ),
+    		'items_list_navigation' => __( 'Events list navigation', 'traveltripper' ),
+    		'filter_items_list'     => __( 'Filter Events list', 'traveltripper' ),
+    	),
+		'supports'              => array( 'title' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+        'menu_icon'             => 'dashicons-clipboard',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+	) );
+
+}

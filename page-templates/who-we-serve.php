@@ -11,17 +11,18 @@
 get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
-  <div class="wrap row">
-
-    <div class="page-header__title-area">
-      <h1 class="page-header__title"><?php the_title(); ?></h1>
+    <div class="wrap row">
+        <div class="page-header__title-area">
+            <h1 class="page-header__title"><?php the_title(); ?></h1>
+        </div>
+        <div class="page-header__feature"> <?php
+            if ( has_post_thumbnail() ) {
+                the_post_thumbnail();
+            } else { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/serve-landing-header.png"> <?php
+            } ?>
+        </div>
     </div>
-
-    <div class="page-header__feature">
-      <img srcset="<?php echo get_template_directory_uri(); ?>/images/serve-landing-header.png, <?php echo get_template_directory_uri(); ?>/images/serve-landing-header@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/serve-landing-header@2x.png" alt="Header Image">
-    </div>
-
-  </div>
 </section>
 
 <section class="intro wrap">

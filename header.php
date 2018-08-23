@@ -39,11 +39,7 @@
 
             get_template_part( 'template-parts/menu', 'header' ); ?>
 
-            <div class="site-header__cta">
-                <a class="btn btn-header" href="#">Request a Demo</a>
-                <a class="client-login" href="#"><span class="background-image"></span>Client Login</a>
-                <button class="menu-toggle-open"></button>
-            </div>
+            <button class="menu-toggle-open"></button>
 
         </div>
     </header> <?php

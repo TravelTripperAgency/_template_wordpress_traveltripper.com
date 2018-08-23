@@ -71,49 +71,6 @@
 
   }
 
-  .site-header__cta {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    max-width: 100%;
-
-    .btn {
-      display: none;
-      @include breakpoint(480px) {
-        display: inline-block;
-      }
-    }
-
-    .client-login {
-      display: none;
-      margin-left: 32px;
-      font-weight: 400;
-      color: #fff;
-      @include breakpoint($xs) {
-        display: block;
-      }
-
-      span {
-        display: inline-block;
-        width: 10px;
-        height: 13px;
-        margin-right: 4px;
-        background-image: url('images/icons/icon-user.svg');
-
-        .sticky-header & {
-          background-image: url('images/icons/icon-user-sticky.svg');
-        }
-
-      }
-
-      .sticky-header & {
-        color: $gray-light;
-      }
-
-    }
-
-  }
-
 }
 
 .menu-toggle-open {
@@ -385,8 +342,34 @@
 
     }
 
+    .page-template-reztrip & img {
+      max-width: 900px;
+    }
+
+    .page-template-ttweb & img {
+      max-width: 880px;
+    }
+
+    .page-template-independents & img {
+      max-width: 860px;
+    }
+
+    .page-template-casinos & img {
+      max-width: 767px;
+    }
+
+    .page-template-digital-marketing & img {
+      max-width: 890px;
+    }
+
+    .page-template-management-companies & img {
+      max-width: 685px;
+    }
+
     .page-template-solutions & img,
     .page-template-who-we-serve & img {
+      max-width: 700px;
+      height: 100%;
       margin-bottom: -155px;
       @include breakpoint($sm) {
         margin-bottom: -212px;

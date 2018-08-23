@@ -11,17 +11,22 @@
 
   > ul {
     z-index: 1;
-    display: flex;
     margin: 0;
     padding: 0;
   }
 
   .menu-item {
+    display: inline-block;
     list-style: none;
 
     &:hover {
       @include breakpoint($md) {
         background-color: #fff;
+
+        &.btn-header {
+          background-color: transparent;
+        }
+
       }
 
       a {
@@ -44,6 +49,24 @@
 
         .sticky-header & .menu-item {
           box-shadow: none;
+        }
+
+      }
+
+      &.client-login {
+
+        a:before {
+          background-image: url('images/icons/icon-user-blue.svg');
+        }
+
+        .sub-menu {
+          right: 0;
+          left: -75px;
+
+          a {
+            font-weight: 700;
+          }
+
         }
 
       }
@@ -73,6 +96,98 @@
       }
     }
 
+    &.btn-header {
+      margin-left: 16px;
+
+      a {
+        display: none;
+        padding: 12px 24px;
+        line-height: 19px;
+        color: #fff;
+        text-decoration: none;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .2);
+        @include breakpoint(480px) {
+          display: inline-block;
+        }
+
+        &:hover {
+          color: $red;
+          text-decoration: none;
+          cursor: pointer;
+          background-color: #fff;
+          border-color: #fff;
+          box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .3);
+          transition: background-color 500ms ease-out;
+          transform: translateY(-1px);
+        }
+
+        &:focus {
+          outline: 0;
+        }
+
+        .sticky-header & {
+          color: $red;
+          border-color: $red;
+
+          &:hover {
+            color: #fff;
+            background-color: #ff533d;
+            border-color: #ff533d;
+          }
+
+        }
+
+
+      }
+
+    }
+
+    &.client-login {
+      position: relative;
+      margin-left: 16px;
+
+      a {
+        display: none;
+        font-weight: 400;
+        @include breakpoint($xs) {
+          display: block;
+        }
+
+        &:before {
+          position: relative;
+          width: 10px;
+          height: 13px;
+          margin-right: 4px;
+          content: '';
+          background-image: url('images/icons/icon-user.svg');
+          @include breakpoint($xs) {
+            display: inline-block;
+          }
+
+          .sticky-header & {
+            background-image: url('images/icons/icon-user-blue.svg');
+          }
+
+        }
+
+        .sticky-header & {
+          color: $blue-dark;
+        }
+
+      }
+
+      .sub-menu a:before {
+        display: none;
+      }
+
+    }
+
+  }
+
+  .menu-item-has-children:hover a {
+    padding-bottom: 20px;
   }
 
   .sub-menu {

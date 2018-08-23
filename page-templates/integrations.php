@@ -11,19 +11,19 @@
 get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
-  <div class="wrap row">
-    <div class="page-header__title-area">
-      <h1 class="page-header__title"><?php the_title(); ?></h1>
-      <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
-      <div class="btn-holder">
-        <a class="btn btn-primary" href="#">request a demo</a>
-      </div>
+    <div class="wrap row">
+        <div class="page-header__title-area">
+            <h1 class="page-header__title"><?php the_title(); ?></h1>
+            <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
+            <div class="btn-holder">
+                <a class="btn btn-primary" href="#">request a demo</a>
+            </div>
+        </div>
+        <div class="page-header__features">
+            <p>Seamless PMS Integrations</p>
+            <p>Channel Management, Payment Gateways, and More</p>
+        </div>
     </div>
-    <div class="page-header__features">
-      <p>Seamless PMS Integrations</p>
-      <p>Channel Management, Payment Gateways, and More</p>
-    </div>
-  </div>
 </section>
 
 <section class="pms-integrations wrap row">

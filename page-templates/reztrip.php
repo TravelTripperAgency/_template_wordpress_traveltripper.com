@@ -11,24 +11,28 @@
 get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
-  <div class="wrap row">
-    <div class="page-header__title-area">
-      <h1 class="page-header__title"><?php the_title(); ?></h1>
-      <p class="page-header__subtitle"><?php the_field( 'header_subtitle' ); ?></p>
-      <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
-      <div class="btn-holder">
-        <a class="btn btn-primary" href="#">request a demo</a>
-      </div>
+    <div class="wrap row">
+        <div class="page-header__title-area">
+            <h1 class="page-header__title"><?php the_title(); ?></h1>
+            <p class="page-header__subtitle"><?php the_field( 'header_subtitle' ); ?></p>
+            <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
+            <div class="btn-holder">
+                <a class="btn btn-primary" href="#">request a demo</a>
+            </div>
+        </div>
+        <div class="page-header__feature"> <?php
+            if ( has_post_thumbnail() ) {
+                the_post_thumbnail();
+            } else { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-header.png"> <?php
+            } ?>
+            <ul class="page-header__features">
+                <li>Powerful Booking Engine</li>
+                <li>Comprehensive Central Reservation System</li>
+                <li>Full-service Distribution Solution</li>
+            </ul>
+        </div>
     </div>
-    <div class="page-header__feature">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-header.png" alt="">
-      <ul class="page-header__features">
-        <li>Powerful Booking Engine</li>
-        <li>Comprehensive Central Reservation System</li>
-        <li>Full-service Distribution Solution</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
 <section class="intro">

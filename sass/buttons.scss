@@ -55,26 +55,3 @@
   }
 
 }
-
-.btn-header {
-  padding-right: 16px;
-  padding-left: 16px;
-  background-color: transparent;
-  border-color: #fff;
-
-  &:hover {
-    color: $red;
-    background-color: #fff;
-  }
-
-  .sticky-header & {
-    color: $red;
-    border-color: $red;
-
-    &:hover {
-      background-color: transparent;
-    }
-
-  }
-
-}

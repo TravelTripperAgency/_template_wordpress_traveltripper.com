@@ -16,7 +16,7 @@ $category = $categories[0]->cat_name; ?>
         if ( has_post_thumbnail() ) { ?>
             <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a> <?php
         } else { ?>
-            <a href="<?php esc_url( the_permalink() ); ?>"><?php // TODO: Call default image. ?></a> <?php
+            <a href="<?php esc_url( the_permalink() ); ?>"><?php traveltripper_default_thumbnail(); ?></a> <?php
         } ?>
     </div>
     <div class="col-sm-6">

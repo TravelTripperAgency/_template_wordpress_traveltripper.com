@@ -32,14 +32,12 @@
 
             // Should we decide to write a custom Walker, we might use this.
             // wp_nav_menu( array(
-            //     'theme_location' => 'menu-primary',
+            //     'theme_location' => 'menu-header',
             //     'container' => 'nav',
             //     'container_class' => 'site-header__nav'
             // ) );
 
             get_template_part( 'template-parts/menu', 'header' ); ?>
-
-            <button class="menu-toggle-open"></button>
 
         </div>
     </header> <?php

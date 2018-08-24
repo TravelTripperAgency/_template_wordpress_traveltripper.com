@@ -97,3 +97,13 @@ if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
 		}
 	}
 endif;
+
+if ( ! function_exists( 'traveltripper_default_thumbnail' ) ) :
+	/**
+	 * Output the default image.
+     * For use in single posts that do not have a featured image set.
+	 */
+	function traveltripper_default_thumbnail() {
+        echo '<img width="1378" height="776" src="' . get_site_url() . '/wp-content/uploads/2018/08/default@2x.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Travel Tripper" srcset="' . get_site_url() . '/wp-content/uploads/2018/08/default@2x.jpg 1378w, ' . get_site_url() . '/wp-content/uploads/2018/08/default@2x-300x169.jpg 300w, ' . get_site_url() . '/wp-content/uploads/2018/08/default@2x-768x432.jpg 768w, ' . get_site_url() . '/wp-content/uploads/2018/08/default@2x-1024x577.jpg 1024w" sizes="(max-width: 1378px) 100vw, 1378px">';
+	}
+endif;

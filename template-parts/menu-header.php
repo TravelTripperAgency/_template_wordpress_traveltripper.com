@@ -195,7 +195,7 @@
         </li>
         <li class="btn-header menu-item"><a href="#">Request a Demo</a></li>
         <li class="client-login menu-item menu-item-has-children">
-            <a href="#"><span class="background-image"></span>Client Login</a>
+            <a href="#">Client Login</a>
             <ul class="sub-menu">
                 <li class="menu-item">
                     <a href="https://us.reztripadmin.com/">
@@ -220,5 +220,6 @@
                 </li>
             </ul>
         </li>
+        <button class="menu-toggle-open"><img src="http://localhost:3000/traveltripper/wp-content/themes/traveltripper/images/icons/icon-menu.svg"></button>
     </ul>
 </nav>

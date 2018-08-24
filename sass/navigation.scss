@@ -2,12 +2,8 @@
 // All other site-header code is in header.scss
 
 .site-header__nav {
-  display: none;
-  margin-right: 36px;
-  margin-left: auto;
-  @include breakpoint($md) {
-    display: flex;
-  }
+  display: inline-block;
+  float: right;
 
   > ul {
     z-index: 1;
@@ -16,17 +12,17 @@
   }
 
   .menu-item {
-    display: inline-block;
+    display: none;
     list-style: none;
+    @include breakpoint($md) {
+      display: inline-block;
+    }
 
     &:hover {
-      @include breakpoint($md) {
-        background-color: #fff;
+      background-color: #fff;
 
-        &.btn-header {
-          background-color: transparent;
-        }
-
+      &.btn-header {
+        background-color: transparent;
       }
 
       a {
@@ -97,10 +93,13 @@
     }
 
     &.btn-header {
+      display: none;
       margin-left: 16px;
+      @include breakpoint(480px) {
+        display: inline-block;
+      }
 
       a {
-        display: none;
         padding: 12px 24px;
         line-height: 19px;
         color: #fff;
@@ -108,9 +107,6 @@
         border-style: solid;
         border-width: 1px;
         box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .2);
-        @include breakpoint(480px) {
-          display: inline-block;
-        }
 
         &:hover {
           color: $red;
@@ -146,14 +142,15 @@
 
     &.client-login {
       position: relative;
+      display: none;
       margin-left: 16px;
+      @include breakpoint(630px) {
+        display: inline-block;
+      }
 
       a {
-        display: none;
+        display: block;
         font-weight: 400;
-        @include breakpoint($xs) {
-          display: block;
-        }
 
         &:before {
           position: relative;
@@ -178,8 +175,16 @@
 
       }
 
-      .sub-menu a:before {
-        display: none;
+      .sub-menu {
+
+        a:before {
+          display: none;
+        }
+
+        .menu-item {
+          display: inline-block;
+        }
+
       }
 
     }

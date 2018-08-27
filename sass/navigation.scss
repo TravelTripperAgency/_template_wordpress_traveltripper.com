@@ -6,9 +6,13 @@
   float: right;
 
   > ul {
+    position: relative;
     z-index: 1;
     margin: 0;
-    padding: 0;
+    padding: 0 42px 0 0;
+    @include breakpoint($md) {
+      padding: 0;
+    }
   }
 
   .menu-item {

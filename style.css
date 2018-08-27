@@ -564,6 +564,7 @@ blockquote {
 
 .widget_search .search-form__wrap {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 80%;
   padding: 9px 8px 6px;
@@ -880,6 +881,8 @@ img {
 }
 
 .single-post .site-header,
+.page-template-default .site-header,
+.error404 .site-header,
 .author .site-header,
 .archive .site-header,
 .search .site-header {
@@ -908,6 +911,8 @@ img {
 }
 
 .single-post .site-header .wrap,
+.page-template-default .site-header .wrap,
+.error404 .site-header .wrap,
 .author .site-header .wrap,
 .archive .site-header .wrap,
 .search .site-header .wrap {
@@ -939,12 +944,17 @@ img {
 }
 
 .menu-toggle-open {
-  position: relative;
+  position: absolute;
+  top: 12px;
+  right: 0;
   width: 26px;
   height: 24px;
-  margin-left: 16px;
   color: #fff;
   background-color: transparent;
+  background-image: url("images/icons/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
   border: 0;
 }
 
@@ -1004,6 +1014,7 @@ img {
 }
 
 .single-post .page-header,
+.page-template-default .page-header,
 .author .page-header,
 .archive .page-header,
 .search .page-header {
@@ -1129,6 +1140,7 @@ img {
   padding-bottom: 40px;
 }
 
+.page-template-default .page-header .page-header__title-area,
 .blog .page-header .page-header__title-area,
 .post-type-archive-resources .page-header .page-header__title-area,
 .post-type-archive-news-and-press .page-header .page-header__title-area,
@@ -1137,6 +1149,7 @@ img {
 }
 
 @media (min-width: 900px) {
+  .page-template-default .page-header .page-header__title-area,
   .blog .page-header .page-header__title-area,
   .post-type-archive-resources .page-header .page-header__title-area,
   .post-type-archive-news-and-press .page-header .page-header__title-area,
@@ -1462,6 +1475,7 @@ img {
 }
 
 .single-post .page-header .page-header__cta,
+.page-template-default .page-header .page-header__cta,
 .author .page-header .page-header__cta,
 .archive .page-header .page-header__cta,
 .search .page-header .page-header__cta {
@@ -1480,6 +1494,7 @@ img {
 }
 
 .single-post .page-header .page-header__cta p,
+.page-template-default .page-header .page-header__cta p,
 .author .page-header .page-header__cta p,
 .archive .page-header .page-header__cta p,
 .search .page-header .page-header__cta p {
@@ -1503,9 +1518,16 @@ img {
 }
 
 .site-header__nav > ul {
+  position: relative;
   z-index: 1;
   margin: 0;
-  padding: 0;
+  padding: 0 42px 0 0;
+}
+
+@media (min-width: 1200px) {
+  .site-header__nav > ul {
+    padding: 0;
+  }
 }
 
 .site-header__nav .menu-item {
@@ -4644,6 +4666,31 @@ img {
 .search .post .entry-author img {
   margin-right: 8px;
   border-radius: 50%;
+}
+
+.page-template-default .page {
+  max-width: 704px;
+  margin: 0 auto 80px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+@media (min-width: 1440px) {
+  .page-template-default .page {
+    margin-bottom: 104px;
+  }
+}
+
+.page-template-default .content {
+  margin-top: 64px;
+}
+
+.page-template-default .entry-header {
+  margin-bottom: 56px;
+}
+
+.page-template-default .entry-title {
+  margin-top: 0;
 }
 
 .post {
@@ -9118,4 +9165,101 @@ img {
 
 .page-template-management-companies .express-suite p {
   margin-bottom: 16px;
+}
+
+.error404 .site-header {
+  top: 0;
+}
+
+.error404 .content {
+  display: flex;
+  align-items: center;
+  min-height: 760px;
+  margin-top: 94px;
+  color: #fff;
+  text-align: center;
+  background-image: url("images/empire-state-building.jpg");
+}
+
+.error404 .content h1 {
+  margin-top: 0;
+  margin-bottom: 46px;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 48px;
+}
+
+.error404 .error-404 {
+  max-width: 704px;
+  margin: 0 auto 80px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+@media (min-width: 1440px) {
+  .error404 .error-404 {
+    margin-bottom: 104px;
+  }
+}
+
+.error404 .error-404 p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.error404 .search-form {
+  margin-bottom: 57px;
+}
+
+.error404 .search-form .search-form__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 9px 8px 6px;
+  background-color: #fff;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
+}
+
+.error404 .search-form label {
+  width: calc(100% - 24px);
+}
+
+.error404 .search-form .search-field {
+  width: 100%;
+  border: 0;
+  outline: none;
+}
+
+.error404 .search-form .search-field::-webkit-input-placeholder {
+  opacity: .25;
+}
+
+.error404 .search-form .search-field:-moz-placeholder {
+  opacity: .25;
+}
+
+.error404 .search-form .search-field::-moz-placeholder {
+  opacity: .25;
+}
+
+.error404 .search-form .search-field:-ms-input-placeholder {
+  opacity: .25;
+}
+
+.error404 .search-form button {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  background-image: url("images/icons/icon-search.svg");
+  background-repeat: no-repeat;
+  border: 0;
+}
+
+.error404 .search-form button:hover {
+  cursor: pointer;
 }

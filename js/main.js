@@ -1,5 +1,8 @@
 jQuery(document).ready(function() {
 
+  //* Add toggle button
+  $('.site-header__nav ul').append('<button class="menu-toggle-open"></button>');
+
   //* Main menu toggle function
   $('.menu-toggle-open').click(function(){
     $('.mobile-nav').addClass('open');

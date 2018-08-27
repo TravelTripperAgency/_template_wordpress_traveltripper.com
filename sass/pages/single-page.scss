@@ -1,0 +1,25 @@
+.page-template-default {
+
+  .page {
+    max-width: 704px;
+    margin: 0 auto 80px;
+    padding-right: 16px;
+    padding-left: 16px;
+    @include breakpoint($lg) {
+      margin-bottom: 104px;
+    }
+  }
+
+  .content {
+    margin-top: 64px;
+  }
+
+  .entry-header {
+    margin-bottom: 56px;
+  }
+
+  .entry-title {
+    margin-top: 0;
+  }
+
+}

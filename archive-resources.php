@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<section class="page-header">
+<section id="skip-link-content" class="page-header">
   <div class="wrap row">
     <div class="page-header__title-area">
       <h1 class="page-header__title">Resources</h1>
@@ -25,7 +25,7 @@ get_header(); ?>
 
 <div class="content-sidebar-wrap">
 
-    <main id="content" class="content">
+    <main class="content">
 
         <h2 class="section-title">Resource Library</h2> <?php
 

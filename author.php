@@ -9,17 +9,6 @@
 
 get_header(); ?>
 
-<section id="skip-link-content" class="page-header">
-  <div class="wrap row">
-    <div class="page-header__cta">
-      <p>Become an expert hotel marketer with our free resources.</p>
-      <div class="btn-holder">
-        <a class="btn btn-secondary-white" href="#">subscribe</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="widget widget-author">
     <div class="wrap">
         <img src="<?php echo get_avatar_url( get_the_author_meta( 'ID' ), array( 'size'=>150 ) ); ?>" alt="<?php the_author(); ?>">
@@ -47,15 +36,24 @@ get_header(); ?>
         // Start the Loop
         while ( have_posts() ) : the_post(); ?>
 
-        <article class="post">
-            <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
+        <article class="post"> <?php
+            if ( has_post_thumbnail() ) { ?>
+                <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a> <?php
+            } else { ?>
+                <a href="<?php esc_url( the_permalink() ); ?>"><?php traveltripper_default_thumbnail(); ?></a> <?php
+            } ?>
             <p><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
         </article> <?php
 
         endwhile;
 
-        // Call Pagination
-		the_posts_navigation();
+        // Call Pagination ?>
+        <nav class="navigation pagination" role="navigation">
+            <h2 class="screen-reader-text">Posts navigation</h2>
+            <div class="nav-links"> <?php
+                echo paginate_links(); ?>
+            </div>
+        </nav> <?php
 
 	else :
 

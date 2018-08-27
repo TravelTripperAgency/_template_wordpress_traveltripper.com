@@ -1,0 +1,102 @@
+.error404 {
+
+  .site-header {
+    top: 0;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    min-height: 760px;
+    margin-top: 94px;
+    color: #fff;
+    text-align: center;
+    background-image: url('images/empire-state-building.jpg');
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 46px;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 48px;
+    }
+
+  }
+
+  .error-404 {
+    max-width: 704px;
+    margin: 0 auto 80px;
+    padding-right: 16px;
+    padding-left: 16px;
+    @include breakpoint($lg) {
+      margin-bottom: 104px;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+    }
+
+  }
+
+  .search-form {
+    margin-bottom: 57px;
+
+    .search-form__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto;
+      padding: 9px 8px 6px;
+      background-color: #fff;
+      border: 1px solid #9b9b9b;
+      border-radius: 3px;
+    }
+
+    label {
+      width: calc(100% - 24px);
+    }
+
+    .search-field {
+      width: 100%;
+      border: 0;
+      outline: none;
+
+      &::-webkit-input-placeholder { // Chrome/Opera/Safari
+        opacity: .25;
+      }
+
+      &:-moz-placeholder { // Firefox 18-
+        opacity: .25;
+      }
+
+      &::-moz-placeholder { // Firefox 19+
+        opacity: .25;
+      }
+
+      &:-ms-input-placeholder { // IE 10+
+        opacity: .25;
+      }
+
+    }
+
+    button {
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      background-image: url('images/icons/icon-search.svg');
+      background-repeat: no-repeat;
+      border: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+}

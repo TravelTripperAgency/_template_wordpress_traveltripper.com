@@ -35,7 +35,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section id="skip-link-content" class="intro">
+<section class="intro">
   <div class="row">
 
     <div class="col-right">
@@ -182,44 +182,9 @@ get_header(); ?>
     </div>
   </div>
 
-</section>
+</section> <?php
 
-<section class="events">
-  <div class="wrap">
-
-    <div class="events__title"><h3>Upcoming Events</h3></div>
-
-    <div class="row">
-
-      <div class="event">
-        <p class="event__date">MARCH 12-14</p>
-        <p class="event__title">HT-NEXT – SAN DIEGO</p>
-        <p class="event__location">Manchester Grand Hyatt, 1 Market Pl, San Diego, CA 92101</p>
-        <p class="event__time">8 AM (Sunday, March 12, 2018) - 7 PM (Wednesday, March 14, 2018)</p>
-      </div>
-
-      <div class="event">
-        <p class="event__date">APRIL 11-13</p>
-        <p class="event__title">HITEC - AMSTERDAM</p>
-        <p class="event__location">RAI Amsterdam Convention Centre, Europaplein 2-22, 1078 GZ Amsterdam, Netherlands BOOTH # J-234</p>
-      </div>
-
-      <div class="event">
-        <p class="event__date">MAY 15-17</p>
-        <p class="event__title">International Hotel Technology Forum (IHTF) - SPAIN</p>
-        <p class="event__location">TBD - Coming Soon</p>
-      </div>
-
-      <div class="event">
-        <p class="event__date">JUNE 18-21</p>
-        <p class="event__title">HITEC - HOUSTON</p>
-        <p class="event__location">George R. Brown Convention Center, 1001 Avenida De Las Americas, Houston, TX 77010</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
+get_template_part( 'inc/template', 'events' ); ?>
 
 <section class="featured-resources">
   <div class="wrap">

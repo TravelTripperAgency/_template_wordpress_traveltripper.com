@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<section class="page-header">
+<section id="skip-link-content" class="page-header">
     <div class="wrap row">
         <div class="page-header__title-area">
             <p class="page-header__title">News & Press</p>
@@ -23,7 +23,7 @@ get_header(); ?>
     </div>
 </section>
 
-<main id="content" class="content"> <?php
+<main class="content"> <?php
 
     while ( have_posts() ) : the_post(); ?>
 

@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<main id="content" class="content"> <?php
+<main class="content"> <?php
 
 	while ( have_posts() ) : the_post();
 
@@ -19,5 +19,7 @@ get_header(); ?>
 	endwhile; ?>
 
 </main> <?php
+
+get_template_part( 'template-parts/content', 'pre-footer-links' );
 
 get_footer();

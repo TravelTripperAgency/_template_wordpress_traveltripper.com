@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<section class="page-header">
+<section id="skip-link-content" class="page-header">
   <div class="wrap row">
     <div class="page-header__title-area">
       <h1 class="page-header__title">News & Press</h1>

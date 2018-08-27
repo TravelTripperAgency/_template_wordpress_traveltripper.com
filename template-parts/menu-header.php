@@ -220,6 +220,5 @@
                 </li>
             </ul>
         </li>
-        <button class="menu-toggle-open"><img src="http://localhost:3000/traveltripper/wp-content/themes/traveltripper/images/icons/icon-menu.svg"></button>
     </ul>
 </nav>

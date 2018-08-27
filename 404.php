@@ -9,27 +9,20 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<main id="skip-link-content" class="content background-image">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'traveltripper' ); ?></h1>
-				</header><!-- .page-header -->
+    <section class="error-404 not-found">
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'traveltripper' ); ?></p>
+        <h1><?php esc_html_e( 'We are sorry, but it looks like the page you are looking for has been moved or doesn&rsquo;t exist anymore.', 'traveltripper' ); ?></h1>
 
-					<?php
-					get_search_form();
+        <?php get_search_form(); ?>
 
-					?>
+        <p><?php esc_html_e( 'Please learn more about our website platform, digital marketing services, and CRS & Direct Booking Engine below or you can search what you are looking for.', 'traveltripper' ); ?></p>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+    </section>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+</main> <?php
 
-<?php
+get_template_part( 'template-parts/content', 'pre-footer-links' );
+
 get_footer();

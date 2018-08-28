@@ -20,7 +20,27 @@ get_header(); ?>
             </div>
         </div>
         <div class="page-header__feature">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image">
+
+            <div class="video-container">
+                <div class="laptop">
+                    <video class="d-sm-block" autoplay="autoplay" loop="loop" width="100%">
+                        <source data-src="<?php echo get_template_directory_uri(); ?>/video/laptop.mp4" src="<?php echo get_template_directory_uri(); ?>/video/laptop.mp4" type="video/mp4">
+                        <source data-src="<?php echo get_template_directory_uri(); ?>/video/laptop.webm" src="<?php echo get_template_directory_uri(); ?>/video/laptop.webm" type="video/webm">
+                        <!-- <img data-src="<?php // echo get_template_directory_uri(); ?>/images/home-header.png" src="" alt="Travel Tripper Demo Image"> -->
+                    </video>
+                </div>
+                <div class="phone-container">
+                    <div class="phone">
+                        <video class="d-sm-block" autoplay="autoplay" loop="loop" width="100%">
+                            <source data-src="<?php echo get_template_directory_uri(); ?>/video/phone.mp4" src="<?php echo get_template_directory_uri(); ?>/video/phone.mp4" type="video/mp4">
+                            <source data-src="<?php echo get_template_directory_uri(); ?>/video/phone.webm" src="<?php echo get_template_directory_uri(); ?>/video/phone.webm" type="video/webm">
+                                <!-- <img data-src="<?php // echo get_template_directory_uri(); ?>/images/home-header.png" src="" alt="Travel Tripper Demo Image"> -->
+                            </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <img src="<?php // echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image"> -->
             <!-- <video class="d-sm-block" autoplay="autoplay" loop="loop" width="100%">
                 <source data-src="<?php // echo get_template_directory_uri(); ?>/video/home-header-video.mp4" src="<?php // echo get_template_directory_uri(); ?>/video/home-header-video.mp4" type="video/mp4">
                 <source data-src="<?php // echo get_template_directory_uri(); ?>/video/home-header-video.webm" src="" type="video/webm">
@@ -166,23 +186,9 @@ get_header(); ?>
 
   </div>
 
-</section>
-
-<section class="featured-webinar">
-
-  <div class="col-right background-image"></div>
-
-  <div class="col-left">
-    <div class="col-left__inner">
-      <p class="type">webinar</p>
-      <p class="title">Tapping into the power of authentic travel experiences for hotel marketing</p>
-      <p class="time">THURSDAY MAY 3, 2018 @ 11:00AM EDT</p>
-      <p>In this webinar, learn about how travel experience influences the customer booking journey, and discover useful tips on how to better integrate the right visuals, locality, and storytelling into your online hotel marketing efforts to win over guests. </p>
-      <a href="#" class="btn btn-primary">reserve your spot</a>
-    </div>
-  </div>
-
 </section> <?php
+
+get_template_part( 'template-parts/content', 'internal-ads' );
 
 get_template_part( 'inc/template', 'events' ); ?>
 

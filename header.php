@@ -42,7 +42,7 @@
         </div>
     </header> <?php
 
-    if ( ( is_single() && !is_singular( array( 'resources', 'news-and-press' ) ) ) || ( is_archive() && !is_post_type_archive( array( 'resources', 'news-and-press' ) ) ) || is_search() || ( is_page() && !is_page_template() ) ) { ?>
+    if ( ( is_single() && !is_singular( array( 'resources', 'news-and-press' ) ) ) || ( is_archive() && !is_post_type_archive( array( 'resources', 'news-and-press' ) ) ) || is_search() || ( is_page() && !is_page_template() && !is_front_page() ) ) { ?>
         <section id="skip-link-content" class="page-header">
             <div class="wrap row">
                 <div class="page-header__cta">

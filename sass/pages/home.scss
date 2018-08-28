@@ -1,5 +1,46 @@
 .home {
 
+  .video-container {
+    position: relative;
+    width: 890px;
+
+    .laptop {
+      position: relative;
+      width: inherit;
+      height: 505px;
+      background-image: url('images/home-header-laptop.png');
+
+      video {
+        position: absolute;
+        top: 31px;
+        left: 121px;
+        width: 646px;
+      }
+
+    }
+
+    .phone-container {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      .phone {
+        width: 247px;
+        height: 411px;
+        background-image: url('images/home-header-phone.png');
+      }
+
+      video {
+        position: absolute;
+        top: 46px;
+        left: 40px;
+        width: 169px;
+      }
+
+    }
+
+  }
+
   .intro {
     margin-top: 54px;
     @include breakpoint($sm) {

@@ -2873,16 +2873,22 @@ img {
 }
 
 .featured-webinar .col-left__inner {
-  display: flex;
-  flex-wrap: wrap;
   max-width: 830px;
-  padding: 0 32px;
+  padding: 32px;
 }
 
 @media (min-width: 1440px) {
   .featured-webinar .col-left__inner {
     max-width: 568px;
   }
+}
+
+.featured-webinar .col-left__inner p {
+  display: inline-block;
+}
+
+.featured-webinar .col-left__inner p:after {
+  clear: both;
 }
 
 .featured-webinar .type {
@@ -2922,6 +2928,7 @@ img {
   width: 100%;
   min-height: 228px;
   background-image: url("images/WWS-partners-webinar.jpg");
+  box-shadow: inset 0 0 0 2000px rgba(74, 74, 74, 0.75);
 }
 
 @media (min-width: 900px) {
@@ -2936,6 +2943,44 @@ img {
     max-width: 50%;
     order: 2;
   }
+}
+
+.home .video-container {
+  position: relative;
+  width: 890px;
+}
+
+.home .video-container .laptop {
+  position: relative;
+  width: inherit;
+  height: 505px;
+  background-image: url("images/home-header-laptop.png");
+}
+
+.home .video-container .laptop video {
+  position: absolute;
+  top: 31px;
+  left: 121px;
+  width: 646px;
+}
+
+.home .video-container .phone-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.home .video-container .phone-container .phone {
+  width: 247px;
+  height: 411px;
+  background-image: url("images/home-header-phone.png");
+}
+
+.home .video-container .phone-container video {
+  position: absolute;
+  top: 46px;
+  left: 40px;
+  width: 169px;
 }
 
 .home .intro {

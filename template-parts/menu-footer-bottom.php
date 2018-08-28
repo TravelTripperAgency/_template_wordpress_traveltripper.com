@@ -15,7 +15,6 @@
             <li class="menu-item"><a href="<?php echo get_site_url(); ?>/privacypolicy/">Privacy Policy</a></li>
             <li class="menu-item"><a href="#">Cookies</a></li>
             <li class="menu-item d-none d-md-inline-block"><a href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
-            <li class="menu-item d-none d-md-inline-block"><a href="#">Client Login</a></li>
         </ul>
     </div>
 </nav>

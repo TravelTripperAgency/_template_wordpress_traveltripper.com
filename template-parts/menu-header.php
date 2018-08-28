@@ -44,28 +44,6 @@
                         </div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="#">
-                        <div class="sub-menu__icon">
-                            <div class="background-icon express-suite"></div>
-                        </div>
-                        <div class="sub-menu__text">
-                            <p class="sub-menu__link-text">Express Suite</p>
-                            <p class="sub-menu__link-description">All-in-one website and booking engine soltition for small to medium-sized properties</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#">
-                        <div class="sub-menu__icon">
-                            <div class="background-icon rate-match"></div>
-                        </div>
-                        <div class="sub-menu__text">
-                            <p class="sub-menu__link-text">Rate Match</p>
-                            <p class="sub-menu__link-description">Innovative price checking tool that integrates into your website</p>
-                        </div>
-                    </a>
-                </li>
             </ul>
         </li>
         <li class="menu-item menu-item-has-children">

@@ -32,7 +32,6 @@
         <nav class="d-md-none">
             <p><a href="#">Request a Demo</a></p>
             <p><a class="text-white" href="<?php echo get_site_url(); ?>/contact/">Contact</a></p>
-            <p><a class="text-white" href="#">Client Login</a></p>
         </nav>
 
         <div>

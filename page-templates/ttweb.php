@@ -267,23 +267,9 @@ get_header(); ?>
   </a>
 </section> <?php
 
-get_template_part( 'inc/template', 'events' ); ?>
+get_template_part( 'inc/template', 'events' );
 
-<section class="featured-webinar">
-
-  <div class="col-right background-image"></div>
-
-  <div class="col-left">
-    <div class="col-left__inner">
-      <p class="type">webinar</p>
-      <p class="title">Tapping into the power of authentic travel experiences for hotel marketing</p>
-      <p class="time">THURSDAY MAY 3, 2018 @ 11:00AM EDT</p>
-      <p>In this webinar, learn about how travel experience influences the customer booking journey, and discover useful tips on how to better integrate the right visuals, locality, and storytelling into your online hotel marketing efforts to win over guests. </p>
-      <a href="#" class="btn btn-primary">reserve your spot</a>
-    </div>
-  </div>
-
-</section>
+get_template_part( 'template-parts/content', 'internal-ads' ); ?>
 
 <section class="featured-resources">
   <div class="wrap">

@@ -2947,14 +2947,33 @@ img {
 
 .home .video-container {
   position: relative;
-  width: 890px;
+  display: none;
+  width: 840px;
+}
+
+@media (min-width: 1200px) {
+  .home .video-container {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home .video-container {
+    width: 890px;
+  }
 }
 
 .home .video-container .laptop {
   position: relative;
-  width: inherit;
+  width: 870px;
   height: 505px;
   background-image: url("images/home-header-laptop.png");
+}
+
+@media (min-width: 1440px) {
+  .home .video-container .laptop {
+    width: inherit;
+  }
 }
 
 .home .video-container .laptop video {
@@ -2966,8 +2985,14 @@ img {
 
 .home .video-container .phone-container {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -10px;
+  bottom: -20px;
+}
+
+@media (min-width: 1440px) {
+  .home .video-container .phone-container {
+    right: 50px;
+  }
 }
 
 .home .video-container .phone-container .phone {

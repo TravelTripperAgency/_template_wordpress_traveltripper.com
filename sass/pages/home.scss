@@ -2,13 +2,23 @@
 
   .video-container {
     position: relative;
-    width: 890px;
+    display: none;
+    width: 840px;
+    @include breakpoint($md) {
+      display: block;
+    }
+    @include breakpoint($lg) {
+      width: 890px;
+    }
 
     .laptop {
       position: relative;
-      width: inherit;
+      width: 870px;
       height: 505px;
       background-image: url('images/home-header-laptop.png');
+      @include breakpoint($lg) {
+        width: inherit;
+      }
 
       video {
         position: absolute;
@@ -21,8 +31,11 @@
 
     .phone-container {
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: -10px;
+      bottom: -20px;
+      @include breakpoint($lg) {
+        right: 50px;
+      }
 
       .phone {
         width: 247px;

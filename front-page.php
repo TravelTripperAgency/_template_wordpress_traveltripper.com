@@ -19,33 +19,28 @@ get_header(); ?>
                 <a class="btn btn-primary" href="#">learn more</a>
             </div>
         </div>
-        <div class="page-header__feature">
-
-            <div class="video-container">
-                <div class="laptop">
-                    <video class="d-sm-block" autoplay="autoplay" loop="loop" width="100%">
-                        <source data-src="<?php echo get_template_directory_uri(); ?>/video/laptop.mp4" src="<?php echo get_template_directory_uri(); ?>/video/laptop.mp4" type="video/mp4">
-                        <source data-src="<?php echo get_template_directory_uri(); ?>/video/laptop.webm" src="<?php echo get_template_directory_uri(); ?>/video/laptop.webm" type="video/webm">
-                        <!-- <img data-src="<?php // echo get_template_directory_uri(); ?>/images/home-header.png" src="" alt="Travel Tripper Demo Image"> -->
-                    </video>
-                </div>
-                <div class="phone-container">
-                    <div class="phone">
-                        <video class="d-sm-block" autoplay="autoplay" loop="loop" width="100%">
-                            <source data-src="<?php echo get_template_directory_uri(); ?>/video/phone.mp4" src="<?php echo get_template_directory_uri(); ?>/video/phone.mp4" type="video/mp4">
-                            <source data-src="<?php echo get_template_directory_uri(); ?>/video/phone.webm" src="<?php echo get_template_directory_uri(); ?>/video/phone.webm" type="video/webm">
-                                <!-- <img data-src="<?php // echo get_template_directory_uri(); ?>/images/home-header.png" src="" alt="Travel Tripper Demo Image"> -->
-                            </video>
+        <div class="page-header__feature"> <?php
+            if ( wp_is_mobile() ) { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image"> <?php
+            } else { ?>
+                <img class="d-md-none" src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image">
+                <div class="video-container">
+                    <div class="laptop">
+                        <video class="d-sm-block" muted autoplay>
+                            <source src="<?php echo get_template_directory_uri(); ?>/video/laptop.webm" type="video/webm">
+                            <source src="<?php echo get_template_directory_uri(); ?>/video/laptop.mp4" type="video/mp4">
+                        </video>
                     </div>
-                </div>
-            </div>
-
-            <!-- <img src="<?php // echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image"> -->
-            <!-- <video class="d-sm-block" autoplay="autoplay" loop="loop" width="100%">
-                <source data-src="<?php // echo get_template_directory_uri(); ?>/video/home-header-video.mp4" src="<?php // echo get_template_directory_uri(); ?>/video/home-header-video.mp4" type="video/mp4">
-                <source data-src="<?php // echo get_template_directory_uri(); ?>/video/home-header-video.webm" src="" type="video/webm">
-                <img data-src="<?php // echo get_template_directory_uri(); ?>/images/home-header.png" src="" alt="Travel Tripper Demo Image">
-            </video> -->
+                    <div class="phone-container">
+                        <div class="phone">
+                            <video class="d-sm-block" muted autoplay>
+                                <source src="<?php echo get_template_directory_uri(); ?>/video/phone.webm" type="video/webm">
+                                <source src="<?php echo get_template_directory_uri(); ?>/video/phone.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div> <?php
+            } ?>
             <ul class="page-header__features">
                 <li>Generate Demand</li>
                 <li>Optimize Conversions</li>

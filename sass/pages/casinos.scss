@@ -214,12 +214,24 @@
         flex: 0 0 span(7 of 12);
         max-width: span(7 of 12);
       }
+
+      figure {
+        display: none;
+        @include breakpoint($xs) {
+          display: block;
+        }
+      }
+
     }
 
   }
 
   .testimonial {
     max-width: 724px;
+    margin-bottom: 80px;
+    @include breakpoint($xs) {
+      margin-bottom: 0;
+    }
     @include breakpoint($lg) {
       max-width: 485px;
     }
@@ -332,9 +344,11 @@
   }
 
   .team {
-    margin-top: -450px;
     color: #fff;
     background-image: url('images/background-blue-3.png');
+    @include breakpoint($xs) {
+      margin-top: -450px;
+    }
     @include breakpoint($sm) {
       margin-top: -500px;
     }
@@ -343,8 +357,11 @@
     }
 
     .row {
-      padding-top: 650px;
+      padding-top: 300px;
       padding-bottom: 88px;
+      @include breakpoint($xs) {
+        padding-top: 650px;
+      }
       @include breakpoint($sm) {
         padding-top: 550px;
       }

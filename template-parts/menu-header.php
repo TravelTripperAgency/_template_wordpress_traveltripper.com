@@ -72,7 +72,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="<?php echo get_site_url(); ?>/who-we-serve/independent/">
+                    <a href="<?php echo get_site_url(); ?>/who-we-serve/independents/">
                         <div class="sub-menu__icon">
                             <div class="background-icon independent-hotels"></div>
                         </div>

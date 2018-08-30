@@ -171,20 +171,30 @@
         max-width: 50%;
         margin-left: auto;
       }
+
+      figure {
+        display: none;
+        @include breakpoint($xs) {
+          display: block;
+        }
+      }
+
     }
 
     .showcase {
-      position: absolute;
-      top: 50%;
       display: flex;
       flex-direction: column;
       max-width: 90%;
+      margin-bottom: 80px;
       padding: 24px;
       background-color: #fff;
       box-shadow: 0 0 29px rgba(0, 0, 0, .3);
-      transform: translateY(-50%);
       @include breakpoint($xs) {
+        position: absolute;
+        top: 50%;
         flex-direction: row;
+        margin-bottom: 0;
+        transform: translateY(-50%);
       }
       @include breakpoint($sm) {
         max-width: 756px;

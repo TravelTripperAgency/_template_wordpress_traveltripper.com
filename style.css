@@ -1305,6 +1305,7 @@ img {
 .page-template-digital-marketing .page-header .page-header__feature img,
 .page-template-management-companies .page-header .page-header__feature img {
   align-self: flex-start;
+  width: 100%;
   margin-bottom: 24px;
 }
 
@@ -3140,22 +3141,32 @@ img {
   }
 }
 
+.home .intro figure {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .home .intro figure {
+    display: block;
+  }
+}
+
 .home .intro .showcase {
-  position: absolute;
-  top: 50%;
   display: flex;
   flex-direction: column;
   max-width: 90%;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 0 29px rgba(0, 0, 0, 0.3);
-  transform: translateY(-50%);
 }
 
 @media (min-width: 600px) {
   .home .intro .showcase {
+    position: absolute;
+    top: 50%;
     flex-direction: row;
     padding-right: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -3273,7 +3284,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 1550px;
+  min-height: 1700px;
   margin-top: -250px;
   margin-bottom: -80px;
   color: #fff;
@@ -3344,9 +3355,16 @@ img {
 }
 
 .home .services .section-title {
+  padding-top: 152px;
   padding-right: 16px;
   padding-left: 16px;
   text-align: center;
+}
+
+@media (min-width: 900px) {
+  .home .services .section-title {
+    padding-top: 0;
+  }
 }
 
 .home .services .services__title {
@@ -5515,22 +5533,32 @@ img {
   }
 }
 
+.page-template-reztrip .conversion .col-left figure {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .page-template-reztrip .conversion .col-left figure {
+    display: block;
+  }
+}
+
 .page-template-reztrip .conversion .showcase {
-  position: absolute;
-  top: 50%;
   display: flex;
   flex-direction: column;
   max-width: 90%;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 0 29px rgba(0, 0, 0, 0.3);
-  transform: translateY(-50%);
 }
 
 @media (min-width: 600px) {
   .page-template-reztrip .conversion .showcase {
+    position: absolute;
+    top: 50%;
     flex-direction: row;
     padding-right: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -6326,22 +6354,34 @@ img {
   }
 }
 
+.page-template-ttweb .conversion .col-left figure {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .page-template-ttweb .conversion .col-left figure {
+    display: block;
+  }
+}
+
 .page-template-ttweb .conversion .showcase {
-  position: absolute;
-  top: 50%;
   display: flex;
   flex-direction: column;
   max-width: 90%;
+  margin-bottom: 80px;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 0 29px rgba(0, 0, 0, 0.3);
-  transform: translateY(-50%);
 }
 
 @media (min-width: 600px) {
   .page-template-ttweb .conversion .showcase {
+    position: absolute;
+    top: 50%;
     flex-direction: row;
+    margin-bottom: 0;
     padding-right: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -7270,6 +7310,16 @@ img {
   }
 }
 
+.page-template-independents .integrations .col-left figure {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .page-template-independents .integrations .col-left figure {
+    display: block;
+  }
+}
+
 .page-template-independents .integrations .col-right {
   position: relative;
   width: 100%;
@@ -7364,21 +7414,23 @@ img {
 }
 
 .page-template-independents .integrations .showcase {
-  position: absolute;
-  top: 50%;
   display: flex;
   flex-direction: column;
   max-width: 90%;
+  margin-bottom: 80px;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 0 29px rgba(0, 0, 0, 0.3);
-  transform: translateY(-50%);
 }
 
 @media (min-width: 600px) {
   .page-template-independents .integrations .showcase {
+    position: absolute;
+    top: 50%;
     flex-direction: row;
+    margin-bottom: 0;
     padding-right: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -7853,8 +7905,25 @@ img {
   }
 }
 
+.page-template-casinos .testimonial-showcase .col-right figure {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .page-template-casinos .testimonial-showcase .col-right figure {
+    display: block;
+  }
+}
+
 .page-template-casinos .testimonial {
   max-width: 724px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 600px) {
+  .page-template-casinos .testimonial {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -7999,9 +8068,14 @@ img {
 }
 
 .page-template-casinos .team {
-  margin-top: -450px;
   color: #fff;
   background-image: url("images/background-blue-3.png");
+}
+
+@media (min-width: 600px) {
+  .page-template-casinos .team {
+    margin-top: -450px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -8017,8 +8091,14 @@ img {
 }
 
 .page-template-casinos .team .row {
-  padding-top: 650px;
+  padding-top: 300px;
   padding-bottom: 88px;
+}
+
+@media (min-width: 600px) {
+  .page-template-casinos .team .row {
+    padding-top: 650px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -8490,22 +8570,34 @@ img {
   }
 }
 
+.page-template-digital-marketing .conversion .col-left figure {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .page-template-digital-marketing .conversion .col-left figure {
+    display: block;
+  }
+}
+
 .page-template-digital-marketing .conversion .showcase {
-  position: absolute;
-  top: 50%;
   display: flex;
   flex-direction: column;
   max-width: 90%;
+  margin-bottom: 80px;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 0 29px rgba(0, 0, 0, 0.3);
-  transform: translateY(-50%);
 }
 
 @media (min-width: 600px) {
   .page-template-digital-marketing .conversion .showcase {
+    position: absolute;
+    top: 50%;
     flex-direction: row;
+    margin-bottom: 0;
     padding-right: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -8964,21 +9056,33 @@ img {
   }
 }
 
+.page-template-management-companies .conversions .col-right figure {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .page-template-management-companies .conversions .col-right figure {
+    display: block;
+  }
+}
+
 .page-template-management-companies .conversions .showcase {
-  position: absolute;
-  top: 50%;
   display: flex;
   flex-direction: column;
   max-width: 90%;
+  margin-bottom: 80px;
   padding: 24px;
   background-color: #fff;
   box-shadow: 0 0 29px rgba(0, 0, 0, 0.3);
-  transform: translateY(-50%);
 }
 
 @media (min-width: 600px) {
   .page-template-management-companies .conversions .showcase {
+    position: absolute;
+    top: 50%;
     flex-direction: row;
+    margin-bottom: 0;
+    transform: translateY(-50%);
   }
 }
 

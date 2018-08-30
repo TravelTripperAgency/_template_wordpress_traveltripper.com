@@ -12,6 +12,7 @@ get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
     <div class="wrap row">
+
         <div class="page-header__title-area">
             <h1 class="page-header__title"><?php the_title(); ?></h1>
             <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
@@ -19,11 +20,17 @@ get_header(); ?>
                 <a class="btn btn-primary" href="#">learn more</a>
             </div>
         </div>
+
         <div class="page-header__feature"> <?php
+
             if ( wp_is_mobile() ) { ?>
+
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image"> <?php
+
             } else { ?>
+
                 <img class="d-md-none" src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image">
+
                 <div class="video-container">
                     <div class="laptop">
                         <video class="d-sm-block" muted autoplay>
@@ -41,12 +48,15 @@ get_header(); ?>
                     </div>
                 </div> <?php
             } ?>
+
             <ul class="page-header__features">
                 <li>Generate Demand</li>
                 <li>Optimize Conversions</li>
                 <li>Maximize Revenue</li>
             </ul>
+
         </div>
+
     </div>
 </section>
 

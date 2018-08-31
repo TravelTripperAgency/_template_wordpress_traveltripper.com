@@ -24,6 +24,12 @@
   justify-content: flex-end !important;
 }
 
+.justify-content-between {
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
 .d-none {
   display: none !important;
 }

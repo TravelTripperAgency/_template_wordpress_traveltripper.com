@@ -4,6 +4,7 @@
 .site-header {
   position: absolute;
   // top: 0;
+  z-index: 1;
   width: 100%;
 
   .single-post &,
@@ -50,7 +51,10 @@
   }
 
   .site-header__logo {
+    position: relative;
+    z-index: 1;
     display: inline;
+    width: 100%;
     // flex-grow: 1;
     // flex-basis: 0;
     max-width: calc(32px + 170px);
@@ -128,7 +132,6 @@
 
 .page-header {
   position: relative;
-  z-index: -2;
   padding-top: 132px;
   color: #fff;
   background-image: url('images/background-header.png');
@@ -247,6 +250,10 @@
       }
     }
 
+    .page-template-contact & {
+      padding-bottom: 16px;
+    }
+
   }
 
   .page-header__title {
@@ -290,6 +297,10 @@
     @include breakpoint($sm) {
       flex-direction: row;
       justify-content: flex-end;
+    }
+
+    @supports (-ms-ime-align: auto) {
+      overflow: hidden;
     }
 
     .home & {

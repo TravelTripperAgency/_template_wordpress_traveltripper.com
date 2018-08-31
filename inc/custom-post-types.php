@@ -54,6 +54,12 @@ function resources_post_type() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
+        'rewrite'               => array(
+    		'slug'                  => 'resources',
+    		'with_front'            => false,
+    		'pages'                 => true,
+    		'feeds'                 => true,
+    	),
 		'capability_type'       => 'post',
 	) );
 }
@@ -106,6 +112,12 @@ function news_post_type() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
+        'rewrite'               => array(
+    		'slug'                  => 'news-and-press',
+    		'with_front'            => false,
+    		'pages'                 => true,
+    		'feeds'                 => true,
+    	),
 		'capability_type'       => 'post',
 	) );
 }
@@ -155,6 +167,12 @@ function events_post_type() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
+        'rewrite'               => array(
+    		'slug'                  => 'events',
+    		'with_front'            => false,
+    		'pages'                 => true,
+    		'feeds'                 => true,
+    	),
 		'capability_type'       => 'post',
 	) );
 

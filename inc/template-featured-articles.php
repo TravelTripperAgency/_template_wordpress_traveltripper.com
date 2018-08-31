@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom loop for Featured Blog Articles
+ * Custom loop for the featured articles at the top of the blog page.
  *
  * @package Travel_Tripper
  */

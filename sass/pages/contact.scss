@@ -1,5 +1,6 @@
 .contact-details {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 72px;
   margin-bottom: 80px;
@@ -7,6 +8,10 @@
   .email {
     position: relative;
     width: 100%;
+    @include breakpoint($sm) {
+      flex: 0 0 span(5 of 12);
+      max-width: span(5 of 12);
+    }
     @include breakpoint($md) {
       flex: 0 0 span(1 of 2);
       max-width: span(1 of 2);
@@ -33,6 +38,10 @@
   .form {
     position: relative;
     width: 100%;
+    @include breakpoint($sm) {
+      flex: 0 0 span(7 of 12);
+      max-width: span(7 of 12);
+    }
     @include breakpoint($md) {
       flex: 0 0 span(1 of 2);
       max-width: span(1 of 2);
@@ -44,6 +53,96 @@
       font-weight: 700;
       line-height: 32px;
     }
+  }
+
+  .form-label {
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .row input:first-child {
+    margin-bottom: 32px;
+    @include breakpoint($md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-textbox,
+  .form-textarea {
+    width: 100%;
+    padding: 6px 8px 10px;
+    background-color: #fff;
+    border: 1px solid #9b9b9b;
+    border-radius: 3px;
+  }
+
+  .form-textbox {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #526173;
+      opacity: .25;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #526173;
+      opacity: .25;
+    }
+
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: #526173;
+      opacity: .25;
+    }
+
+  }
+
+  .form-textarea {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .form-dropdown-wrap {
+    position: relative;
+    width: 100%;
+
+    &:after {
+      position: absolute;
+      top: 8px;
+      right: 11px;
+      width: 12px;
+      content: url('images/icons/icon-form-dropdown.svg');
+    }
+
+  }
+
+  .form-dropdown {
+    width: 100%;
+    padding: 7px 8px 9px;
+    font-family: $source-sans;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #9b9b9b;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 3px;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+  }
+
+  .form-submit-button {
+    float: right;
+    font-family: $recta;
+    font-size: 18px;
+    font-weight: 700;
   }
 
 }

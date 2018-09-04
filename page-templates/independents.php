@@ -169,63 +169,14 @@ get_header(); ?>
 
     </div>
 
-</section>
-
-<section class="express-suite row wrap">
-
-  <div class="col-left">
-    <h2 class="section-title">Running a guesthouse, B&B, or vacation rental? </h2>
-    <p>Learn more about Express Suite, our all-in-one website and booking solution ideal for small- and medium-sized accommodations.</p>
-    <a href="#" class="btn btn-secondary-white">learn more</a>
-  </div>
-
-  <div class="col-right">
-    <img srcset="<?php echo get_template_directory_uri(); ?>/images/independent-express-suite.png, <?php echo get_template_directory_uri(); ?>/images/independent-express-suite@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/independent-express-suite@2x.png" alt="">
-  </div>
-
 </section> <?php
 
 get_template_part( 'template-parts/content', 'pre-footer-links' );
 
 get_template_part( 'template-parts/content', 'internal-ads' );
 
-get_template_part( 'inc/template', 'events' ); ?>
+get_template_part( 'template-parts/query', 'events' );
 
-<section class="featured-resources">
-  <div class="wrap">
-
-    <div class="featured-resources__title"><h3>Resources for Independent Hotels</h3></div>
-
-    <div class="featured-resources__wrap">
-
-      <div class="resource">
-        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/437x255.png" alt="437x255"></a>
-        <p><a href="#">6 hotel booking trends we're watching in 2018</a></p>
-      </div>
-
-      <div class="resource">
-        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/437x255.png" alt="437x255"></a>
-        <p><a href="#">How to encourage guests to write hotel reviews on TripAdvisor, Yelp, Google and Facebook</a></p>
-      </div>
-
-      <div class="resource">
-        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/437x255.png" alt="437x255"></a>
-        <p><a href="#">5 ways hotels can use behavioral economics to improve conversion rates</a></p>
-      </div>
-
-      <div class="resource">
-        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/437x255.png" alt="437x255"></a>
-        <p><a href="#">The importance of data transparency in hotel marketing</a></p>
-      </div>
-
-    </div>
-
-    <div class="btn-wrap">
-      <a class="btn btn-primary-white" href="#">view all</a>
-    </div>
-
-  </div>
-
-</section> <?php
+get_template_part( 'template-parts/query', 'featured-resources' );
 
 get_footer();

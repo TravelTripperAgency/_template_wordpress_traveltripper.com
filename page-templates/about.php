@@ -135,7 +135,7 @@ get_header(); ?>
 
 </section> <?php
 
-get_template_part( 'inc/template', 'events' );
+get_template_part( 'template-parts/query', 'events' );
 
 get_template_part( 'template-parts/content', 'pre-footer-links' );
 

@@ -291,12 +291,34 @@
 
 .widget_categories {
 
+  .dropdown-wrap {
+    position: relative;
+    width: 100%;
+
+    &:after {
+      position: absolute;
+      top: 6px;
+      right: calc(20% + 11px);
+      width: 12px;
+      content: url('images/icons/icon-dropdown.svg');
+    }
+
+  }
+
   select {
     width: 80%;
     padding: 7px 8px;
     background-color: #fff;
     border: 1px solid #9b9b9b;
     border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+
   }
 
 }

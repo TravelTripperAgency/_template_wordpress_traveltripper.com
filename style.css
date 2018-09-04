@@ -669,12 +669,32 @@ blockquote {
   color: #3a75a2;
 }
 
+.widget_categories .dropdown-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.widget_categories .dropdown-wrap:after {
+  position: absolute;
+  top: 6px;
+  right: calc(20% + 11px);
+  width: 12px;
+  content: url("images/icons/icon-dropdown.svg");
+}
+
 .widget_categories select {
   width: 80%;
   padding: 7px 8px;
   background-color: #fff;
   border: 1px solid #9b9b9b;
   border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.widget_categories select::-ms-expand {
+  display: none;
 }
 
 .owl-carousel {

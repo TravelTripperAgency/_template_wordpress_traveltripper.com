@@ -160,8 +160,6 @@ function traveltripper_scripts() {
 
     wp_enqueue_script( 'traveltripper-javascript', get_template_directory_uri() . '/js/main.min.js', array(), null, true);
 
-    wp_enqueue_script( 'mobile-detect', get_template_directory_uri() . '/js/mobile.js', array(), null, true);
-
 	// wp_enqueue_script( 'traveltripper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'traveltripper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

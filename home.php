@@ -30,9 +30,9 @@ get_header(); ?>
 
     <main class="content"> <?php
 
-        // Call Featured Articles (from /inc directory)
+        // Call Featured Articles (from /template-parts directory)
         if ( !is_paged() ) {
-            get_template_part( 'inc/template', 'featured-articles' );
+            get_template_part( 'template-parts/query', 'featured-articles' );
         } ?>
 
         <div class="latest-articles__title"><h2>The Latest</h2></div> <?php

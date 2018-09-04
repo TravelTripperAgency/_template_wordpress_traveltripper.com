@@ -13,7 +13,7 @@ $query_resource_args = array(
 );
 $query_resource = new WP_Query( $query_resource_args );
 
-if ( $query_resource->have_posts() ) { ?>
+if ( isset( $featured_category ) && $query_resource->have_posts() ) { ?>
 
     <section class="featured-resources">
         <div class="wrap">

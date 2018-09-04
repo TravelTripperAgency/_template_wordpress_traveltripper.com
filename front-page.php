@@ -195,8 +195,8 @@ get_header(); ?>
 
 get_template_part( 'template-parts/content', 'internal-ads' );
 
-get_template_part( 'inc/template', 'events' );
+get_template_part( 'template-parts/query', 'events' );
 
-get_template_part( 'inc/template', 'featured-resources' );
+get_template_part( 'template-parts/query', 'featured-resources' );
 
 get_footer();

@@ -123,7 +123,7 @@ function my_theme_archive_title( $title ) {
 /**
  * Remove paragraph tags from category_description().
  */
-remove_filter('term_description','wpautop');
+remove_filter( 'term_description', 'wpautop' );
 
 
 /**

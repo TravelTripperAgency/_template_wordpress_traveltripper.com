@@ -12,7 +12,8 @@ get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
     <div class="wrap row">
-        <div class="page-header__title-area">
+
+        <div class="page-header__title-area<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>">
             <h1 class="page-header__title"><?php the_title(); ?></h1>
             <p class="page-header__subtitle"><?php the_field( 'header_subtitle' ); ?></p>
             <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
@@ -20,7 +21,8 @@ get_header(); ?>
                 <a class="btn btn-primary" href="#">request a demo</a>
             </div>
         </div>
-        <div class="page-header__feature"> <?php
+
+        <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
             if ( has_post_thumbnail() ) {
                 the_post_thumbnail();
             } else { ?>
@@ -32,6 +34,7 @@ get_header(); ?>
                 <li>Full-service Distribution Solution</li>
             </ul>
         </div>
+
     </div>
 </section>
 
@@ -137,7 +140,7 @@ get_header(); ?>
 
 <section class="conversion row">
 
-  <div class="col-right wrap">
+  <div class="col-right wrap<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
     <div class="testimonial">
       <p class="quote">RezTrip is by far the best online booking engine available for hotels right now. Our direct bookings instantly increased once we launched RezTrip across our portfolio of 18 hotels.</p>
       <p class="cite">MATTHEW THOMAS – Director, Meriton Group</p>
@@ -146,11 +149,11 @@ get_header(); ?>
 
   <div class="col-left">
 
-    <figure>
+    <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>>
       <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-conversion-ipad.png, <?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-conversion-ipad@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-conversion-ipad@2x.png" alt="Conversion Rate iPad">
     </figure>
 
-    <div class="showcase">
+    <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
       <div class="showcase__left">
         <p class="showcase__increase">2X<span>+</span></p>
         <p class="showcase__revenue">conversion rate in four months</p>
@@ -271,7 +274,7 @@ get_header(); ?>
 
 get_template_part( 'template-parts/query', 'events' );
 
-get_template_part( 'template-parts/content', 'internal-ads' );
+get_template_part( 'template-parts/content', 'internal-ad' );
 
 get_template_part( 'template-parts/query', 'featured-resources' );
 

@@ -35,7 +35,9 @@ if ( ! is_active_sidebar( 'sidebar-primary' ) ) {
             }
             dropdown.onchange = onCatChange;
         </script>
-    </section>
+    </section> <?php
+
+    get_template_part( 'template-parts/query', 'popular-posts' ); ?>
 
 </aside>
 

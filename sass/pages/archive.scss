@@ -59,6 +59,7 @@
   }
 
   .featured-articles__item {
+    margin-bottom: 32px;
     @include breakpoint($sm) {
       flex: 0 0 span(1 of 2);
       max-width: span(1 of 2);
@@ -67,12 +68,12 @@
       margin-bottom: 54px;
     }
 
-    &.last {
-      margin-bottom: 32px;
-      @include breakpoint($sm) {
-        margin-bottom: 0;
-      }
-    }
+    // &.last {
+    //   margin-bottom: 32px;
+    //   @include breakpoint($sm) {
+    //     margin-bottom: 0;
+    //   }
+    // }
 
     &:nth-child(n+4) {
       @include breakpoint($lg) {
@@ -108,7 +109,8 @@
 
   }
 
-  .post {
+  .post,
+  .resources {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

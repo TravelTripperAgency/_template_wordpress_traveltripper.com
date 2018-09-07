@@ -1,5 +1,12 @@
 jQuery(document).ready(function() {
 
+  //* Animation scroll trigger
+  wow = new WOW({
+    mobile: false,
+    live: false
+  });
+  wow.init();
+
   //* Add toggle button
   $('.site-header__nav ul').append('<button class="menu-toggle-open"></button>');
 

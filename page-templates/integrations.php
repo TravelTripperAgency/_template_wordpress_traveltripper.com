@@ -137,6 +137,6 @@ get_header(); ?>
 
 get_template_part( 'template-parts/content', 'pre-footer-links' );
 
-get_template_part( 'template-parts/content', 'internal-ads' );
+get_template_part( 'template-parts/content', 'internal-ad' );
 
 get_footer();

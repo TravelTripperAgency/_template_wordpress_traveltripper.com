@@ -8,6 +8,7 @@
   width: 100%;
 
   .single-post &,
+  .single-resources &,
   .page-template-default &,
   .error404 &,
   .author &,
@@ -40,6 +41,7 @@
     margin-top: 24px;
 
     .single-post &,
+    .single-resources &,
     .page-template-default &,
     .error404 &,
     .author &,
@@ -151,11 +153,12 @@
   }
 
   .single-post &,
+  .single-resources &,
   .page-template-default &,
   .author &,
   .archive &,
   .search & {
-    padding-top: 101px;
+    padding-top: 94px;
     background-color: $background-white;
     background-image: none;
   }
@@ -417,6 +420,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    padding-left: 0;
     list-style: none;
 
     .page-template-about & {
@@ -452,6 +456,14 @@
           display: inline;
           margin-left: 64px;
         }
+
+        &:first-child {
+          margin-left: 28px;
+          @include breakpoint($sm) {
+            margin-left: 28px;
+          }
+        }
+
       }
 
       .home &,
@@ -497,6 +509,7 @@
     }
 
     .single-post &,
+    .single-resources &,
     .page-template-default &,
     .author &,
     .archive &,
@@ -512,6 +525,7 @@
       }
 
       .single-post &,
+      .single-resources &,
       .page-template-default &,
       .author &,
       .archive &,

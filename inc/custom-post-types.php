@@ -6,7 +6,7 @@
  */
 
 // Register Resources Post Type
-add_action( 'init', 'resources_post_type', 0 );
+add_action( 'init', 'resources_post_type', 10 );
 function resources_post_type() {
 	register_post_type( 'resources', array(
 		'label'                 => __( 'Resource', 'traveltripper' ),
@@ -21,7 +21,7 @@ function resources_post_type() {
     		'parent_item_colon'     => __( 'Parent Resource:', 'traveltripper' ),
     		'all_items'             => __( 'All Resources', 'traveltripper' ),
     		'add_new_item'          => __( 'Add New Resource', 'traveltripper' ),
-    		'add_new'               => __( 'Add New', 'traveltripper' ),
+    		'add_new'               => __( 'Add New Resource', 'traveltripper' ),
     		'new_item'              => __( 'New Resource', 'traveltripper' ),
     		'edit_item'             => __( 'Edit Resource', 'traveltripper' ),
     		'update_item'           => __( 'Update Resource', 'traveltripper' ),
@@ -41,7 +41,6 @@ function resources_post_type() {
     		'filter_items_list'     => __( 'Filter Resources list', 'traveltripper' ),
     	),
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -65,7 +64,7 @@ function resources_post_type() {
 }
 
 // Register News Post Type
-add_action( 'init', 'news_post_type', 0 );
+add_action( 'init', 'news_post_type', 10 );
 function news_post_type() {
 	register_post_type( 'news-and-press', array(
 		'label'                 => __( 'News', 'traveltripper' ),
@@ -123,7 +122,7 @@ function news_post_type() {
 }
 
 // Register Events Post Type
-add_action( 'init', 'events_post_type', 0 );
+add_action( 'init', 'events_post_type', 10 );
 function events_post_type() {
 
 	register_post_type( 'events', array(

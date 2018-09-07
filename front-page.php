@@ -13,7 +13,7 @@ get_header(); ?>
 <section id="skip-link-content" class="page-header">
     <div class="wrap row">
 
-        <div class="page-header__title-area">
+        <div class="page-header__title-area<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>">
             <h1 class="page-header__title"><?php the_title(); ?></h1>
             <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
             <div class="btn-holder">
@@ -21,7 +21,7 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="page-header__feature"> <?php
+        <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
 
             if ( wp_is_mobile() ) { ?>
 
@@ -65,11 +65,11 @@ get_header(); ?>
 
     <div class="col-right">
       <div class="col-right__wrap">
-        <div class="col-right__col-left">
+        <div class="col-right__col-left<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInUp'; } ?>">
           <h2 class="section-title">Dominate from search to stay.</h2>
           <p>Travel Tripper's powerful <a href="#">hotel booking engine</a>, <a href="#">website services</a>, and <a href="#">digital marketing solutions</a> help you to maximize revenue from your direct channel.</p>
         </div>
-        <div class="col-right__col-right">
+        <div class="col-right__col-right<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
           <div class="testimonial">
             <p class="quote">"This software is the best software out there when you want to fight OTA battle."</p>
             <p class="cite">- Hotel Tech Report</p>
@@ -80,11 +80,11 @@ get_header(); ?>
 
     <div class="col-left">
 
-      <figure>
+      <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>>
         <img srcset="<?php echo get_template_directory_uri(); ?>/images/home-showcase.png, <?php echo get_template_directory_uri(); ?>/images/home-showcase@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/home-showcase@2x.png" alt="Travel Tripper Website Example">
       </figure>
 
-      <div class="showcase">
+      <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
         <div class="showcase__left">
           <p class="showcase__increase"><span>+</span>84%</p>
           <p class="showcase__revenue">direct website revenue</p>
@@ -193,7 +193,7 @@ get_header(); ?>
 
 </section> <?php
 
-get_template_part( 'template-parts/content', 'internal-ads' );
+get_template_part( 'template-parts/content', 'internal-ad' );
 
 get_template_part( 'template-parts/query', 'events' );
 

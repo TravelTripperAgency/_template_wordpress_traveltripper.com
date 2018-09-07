@@ -12,14 +12,14 @@ get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
     <div class="wrap row">
-        <div class="page-header__title-area">
+        <div class="page-header__title-area<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>">
             <h1 class="page-header__title"><?php the_title(); ?></h1>
             <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
             <div class="btn-holder">
                 <a class="btn btn-primary" href="#">request a demo</a>
             </div>
         </div>
-        <div class="page-header__feature"> <?php
+        <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
             if ( has_post_thumbnail() ) {
                 the_post_thumbnail();
             } else { ?>
@@ -114,7 +114,7 @@ get_header(); ?>
 
 </section>
 
-<section class="testimonials row">
+<section class="testimonials row<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
   <div class="col-left">
     <div class="testimonial">
       <p class="quote">The platform is powerful & continuously evolving. Ability to work around flexible smart policies, complex offers, geo-targeting functionality, and response time around support as needed remain key differentiators.</p>
@@ -126,11 +126,11 @@ get_header(); ?>
 <section class="conversions">
   <div class="col-right">
 
-    <figure>
+    <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInRight"'; } ?>>
       <img srcset="<?php echo get_template_directory_uri(); ?>/images/management-companies-showcase.png, <?php echo get_template_directory_uri(); ?>/images/management-companies-showcase@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/management-companies-showcase@2x.png" alt="StayWell iPad">
     </figure>
 
-    <div class="showcase">
+    <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>" data-wow-delay=".5s">
       <div class="showcase__left">
         <p>Since switching to Travel Tripper in 2016, Staywell Hotel has experienced consistent increases in rooms, nights, and ADR across all properties.</p>
       </div>
@@ -167,28 +167,11 @@ get_header(); ?>
     </div>
   </div>
 
-</section>
-
-<section class="express-suite row wrap">
-
-    <div class="col-right">
-      <h2 class="section-title">Need a vanity site for your hotel brand?</h2>
-      <p>Learn more about Express Suite, our cost-effective website and booking solution perfect for simple brand sites.</p>
-      <a href="#" class="btn btn-primary-white">learn more</a>
-    </div>
-
-    <div class="col-left">
-      <figure>
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-ttweb-express-suite.png, <?php echo get_template_directory_uri(); ?>/images/solutions-ttweb-express-suite@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-ttweb-express-suite@2x.png" alt="Express Suite Example">
-      </figure>
-    </div>
-
-  </div>
 </section> <?php
 
 get_template_part( 'template-parts/content', 'pre-footer-links' );
 
-get_template_part( 'template-parts/content', 'internal-ads' );
+get_template_part( 'template-parts/content', 'internal-ad' );
 
 get_template_part( 'template-parts/query', 'events' );
 

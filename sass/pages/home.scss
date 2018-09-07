@@ -143,6 +143,7 @@
       @include breakpoint($md) {
         flex: 0 0 span(7 of 12);
         max-width: span(7 of 12);
+        // margin-top: 200px;
       }
       @include breakpoint($lg) {
         flex: 0 0 span(7 of 12, $double-gutters);

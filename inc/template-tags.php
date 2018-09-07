@@ -49,7 +49,7 @@ if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
 	 */
 	function traveltripper_entry_footer() {
 
-		if ( 'post' === get_post_type() ) { ?>
+		if ( get_post_type() === 'post' ) { ?>
 
             <section class="widget widget-author">
                 <a class="img-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><img src="<?php echo get_avatar_url(get_the_author_meta( 'ID' ), array('size'=>86)); ?>" alt="<?php the_author(); ?>"></a>
@@ -72,6 +72,21 @@ if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
                   /* translators: 1: list of tags. */
                   printf( '<span class="entry-tags">' . esc_html__( 'Tags: %1$s', 'traveltripper' ) . '</span>', $tags_list ); // WPCS: XSS OK.
               } ?>
+
+            </p> <?php
+
+		}
+
+		if ( get_post_type() === 'resources' ) { ?>
+
+            <p class="entry-meta"> <?php
+
+                $tags_list = get_the_term_list( '', 'resource_tag', esc_html_x( ' ', 'list item separator', 'traveltripper' ) );
+
+                if ( $tags_list ) {
+                    /* translators: 1: list of tags. */
+                    printf( '<span class="entry-tags">' . esc_html__( 'Tags: %1$s', 'traveltripper' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+                } ?>
 
             </p> <?php
 

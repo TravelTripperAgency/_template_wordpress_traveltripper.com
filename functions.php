@@ -91,6 +91,7 @@ if ( ! function_exists( 'traveltripper_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'traveltripper_setup' );
 
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -105,6 +106,7 @@ function traveltripper_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'traveltripper_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'traveltripper_content_width', 0 );
+
 
 /**
  * Register widget areas.
@@ -134,6 +136,7 @@ function traveltripper_widgets_init() {
 	// ) );
 }
 
+
 /**
  * Allow PHP in the Text widget.
  */
@@ -147,6 +150,7 @@ function execute_php( $html ) {
     }
     return $html;
 }
+
 
 /**
  * Enqueue scripts and styles.
@@ -169,6 +173,16 @@ function traveltripper_scripts() {
 	}
 }
 
+
+/**
+ * Hide ACF Custom Menu from non-developers
+ */
+add_filter( 'acf/settings/show_admin', 'tt_acf_show_admin' );
+function tt_acf_show_admin( $show ) {
+    if ( get_user_by( 'email', 'brad@traveltripper.com' ) || get_user_by( 'email', 'jburkhard@traveltripper.com' ) || get_user_by( 'email', 'not@relevent.com' ) ) {
+        return true;
+    }
+}
 
 /**
  * Implement the Custom Header feature.
@@ -198,6 +212,12 @@ require get_template_directory() . '/inc/customizer.php';
  * Custom Post Types
  */
 require get_template_directory() . '/inc/custom-post-types.php';
+
+
+/**
+ * Custom Taxonomies
+ */
+require get_template_directory() . '/inc/custom-taxonomies.php';
 
 
 /**

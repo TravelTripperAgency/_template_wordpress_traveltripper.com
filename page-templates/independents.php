@@ -12,14 +12,14 @@ get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
     <div class="wrap row">
-        <div class="page-header__title-area">
+        <div class="page-header__title-area<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>">
             <h1 class="page-header__title"><?php the_title(); ?></h1>
             <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
             <div class="btn-holder">
                 <a class="btn btn-primary" href="#">request a demo</a>
             </div>
         </div>
-        <div class="page-header__feature"> <?php
+        <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
             if ( has_post_thumbnail() ) {
                 the_post_thumbnail();
             } else { ?>
@@ -118,11 +118,11 @@ get_header(); ?>
 
     <div class="col-left">
 
-      <figure>
+      <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>>
         <img srcset="<?php echo get_template_directory_uri(); ?>/images/independent-showcase.png, <?php echo get_template_directory_uri(); ?>/images/independent-showcase@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/independent-showcase@2x.png" alt="Travel Tripper Website Example">
       </figure>
 
-      <div class="showcase">
+      <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
         <div class="showcase__left">
           <p class="showcase__increase"><span>+</span>51%</p>
           <p class="showcase__revenue">increase in direct bookings</p>
@@ -173,7 +173,7 @@ get_header(); ?>
 
 get_template_part( 'template-parts/content', 'pre-footer-links' );
 
-get_template_part( 'template-parts/content', 'internal-ads' );
+get_template_part( 'template-parts/content', 'internal-ad' );
 
 get_template_part( 'template-parts/query', 'events' );
 

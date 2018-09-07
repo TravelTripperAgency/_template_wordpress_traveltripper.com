@@ -36,14 +36,9 @@ if ( $query_featured->have_posts() ) { ?>
                     <p class="entry-title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
                 </article> <?php
 
-        	endwhile; ?>
+        	endwhile;
 
-        <section class="widget widget-cta">
-          <p class="widget-cta__type">Webinar</p>
-          <h3 class="widget-title">Optimizing Distribution Channels for Independent Hotels</h3>
-          <div class="widget-cta__time"><p>Friday February 2, 2017 @ 10:30AM EST</p></div>
-          <a href="#" class="btn btn-primary">reserve your spot</a>
-        </section>
+        get_template_part( 'template-parts/content', 'internal-ad-blog' ); ?>
 
     </section> <?php
 

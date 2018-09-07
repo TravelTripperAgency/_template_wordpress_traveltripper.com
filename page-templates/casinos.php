@@ -12,14 +12,14 @@ get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
     <div class="wrap row">
-        <div class="page-header__title-area">
+        <div class="page-header__title-area<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>">
             <h1 class="page-header__title"><?php the_title(); ?></h1>
             <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
             <div class="btn-holder">
                 <a class="btn btn-primary" href="#">request a demo</a>
             </div>
         </div>
-        <div class="page-header__feature"> <?php
+        <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
             if ( has_post_thumbnail() ) {
                 the_post_thumbnail();
             } else { ?>
@@ -114,7 +114,7 @@ get_header(); ?>
 
 <section class="testimonial-showcase row">
 
-  <div class="col-left wrap">
+  <div class="col-left wrap<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
     <div class="testimonial">
       <p class="quote">Within a few days of launching with RezTrip Direct, <strong>our conversion rates nearly tripled</strong>, which was the most important metric we were looking to improve. We look forward to continuing our productive relationship with Travel Tripper.</p>
       <p class="cite">– BRIAN CHRISTENSEN, Corporate VP, Revenue Management & Distribution, Golden Entertainment</p>
@@ -123,11 +123,11 @@ get_header(); ?>
 
   <div class="col-right">
 
-    <figure>
+    <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInRight"'; } ?>>
       <img srcset="<?php echo get_template_directory_uri(); ?>/images/casinos-showcase.png, <?php echo get_template_directory_uri(); ?>/images/casinos-showcase@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/casinos-showcase@2x.png" alt="Travel Tripper Website Example">
     </figure>
 
-    <div class="showcase">
+    <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>" data-wow-delay=".5s">
       <div class="showcase__left">
         <p>El Dorado Resorts has consistently seen increases in conversion rates across its property websites since going live with RezTrip in 2016.</p>
       </div>
@@ -162,7 +162,7 @@ get_header(); ?>
 
 get_template_part( 'template-parts/content', 'pre-footer-links' );
 
-get_template_part( 'template-parts/content', 'internal-ads' );
+get_template_part( 'template-parts/content', 'internal-ad' );
 
 get_template_part( 'template-parts/query', 'events' );
 

@@ -10,6 +10,11 @@
     margin-top: 44px;
     order: 3;
   }
+  @include breakpoint($lg) {
+    flex: 0 0 span(1 of 4, $double-gutters);
+    flex-direction: column;
+    max-width: span(1 of 4, $double-gutters);
+  }
 
   .blog & {
     margin-bottom: 72px;
@@ -21,20 +26,35 @@
     }
   }
 
-  .single & {
-    display: none;
-    @include breakpoint($md) {
-      display: flex;
-      flex: 0 0 span(1 of 4);
-      flex-direction: column;
-      max-width: span(1 of 4);
-    }
-    @include breakpoint($lg) {
-      flex: 0 0 span(1 of 4, $double-gutters);
-      flex-direction: column;
-      max-width: span(1 of 4, $double-gutters);
-    }
-  }
+  // .single-post & {
+  //   display: none;
+  //   @include breakpoint($md) {
+  //     display: flex;
+  //     flex: 0 0 span(1 of 4);
+  //     flex-direction: column;
+  //     max-width: span(1 of 4);
+  //   }
+  //   @include breakpoint($lg) {
+  //     flex: 0 0 span(1 of 4, $double-gutters);
+  //     flex-direction: column;
+  //     max-width: span(1 of 4, $double-gutters);
+  //   }
+  // }
+
+  // .single-resources & {
+  //   display: none;
+  //   @include breakpoint($md) {
+  //     display: flex;
+  //     flex: 0 0 span(1 of 4);
+  //     flex-direction: column;
+  //     max-width: span(1 of 4);
+  //   }
+  //   @include breakpoint($lg) {
+  //     flex: 0 0 span(1 of 4, $double-gutters);
+  //     flex-direction: column;
+  //     max-width: span(1 of 4, $double-gutters);
+  //   }
+  // }
 
 }
 

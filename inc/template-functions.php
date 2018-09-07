@@ -52,7 +52,7 @@ function blog_meta_callback( $post ) {
     wp_nonce_field( basename( __FILE__ ), 'blog_nonce' );
     $blog_stored_meta = get_post_meta( $post->ID ); ?>
      <p>
-        <span class="blog-row-title"><?php _e( 'Check if this is a featured post:', 'traveltripper' )?></span>
+        <!-- <span class="blog-row-title"><?php // _e( 'Check if this is a featured post:', 'traveltripper' )?></span> -->
         <div class="blog-row-content">
             <label for="featured-checkbox">
                 <input type="checkbox" name="featured-checkbox" id="featured-checkbox" value="yes" <?php if ( isset ( $blog_stored_meta['featured-checkbox'] ) ) checked( $blog_stored_meta['featured-checkbox'][0], 'yes' ); ?>>
@@ -114,6 +114,8 @@ function my_theme_archive_title( $title ) {
         $title = 'Category<strong>: ' . single_cat_title( '', false ) . '</strong>';
     } elseif ( is_tag() ) {
         $title = 'Tag<strong>: ' . single_tag_title( '', false ) . '</strong>';
+    } elseif ( is_tax( 'resource_tag' ) ) {
+        $title = 'Tag<strong>: ' . single_tag_title( '', false ) . '</strong>';
     }
 
     return $title;
@@ -145,7 +147,6 @@ function custom_search_form( $form ) {
 }
 
 
-
 /**
  * Exclude featured posts from the main query
  *
@@ -153,26 +154,26 @@ function custom_search_form( $form ) {
  * We are leaving it here for reference should we need it.
  */
 // add_action( 'pre_get_posts', 'exclude_featured_post' );
-function exclude_featured_post( $query ) {
-    if ( $query->is_home() && $query->is_main_query()) {
-        if ( $query->is_main_query()) {
-            // In case there is already a meta query set somewhere else...
-            $meta_query = $query->get('meta_query')? : [];
-
-            // append this one.
-            $meta_query[] = [
-                'meta_query' => array(
-                    array(
-                        'key' => 'featured-checkbox',
-                        'value' => 'yes'
-                    )
-                )
-            ];
-
-            $query->set('meta_query', $meta_query);
-
-        }
-
-    }
-
-}
+// function exclude_featured_post( $query ) {
+//     if ( $query->is_home() && $query->is_main_query()) {
+//         if ( $query->is_main_query()) {
+//             // In case there is already a meta query set somewhere else...
+//             $meta_query = $query->get('meta_query')? : [];
+//
+//             // append this one.
+//             $meta_query[] = [
+//                 'meta_query' => array(
+//                     array(
+//                         'key' => 'featured-checkbox',
+//                         'value' => 'yes'
+//                     )
+//                 )
+//             ];
+//
+//             $query->set('meta_query', $meta_query);
+//
+//         }
+//
+//     }
+//
+// }

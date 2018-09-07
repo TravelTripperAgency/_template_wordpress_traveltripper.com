@@ -16,15 +16,23 @@ get_header(); ?>
             <div class="author-bio-wrap">
                 <p class="author-name"><?php the_author(); ?></p>
                 <p><?php the_author_meta( 'description' ); ?></p>
-            </div>
-            <div class="author-connect">
-                <p>Connect</p>
-                <div class="d-flex">
-                    <a href="<?php the_author_meta( 'googleplus' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/connect-google-plus.svg" alt="Google Plus Icon"></a>
-                    <a href="<?php the_author_meta( 'linkedin' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/connect-linkedin.svg" alt="LinkedIn Icon"></a>
-                    <a href="<?php the_author_meta( 'twitter' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/connect-twitter.svg" alt="Twitter Icon"></a>
-                </div>
-            </div>
+            </div> <?php
+            if ( get_the_author_meta( 'googleplus' ) || get_the_author_meta( 'linkedin' ) || get_the_author_meta( 'twitter' ) ) { ?>
+                <div class="author-connect">
+                    <p>Connect</p>
+                    <div class="d-flex"> <?php
+                        if ( get_the_author_meta( 'googleplus' ) ) { ?>
+                            <a href="<?php the_author_meta( 'googleplus' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/connect-google-plus.svg" alt="Google Plus Icon"></a> <?php
+                        }
+                        if ( get_the_author_meta( 'linkedin' ) ) { ?>
+                            <a href="<?php the_author_meta( 'linkedin' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/connect-linkedin.svg" alt="LinkedIn Icon"></a> <?php
+                        }
+                        if ( get_the_author_meta( 'twitter' ) ) { ?>
+                            <a href="https://twitter.com/<?php the_author_meta( 'twitter' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/connect-twitter.svg" alt="Twitter Icon"></a> <?php
+                        } ?>
+                    </div>
+                </div> <?php
+            } ?>
         </div>
     </div>
 </section>

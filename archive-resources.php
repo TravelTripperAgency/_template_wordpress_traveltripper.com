@@ -32,16 +32,27 @@ get_header(); ?>
         if ( have_posts() ) {
 
             // Start the Loop
-        	while ( have_posts() ) : the_post();
+        	while ( have_posts() ) : the_post(); ?>
 
-                // Get the first category
-                $categories = get_the_category();
-                $category = $categories[0]->cat_name; ?>
-
-                <article class="post">
-                    <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
-                    <p class="category"><?php echo $category; ?></p>
-                    <p class="post__title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
+                <article class="post"> <?php
+                    if ( has_post_thumbnail() ) {
+                        if ( get_field( 'resource_link' ) ) { ?>
+                            <a href="<?php esc_url( the_field( 'resource_link' ) ); ?>"><?php the_post_thumbnail(); ?></a> <?php
+                        } else { ?>
+                            <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a> <?php
+                        }
+                    } else {
+                        if ( get_field( 'resource_link' ) ) { ?>
+                            <a href="<?php esc_url( the_field( 'resource_link' ) ); ?>"><?php traveltripper_default_thumbnail(); ?></a> <?php
+                        } else { ?>
+                            <a href="<?php esc_url( the_permalink() ); ?>"><?php traveltripper_default_thumbnail(); ?></a> <?php
+                        }
+                    }
+                    if ( get_field( 'resource_link' ) ) { ?>
+                        <p class="post__title"><a href="<?php esc_url( the_field( 'resource_link' ) ); ?>"><?php the_title(); ?></a></p> <?php
+                    } else { ?>
+                        <p class="post__title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p> <?php
+                    } ?>
                 </article> <?php
 
             endwhile;

@@ -80,20 +80,23 @@ get_header(); ?>
 
 <section class="clients background-image">
 
-  <div class="wrap">
-    <h2 class="section-title">Trusted by top casino and gaming companies</h2>
-  </div>
+    <div class="wrap">
+        <h2 class="section-title"><?php the_field( 'slider_section_title' ); ?></h2>
+    </div> <?php
 
-  <div class="client-slider owl-carousel">
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-1.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-2.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-3.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-4.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-1.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-2.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-3.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-4.jpg');"></div>
-  </div>
+    if ( have_rows( 'slider_images' ) ) { ?>
+
+        <div class="owl-carousel client-slider"> <?php
+
+            while ( have_rows( 'slider_images' ) ) : the_row(); ?>
+
+                <div class="item background-image" style="background-image: url('<?php the_sub_field( 'slider_image' ); ?>');"></div> <?php
+
+            endwhile; ?>
+
+        </div> <?php
+
+    } ?>
 
 </section>
 

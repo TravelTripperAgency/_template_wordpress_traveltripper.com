@@ -105,17 +105,22 @@ get_header(); ?>
   </div>
 </section>
 
-<section class="clients">
-  <div class="owl-carousel client-slider">
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-1.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-2.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-3.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-4.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-1.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-2.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-3.jpg');"></div>
-    <div class="item background-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/client-4.jpg');"></div>
-  </div>
+<section class="clients"> <?php
+
+    if ( have_rows( 'slider_images' ) ) { ?>
+
+        <div class="owl-carousel client-slider"> <?php
+
+            while ( have_rows( 'slider_images' ) ) : the_row(); ?>
+
+                <div class="item background-image" style="background-image: url('<?php the_sub_field( 'slider_image' ); ?>');"></div> <?php
+
+            endwhile; ?>
+
+        </div> <?php
+
+    } ?>
+
 </section>
 
 <section class="awards">

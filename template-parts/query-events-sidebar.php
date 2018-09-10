@@ -16,10 +16,10 @@ $query_event = new WP_Query( $query_event_args );
 
 if ( $query_event->have_posts() ) { ?>
 
-    <section class="events">
+    <section class="widget widget-events events">
         <div class="wrap">
 
-            <div class="events__title"><h3>Upcoming Events</h3></div>
+            <div class="widget-title"><h3>Upcoming Events</h3></div>
 
             <div class="row"> <?php
 
@@ -28,13 +28,7 @@ if ( $query_event->have_posts() ) { ?>
                         if ( get_field( 'event_dates' ) ) { ?>
                             <p class="event__date"><?php the_field( 'event_dates' ); ?></p> <?php
                         } ?>
-                        <p class="event__title"><?php the_title(); ?></p> <?php
-                        if ( get_field( 'event_location' ) ) { ?>
-                            <p class="event__location"><?php the_field( 'event_location' ); ?></p> <?php
-                        }
-                        if ( get_field( 'event_time' ) ) { ?>
-                            <p class="event__time"><?php the_field( 'event_time' ); ?></p> <?php
-                        } ?>
+                        <p class="event__title"><?php the_title(); ?></p>
                     </div> <?php
                 endwhile; ?>
 

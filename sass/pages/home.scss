@@ -434,18 +434,12 @@
   .clients {
 
     .section-title {
-      padding-right: 16px;
-      padding-left: 16px;
-      text-align: center;
-    }
-
-    .clients__title {
       position: relative;
       margin-bottom: 32px;
+      padding-right: 16px;
       padding-bottom: 16px;
-      font-family: $recta;
-      font-size: 32px;
-      font-weight: 700;
+      padding-left: 16px;
+      text-align: center;
 
       &:after {
         position: absolute;

@@ -41,6 +41,7 @@ function traveltripper_pingback_header() {
 /**
  * Featured Posts
  */
+
 // Add featured meta hook
 add_action( 'add_meta_boxes', 'blog_featured_meta' );
 function blog_featured_meta() {
@@ -58,13 +59,18 @@ function blog_meta_callback( $post ) {
                 <input type="checkbox" name="featured-checkbox" id="featured-checkbox" value="yes" <?php if ( isset ( $blog_stored_meta['featured-checkbox'] ) ) checked( $blog_stored_meta['featured-checkbox'][0], 'yes' ); ?>>
                 <?php _e( 'Featured Post', 'traveltripper' )?>
             </label>
+            <br>
+            <label for="popular-checkbox">
+                <input type="checkbox" name="popular-checkbox" id="popular-checkbox" value="yes" <?php if ( isset ( $blog_stored_meta['popular-checkbox'] ) ) checked( $blog_stored_meta['popular-checkbox'][0], 'yes' ); ?>>
+                <?php _e( 'Popular Post', 'traveltripper' )?>
+            </label>
         </div>
     </p> <?php
 }
 
 // Saves the featured post meta input
-add_action( 'save_post', 'blog_meta_save' );
-function blog_meta_save( $post_id ) {
+add_action( 'save_post', 'blog_featured_meta_save' );
+function blog_featured_meta_save( $post_id ) {
 
     // Checks save status - overcome autosave, etc.
     $is_autosave = wp_is_post_autosave( $post_id );
@@ -81,6 +87,12 @@ function blog_meta_save( $post_id ) {
         update_post_meta( $post_id, 'featured-checkbox', 'yes' );
     } else {
         update_post_meta( $post_id, 'featured-checkbox', 'no' );
+    }
+
+    if( isset( $_POST[ 'popular-checkbox' ] ) ) {
+        update_post_meta( $post_id, 'popular-checkbox', 'yes' );
+    } else {
+        update_post_meta( $post_id, 'popular-checkbox', 'no' );
     }
 
 }

@@ -36,7 +36,7 @@ if ( isset( $featured_category ) && $query_resource->have_posts() ) { ?>
             </div>
 
             <div class="btn-wrap">
-              <a class="btn btn-primary-white" href="<?php echo get_term_link( $featured_category ); ?>">view all</a>
+                <a class="btn btn-primary-white" href="<?php echo get_term_link( $featured_category ); ?>">view all</a>
             </div>
 
         </div>

@@ -100,9 +100,6 @@
             <ul class="sub-menu">
                 <li class="menu-item">
                     <a href="#">
-                        <div class="sub-menu__icon">
-                            <div class="background-icon webinar"></div>
-                        </div>
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Webinars</p>
                         </div>
@@ -110,9 +107,6 @@
                 </li>
                 <li class="menu-item">
                     <a href="#">
-                        <div class="sub-menu__icon">
-                            <div class="background-icon case-studies"></div>
-                        </div>
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Case Studies</p>
                         </div>
@@ -120,9 +114,6 @@
                 </li>
                 <li class="menu-item">
                     <a href="#">
-                        <div class="sub-menu__icon">
-                            <div class="background-icon slideshare"></div>
-                        </div>
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Slideshare</p>
                         </div>
@@ -130,9 +121,6 @@
                 </li>
                 <li class="menu-item">
                     <a href="#">
-                        <div class="sub-menu__icon">
-                            <div class="background-icon infographic"></div>
-                        </div>
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Infographics</p>
                         </div>

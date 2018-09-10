@@ -35,25 +35,9 @@ get_header(); ?>
             <p>Sign up for Travel Tripper's newsletter to get the latest news, tips, and resources delivered to your inbox.</p>
             <a href="#" class="btn btn-primary">subscribe</a>
           </div>
-        </div>
+        </div> <?php
 
-        <div class="related-articles">
-          <div class="section-title"><p>Related Articles</p></div>
-          <div class="row">
-            <div class="col-sm-6 col-lg-4">
-              <a href="/post/"><img src="<?php echo get_template_directory_uri(); ?>/images/437x255.png" alt=""></a>
-              <p><a href="/post/">6 hotel booking trends we're watching in 2018</a></p>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <a href="/post/"><img src="<?php echo get_template_directory_uri(); ?>/images/437x255.png" alt=""></a>
-              <p><a href="/post/">How to encourage guests to write hotel reviews on TripAdvisor, Yelp, Google and Facebook</a></p>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <a href="/post/"><img src="<?php echo get_template_directory_uri(); ?>/images/437x255.png" alt=""></a>
-              <p><a href="/post/">5 ways hotels can use behavioral economics to improve conversion rates</a></p>
-            </div>
-          </div>
-        </div>
+        related_posts(); ?>
 
     </main> <?php
 

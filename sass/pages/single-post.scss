@@ -86,15 +86,12 @@
   margin-bottom: 80px;
 
   .section-title {
+    margin-bottom: 32px;
+    font-size: 21px;
+    font-weight: 700;
     text-align: center;
     @include breakpoint($sm) {
       text-align: left;
-    }
-
-    p {
-      margin-bottom: 32px;
-      font-size: 21px;
-      font-weight: 700;
     }
   }
 

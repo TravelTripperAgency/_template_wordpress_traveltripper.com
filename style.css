@@ -3655,21 +3655,15 @@ img {
 }
 
 .home .clients .section-title {
+  position: relative;
+  margin-bottom: 32px;
   padding-right: 16px;
+  padding-bottom: 16px;
   padding-left: 16px;
   text-align: center;
 }
 
-.home .clients .clients__title {
-  position: relative;
-  margin-bottom: 32px;
-  padding-bottom: 16px;
-  font-family: Recta, sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.home .clients .clients__title:after {
+.home .clients .section-title:after {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -5195,6 +5189,9 @@ img {
 }
 
 .related-articles .section-title {
+  margin-bottom: 32px;
+  font-size: 21px;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -5202,12 +5199,6 @@ img {
   .related-articles .section-title {
     text-align: left;
   }
-}
-
-.related-articles .section-title p {
-  margin-bottom: 32px;
-  font-size: 21px;
-  font-weight: 700;
 }
 
 .related-articles .row {

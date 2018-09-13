@@ -17,7 +17,7 @@ get_header(); ?>
             <h1 class="page-header__title"><?php the_title(); ?></h1>
             <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="#">learn more</a>
+                <a class="btn btn-primary" href="<?php echo get_site_url(); ?>/solutions/">learn more</a>
             </div>
         </div>
 
@@ -67,12 +67,12 @@ get_header(); ?>
       <div class="col-right__wrap">
         <div class="col-right__col-left<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInUp'; } ?>">
           <h2 class="section-title">Dominate from search to stay.</h2>
-          <p>Travel Tripper's powerful <a href="#">hotel booking engine</a>, <a href="#">website services</a>, and <a href="#">digital marketing solutions</a> help you to maximize revenue from your direct channel.</p>
+          <p>Travel Tripper's powerful <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">hotel booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website services</a>, and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">digital marketing solutions</a> help you to maximize revenue from your direct channel.</p>
         </div>
         <div class="col-right__col-right<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
           <div class="testimonial">
-            <p class="quote">"This software is the best software out there when you want to fight OTA battle."</p>
-            <p class="cite">- Hotel Tech Report</p>
+            <p class="quote">"This software is the best software out there when you want to fight the OTA battle."</p>
+            <p class="cite">- VP Revenue Management, Miami Hotel</p>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ get_header(); ?>
           <a href="#" class="btn btn-primary">see how we did it</a>
         </div>
         <div class="showcase__right">
-          <p>The Mayfair Hotel & Spa increased their direct website revenue 84% after parterning with Travel Tripper.</p>
+          <p>The Mayfair Hotel & Spa increased their direct website revenue 84% after partnering with Travel Tripper.</p>
         </div>
       </div>
 
@@ -109,21 +109,22 @@ get_header(); ?>
   <div class="row wrap">
     <div class="service reztrip">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip-home.svg" alt="">
-      <p class="service__title">RezTrip</p>
+      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">RezTrip</a></p>
       <p class="service__subtitle">CRS & Booking Engine</p>
       <p class="service__description">Shift bookings from high-commission OTA channels to direct bookings using smart rate and revenue management tools.</p>
       <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></p>
     </div>
     <div class="service web">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-home.svg" alt="">
-      <p class="service__title">Travel Tripper Web</p>
+      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">Travel Tripper Web</a></p>
       <p class="service__subtitle">Website Platform and Agency</p>
       <p class="service__description">Change lookers into bookers with beautiful design and smart content like live rates and special offers.</p>
       <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></p>
     </div>
     <div class="service dgs">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-home.svg" alt="">
-      <p class="service__title">Digital Marketing</p>
+      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">Digital Marketing</a></p>
+      <p class="service__subtitle">Full-Service Agency</p>
       <p class="service__description">Maximize ROI across all online advertising channels with cutting edge technology and strategy, including our award-winning Real Time Ads for hotels.</p>
       <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></p>
     </div>
@@ -164,28 +165,28 @@ get_header(); ?>
 
     <div class="customer groups">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-hotel-groups-home.svg" alt="Hotel Groups Icon">
-      <p class="customer__title">Hotel Groups and Management Companies</p>
+      <p class="customer__title"><a href="<?php echo get_site_url(); ?>/who-we-serve/management-companies/">Hotel Groups and Management Companies</a></p>
       <p class="customer__description">Flexible multi-property solution with powerful analytics to help you increase ROI in all your online distribution channels.</p>
       <p class="customer__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="customer casinos">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-casinos-home.svg" alt="Casinos Icon">
-      <p class="customer__title">Casinos and Gaming</p>
+      <p class="customer__title"><a href="<?php echo get_site_url(); ?>/who-we-serve/casinos/">Casinos and Gaming</a></p>
       <p class="customer__description">Specialized booking features to better serve your most loyal players and core clientele.</p>
       <p class="customer__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="customer independents">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-independent-hotels-home.svg" alt="Independent Hotels Icon">
-      <p class="customer__title">Independent and Boutique Hotels</p>
+      <p class="customer__title"><a href="<?php echo get_site_url(); ?>/who-we-serve/independents/">Independent and Boutique Hotels</a></p>
       <p class="customer__description">The direct booking partner that your team has been looking for.</p>
       <p class="customer__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="customer partners">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-partners-home.svg" alt="Partners Icon">
-      <p class="customer__title">Partners</p>
+      <p class="customer__title"><a href="<?php echo get_site_url(); ?>/who-we-serve/partners/">Partners</a></p>
       <p class="customer__description">Become a partner to help hotels build the perfect digital solution for their booking and marketing needs.</p>
       <p class="customer__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>

@@ -48,8 +48,12 @@
       margin: 0;
       font-family: $recta;
       font-size: 24px;
-      font-weight: 700;
       line-height: 27px;
+
+      a {
+        color: $gray-dark;
+      }
+
     }
 
     .subtitle {

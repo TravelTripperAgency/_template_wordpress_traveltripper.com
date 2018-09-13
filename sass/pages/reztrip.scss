@@ -116,6 +116,7 @@
         position: relative;
         width: 100%;
         margin-bottom: 16px;
+        font-weight: 300;
         @include breakpoint($xs) {
           flex: 0 0 span(1 of 2);
           max-width: span(1 of 2);
@@ -191,13 +192,6 @@
       p {
         font-weight: 300;
         line-height: 36px;
-
-        span {
-          display: block;
-          font-weight: 700;
-          color: $blue-light;
-        }
-
       }
 
     }
@@ -608,6 +602,10 @@
 
     figure {
       text-align: center;
+    }
+
+    p {
+      font-weight: 300;
     }
 
   }

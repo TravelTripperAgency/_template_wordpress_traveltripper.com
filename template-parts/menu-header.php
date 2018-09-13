@@ -17,8 +17,8 @@
                     <div class="background-icon reztrip"></div>
                     </div>
                     <div class="sub-menu__text">
-                        <p class="sub-menu__link-text">RezTrip CRS - Booking Engine</p>
-                        <p class="sub-menu__link-description">The industry's most innovative website platform and booking engine</p>
+                        <p class="sub-menu__link-text">RezTrip CRS & Booking Engine</p>
+                        <p class="sub-menu__link-description">The industry's most innovative reservations system and booking engine</p>
                     </div>
                     </a>
                 </li>
@@ -40,7 +40,18 @@
                         </div>
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Digital Marketing</p>
-                            <p class="sub-menu__link-description">Digital marketing and distribution strategy that expands your hotel's global reach</p>
+                            <p class="sub-menu__link-description">Digital marketing innovation and strategy that expands your hotel's global reach</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="<?php echo get_site_url(); ?>/solutions/rate-match/">
+                        <div class="sub-menu__icon">
+                            <div class="background-icon rate-match"></div>
+                        </div>
+                        <div class="sub-menu__text">
+                            <p class="sub-menu__link-text">Rate Match</p>
+                            <p class="sub-menu__link-description">Innovative price-checking tool that guarantees price parity with the OTAs</p>
                         </div>
                     </a>
                 </li>
@@ -67,7 +78,7 @@
                         </div>
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Casinos & Gaming</p>
-                            <p class="sub-menu__link-description">Serve you most loyal guests just as easily online as offline.</p>
+                            <p class="sub-menu__link-description">Serve you most loyal guests just as easily online as offline</p>
                         </div>
                     </a>
                 </li>
@@ -99,30 +110,37 @@
             <a href="<?php echo get_site_url(); ?>/resources/">Resources</a>
             <ul class="sub-menu">
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="<?php echo get_site_url(); ?>/resources/tag/webinars/">
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Webinars</p>
                         </div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="<?php echo get_site_url(); ?>/resources/tag/vlogs/">
                         <div class="sub-menu__text">
-                            <p class="sub-menu__link-text">Case Studies</p>
+                            <p class="sub-menu__link-text">Vlogs</p>
                         </div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="<?php echo get_site_url(); ?>/resources/tag/podcasts/">
                         <div class="sub-menu__text">
-                            <p class="sub-menu__link-text">Slideshare</p>
+                            <p class="sub-menu__link-text">Podcasts</p>
                         </div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">
+                    <a href="<?php echo get_site_url(); ?>/resources/tag/infographics/">
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Infographics</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="<?php echo get_site_url(); ?>/resources/tag/slideshares/">
+                        <div class="sub-menu__text">
+                            <p class="sub-menu__link-text">Slideshares</p>
                         </div>
                     </a>
                 </li>
@@ -151,7 +169,14 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="<?php echo get_site_url(); ?>/about/careers/">
+                    <a href="<?php echo get_site_url(); ?>/contact/">
+                        <div class="sub-menu__text">
+                            <p class="sub-menu__link-text">Contact</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide">
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Careers</p>
                         </div>
@@ -159,14 +184,14 @@
                 </li>
             </ul>
         </li>
-        <li class="btn-header menu-item"><a href="#">Request a Demo</a></li>
+        <li class="btn-header menu-item"><a href="http://try.traveltripper.com/request-demo/?utm_source=website&utm_content=navbar">Request a Demo</a></li>
         <li class="client-login menu-item menu-item-has-children">
-            <a href="#">Client Login</a>
+            <a>Client Login</a>
             <ul class="sub-menu">
                 <li class="menu-item">
                     <a href="https://us.reztripadmin.com/">
                         <div class="sub-menu__text">
-                            <p class="sub-menu__link-text">RezTrip - US</p>
+                            <p class="sub-menu__link-text">RezTrip</p>
                         </div>
                     </a>
                 </li>
@@ -180,7 +205,7 @@
                 <li class="menu-item">
                     <a href="https://www.traveltripper.io/">
                         <div class="sub-menu__text">
-                            <p class="sub-menu__link-text">TT CMS - .io</p>
+                            <p class="sub-menu__link-text">TT Web</p>
                         </div>
                     </a>
                 </li>

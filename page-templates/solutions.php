@@ -31,7 +31,7 @@ get_header(); ?>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip-hover.svg" alt="">
-      <p class="title">RezTrip</p>
+      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">RezTrip</a></p>
       <p class="subtitle">CRS & Booking Engine</p>
       <p class="description">Shift bookings from high-commission OTA channels to direct bookings using smart rate and revenue management tools.</p>
       <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
@@ -39,36 +39,37 @@ get_header(); ?>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-hover.svg" alt="">
-      <p class="title">Travel Tripper Web</p>
+      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">Travel Tripper Web</a></p>
       <p class="subtitle">Website Platform and Agency</p>
-      <p class="description">Change lookers into bookers with beautiful design and smart content like live rates and special offers.</p>
+      <p class="description">Change lookers into bookers with beautiful design and dynamic content like live rates and special offers.</p>
       <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-hover.svg" alt="">
-      <p class="title">Digital Marketing</p>
+      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">Digital Marketing</a></p>
+      <p class="subtitle">Full-Service Agency</p>
       <p class="description">Maximize your ROI across all online advertising channels with cutting edge technology and strategy.</p>
       <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-express-suite-hover.svg" alt="">
+    <!-- <div class="col">
+      <img src="<?php // echo get_template_directory_uri(); ?>/images/icons/icon-express-suite-hover.svg" alt="">
       <p class="title">Express Suite</p>
       <p class="description">Power your hotel with the smart all-in-one website and booking engine designed for small and medium-sized properties.</p>
-      <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
-    </div>
+      <p class="arrow"><img src="<?php // echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
+    </div> -->
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-rate-match-hover.svg" alt="">
-      <p class="title">Rate Match</p>
+      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/rate-match/">Rate Match</a></p>
       <p class="description">Give your guests the confidence to book direct with an innovative price-checking and rate-matching tool that integrates directly into your website.</p>
       <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-integrations-hover.svg" alt="">
-      <p class="title">Integrations</p>
+      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/integrations/">Integrations</a></p>
       <p class="description">With more than 50+ PMS and hotel technology partners, Travel Tripper integrates well with your existing tech stack.</p>
       <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>

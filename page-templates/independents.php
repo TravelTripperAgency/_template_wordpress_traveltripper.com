@@ -13,8 +13,10 @@ get_header(); ?>
 <section id="skip-link-content" class="page-header">
     <div class="wrap row">
         <div class="page-header__title-area<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>">
-            <h1 class="page-header__title"><?php the_title(); ?></h1>
-            <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
+            <h1 class="page-header__title"><?php the_title(); ?></h1> <?php
+            if ( get_field( 'header_description' ) ) { ?>
+                <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
+            } ?>
             <div class="btn-holder">
                 <a class="btn btn-primary" href="#">request a demo</a>
             </div>
@@ -41,7 +43,7 @@ get_header(); ?>
 
   <div class="col-left">
     <h2 class="section-title">Competing digitally just got a lot easier.</h2>
-    <p>Independent and boutique hotels face a lot of upward battles when it comes to online distribution—high competition, a rapidly changing marketplace, limited resources and time. With Travel Tripper, you’ll have a strategic e-commerce partner invested in your hotel’s success. </p>
+    <p>Independent and boutique hotels face a lot of upward battles when it comes to online distribution—high competition, a rapidly changing marketplace, limited resources and time. With Travel Tripper, you'll have a strategic e-commerce partner invested in your hotel's success.</p>
   </div>
 
 </section>

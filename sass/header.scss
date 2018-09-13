@@ -145,6 +145,7 @@
   .page-template-reztrip &,
   .page-template-ttweb &,
   .page-template-independents &,
+  .page-template-rate-match &,
   .page-template-casinos &,
   .page-template-digital-marketing &,
   .page-template-management-companies & {
@@ -171,7 +172,7 @@
   .page-header__title-area {
     display: flex;
     flex-direction: column;
-    padding-bottom: 90px;
+    padding-bottom: 56px;
     @include breakpoint($sm) {
       padding-bottom: 146px;
     }
@@ -197,6 +198,7 @@
     .page-template-reztrip &,
     .page-template-ttweb &,
     .page-template-independents &,
+    .page-template-rate-match &,
     .page-template-casinos &,
     .page-template-digital-marketing &,
     .page-template-management-companies & {
@@ -341,6 +343,7 @@
     .page-template-reztrip &,
     .page-template-ttweb &,
     .page-template-independents &,
+    .page-template-rate-match &,
     .page-template-casinos &,
     .page-template-digital-marketing &,
     .page-template-management-companies & {
@@ -384,7 +387,8 @@
       max-width: 880px;
     }
 
-    .page-template-independents & img {
+    .page-template-independents & img,
+    .page-template-rate-match & img {
       max-width: 860px;
     }
 
@@ -402,6 +406,7 @@
 
     .page-template-solutions & img,
     .page-template-who-we-serve & img {
+      width: 100%;
       max-width: 700px;
       height: 100%;
       margin-bottom: -155px;

@@ -14,9 +14,13 @@ get_header(); ?>
     <div class="wrap row">
 
         <div class="page-header__title-area<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>">
-            <h1 class="page-header__title"><?php the_title(); ?></h1>
-            <p class="page-header__subtitle"><?php the_field( 'header_subtitle' ); ?></p>
-            <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
+            <h1 class="page-header__title"><?php the_title(); ?></h1> <?php
+            if ( get_field( 'header_subtitle' ) ) { ?>
+                <p class="page-header__subtitle"><?php the_field( 'header_subtitle' ); ?></p> <?php
+            }
+            if ( get_field( 'header_description' ) ) { ?>
+                <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
+            } ?>
             <div class="btn-holder">
                 <a class="btn btn-primary" href="#">request a demo</a>
             </div>
@@ -29,9 +33,9 @@ get_header(); ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-header.png"> <?php
             } ?>
             <ul class="page-header__features">
-                <li>Powerful Booking Engine</li>
-                <li>Comprehensive Central Reservation System</li>
-                <li>Full-service Distribution Solution</li>
+                <li>Powerful booking engine</li>
+                <li>Robust central reservation system</li>
+                <li>Comprehensive distribution solution</li>
             </ul>
         </div>
 
@@ -43,7 +47,7 @@ get_header(); ?>
 
     <div class="col-right">
 
-      <h2 class="section-title">Dominate from search to stay.</h2>
+      <h2 class="section-title">Designed to be direct</h2>
 
       <div class="row col-right__top">
         <p>We've created the industry's most innovative CRS and booking engine—intuitive, elegant, and packed with features to help you convert lookers into bookers. Hotels that switch to RezTrip routinely see significant increases in direct bookings and conversion rates.</p>
@@ -52,7 +56,7 @@ get_header(); ?>
       <div class="row col-right__middle">
         <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-sale.svg" alt="pricing icon">Strikethrough pricing</p>
         <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-hourglass.svg" alt="hourglass icon">Rooms remaining</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-geo-targeting.svg" alt="geo location icon">Dynamic Pricing Rules with geo-targeting </p>
+        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-geo-targeting.svg" alt="geo location icon">Dynamic Pricing Rules with geo-targeting</p>
         <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-price-match.svg" alt="rate match icon">Integrated rate match</p>
       </div>
 
@@ -67,7 +71,7 @@ get_header(); ?>
       </div>
 
       <div class="btn-holder">
-        <a href="#" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the full RezTrip feature and spec sheet.</a>
+        <a href="#" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the full RezTrip feature and spec sheet.</a>
       </div>
 
     </div>
@@ -89,7 +93,7 @@ get_header(); ?>
     <div class="col-left">
       <div class="text-wrap">
         <h2 class="section-title">Comprehensive hotel distribution</h2>
-        <p>In addition to your hotel website, RezTrip also offers distribution through channel managers, OTAs, GDS, consortia, metasearch, and call center. <span class="blue">Manage all rates and inventory through one seamless  reservation system.</span></p>
+        <p>In addition to your hotel website, RezTrip also offers distribution through channel managers, OTAs, GDS, consortia, metasearch, and call center. Manage all rates and inventory through one seamless  reservation system.</p>
       </div>
       <div class="text-center">
         <img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-crs.png" alt="HotelTechAwards">
@@ -117,21 +121,18 @@ get_header(); ?>
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-roi-blue.svg" alt="ROI icon">
       <p class="title">Better ROI</p>
       <p class="description">Shift bookings from high-commission channels to direct bookings through RezTrip tools</p>
-      <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-lightbulb-blue.svg" alt="lightbulb icon">
       <p class="title">Better decisions</p>
       <p class="description">Whether you operate one hotel or oversee many, easily make the smartest revenue strategy decisions for your hotel</p>
-      <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-resources-blue.svg" alt="briefcase icon">
       <p class="title">Expert support</p>
       <p class="description">Tap into a trove of expert resources to power your success</p>
-      <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
 
   </div>
@@ -160,7 +161,7 @@ get_header(); ?>
         <a href="#" class="btn btn-primary">see how we did it</a>
       </div>
       <div class="showcase__right">
-        <p>The Stratosphere Hotel increased their conversion rate over 2x within 4 months after integrating RezTrip with their exisiting system.</p>
+        <p>The Stratosphere Hotel increased their conversion rate over 2x within 4 months after integrating RezTrip with their existing system.</p>
       </div>
     </div>
 
@@ -173,7 +174,7 @@ get_header(); ?>
 
     <div class="col-left">
       <h2 class="section-title">Seamless reservation delivery and integrations with your PMS, channel manager, and revenue management systems</h2>
-      <a href="#" class="btn">view all integrations & partners</a>
+      <a href="<?php echo get_site_url(); ?>/solutions/integrations/" class="btn btn-secondary-dark">view all integrations & partners</a>
     </div>
 
     <div class="col-right row">
@@ -221,8 +222,8 @@ get_header(); ?>
   <div class="wrap row">
 
     <div class="text-center">
-      <h2 class="section-title">Power up direct bookings by integrating RezTrip with TT Web and  </h2>
-      <p>When you work with our digital marketing team, we are able to create seamless campaigns because we have insights into your booking and website data.</p>
+      <h2 class="section-title">Power up direct bookings by integrating RezTrip with <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">TT Web</a> and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">Digital Marketing</a></h2>
+      <p>Travel Tripper's suite of solutions together create a robust hotel e-commerce platform designed to maximize your hotel's direct distribution strategy.</p>
     </div>
 
     <figure>

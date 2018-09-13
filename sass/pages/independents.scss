@@ -14,8 +14,8 @@
       width: 100%;
       margin-bottom: 48px;
       @include breakpoint($sm) {
-        flex: 0 0 span(6 of 12);
-        max-width: span(6 of 12);
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
         margin-bottom: 0;
         order: 2;
       }
@@ -29,6 +29,7 @@
         @include breakpoint($md) {
           display: inline-flex;
           flex-wrap: wrap;
+          justify-content: space-between;
         }
       }
 
@@ -40,8 +41,9 @@
         font-weight: 600;
         letter-spacing: .79px;
         @include breakpoint($md) {
-          flex: 1 0 36%;
+          flex: 0 0 span(1 of 3, $double-gutters);
           align-self: center;
+          max-width: span(1 of 3, $double-gutters);
         }
 
         &:before {
@@ -55,15 +57,15 @@
           transform: translateY(-50%);
         }
 
-        + p {
-          @include breakpoint($md) {
-            margin-left: 40px;
-          }
-        }
+        // + p {
+        //   @include breakpoint($md) {
+        //     margin-left: 40px;
+        //   }
+        // }
 
-        &:last-child {
-          margin-left: 30px;
-        }
+        // &:last-child {
+        //   margin-left: 30px;
+        // }
 
       }
 
@@ -73,8 +75,8 @@
       position: relative;
       width: 100%;
       @include breakpoint($sm) {
-        flex: 0 0 span(6 of 12);
-        max-width: span(6 of 12);
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
       }
 
       p {

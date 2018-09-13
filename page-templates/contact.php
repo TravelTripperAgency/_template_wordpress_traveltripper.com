@@ -13,8 +13,10 @@ get_header(); ?>
 <section id="skip-link-content" class="page-header">
   <div class="wrap row">
     <div class="page-header__title-area">
-      <h1 class="page-header__title"><?php the_title(); ?></h1>
-      <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
+      <h1 class="page-header__title"><?php the_title(); ?></h1> <?php
+      if ( get_field( 'header_description' ) ) { ?>
+          <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
+      } ?>
     </div>
   </div>
 </section>

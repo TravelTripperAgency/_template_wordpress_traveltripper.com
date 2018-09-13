@@ -1,0 +1,559 @@
+.page-template-rate-match {
+
+  .intro {
+    margin-bottom: 32px;
+    @include breakpoint($sm) {
+      margin-bottom: 64px;
+    }
+    @include breakpoint($md) {
+      margin-top: -80px;
+    }
+    @include breakpoint($lg) {
+      margin-bottom: 130px;
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      margin-bottom: 48px;
+      @include breakpoint($sm) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+        margin-bottom: 0;
+        order: 2;
+      }
+      @include breakpoint($md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .col-right__wrap {
+        @include breakpoint($md) {
+          display: inline-flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+      }
+
+      p {
+        position: relative;
+        width: 100%;
+        margin-bottom: 32px;
+        margin-left: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: .79px;
+        @include breakpoint($md) {
+          // flex: 1 0 36%;
+          flex: 0 0 span(1 of 3, $double-gutters);
+          align-self: center;
+          max-width: span(1 of 3, $double-gutters);
+        }
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: -28px;
+          width: 20px;
+          height: 2px;
+          content: '';
+          background-color: $red;
+          transform: translateY(-50%);
+        }
+
+        // + p {
+        //   @include breakpoint($md) {
+        //     margin-left: 40px;
+        //   }
+        // }
+
+        // &:last-child {
+        //   margin-left: 30px;
+        // }
+
+      }
+
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($sm) {
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
+      }
+
+      p {
+        font-weight: 300;
+        line-height: 36px;
+      }
+
+    }
+
+  }
+
+  .video {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .features {
+    margin-bottom: 80px;
+
+    ol {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto 40px;
+      padding: 0;
+      font-family: $source-sans;
+      font-weight: 300;
+      line-height: 27px;
+      color: $blue-light;
+      list-style-type: none;
+      @include breakpoint($md) {
+        flex-direction: row;
+        margin-bottom: 25px;
+      }
+
+      li {
+        position: relative;
+        width: calc(100% - 60px);
+        margin-left: 60px;
+        counter-increment: customlistcounter;
+        @include breakpoint($md) {
+          max-width: calc(((100% - 96px) / 4 * 1) - 60px);
+        }
+
+        &:before {
+          position: absolute;
+          left: -60px;
+          padding: 6px 15px 7px 17px;
+          content: counter(customlistcounter) ' ';
+          border: 1px solid $blue-light;
+          border-radius: 50%;
+        }
+
+        + li {
+          margin-top: 40px;
+          @include breakpoint($md) {
+            margin-top: 0;
+          }
+        }
+
+      }
+
+    }
+
+    .btn-holder {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        margin-right: 22px;
+      }
+
+    }
+
+  }
+
+  .conversion {
+    position: relative;
+    background: linear-gradient(#fff, $background-white);
+
+    .background-image {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-height: 1380px;
+      background-image: url('images/background-blue-2.png');
+      @include breakpoint($xs) {
+        justify-content: normal;
+        min-height: 1700px;
+      }
+      @include breakpoint($md) {
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 1200px;
+      }
+      @include breakpoint($lg) {
+        min-height: 1250px;
+      }
+      @include breakpoint($xl) {
+        min-height: 1340px;
+      }
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 2);
+        max-width: span(1 of 2);
+      }
+
+      figure {
+        display: none;
+        @include breakpoint($xs) {
+          display: block;
+        }
+      }
+
+    }
+
+    .showcase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 90%;
+      margin-bottom: 80px;
+      padding: 24px;
+      background-color: #fff;
+      box-shadow: 0 0 29px rgba(0, 0, 0, .3);
+      @include breakpoint($xs) {
+        position: absolute;
+        top: 28%;
+        flex-direction: row;
+        margin-bottom: 0;
+        padding-right: 0;
+      }
+      @include breakpoint($sm) {
+        max-width: 756px;
+      }
+      @include breakpoint($md) {
+        top: 20%;
+      }
+      @include breakpoint($lg) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 64px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 17px;
+        @include breakpoint($sm) {
+          font-size: 23px;
+        }
+      }
+
+      .showcase__left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 186px;
+        margin-bottom: 24px;
+        @include breakpoint($xs) {
+          margin-bottom: 0;
+        }
+
+        .btn {
+          @include breakpoint($xs) {
+            position: absolute;
+            bottom: -45px;
+          }
+          @include breakpoint($lg) {
+            bottom: -52px;
+          }
+        }
+
+      }
+
+      .showcase__increase {
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 55.89px;
+        color: $blue-light;
+        @include breakpoint($sm) {
+          font-size: 78px;
+        }
+
+        span {
+          font-size: 45px;
+          @include breakpoint($sm) {
+            font-size: 61px;
+          }
+        }
+
+      }
+
+      .showcase__revenue {
+        margin-bottom: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 19.87px;
+        color: $blue-light;
+        text-align: center;
+        text-transform: uppercase;
+        // @include breakpoint($xs) {
+        //   margin-bottom: 44px;
+        // }
+        @include breakpoint($sm) {
+          font-size: 15px;
+        }
+      }
+
+      .showcase__right {
+        margin-right: 24px;
+        margin-left: 24px;
+        text-align: center;
+        @include breakpoint($xs) {
+          margin-right: 78px;
+          text-align: left;
+        }
+      }
+
+    }
+
+    .col-right {
+      position: relative;
+      display: flex;
+      // flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-right: 16px;
+      padding-left: 16px;
+      @include breakpoint($md) {
+        flex: 0 0 span(1 of 2);
+        justify-content: flex-start;
+        max-width: span(1 of 2);
+      }
+    }
+
+    .col-right__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial {
+      max-width: 465px;
+      margin-bottom: 91px;
+      color: #fff;
+      border-color: #fff;
+
+      .cite {
+        background-color: #303e60;
+        border-color: #fff;
+        @include breakpoint($xs) {
+          background-color: #31466a;
+        }
+        @include breakpoint($sm) {
+          background-color: #31476b;
+        }
+        @include breakpoint($md) {
+          background-color: #303e60;
+        }
+      }
+
+    }
+
+  }
+
+  .dashboard {
+    // background-image: url('images/background-gray-double.png');
+    background-color: $background-white;
+
+    .section-title {
+      margin-bottom: 16px;
+    }
+
+    .col-left {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
+      }
+
+      .wrap {
+        max-width: 618px;
+      }
+
+      .description {
+        font-weight: 300;
+        line-height: 36px;
+      }
+
+      .features p {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 56px;
+        font-weight: 700;
+        color: $gray-light;
+        @include breakpoint($xs) {
+          flex: 0 0 span(1 of 2);
+          max-width: span(1 of 2);
+        }
+
+        img {
+          margin-right: 16px;
+        }
+
+      }
+
+    }
+
+    .col-right {
+      position: relative;
+      width: 100%;
+      min-height: 654px;
+      padding-right: 0;
+      padding-left: 0;
+      background-image: url('images/rate-match-dashboard-disparity-rarity.png');
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: contain;
+      @include breakpoint($md) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+        background-position: 0% 50%;
+        background-size: unset;
+      }
+    }
+
+  }
+
+  .spacer {
+    min-height: 280px;
+    background-image: url('images/background-gray-03.png');
+    @include breakpoint($md) {
+      min-height: 340px;
+    }
+    @include breakpoint($lg) {
+      min-height: 450px;
+    }
+    @include breakpoint($xl) {
+      min-height: 550px;
+    }
+  }
+
+  .advantages {
+    margin-bottom: 150px;
+    @include breakpoint($md) {
+      min-height: 824px;
+      background-image: url('images/rate-match-widget-advantages.png');
+      background-repeat: no-repeat;
+      background-position: 150% 50%;
+    }
+    @media (min-width: 1300px) {
+      background-position-x: 190%;
+    }
+    @include breakpoint($lg) {
+      background-position-x: -520px;
+    }
+    @include breakpoint($xl) {
+      background-position-x: -275px;
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+    }
+
+    .col-right {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      @include breakpoint($md) {
+        flex: 0 0 span(5 of 12);
+        max-width: span(5 of 12);
+        order: 2;
+      }
+
+      .wrap {
+        max-width: 618px;
+      }
+
+      .description {
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid $gray-light;
+
+        p {
+          font-weight: 300;
+          line-height: 36px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+        }
+
+      }
+
+      .features {
+        margin-bottom: 8px;
+
+        p {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 32px;
+          font-weight: 700;
+          color: $gray-light;
+          // @include breakpoint($xs) {
+          //   flex: 0 0 span(1 of 2);
+          //   max-width: span(1 of 2);
+          // }
+        }
+
+        img {
+          margin-right: 16px;
+        }
+
+      }
+
+      .btn {
+        margin-bottom: 96px;
+        @include breakpoint($md) {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+
+    .col-left {
+      position: relative;
+      width: 100%;
+      min-height: 320px;
+      padding-right: 0;
+      padding-left: 0;
+      background-image: url('images/rate-match-widget-advantages.png');
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      background-size: cover;
+      @include breakpoint($xs) {
+        min-height: 682px;
+        background-position-x: 95%;
+      }
+      @include breakpoint($md) {
+        flex: 0 0 span(7 of 12);
+        max-width: span(7 of 12);
+        background-image: none;
+      }
+    }
+
+  }
+
+}

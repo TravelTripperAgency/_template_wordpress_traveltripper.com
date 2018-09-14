@@ -21,7 +21,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="#">request a demo</a>
+                <a class="btn btn-primary" href="https://try.traveltripper.com/request-demo/?utm_source=website&utm_content=ttweb">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
@@ -31,9 +31,9 @@ get_header(); ?>
                 <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-ttweb-header.png"> <?php
             } ?>
             <ul class="page-header__features">
-                <li>Award-Winning Web Design</li>
-                <li>Industry Leading Website Platform</li>
-                <li>Fully Integrated Booking Engine and CRS</li>
+                <li>Award-winning web design</li>
+                <li>Industry leading e-commerce platform</li>
+                <li>Seamlessly integrated CRS & booking engine</li>
             </ul>
         </div>
     </div>
@@ -47,7 +47,7 @@ get_header(); ?>
       <h2 class="section-title">Powerful features that drive higher conversion rates</h2>
 
       <div class="row col-right__top">
-        <p>Change lookers into bookers and increase bookings with beautiful design combined with smart dynamic content such as live rates and special offers. Our web platform is the first to fully integrate the CRS and <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine</a> directly into the hotel  website, creating a modern and seamless user experience that increases direct bookings.</p>
+        <p>Change lookers into bookers and increase bookings with beautiful design combined with smart dynamic content such as live rates and special offers. Our web platform is the first to fully integrate the <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">CRS and booking engine</a> directly into the hotel  website, creating a modern and seamless user experience that increases direct bookings.</p>
       </div>
 
       <div class="row col-right__middle">
@@ -67,7 +67,7 @@ get_header(); ?>
       </div>
 
       <div class="btn-holder">
-        <a href="#" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the TT Web feature sheet</a>
+        <a href="#" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the TT Web feature sheet</a>
       </div>
 
     </div>
@@ -88,7 +88,7 @@ get_header(); ?>
 
     <div class="col-left">
       <h2 class="section-title">Work with our full-service agency</h2>
-      <p>Travel Tripper's in-house agency offers full website design and development services, along with ongoing maintenance and digital marketing specialized for hotels. Our team works hand-in-hand with your distribution and revenue management teams to <span class="blue">help your hotel maximize performance on your direct channel.</span></p>
+      <p>Travel Tripper's in-house agency offers full website design and development services, along with ongoing maintenance and digital marketing specialized for hotels. Our team works hand-in-hand with your distribution and revenue management teams to help your hotel maximize performance on your direct channel.</p>
     </div>
 
     <div class="col-right row">
@@ -135,7 +135,7 @@ get_header(); ?>
       <div class="col-left">
         <figure class="wp-caption">
           <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-adrian-awards-2016.jpg, <?php echo get_template_directory_uri(); ?>/images/solutions-adrian-awards-2016@2x.jpg 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-adrian-awards-2016@2x.jpg" alt="Adrian Awards photo">
-          <figcaption class="wp-caption-text">Nate Lane, Digital Agency Director, and Andre De Araujo, VP of Ecommerce at Highgate Hotels, accept the Platinum Adrian Award for Digital Marketing for Travel Tripper's work on 24 North Hotel website.</figcaption>
+          <figcaption class="wp-caption-text">Nate Lane, Senior Director of Digital Platforms, and Andre De Araujo, VP of E-commerce at Highgate Hotels, accept the Platinum Adrian Award for Digital Marketing for Travel Tripper's work on 24 North Hotel website.</figcaption>
         </figure>
       </div>
 
@@ -208,7 +208,7 @@ get_header(); ?>
 
     <div class="title-row">
       <h2 class="section-title">Power up direct bookings by integrating Travel Tripper Web with RezTrip and Digital Marketing</h2>
-      <p class="section-subtitle">When you work with our digital marketing team, we are able to create seamless campaigns because we have insights into your booking and website data.</p>
+      <p class="section-subtitle">Travel Tripper's suite of solutions together create a robust hotel e-commerce platform designed to maximize your hotel's direct distribution strategy.</p>
     </div>
 
     <figure>
@@ -240,7 +240,7 @@ get_header(); ?>
 </section>
 
 <section class="pre-footer-links">
-  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">
+  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/booking-engine/">
     <div class="pre-footer-link__wrapper">
       <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip.svg" alt="Booking Engine icon">
       <p class="pre-footer-link__headline">RezTrip</p>

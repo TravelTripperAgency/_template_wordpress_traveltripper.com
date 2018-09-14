@@ -481,13 +481,11 @@
       padding-right: 16px;
       padding-left: 16px;
       @include breakpoint($sm) {
-        flex-direction: row;
-        justify-content: space-evenly;
         margin-bottom: 28px;
       }
       @include breakpoint($md) {
         flex: 0 0 41.6666666666%;
-        flex-direction: column;
+        justify-content: space-evenly;
         max-width: 41.6666666666%;
         margin-bottom: 0;
       }
@@ -495,12 +493,6 @@
       img {
         align-self: center;
         margin-top: 56px;
-        @include breakpoint($sm) {
-          margin-top: 0;
-        }
-        @include breakpoint($md) {
-          margin-top: 56px;
-        }
       }
 
     }
@@ -560,6 +552,14 @@
     .row {
       align-items: center;
       width: 100%;
+
+      .row {
+        @include breakpoint($sm) {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+
     }
 
     .col {

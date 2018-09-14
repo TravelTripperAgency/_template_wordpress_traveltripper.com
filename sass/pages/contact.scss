@@ -106,7 +106,7 @@
     margin-bottom: 24px;
   }
 
-  .form-dropdown-wrap {
+  .form-wn-wrap {
     position: relative;
     width: 100%;
 
@@ -115,7 +115,7 @@
       top: 8px;
       right: 11px;
       width: 12px;
-      content: url('images/icons/icon-form-dropdown.svg');
+      content: url('images/icons/icon-form-wn.svg');
     }
 
   }
@@ -125,11 +125,12 @@
     padding: 7px 8px 9px;
     font-family: $source-sans;
     font-size: 14px;
+    color: $gray-dark;
     background-color: #fff;
     border: 1px solid #9b9b9b;
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border-radius: 3px;
 
     &::-ms-expand {

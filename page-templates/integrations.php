@@ -17,9 +17,6 @@ get_header(); ?>
             if ( get_field( 'header_description' ) ) { ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
-            <div class="btn-holder">
-                <a class="btn btn-primary" href="#">request a demo</a>
-            </div>
         </div>
         <div class="page-header__features">
             <p>Seamless PMS Integrations</p>

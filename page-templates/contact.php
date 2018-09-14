@@ -24,6 +24,7 @@ get_header(); ?>
 <section class="wrap contact-details">
 
     <div class="email">
+
       <div class="email__customer-support">
         <p class="title">Customer Support</p>
         <p>CRS and Booking Engine: <a href="mailto:support@traveltripper.com">support@traveltripper.com</a></p>
@@ -43,11 +44,22 @@ get_header(); ?>
         <p class="title">Marketing Inquiries</p>
         <p>For press requests or partnership-related inquiries, please contact <a href="mailto:marketing@traveltripper.com">marketing@traveltripper.com</a></p>
       </div>
+
+      <div class="email__billing">
+        <p class="title">Billing Inquiries</p>
+        <p>For questions related to billing and accounts payable, please contact <a href="mailto:accounting@traveltripper.com">accounting@traveltripper.com.</a></p>
+      </div>
+
+      <div class="email__careers">
+        <p class="title">Career Inquiries</p>
+        <p>To learn about open career opportunities, please visit our <a href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide">LinkedIn page</a>.</p>
+      </div>
+
     </div>
 
     <div class="form">
 
-        <p>For all other inquiries, including partnerships, careers, and more, please use the following form:</p>
+        <p>For all other inquiries, please use the following form:</p>
 
         <form action="https://submit.jotform.me/submit/71853446382462/" method="post" name="form_71853446382462"
             id="71853446382462" accept-charset="utf-8">
@@ -89,30 +101,6 @@ get_header(); ?>
 
         <script type="text/javascript">JotForm.ownerView=true;</script>
 
-      <!-- <form>
-        <label>Your Name</label>
-        <div class="row">
-          <div class="col-md-6">
-            <input>
-          </div>
-          <div class="col-md-6">
-            <input>
-          </div>
-        </div>
-
-        <label>Email Address</label>
-        <input>
-
-        <label>Subject</label>
-        <input>
-
-        <label>Message</label>
-        <textarea></textarea>
-
-        <input class="btn btn-primary" type="submit" name="submit" value="Send Message">
-
-      </form> -->
-
     </div>
 
 </section>
@@ -127,7 +115,7 @@ get_header(); ?>
 
       <div class="location america">
         <div class="location__wrap">
-          <p class="title">North America</p>
+          <p class="title">New York</p>
           <p>370 Lexington Avenue, Suite 1601</p>
           <p>New York, NY 10017</p>
           <p>United States</p>
@@ -137,22 +125,23 @@ get_header(); ?>
 
       <div class="location europe">
         <div class="location__wrap">
-          <p class="title">Europe</p>
-          <p>WeWork​, 1 Primrose Street</p>
-          <p>London​, EC2A 2EX​</p>
+          <p class="title">London</p>
+          <p>25 Moorgate</p>
+          <p>London EC2R 6AY</p>
           <p>United Kingdom</p>
-          <p>+44-02038085753</p>
+          <p>uksales@traveltripper.com</p>
         </div>
       </div>
 
       <div class="location asia">
         <div class="location__wrap">
-          <p class="title">Asia/India</p>
-          <p>Quadrant 4, Level 5, Module A1 & A2</p>
-          <p>Cyber Towers, Hitech City,</p>
-          <p>Hyderabad, Telengana</p>
+          <p class="title">Hyderabad, India</p>
+          <p>307-309, 3rd Floor,</p>
+          <p>Manjeera Trinity Corporate,</p>
+          <p>JNTU - Hitech City Road, Kukatpally,</p>
+          <p>Hyderabad, Telangana 500072</p>
           <p>India</p>
-          <p>+91 40 300 24444</p>
+          <p>+91 40 3002 4444</p>
         </div>
       </div>
 

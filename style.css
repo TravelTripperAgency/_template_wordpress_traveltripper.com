@@ -40,7 +40,10 @@ body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
   color: #4a4a4a;
+  letter-spacing: .25px;
 }
 
 p {
@@ -2629,6 +2632,7 @@ img {
 }
 
 .section-title {
+  max-width: 1440px;
   margin-top: 0;
   font-family: Recta, sans-serif;
   font-size: 32px;
@@ -3871,7 +3875,7 @@ img {
   display: flex;
   width: 100%;
   min-height: 500px;
-  background-image: url("images/about-tt-sales-conference-min.png");
+  background-image: url("images/about-tt-sales-conference.jpg");
 }
 
 @media (min-width: 1200px) {
@@ -4146,6 +4150,10 @@ img {
   margin-bottom: 16px;
 }
 
+.page-template-about .join-us .col-left .section-title a {
+  color: #fff;
+}
+
 .page-template-about .join-us .col-left p {
   font-weight: 300;
   line-height: 36px;
@@ -4335,17 +4343,17 @@ img {
   margin-bottom: 24px;
 }
 
-.contact-details .form-dropdown-wrap {
+.contact-details .form-wn-wrap {
   position: relative;
   width: 100%;
 }
 
-.contact-details .form-dropdown-wrap:after {
+.contact-details .form-wn-wrap:after {
   position: absolute;
   top: 8px;
   right: 11px;
   width: 12px;
-  content: url("images/icons/icon-form-dropdown.svg");
+  content: url("images/icons/icon-form-wn.svg");
 }
 
 .contact-details .form-dropdown {
@@ -4353,6 +4361,7 @@ img {
   padding: 7px 8px 9px;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
+  color: #4a4a4a;
   background-color: #fff;
   border: 1px solid #9b9b9b;
   -webkit-appearance: none;
@@ -5750,7 +5759,9 @@ img {
 
 .page-template-reztrip .why .section-title {
   position: relative;
+  margin-right: auto;
   margin-bottom: 42px;
+  margin-left: auto;
   padding: 0 16px 16px;
   text-align: center;
 }
@@ -6269,6 +6280,13 @@ img {
 .page-template-reztrip .services .row {
   align-items: center;
   width: 100%;
+}
+
+@media (min-width: 900px) {
+  .page-template-reztrip .services .row .row {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .page-template-reztrip .services .col {
@@ -6840,43 +6858,21 @@ img {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 64px;
   padding-right: 16px;
   padding-left: 16px;
-}
-
-@media (min-width: 900px) {
-  .page-template-ttweb .conversion .col-right {
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 28px;
-  }
 }
 
 @media (min-width: 1200px) {
   .page-template-ttweb .conversion .col-right {
     flex: 0 0 41.6666666666%;
-    flex-direction: column;
+    justify-content: space-evenly;
     max-width: 41.6666666666%;
-    margin-bottom: 0;
   }
 }
 
 .page-template-ttweb .conversion .col-right img {
   align-self: center;
   margin-top: 56px;
-}
-
-@media (min-width: 900px) {
-  .page-template-ttweb .conversion .col-right img {
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .page-template-ttweb .conversion .col-right img {
-    margin-top: 56px;
-  }
 }
 
 .page-template-ttweb .express-suite .col-sm-6 {
@@ -6953,6 +6949,13 @@ img {
 .page-template-ttweb .services .row {
   align-items: center;
   width: 100%;
+}
+
+@media (min-width: 900px) {
+  .page-template-ttweb .services .row .row {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .page-template-ttweb .services .col {
@@ -9704,8 +9707,6 @@ img {
 
 @media (min-width: 900px) {
   .page-template-digital-marketing .conversion .col-right {
-    flex-direction: row;
-    justify-content: space-evenly;
     margin-bottom: 28px;
   }
 }
@@ -9713,7 +9714,7 @@ img {
 @media (min-width: 1200px) {
   .page-template-digital-marketing .conversion .col-right {
     flex: 0 0 41.6666666666%;
-    flex-direction: column;
+    justify-content: space-evenly;
     max-width: 41.6666666666%;
     margin-bottom: 0;
   }
@@ -9722,18 +9723,6 @@ img {
 .page-template-digital-marketing .conversion .col-right img {
   align-self: center;
   margin-top: 56px;
-}
-
-@media (min-width: 900px) {
-  .page-template-digital-marketing .conversion .col-right img {
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .page-template-digital-marketing .conversion .col-right img {
-    margin-top: 56px;
-  }
 }
 
 .page-template-digital-marketing .spacer-2 {
@@ -9805,6 +9794,13 @@ img {
 .page-template-digital-marketing .services .row {
   align-items: center;
   width: 100%;
+}
+
+@media (min-width: 900px) {
+  .page-template-digital-marketing .services .row .row {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .page-template-digital-marketing .services .col {

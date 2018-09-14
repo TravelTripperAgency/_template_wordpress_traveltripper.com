@@ -231,7 +231,9 @@
 
     .section-title {
       position: relative;
+      margin-right: auto;
       margin-bottom: 42px;
+      margin-left: auto;
       padding: 0 16px 16px;
       text-align: center;
 
@@ -639,6 +641,14 @@
     .row {
       align-items: center;
       width: 100%;
+
+      .row {
+        @include breakpoint($sm) {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+
     }
 
     .col {

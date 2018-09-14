@@ -41,7 +41,7 @@
       display: flex;
       width: 100%;
       min-height: 500px;
-      background-image: url('images/about-tt-sales-conference-min.png');
+      background-image: url('images/about-tt-sales-conference.jpg');
       @include breakpoint($md) {
         flex: 0 0 50%;
         max-width: 50%;
@@ -281,6 +281,11 @@
       .section-title {
         margin-top: 0;
         margin-bottom: 16px;
+
+        a {
+          color: #fff;
+        }
+
       }
 
       p {

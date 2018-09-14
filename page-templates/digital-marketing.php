@@ -21,7 +21,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="#">request a demo</a>
+                <a class="btn btn-primary" href="https://try.traveltripper.com/request-demo/?utm_source=website&utm_content=digitalmarketing">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
@@ -58,7 +58,7 @@ get_header(); ?>
       </div>
 
       <div class="btn-holder">
-        <a href="#" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download our Digital Marketing features sheet</a>
+        <a href="#" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download our Digital Marketing features sheet</a>
       </div>
 
     </div>
@@ -79,7 +79,7 @@ get_header(); ?>
   <div class="col-left">
     <div class="col-left__wrap">
 
-      <h2 class="section-title">Award winning & industry-first innovations that achieve record breaking returns on your ad spend</h2>
+      <h2 class="section-title">Award-winning & industry-first innovations that achieve record-breaking returns on your ad spend</h2>
       <p class="blue">Real Time Ads (RTAs) use real-time information populated directly from the booking engine into Google AdWords.</p>
       <p>Now we can display your current room rate, occupancy rate, rooms available, and number of recently booked rooms directly within Google search ads. Our studies show that by using Real Time Ads, you’ll see significant increases in conversion rates and decreases in cost per conversion, and you can expect to more than double your return on ad spend.</p>
 
@@ -110,7 +110,7 @@ get_header(); ?>
       <div class="col">
         <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-lightbulb-white.svg" alt="lightbult icon">
         <p class="title">Innovation</p>
-        <p class="description">From our Google Real-Time Ads to Yelp listings, Travel Tripper is leading the hospitality industry on innovative techniques and tools in digital marketing.</p>
+        <p class="description">From Google Real Time Ads to Yelp listings, Travel Tripper is leading the hospitality industry on innovative techniques and tools in digital marketing.</p>
       </div>
 
       <div class="col">
@@ -176,8 +176,8 @@ get_header(); ?>
   <div class="wrap row">
 
     <div class="title-row">
-      <h2 class="section-title">Power up direct bookings by integrating Travel Tripper Web with RezTrip and Digital Marketing</h2>
-      <p class="section-subtitle">When you work with our digital marketing team, we are able to create seamless campaigns because we have insights into your booking and website data.</p>
+      <h2 class="section-title">Power up direct bookings by integrating Digital Marketing with RezTrip and Travel Tripper Web</h2>
+      <p class="section-subtitle">Travel Tripper's suite of solutions together create a robust hotel e-commerce platform designed to maximize your hotel's direct distribution strategy.</p>
     </div>
 
     <figure>
@@ -186,7 +186,7 @@ get_header(); ?>
 
     <div class="row">
       <div class="col">
-        <img src="#" alt="magnifying glass icon">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-magnifying-glass-blue.svg" alt="magnifying glass icon">
         <p>Generate Demand</p>
       </div>
       <div class="col">
@@ -209,7 +209,7 @@ get_header(); ?>
 </section>
 
 <section class="pre-footer-links">
-  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">
+  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/booking-engine/">
     <div class="pre-footer-link__wrapper">
       <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip.svg" alt="Booking Engine icon">
       <p class="pre-footer-link__headline">RezTrip</p>
@@ -217,11 +217,11 @@ get_header(); ?>
       <p class="pre-footer-link__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
   </a>
-  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">
+  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">
     <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing.svg" alt="Digital Marketing icon">
-      <p class="pre-footer-link__headline">Digital Marketing</p>
-      <p class="pre-footer-link__description">Drive qualified traffic to your hotel website and maximize direct bookings with smart campaigns managed by an expert team.</p>
+      <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb.svg" alt="Hotel Websites icon">
+      <p class="pre-footer-link__headline">Travel Tripper Web</p>
+      <p class="pre-footer-link__description">Boost direct bookings with beautiful hotel websites driving higher guest engagement and increased conversions across all devices.</p>
       <p class="pre-footer-link__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
   </a>

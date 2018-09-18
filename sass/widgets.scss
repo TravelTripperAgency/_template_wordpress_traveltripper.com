@@ -34,9 +34,9 @@
 
     .wrap {
       display: flex;
-      @include breakpoint($md) {
-        padding: 0 48px;
-      }
+      // @include breakpoint($md) {
+      //   padding: 0 48px;
+      // }
     }
 
     .author-wrap {
@@ -81,6 +81,11 @@
 
     .sidebar-secondary & {
       margin-bottom: 17px;
+    }
+
+    .entry-footer & {
+      width: 100%;
+      min-width: 86px;      
     }
 
   }

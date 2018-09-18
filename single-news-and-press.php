@@ -17,7 +17,7 @@ get_header(); ?>
         <div class="page-header__cta">
             <p>Become an expert hotel marketer with our free resources.</p>
             <div class="btn-holder">
-                <a class="btn btn-white" href="#">subscribe</a>
+                <a class="btn btn-white" href="http://eepurl.com/bI-pnv">subscribe</a>
             </div>
         </div>
     </div>
@@ -30,9 +30,9 @@ get_header(); ?>
         <article class="post">
 
             <header class="entry-header">
-                <a class="back" href="<?php echo get_site_url(); ?>/news-and-press/">← Back to the Newsroom</a>
-                <h1 class="entry-title"><?php the_title(); ?></h1>
-                <time class="entry-time" datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
+                <a class="back" href="<?php echo get_site_url(); ?>/news-and-press/">← Back to the Newsroom</a> <?php
+                the_title( '<h1 class="entry-title">', '</h1>' );
+                traveltripper_posted_on(); ?>
             </header> <?php
 
             if ( has_post_thumbnail() ) { ?>

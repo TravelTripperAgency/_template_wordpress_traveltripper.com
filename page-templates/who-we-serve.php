@@ -108,13 +108,13 @@ get_header(); ?>
     </div>
 
     <div class="testimonial">
-      <p class="quote">This software is the best software out there when you want to fight OTA battle.</p>
-      <p class="cite">- VP Revenue Management on Hotel Tech Report</p>
+        <p class="quote">I really love working with the team at Travel Tripper. Everyone from our account manager, to our client support team, to the product specialists have just been a dream to work with. It's been like night and day in comparison to previous vendors that we've had in similar space.</p>
+        <p class="cite">ERIC GOODEN - Marketing Manager, Bellstar Hotels & Resorts</p>
     </div>
 
   </div>
 </section> <?php
 
-get_template_part( 'template-parts/content', 'pre-footer-links' );
+get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 
 get_footer();

@@ -10,7 +10,8 @@
 // Get the first category so long as it's not a Resource post
 if ( get_post_type() !== 'resources' ) {
     $categories = get_the_category();
-    $category = $categories[0]->cat_name;
+    $category_name = $categories[0]->cat_name;
+    $category_link = get_category_link( $categories[0]->term_id );
 } ?>
 
 <article <?php post_class(); ?>>
@@ -32,7 +33,7 @@ if ( get_post_type() !== 'resources' ) {
     <div class="col-sm-6">
         <p class="entry-time"><time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time></p> <?php
         if ( get_post_type() !== 'resources' ) { ?>
-            <p class="entry-category"><?php echo $category; ?></p> <?php
+            <p class="entry-category"><a href="<?php echo esc_url( $category_link ); ?>"><?php echo $category_name; ?></a></p> <?php
         } ?>
         <p class="entry-title"><a href="<?php if ( get_field( 'resource_link' ) ) { esc_url( the_field( 'resource_link' ) ); } else { esc_url( the_permalink() ); } ?>"><?php the_title(); ?></a></p>
         <?php the_excerpt();

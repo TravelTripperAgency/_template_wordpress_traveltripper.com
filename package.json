@@ -21,7 +21,7 @@
     "browsersync": "browser-sync start --proxy 'localhost/traveltripper' --files '**/*'",
     "css": "node-sass --output-style expanded sass/style.scss style.css",
     "css:watch": "node-sass --output-style expanded --watch sass/style.scss style.css",
-    "js:uglify": "uglifyjs js/jquery-3.3.1.js js/owl.carousel.js js/wow.js js/main.js -c -m -o js/main.min.js",
+    "js:uglify": "uglifyjs js/jquery-3.3.1.js js/owl.carousel.js js/wow.js js/fitvids.js js/main.js -c -m -o js/main.min.js",
     "watch": "parallelshell 'npm run css:watch' 'npm run browsersync'"
   }
 }

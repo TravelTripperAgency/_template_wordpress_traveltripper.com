@@ -18,10 +18,6 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
         </div>
-        <div class="page-header__features">
-            <p>Seamless PMS Integrations</p>
-            <p>Channel Management, Payment Gateways, and More</p>
-        </div>
     </div>
 </section>
 
@@ -74,10 +70,8 @@ get_header(); ?>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/derbysoft.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/dhisco.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/hotel-availabilities.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/ideas.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/kognitiv.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/leonardo.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/rainmaker.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/rategain.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/rate-tiger.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/sabre.png" alt=""></div>
@@ -134,7 +128,7 @@ get_header(); ?>
 
 </section> <?php
 
-get_template_part( 'template-parts/content', 'pre-footer-links' );
+get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 
 get_template_part( 'template-parts/content', 'internal-ad' );
 

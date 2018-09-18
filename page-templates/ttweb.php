@@ -237,26 +237,9 @@ get_header(); ?>
     </div>
 
   </div>
-</section>
-
-<section class="pre-footer-links">
-  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/booking-engine/">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip.svg" alt="Booking Engine icon">
-      <p class="pre-footer-link__headline">RezTrip</p>
-      <p class="pre-footer-link__description">Shift bookings from high-commission channels to direct bookings with the industry's most innovative website platform and booking engine.</p>
-      <p class="pre-footer-link__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
-    </div>
-  </a>
-  <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">
-    <div class="pre-footer-link__wrapper">
-      <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing.svg" alt="Digital Marketing icon">
-      <p class="pre-footer-link__headline">Digital Marketing</p>
-      <p class="pre-footer-link__description">Drive qualified traffic to your hotel website and maximize direct bookings with smart campaigns managed by an expert team.</p>
-      <p class="pre-footer-link__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
-    </div>
-  </a>
 </section> <?php
+
+get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 
 get_template_part( 'template-parts/query', 'events' );
 

@@ -53,7 +53,7 @@ get_header(); ?>
 
 <section class="video">
     <div class="video-container">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/video-placeholder.jpg">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/rta-onscreen.jpg">
     </div>
 </section>
 
@@ -65,7 +65,7 @@ get_header(); ?>
         <li>The guest never sees that you’re out of parity—and can confidently book the lowest rate directly through your site.</li>
     </ol>
     <div class="btn-holder">
-      <a href="#" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the feature and spec sheet</a>
+      <a href="#" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the Rate Match features sheet</a>
     </div>
 </section>
 
@@ -82,7 +82,7 @@ get_header(); ?>
                 <div class="showcase__left">
                     <p class="showcase__increase"><span>+</span>50%</p>
                     <p class="showcase__revenue">increase in conversion rates</p>
-                    <a href="#" class="btn btn-primary">see how we did it</a>
+                    <a href="http://www.traveltripper.com/blog/travel-tripper-rate-match-is-a-2016-techovation-finalist/" class="btn btn-primary">see how we did it</a>
                 </div>
                 <div class="showcase__right">
                     <p>A New York hotel saw its conversion rate jump almost 50% within 10 days of implementing Rate Match.</p>

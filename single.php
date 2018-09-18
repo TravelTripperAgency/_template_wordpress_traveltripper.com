@@ -33,7 +33,7 @@ get_header(); ?>
           <div class="post-cta__wrap">
             <p class="post-cta__title">Stay on top of hotel distribution and marketing trends.</p>
             <p>Sign up for Travel Tripper's newsletter to get the latest news, tips, and resources delivered to your inbox.</p>
-            <a href="#" class="btn btn-primary">subscribe</a>
+            <a href="http://eepurl.com/bI-pnv" class="btn btn-primary">subscribe</a>
           </div>
         </div> <?php
 

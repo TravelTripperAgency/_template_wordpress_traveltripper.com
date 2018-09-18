@@ -18,7 +18,7 @@ get_header(); ?>
           <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
       } ?>
       <div class="btn-holder">
-        <a class="btn btn-primary" href="#">work with us</a>
+        <a class="btn btn-primary" href="<?php echo get_site_url(); ?>/contact/">work with us</a>
       </div>
     </div>
   </div>
@@ -51,7 +51,7 @@ get_header(); ?>
     <div class="col-right__inner">
       <h2 class="section-title">Integrations</h2>
       <p>Travel Tripper integrates with many of the leading hotel technology platforms in the industry, including PMS, channel managers, payment gateways, CRMs, revenue management systems, loyalty programs, data and analytics platforms, advertising platforms and more.</p>
-      <a class="btn btn-secondary-white" href="#">View all Integrations & Partners</a>
+      <a class="btn btn-secondary-white" href="<?php echo get_site_url(); ?>/solutions/integrations/">View all Integrations & Partners</a>
     </div>
   </div>
 
@@ -89,7 +89,7 @@ get_header(); ?>
 
 </section> <?php
 
-get_template_part( 'template-parts/content', 'pre-footer-links' );
+get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 
 get_template_part( 'template-parts/content', 'internal-ad' );
 

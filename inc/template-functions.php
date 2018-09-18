@@ -5,27 +5,6 @@
  * @package Travel_Tripper
  */
 
-/**
- * Adds custom classes to the array of body classes.
- *
- * @param array $classes Classes for the body element.
- * @return array
- */
-// add_filter( 'body_class', 'traveltripper_body_classes' );
-// function traveltripper_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	// if ( ! is_singular() ) {
-	// 	$classes[] = 'hfeed';
-	// }
-
-	// Adds a class of no-sidebar when there is no sidebar present.
-	// if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	// 	$classes[] = 'no-sidebar';
-	// }
-
-	// return $classes;
-// }
-
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
@@ -108,6 +87,15 @@ function add_class_to_excerpt( $excerpt ) {
 
 
 /**
+ * Shorten output of `the_excerpt()`
+ */
+add_filter( 'excerpt_length', 'custom_excerpt_length', 99 );
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+
+
+/**
  * Add LinkedIn to user contact fields.
  */
 add_filter( 'user_contactmethods', 'linkedin_contact_info' );
@@ -156,6 +144,39 @@ function custom_search_form( $form ) {
     </form>';
 
     return $form;
+}
+
+
+/**
+ * Get Resources tag name for archive-resources.php template
+ */
+function resources_custom_tag() {
+    // Get post by post ID.
+    if ( !$post = get_post() ) {
+        return '';
+    }
+
+    // Get post type taxonomies.
+    $taxonomies = get_object_taxonomies( $post->post_type, 'objects' );
+
+    $output = array();
+
+    foreach ( $taxonomies as $taxonomy_name => $taxonomy ) {
+        // Get the terms.
+        $terms = get_the_terms( $post->ID, $taxonomy_name );
+        if ( !empty( $terms ) ) {
+            $counter = 1;
+            foreach ( $terms as $term ) {
+                if ( $counter = 1 ) {
+                    $output[] = sprintf( '<p class="entry-category">%1$s</p>',
+                        esc_html( $term->name )
+                    );
+                }
+                $counter = $counter + 1;
+            }
+        }
+    }
+    return implode( '', $output );
 }
 
 

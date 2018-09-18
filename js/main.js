@@ -7,6 +7,9 @@ jQuery(document).ready(function() {
   });
   wow.init();
 
+  // fitVids target
+  $(".post").fitVids();
+
   //* Add toggle button
   $('.site-header__nav ul').append('<button class="menu-toggle-open"></button>');
 

@@ -17,12 +17,12 @@ get_header(); ?>
 
         <?php get_search_form(); ?>
 
-        <p><?php esc_html_e( 'Please learn more about our website platform, digital marketing services, and CRS & Direct Booking Engine below or you can search what you are looking for.', 'traveltripper' ); ?></p>
+        <p><?php esc_html_e( 'Please learn more about our CRS & booking engine, website platform, and digital marketing services below or you can search what you are looking for.', 'traveltripper' ); ?></p>
 
     </section>
 
 </main> <?php
 
-get_template_part( 'template-parts/content', 'pre-footer-links' );
+get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 
 get_footer();

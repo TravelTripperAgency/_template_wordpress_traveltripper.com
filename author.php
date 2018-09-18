@@ -37,6 +37,10 @@ get_header(); ?>
     </div>
 </section>
 
+<section class="widget-author-separator wrap">
+    <div class="border"></div>
+</section>
+
 <main class="content wrap"> <?php
 
 	if ( have_posts() ) :

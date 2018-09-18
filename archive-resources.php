@@ -34,7 +34,8 @@ get_header(); ?>
             // Start the Loop
         	while ( have_posts() ) : the_post(); ?>
 
-                <article class="post"> <?php
+                <article <?php post_class( 'post' ); ?>> <?php
+
                     if ( has_post_thumbnail() ) {
                         if ( get_field( 'resource_link' ) ) { ?>
                             <a href="<?php esc_url( the_field( 'resource_link' ) ); ?>"><?php the_post_thumbnail(); ?></a> <?php
@@ -48,6 +49,7 @@ get_header(); ?>
                             <a href="<?php esc_url( the_permalink() ); ?>"><?php traveltripper_default_thumbnail(); ?></a> <?php
                         }
                     }
+                    echo resources_custom_tag();
                     if ( get_field( 'resource_link' ) ) { ?>
                         <p class="post__title"><a href="<?php esc_url( the_field( 'resource_link' ) ); ?>"><?php the_title(); ?></a></p> <?php
                     } else { ?>
@@ -60,11 +62,11 @@ get_header(); ?>
         }
 
         // Not even sure if this works as there are no resources.
-        // the_posts_pagination(); ?>
+        the_posts_pagination(); ?>
 
     </main> <?php
 
-    get_sidebar( 'primary' ); ?>
+    get_sidebar( 'resources' ); ?>
 
 </div> <?php
 

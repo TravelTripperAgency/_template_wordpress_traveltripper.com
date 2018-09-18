@@ -67,11 +67,11 @@ if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
                   printf( '<span class="entry-categories">' . esc_html__( 'Categories: %1$s', 'traveltripper' ) . '</span>', $categories_list ); // WPCS: XSS OK.
               }
 
-              $tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'traveltripper' ) );
-              if ( $tags_list ) {
-                  /* translators: 1: list of tags. */
-                  printf( '<span class="entry-tags">' . esc_html__( 'Tags: %1$s', 'traveltripper' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-              } ?>
+              // $tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'traveltripper' ) );
+              // if ( $tags_list ) {
+              //     /* translators: 1: list of tags. */
+              //     printf( '<span class="entry-tags">' . esc_html__( 'Tags: %1$s', 'traveltripper' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+              // } ?>
 
             </p> <?php
 

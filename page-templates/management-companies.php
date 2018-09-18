@@ -18,7 +18,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="#">request a demo</a>
+                <a class="btn btn-primary" href="https://try.traveltripper.com/request-demo/?utm_source=website&utm_content=hotelgroups">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
@@ -43,7 +43,7 @@ get_header(); ?>
 
   <div class="col-right">
     <p>Hotel groups need a flexible and featured-packed multi-property solution that keeps them ahead of the competition when it comes to hotel distribution and marketing trends.</p>
-    <p>Travel Tripper's solutions easily allow revenue and marketing managers to manage one, several, or a hundred hotels with ease through our <a href="#">CRS</a>, <a href="#">website</a>, and <a href="#">digital marketing platforms</a>.</p>
+    <p>Travel Tripper's solutions easily allow revenue and marketing managers to manage one, several, or a hundred hotels with ease through our <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">CRS</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">digital marketing</a> platforms.</p>
   </div>
 
 </section>
@@ -122,8 +122,8 @@ get_header(); ?>
 <section class="testimonials row<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
   <div class="col-left">
     <div class="testimonial">
-      <p class="quote">The platform is powerful & continuously evolving. Ability to work around flexible smart policies, complex offers, geo-targeting functionality, and response time around support as needed remain key differentiators.</p>
-      <p class="cite">– VP of Revenue & Distribution on Hotel Tech Report</p>
+      <p class="quote">We're running independent resorts. Every resort has its own unique brand. And because of that, we have multiple marketing campaigns that are running in various markets congruently at all times of the year. Those campaigns are aimed at transient vacationers, companies that are booking corporate events, associations that are booking annual conferences, and weddings, and family gatherings. Travel Tripper is a product that helps us achieve our goals for those campaigns.</p>
+      <p class="cite">ERIC GOODEN - Marketing Manager, Bellstar Hotels & Resorts</p>
     </div>
   </div>
 </section>
@@ -137,7 +137,7 @@ get_header(); ?>
 
     <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>" data-wow-delay=".5s">
       <div class="showcase__left">
-        <p>Since switching to Travel Tripper in 2016, Staywell Hotel has experienced consistent increases in rooms, nights, and ADR across all properties.</p>
+        <p>Since switching to Travel Tripper in 2016, StayWell hotels have experienced consistent increases in rooms, nights, and ADR across all properties.</p>
       </div>
       <div class="showcase__right">
         <p class="showcase__increase"><span>+</span>30%</p>
@@ -155,7 +155,7 @@ get_header(); ?>
     <div class="col-left__wrap">
 
       <h2 class="section-title">Integrated with the systems you already work with</h2>
-      <a href="#" class="btn">View all Integrations & Partners</a>
+      <a href="#" class="btn btn-secondary-dark">View all Integrations & Partners</a>
 
       <div class="row">
         <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/oracle.png" alt="integration logo"></div>
@@ -174,7 +174,7 @@ get_header(); ?>
 
 </section> <?php
 
-get_template_part( 'template-parts/content', 'pre-footer-links' );
+get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 
 get_template_part( 'template-parts/content', 'internal-ad' );
 

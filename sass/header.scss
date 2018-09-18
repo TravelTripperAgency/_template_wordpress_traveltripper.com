@@ -180,7 +180,11 @@
     .home & {
       position: relative;
       width: 100%;
+      @include breakpoint($xs) {
+        margin-left: 20px;
+      }
       @include breakpoint($sm) {
+        margin-left: 0;
         padding-bottom: 0;
       }
       @include breakpoint($md) {
@@ -215,12 +219,12 @@
       }
     }
 
-    .page-template-independents & {
-      align-self: flex-start;
-      @include breakpoint($xs) {
-        padding: 0;
-      }
-    }
+    // .page-template-independents & {
+    //   align-self: flex-start;
+    //   @include breakpoint($xs) {
+    //     padding: 0;
+    //   }
+    // }
 
     .page-template-integrations & {
       position: relative;
@@ -428,6 +432,15 @@
     padding-left: 0;
     list-style: none;
 
+    .home & {
+      @include breakpoint($xs) {
+        margin-left: 20px;
+      }
+      @include breakpoint($sm) {
+        margin-left: 0;
+      }
+    }
+
     .page-template-about & {
       display: block;
       width: initial;
@@ -448,12 +461,14 @@
 
       &:before {
         position: absolute;
-        top: 8px;
+        top: 13px;
+        // top: 50%;
         left: -28px;
         width: 20px;
         height: 2px;
         content: '';
         background-color: $red;
+        // transform: translateY(-50%);
       }
 
       .page-template-about & {

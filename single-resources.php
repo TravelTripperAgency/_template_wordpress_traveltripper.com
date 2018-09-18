@@ -16,9 +16,9 @@ get_header(); ?>
 
             <article class="post">
 
-                <header class="entry-header">
-                    <h1 class="entry-title"><?php the_title(); ?></h1>
-                    <time class="entry-time" datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
+                <header class="entry-header"> <?php
+                    the_title( '<h1 class="entry-title">', '</h1>' );
+                    traveltripper_posted_on(); ?>
                 </header> <?php
 
                 if ( has_post_thumbnail() ) { ?>

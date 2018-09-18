@@ -18,7 +18,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="#">request a demo</a>
+                <a class="btn btn-primary" href="https://try.traveltripper.com/request-demo/?utm_source=website&utm_content=boutiquehotels">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
@@ -74,7 +74,7 @@ get_header(); ?>
 
   <div class="col-right">
     <h2 class="section-title">All-in-one complete e-commerce solution</h2>
-    <p>We offer <a href="#">distribution</a>, <a href="#">booking engine</a>, <a href="#">website</a>, and <a href="#">digital marketing</a> so you are covered from search to stay with one point of contact when you need to get things done.</p>
+    <p>We offer <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">distribution</a>, <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">digital marketing</a> so you are covered from search to stay with one point of contact when you need to get things done.</p>
     <p>Work closely with an expert team of revenue optimization and marketing specialists to help you maximize revenue and hit your direct booking goals.</p>
   </div>
 
@@ -110,6 +110,7 @@ get_header(); ?>
     <div class="service dgs">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-hover.svg" alt="">
       <p class="service__title">Digital Marketing</p>
+      <p class="service__subtitle">Full Service Agency</p>
       <p class="service__description">Maximize ROI across all online advertising channels with cutting edge technology and strategy, including our award-winning Real Time Ads for hotels.</p>
       <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
@@ -144,7 +145,7 @@ get_header(); ?>
 
       <div class="col-right__col-left">
         <h2 class="section-title">Integrated with the systems you work with</h2>
-        <a href="#" class="btn">View all Integrations & Partners</a>
+        <a href="#" class="btn btn-secondary-dark">View all Integrations & Partners</a>
       </div>
 
       <div class="col-right__col-right row">
@@ -176,7 +177,7 @@ get_header(); ?>
 
 </section> <?php
 
-get_template_part( 'template-parts/content', 'pre-footer-links' );
+get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 
 get_template_part( 'template-parts/content', 'internal-ad' );
 

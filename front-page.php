@@ -102,9 +102,7 @@ get_header(); ?>
 
 <section class="services background-image">
 
-  <div class="section-title">
-    <h2 class="services__title">Three dynamic solutions to power your hotel bookings</h2>
-  </div>
+  <h2 class="section-title">Three dynamic solutions to power your hotel bookings</h2>
 
   <div class="row wrap">
     <div class="service reztrip">
@@ -156,9 +154,9 @@ get_header(); ?>
 
 <section class="customers">
 
-  <div class="section-title">
-    <p class="customers__title">Direct revenue, simplifed for all</p>
-    <p class="customers__subtitle">Travel Tripper's packaged and custom solutions are ideal for:</p>
+  <div class="wrap">
+    <p class="section-title">Direct revenue, simplifed for all</p>
+    <p class="section-subtitle">Travel Tripper's packaged and custom solutions are ideal for:</p>
   </div>
 
   <div class="row wrap">

@@ -237,8 +237,6 @@
     }
 
     .cite {
-      bottom: -32px;
-      max-width: 83%;
       @include breakpoint($lg) {
         max-width: 383px;
       }

@@ -18,7 +18,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="#">request a demo</a>
+                <a class="btn btn-primary" href="https://try.traveltripper.com/request-demo/?utm_source=website&utm_content=casinos">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
@@ -42,7 +42,7 @@ get_header(); ?>
       <h2 class="section-title">Customized features to impress new loyalty members, and keep high value guests engaged.</h2>
     </div>
     <div class="col-right">
-      <p>Casino hotels depend on player loyalty for their core business; Travel Tripper has built a booking product that helps gaming properties serve their most loyal guests just as easily online as offline. </p>
+      <p>Casino hotels depend on player loyalty for their core business. Travel Tripper's robust and extensible CRS platform helps casino and gaming properties to streamline operations, automate loyalty bookings, and maximize revenue across diverse business segments.</p>
     </div>
   </div>
 
@@ -55,7 +55,7 @@ get_header(); ?>
       <ul>
         <li>Integration with key loyalty programs such as Scientific Games and Aristocrat</li>
         <li>Offer complimentary rooms online and allow guests to book special loyalty offers with their player numbers</li>
-        <li>Reduce reliance on call center</li>
+        <li>Streamline call center operations and give agents unprecedented flexibility to meet the unique requests of VIPs</li>
         <li>Multi-room and multi-rate plan bookings available</li>
         <li>Capability of blending multiple casino offers into one reservation</li>
         <li>Brand and hotel group booking portals available</li>
@@ -73,7 +73,8 @@ get_header(); ?>
         <li>Easily sell room packages and individual add-ons</li>
         <li>Integrated rate-shopping and price-matching with Travel Tripper Rate Match</li>
         <li>Enhanced group integration</li>
-        <li>Integration with key revenue optimization platforms such as Rainmaker and Nor1</li>
+        <li>Integration with PMS, revenue management, and loyalty systems to simplify rate management and data entry</li>
+        <li>Flexible credit card payment processing and secure payment gateway integration</li>
       </ul>
     </div>
   </div>
@@ -105,7 +106,7 @@ get_header(); ?>
 <section class="casino-integrations row wrap">
   <div class="col-right">
     <h2 class="section-title">Integrations available with standard gaming and casino hotel platforms</h2>
-    <p>Don't see an integration listed here that you need? View our full list of <a href="#">integration partners</a> or contact us for more information.</p>
+    <p>Don't see an integration listed here that you need? View our full list of <a href="<?php echo get_site_url(); ?>/solutions/integrations/">integration partners</a> or contact us for more information.</p>
   </div>
   <div class="col-left row">
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/agilysys.png" alt=""></div>
@@ -157,7 +158,7 @@ get_header(); ?>
 
     <div class="col-left">
       <figure class="wp-caption">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/vegas-team.jpg, <?php echo get_template_directory_uri(); ?>/images/vegas-team@2x.jpg 2x" src="<?php echo get_template_directory_uri(); ?>/images/vegas-team@2x.jpg" alt="Travel Tripper's Las Vegas Team">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/vegas-team.jpg" alt="Travel Tripper's Las Vegas Team">
         <figcaption class="wp-caption-text">Travel Tripper's dedicated Las Vegas team enjoys a night out with clients.</figcaption>
       </figure>
     </div>
@@ -165,7 +166,7 @@ get_header(); ?>
   </div>
 </section> <?php
 
-get_template_part( 'template-parts/content', 'pre-footer-links' );
+get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 
 get_template_part( 'template-parts/content', 'internal-ad' );
 

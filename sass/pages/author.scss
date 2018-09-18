@@ -1,5 +1,10 @@
 .author {
 
+  .widget-author-separator .border {
+    margin-bottom: 32px;
+    border-bottom: 1px solid $gray-dark;
+  }
+
   .content {
     display: flex;
     flex-wrap: wrap;
@@ -13,6 +18,8 @@
     @include breakpoint($xs) {
       flex: 0 0 span(1 of 2);
       max-width: span(1 of 2);
+      margin-right: 0;
+      margin-left: 0;
     }
     @include breakpoint($sm) {
       flex: 0 0 span(1 of 3);

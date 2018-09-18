@@ -28,11 +28,12 @@ if ( $query_featured->have_posts() ) { ?>
 
                 // Get the first category
                 $categories = get_the_category();
-                $category = $categories[0]->cat_name; ?>
+                $category_name = $categories[0]->cat_name;
+                $category_link = get_category_link( $categories[0]->term_id ); ?>
 
                 <article class="featured-articles__item">
                     <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
-                    <p class="entry-meta"><span class="entry-category"><?php echo $category; ?></span></p>
+                    <p class="entry-meta"><a class="entry-category" href="<?php echo esc_url( $category_link ); ?>"><?php echo $category_name; ?></a></p>
                     <p class="entry-title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p>
                 </article> <?php
 

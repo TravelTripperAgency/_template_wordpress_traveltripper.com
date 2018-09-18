@@ -9,24 +9,11 @@
 
 get_header(); ?>
 
-<section id="skip-link-content" class="page-header">
-  <div class="wrap row">
-    <div class="page-header__title-area">
-      <h1 class="page-header__title"><?php the_archive_title(); ?></h1>
-      <p class="page-header__description">The latest in marketing and distribution trends for hoteliers</p>
-    </div>
-    <div class="page-header__cta">
-      <p>Become an expert hotel marketer with our free resources.</p>
-      <div class="btn-holder">
-        <a class="btn btn-white" href="http://eepurl.com/bI-pnv">subscribe</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <div class="content-sidebar-wrap">
 
     <main class="content"> <?php
+
+        the_archive_title( '<h1 class="page-title">', '</h1>' );
 
 		if ( have_posts() ) :
 

@@ -1,7 +1,7 @@
 .post-type-archive-resources {
 
   .content {
-    @include breakpoint($sm) {
+    @include breakpoint($xs) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -21,7 +21,7 @@
     width: 100%;
     max-width: 330px;
     margin: 0 auto 80px;
-    @include breakpoint($sm) {
+    @include breakpoint($xs) {
       flex: 0 0 span(1 of 2);
       max-width: span(1 of 2);
       margin: 0 0 80px;
@@ -30,6 +30,11 @@
       flex: 0 0 span(1 of 3);
       max-width: span(1 of 3);
     }
+
+    img {
+      margin-bottom: 8px;
+    }
+
   }
 
   .featured-image {

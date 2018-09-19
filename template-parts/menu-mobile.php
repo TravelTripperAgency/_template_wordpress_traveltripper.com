@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">
+                        <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">
                             <div class="sub-menu__icon">
                                 <div class="background-icon digital-marketing"></div>
                             </div>

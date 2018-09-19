@@ -30,7 +30,10 @@
   }
 
   .author & {
-    margin: 32px 0;
+    margin: 32px auto;
+    @include breakpoint($md) {
+      max-width: 1024px;
+    }
 
     .wrap {
       display: flex;
@@ -85,7 +88,7 @@
 
     .entry-footer & {
       width: 100%;
-      min-width: 86px;      
+      min-width: 86px;
     }
 
   }

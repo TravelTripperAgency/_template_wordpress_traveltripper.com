@@ -32,7 +32,7 @@
     }
 
     if ( !is_page( 'digital-marketing' ) ) { ?>
-        <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">
+        <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">
             <div class="pre-footer-link__wrapper">
                 <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing.svg" alt="Digital Marketing icon">
                 <p class="pre-footer-link__headline">Digital Marketing</p>

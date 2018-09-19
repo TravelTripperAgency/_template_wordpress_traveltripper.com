@@ -37,7 +37,7 @@
     flex-direction: column;
     max-width: 395px;
     margin: 0 auto 88px;
-    @include breakpoint($sm) {
+    @include breakpoint($xs) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -60,7 +60,7 @@
 
   .featured-articles__item {
     margin-bottom: 32px;
-    @include breakpoint($sm) {
+    @include breakpoint($xs) {
       flex: 0 0 span(1 of 2);
       max-width: span(1 of 2);
     }

@@ -74,7 +74,7 @@ get_header(); ?>
 
   <div class="col-right">
     <h2 class="section-title">All-in-one complete e-commerce solution</h2>
-    <p>We offer <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">distribution</a>, <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">digital marketing</a> so you are covered from search to stay with one point of contact when you need to get things done.</p>
+    <p>We offer <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">distribution</a>, <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing</a> so you are covered from search to stay with one point of contact when you need to get things done.</p>
     <p>Work closely with an expert team of revenue optimization and marketing specialists to help you maximize revenue and hit your direct booking goals.</p>
   </div>
 

@@ -67,7 +67,7 @@ get_header(); ?>
       </div>
 
       <div class="btn-holder">
-        <a href="#" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the TT Web feature sheet</a>
+        <a href="javascript:void(0)" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the TT Web feature sheet</a>
       </div>
 
     </div>

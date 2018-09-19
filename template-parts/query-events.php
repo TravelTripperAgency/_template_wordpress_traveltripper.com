@@ -28,7 +28,13 @@ if ( $query_event->have_posts() ) { ?>
                         if ( get_field( 'event_dates' ) ) { ?>
                             <p class="event__date"><?php the_field( 'event_dates' ); ?></p> <?php
                         } ?>
-                        <p class="event__title"><?php the_title(); ?></p> <?php
+                        <p class="event__title"><?php
+                            if ( get_field( 'event_link' ) ) { ?>
+                                <a href="<?php the_field( 'event_link' );  ?>"><?php the_title(); ?></a> <?php
+                            } else {
+                                the_title();
+                            } ?>
+                        </p> <?php
                         if ( get_field( 'event_location' ) ) { ?>
                             <p class="event__location"><?php the_field( 'event_location' ); ?></p> <?php
                         }

@@ -71,7 +71,7 @@ get_header(); ?>
       </div>
 
       <div class="btn-holder">
-        <a href="#" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the full RezTrip feature and spec sheet.</a>
+        <a href="javascript:void(0)" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the full RezTrip feature and spec sheet.</a>
       </div>
 
     </div>
@@ -96,7 +96,7 @@ get_header(); ?>
         <p>In addition to your hotel website, RezTrip also offers distribution through channel managers, OTAs, GDS, consortia, metasearch, and call center. Manage all rates and inventory through one seamless  reservation system.</p>
       </div>
       <div class="text-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-crs.png" alt="HotelTechAwards">
+         <a href="https://hoteltechreport.com/company/travel-tripper-crs"><img srcset="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-crs.png, <?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-crs@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-crs@2x.png" alt="HotelTechAwards"></a>
       </div>
     </div>
 
@@ -222,7 +222,7 @@ get_header(); ?>
   <div class="wrap row">
 
     <div class="text-center">
-      <h2 class="section-title">Power up direct bookings by integrating RezTrip with <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">TT Web</a> and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">Digital Marketing</a></h2>
+      <h2 class="section-title">Power up direct bookings by integrating RezTrip with <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">TT Web</a> and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></h2>
       <p>Travel Tripper's suite of solutions together create a robust hotel e-commerce platform designed to maximize your hotel's direct distribution strategy.</p>
     </div>
 

@@ -31,7 +31,7 @@ get_header(); ?>
 
     <div class="col-left">
       <h2 class="section-title">Built by hoteliers<span class="d-none d-sm-inline"> for hoteliers</span></h2>
-      <p>Travel Tripper is a hotel tech provider and strategic digital partner helping hotels worldwide to increase direct bookings and maximize revenue. Known in the industry for its constant innovation and exceptional expertise, Travel Tripper empowers hotels to dominate from search to stay with its comprehensive suite of solutions, including <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine and CRS</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">web design and development</a>, and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">digital marketing management</a>.</p>
+      <p>Travel Tripper is a hotel tech provider and strategic digital partner helping hotels worldwide to increase direct bookings and maximize revenue. Known in the industry for its constant innovation and exceptional expertise, Travel Tripper empowers hotels to dominate from search to stay with its comprehensive suite of solutions, including <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine and CRS</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">web design and development</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing management</a>.</p>
     </div>
 
     <div class="col-right background-image">

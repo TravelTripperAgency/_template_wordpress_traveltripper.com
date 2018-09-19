@@ -189,6 +189,11 @@
     line-height: 23px;
     color: $blue-light;
     text-transform: uppercase;
+
+    a {
+      color: $blue-light;
+    }
+
   }
 
   .event__location {
@@ -263,7 +268,7 @@
     max-width: 540px;
     padding: 73px 44px 64px;
     @include breakpoint($xs) {
-      padding: 73px 88px 64px;
+      padding: 73px 43px 64px;
     }
     @include breakpoint($sm) {
       padding: 73px 0 64px;
@@ -355,7 +360,11 @@
 
     img {
       margin-bottom: 27px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+
+      &:hover {
+        box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+      }
+
     }
 
     p {

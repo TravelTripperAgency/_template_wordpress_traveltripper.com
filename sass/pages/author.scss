@@ -1,14 +1,24 @@
 .author {
 
-  .widget-author-separator .border {
-    margin-bottom: 32px;
-    border-bottom: 1px solid $gray-dark;
+  .widget-author-separator {
+    @include breakpoint($md) {
+      max-width: 1024px;
+    }
+
+    .border {
+      margin-bottom: 32px;
+      border-bottom: 1px solid $gray-dark;
+    }
+
   }
 
   .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include breakpoint($md) {
+      max-width: 1024px;
+    }
   }
 
   .post {

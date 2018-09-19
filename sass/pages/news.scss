@@ -1,19 +1,22 @@
 .post-type-archive-news-and-press {
 
-  .featured-news {
-    margin-top: 53px;
-    // margin-bottom is 72px, but needs the additional 56px due to the negitive
-    // margin on the last row.
-    margin-bottom: 128px;
+  .page-header {
+    margin-bottom: 53px;
     @include breakpoint($sm) {
-      margin-top: 115px;
+      margin-bottom: 115px;
     }
     @include breakpoint($md) {
-      margin-top: 147px;
+      margin-bottom: 147px;
     }
     @include breakpoint($xl) {
-      margin-top: 56px;
+      margin-bottom: 56px;
     }
+  }
+
+  .featured-news {
+    margin-bottom: 128px;
+    // margin-bottom is 72px, but needs the additional 56px due to the negitive
+    // margin on the last row.
 
     .row {
       max-width: 437px;
@@ -67,15 +70,25 @@
     max-width: 700px;
     margin: 0 auto;
 
-    .old-news__title h2 {
-      font-family: $recta;
-      font-size: 24px;
-      font-weight: 700;
+    .old-news__title {
+      border-bottom: 1px solid #4a4a4a;
+
+      h2 {
+        font-family: $recta;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
     }
 
     .old-news__item {
-      padding-top: 32px;
-      border-top: 1px solid $gray-dark;
+      margin-top: 32px;
+      border-bottom: 1px solid $gray-dark;
+
+      &.last {
+        margin-bottom: 64px;
+        border-bottom: 0;
+      }
 
       a {
         font-family: $recta;

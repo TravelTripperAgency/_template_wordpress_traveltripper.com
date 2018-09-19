@@ -43,7 +43,7 @@ get_header(); ?>
 
   <div class="col-right">
     <p>Hotel groups need a flexible and featured-packed multi-property solution that keeps them ahead of the competition when it comes to hotel distribution and marketing trends.</p>
-    <p>Travel Tripper's solutions easily allow revenue and marketing managers to manage one, several, or a hundred hotels with ease through our <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">CRS</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">digital marketing</a> platforms.</p>
+    <p>Travel Tripper's solutions easily allow revenue and marketing managers to manage one, several, or a hundred hotels with ease through our <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">CRS</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing</a> platforms.</p>
   </div>
 
 </section>

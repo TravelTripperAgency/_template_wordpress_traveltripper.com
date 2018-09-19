@@ -61,7 +61,6 @@ get_header(); ?>
 
         }
 
-        // Not even sure if this works as there are no resources.
         the_posts_pagination(); ?>
 
     </main> <?php

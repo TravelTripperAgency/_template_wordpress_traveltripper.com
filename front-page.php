@@ -67,7 +67,7 @@ get_header(); ?>
       <div class="col-right__wrap">
         <div class="col-right__col-left<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInUp'; } ?>">
           <h2 class="section-title">Dominate from search to stay.</h2>
-          <p>Travel Tripper's powerful <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">hotel booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website services</a>, and <a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">digital marketing solutions</a> help you to maximize revenue from your direct channel.</p>
+          <p>Travel Tripper's powerful <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">hotel booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website services</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing solutions</a> help you to maximize revenue from your direct channel.</p>
         </div>
         <div class="col-right__col-right<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
           <div class="testimonial">
@@ -121,7 +121,7 @@ get_header(); ?>
     </div>
     <div class="service dgs">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-home.svg" alt="">
-      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">Digital Marketing</a></p>
+      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></p>
       <p class="service__subtitle">Full-Service Agency</p>
       <p class="service__description">Maximize ROI across all online advertising channels with cutting edge technology and strategy, including our award-winning Real Time Ads for hotels.</p>
       <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></p>

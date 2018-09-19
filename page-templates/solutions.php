@@ -47,18 +47,11 @@ get_header(); ?>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-hover.svg" alt="">
-      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/digital-marketing/">Digital Marketing</a></p>
+      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></p>
       <p class="subtitle">Full-Service Agency</p>
       <p class="description">Maximize your ROI across all online advertising channels with cutting edge technology and strategy.</p>
       <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
-
-    <!-- <div class="col">
-      <img src="<?php // echo get_template_directory_uri(); ?>/images/icons/icon-express-suite-hover.svg" alt="">
-      <p class="title">Express Suite</p>
-      <p class="description">Power your hotel with the smart all-in-one website and booking engine designed for small and medium-sized properties.</p>
-      <p class="arrow"><img src="<?php // echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
-    </div> -->
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-rate-match-hover.svg" alt="">
@@ -99,7 +92,7 @@ get_header(); ?>
         </div>
 
         <div class="col-right">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report.png" alt="hotel tech report">
+          <a href="https://hoteltechreport.com/s/travel%20tripper"><img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report.png" alt="hotel tech report"></a>
         </div>
 
       </div>

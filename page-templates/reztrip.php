@@ -155,12 +155,12 @@ get_header(); ?>
     </figure>
 
     <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-      <div class="showcase__left">
-        <p class="showcase__increase">2X<span>+</span></p>
-        <p class="showcase__revenue">conversion rate in four months</p>
-        <a href="#" class="btn btn-primary">see how we did it</a>
+      <div class="showcase__metrix">
+        <p class="showcase__metrix-number">2X<span>+</span></p>
+        <p class="showcase__metrix-text">conversion rate in four months</p>
+        <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Stratosphere-case-study-091918.pdf" class="btn btn-primary">see how we did it</a>
       </div>
-      <div class="showcase__right">
+      <div class="showcase__description">
         <p>The Stratosphere Hotel increased their conversion rate over 2x within 4 months after integrating RezTrip with their existing system.</p>
       </div>
     </div>
@@ -222,7 +222,7 @@ get_header(); ?>
   <div class="wrap row">
 
     <div class="text-center">
-      <h2 class="section-title">Power up direct bookings by integrating RezTrip with <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">TT Web</a> and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></h2>
+      <h2 class="section-title">Power up direct bookings by integrating RezTrip with <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">TT Web</a> and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></h2>
       <p>Travel Tripper's suite of solutions together create a robust hotel e-commerce platform designed to maximize your hotel's direct distribution strategy.</p>
     </div>
 

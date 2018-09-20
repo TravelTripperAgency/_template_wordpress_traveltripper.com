@@ -87,6 +87,10 @@
 
     }
 
+    &.current-menu-item > a {
+      text-decoration: underline;
+    }
+
     .sticky-header & {
       &:hover {
         box-shadow: 0 0 12px rgba(0, 0, 0, .2);
@@ -220,6 +224,7 @@
         display: flex;
         // margin: 16px 32px 16px 16px;
         padding: 0;
+        text-decoration: none;
 
         &:hover {
           color: $blue-light;

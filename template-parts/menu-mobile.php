@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">
+                        <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">
                             <div class="sub-menu__icon">
                                 <div class="background-icon ttweb"></div>
                             </div>

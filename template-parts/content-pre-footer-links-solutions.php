@@ -21,7 +21,7 @@
     }
 
     if ( !is_page( 'hotel-websites' ) ) { ?>
-        <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">
+        <a class="pre-footer-link" href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">
             <div class="pre-footer-link__wrapper">
                 <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb.svg" alt="Hotel Websites icon">
                 <p class="pre-footer-link__headline">Travel Tripper Web</p>

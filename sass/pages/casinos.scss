@@ -245,96 +245,17 @@
   }
 
   .showcase {
-    position: absolute;
-    top: 60%;
-    display: flex;
-    flex-direction: column;
-    max-width: 90%;
-    padding: 24px;
-    background-color: #fff;
-    box-shadow: 0 0 29px rgba(0, 0, 0, .3);
-    transform: translateY(-40%);
     @include breakpoint($xs) {
-      flex-direction: row;
-    }
-    @include breakpoint($sm) {
-      max-width: 756px;
-    }
-    @include breakpoint($lg) {
-      padding-top: 32px;
-      padding-right: 64px;
-      padding-bottom: 32px;
+      top: 50%;
+      padding-right: 24px;
+      padding-left: 0;
+      transform: translateY(-50%);
     }
 
-    p {
-      margin-bottom: 0;
-      font-size: 17px;
-      @include breakpoint($sm) {
-        font-size: 23px;
-      }
-    }
-
-    .showcase__right {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 186px;
-      margin-bottom: 24px;
+    .showcase__description {
       @include breakpoint($xs) {
-        margin-bottom: 0;
-      }
-
-      .btn {
-        @include breakpoint($xs) {
-          position: absolute;
-          bottom: -45px;
-        }
-        @include breakpoint($lg) {
-          bottom: -52px;
-        }
-      }
-
-    }
-
-    .showcase__increase {
-      font-size: 58px;
-      font-weight: 700;
-      line-height: 55.89px;
-      color: $blue-light;
-      @include breakpoint($sm) {
-        font-size: 78px;
-      }
-
-      span {
-        font-size: 45px;
-        @include breakpoint($sm) {
-          font-size: 61px;
-        }
-      }
-
-    }
-
-    .showcase__revenue {
-      margin-bottom: 8px;
-      font-size: 11px;
-      font-weight: 700;
-      line-height: 19.87px;
-      color: $blue-light;
-      text-align: center;
-      text-transform: uppercase;
-      @include breakpoint($sm) {
-        font-size: 15px;
-      }
-    }
-
-    .showcase__left {
-      display: flex;
-      align-items: center;
-      margin-right: 24px;
-      margin-left: 24px;
-      text-align: center;
-      @include breakpoint($xs) {
+        margin-right: 24px;
+        margin-left: 40px;
         text-align: left;
       }
     }

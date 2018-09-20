@@ -67,7 +67,7 @@ get_header(); ?>
       <div class="col-right__wrap">
         <div class="col-right__col-left<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInUp'; } ?>">
           <h2 class="section-title">Dominate from search to stay.</h2>
-          <p>Travel Tripper's powerful <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">hotel booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website services</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing solutions</a> help you to maximize revenue from your direct channel.</p>
+          <p>Travel Tripper's powerful <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">hotel booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">website services</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing solutions</a> help you to maximize revenue from your direct channel.</p>
         </div>
         <div class="col-right__col-right<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
           <div class="testimonial">
@@ -85,12 +85,12 @@ get_header(); ?>
       </figure>
 
       <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-        <div class="showcase__left">
-          <p class="showcase__increase"><span>+</span>84%</p>
-          <p class="showcase__revenue">direct website revenue</p>
+        <div class="showcase__metrix">
+          <p class="showcase__metrix-number"><span>+</span>84%</p>
+          <p class="showcase__metrix-text">direct website revenue</p>
           <a href="#" class="btn btn-primary">see how we did it</a>
         </div>
-        <div class="showcase__right">
+        <div class="showcase__description">
           <p>The Mayfair Hotel & Spa increased their direct website revenue 84% after partnering with Travel Tripper.</p>
         </div>
       </div>
@@ -114,7 +114,7 @@ get_header(); ?>
     </div>
     <div class="service web">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-home.svg" alt="">
-      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">Travel Tripper Web</a></p>
+      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">Travel Tripper Web</a></p>
       <p class="service__subtitle">Website Platform and Agency</p>
       <p class="service__description">Change lookers into bookers with beautiful design and smart content like live rates and special offers.</p>
       <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></p>

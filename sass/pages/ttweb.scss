@@ -332,112 +332,18 @@
     }
 
     .showcase {
-      display: flex;
-      flex-direction: column;
-      max-width: 90%;
-      margin-bottom: 80px;
-      padding: 24px;
-      background-color: #fff;
-      box-shadow: 0 0 29px rgba(0, 0, 0, .3);
       @include breakpoint($xs) {
-        position: absolute;
         top: 50%;
         flex-direction: row;
-        margin-bottom: 0;
-        padding-right: 0;
         transform: translateY(-50%);
       }
-      @include breakpoint($sm) {
-        max-width: 756px;
-      }
-      // @include breakpoint($md) {
-      // }
-      @include breakpoint($lg) {
-        padding-top: 32px;
-        padding-bottom: 32px;
-        padding-left: 64px;
-      }
-
-      p {
-        margin-bottom: 0;
-        font-size: 17px;
-        @include breakpoint($sm) {
-          font-size: 23px;
-        }
-      }
-
-      .showcase__left {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 186px;
-        margin-bottom: 24px;
-        @include breakpoint($xs) {
-          margin-bottom: 0;
-        }
-
-        .btn {
-          @include breakpoint($xs) {
-            position: absolute;
-            bottom: -45px;
-          }
-          @include breakpoint($lg) {
-            bottom: -52px;
-          }
-        }
-
-      }
-
-      .showcase__increase {
-        font-size: 58px;
-        font-weight: 700;
-        line-height: 55.89px;
-        color: $blue-light;
-        @include breakpoint($sm) {
-          font-size: 78px;
-        }
-
-        span {
-          font-size: 45px;
-          @include breakpoint($sm) {
-            font-size: 61px;
-          }
-        }
-
-      }
-
-      .showcase__revenue {
-        margin-bottom: 8px;
-        font-size: 11px;
-        font-weight: 700;
-        line-height: 19.87px;
-        color: $blue-light;
-        text-transform: uppercase;
-        @include breakpoint($xs) {
-          margin-bottom: 44px;
-        }
-        @include breakpoint($sm) {
-          font-size: 15px;
-        }
-      }
-
-      .showcase__right {
-        margin-right: 24px;
-        margin-left: 24px;
-        text-align: center;
-        @include breakpoint($xs) {
-          margin-right: 78px;
-          text-align: left;
-        }
-      }
-
     }
 
     .col-right {
       position: relative;
       display: flex;
       flex-direction: column;
+      align-items: center;
       width: 100%;
       padding-right: 16px;
       padding-left: 16px;

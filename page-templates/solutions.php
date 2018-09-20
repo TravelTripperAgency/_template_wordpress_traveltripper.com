@@ -39,7 +39,7 @@ get_header(); ?>
 
     <div class="col">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-hover.svg" alt="">
-      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">Travel Tripper Web</a></p>
+      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">Travel Tripper Web</a></p>
       <p class="subtitle">Website Platform and Agency</p>
       <p class="description">Change lookers into bookers with beautiful design and dynamic content like live rates and special offers.</p>
       <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>

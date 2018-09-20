@@ -90,7 +90,7 @@ get_header(); ?>
       </div>
 
       <div class="btn-holder">
-        <a href="#" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download our case study on RTAs</a>
+        <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Google-RTA-case-study-TT-and-ROW-NYC.pdf" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download our case study on RTAs</a>
       </div>
 
     </div>
@@ -145,12 +145,12 @@ get_header(); ?>
     </figure>
 
     <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-      <div class="showcase__left">
-        <p class="showcase__increase">7X<span>+</span></p>
-        <p class="showcase__revenue">increase on roas</p>
-        <a href="#" class="btn btn-primary">see how we did it</a>
+      <div class="showcase__metrix">
+        <p class="showcase__metrix-number">7X<span>+</span></p>
+        <p class="showcase__metrix-text">increase on roas</p>
+        <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/ROW-NYC-Real-Time-Search-Ads-091918.pdf" class="btn btn-primary">see how we did it</a>
       </div>
-      <div class="showcase__right">
+      <div class="showcase__description">
         <p>We helped ROW NYC increase their return on ad spend by sevenfold using Real-Time Ads with real-time pricing and availability pulled directly from RezTrip.</p>
       </div>
     </div>

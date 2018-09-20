@@ -176,12 +176,12 @@ get_header(); ?>
     </figure>
 
     <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-      <div class="showcase__left">
-        <p class="showcase__increase">3x</p>
-        <p class="showcase__revenue">increase in bookings</p>
-        <a href="#" class="btn btn-primary">see how we did it</a>
+      <div class="showcase__metrix">
+        <p class="showcase__metrix-number">3x</p>
+        <p class="showcase__metrix-text">increase in bookings</p>
+        <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Yve-Hotel-Miami-Travel-Tripper.pdf" class="btn btn-primary">see how we did it</a>
       </div>
-      <div class="showcase__right">
+      <div class="showcase__description">
         <p>Hotel Yve Miami tripled their website bookings and direct website contribution after launching with Travel Tripper Web in August 2017.</p>
       </div>
     </div>
@@ -195,7 +195,7 @@ get_header(); ?>
       <p class="cite">Director of Revenue, Independent Hotel</p>
     </div>
 
-    <img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report.png" alt="Hotel Tech Report Reviews">
+    <a href="https://hoteltechreport.com/company/travel-tripper-digital-agency"><img srcset="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency.png, <?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency@2x.png" alt="Hotel Tech Report"></a>
 
   </div>
 

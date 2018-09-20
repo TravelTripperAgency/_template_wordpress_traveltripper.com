@@ -74,7 +74,7 @@ get_header(); ?>
 
   <div class="col-right">
     <h2 class="section-title">All-in-one complete e-commerce solution</h2>
-    <p>We offer <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">distribution</a>, <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing</a> so you are covered from search to stay with one point of contact when you need to get things done.</p>
+    <p>We offer <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">distribution</a>, <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing</a> so you are covered from search to stay with one point of contact when you need to get things done.</p>
     <p>Work closely with an expert team of revenue optimization and marketing specialists to help you maximize revenue and hit your direct booking goals.</p>
   </div>
 
@@ -129,12 +129,12 @@ get_header(); ?>
       </figure>
 
       <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-        <div class="showcase__left">
-          <p class="showcase__increase"><span>+</span>51%</p>
-          <p class="showcase__revenue">increase in direct bookings</p>
+        <div class="showcase__metrix">
+          <p class="showcase__metrix-number"><span>+</span>51%</p>
+          <p class="showcase__metrix-text">increase in direct bookings</p>
           <a href="#" class="btn btn-primary">see how we did it</a>
         </div>
-        <div class="showcase__right">
+        <div class="showcase__description">
           <p>Galt House Hotel increased their direct bookings by 51% since launching with RezTrip CRS & Booking Engine in Sept. 2017</p>
         </div>
       </div>

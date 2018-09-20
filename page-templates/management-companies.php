@@ -43,7 +43,7 @@ get_header(); ?>
 
   <div class="col-right">
     <p>Hotel groups need a flexible and featured-packed multi-property solution that keeps them ahead of the competition when it comes to hotel distribution and marketing trends.</p>
-    <p>Travel Tripper's solutions easily allow revenue and marketing managers to manage one, several, or a hundred hotels with ease through our <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">CRS</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-websites/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing</a> platforms.</p>
+    <p>Travel Tripper's solutions easily allow revenue and marketing managers to manage one, several, or a hundred hotels with ease through our <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">CRS</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing</a> platforms.</p>
   </div>
 
 </section>
@@ -136,12 +136,12 @@ get_header(); ?>
     </figure>
 
     <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>" data-wow-delay=".5s">
-      <div class="showcase__left">
+      <div class="showcase__description">
         <p>Since switching to Travel Tripper in 2016, StayWell hotels have experienced consistent increases in rooms, nights, and ADR across all properties.</p>
       </div>
-      <div class="showcase__right">
-        <p class="showcase__increase"><span>+</span>30%</p>
-        <p class="showcase__revenue"> increase in direct website revenue</p>
+      <div class="showcase__metrix">
+        <p class="showcase__metrix-number"><span>+</span>30%</p>
+        <p class="showcase__metrix-text"> increase in direct website revenue</p>
         <a href="#" class="btn btn-primary">see how we did it</a>
       </div>
     </div>

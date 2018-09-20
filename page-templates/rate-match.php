@@ -79,12 +79,12 @@ get_header(); ?>
             </figure>
 
             <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-                <div class="showcase__left">
-                    <p class="showcase__increase"><span>+</span>50%</p>
-                    <p class="showcase__revenue">increase in conversion rates</p>
+                <div class="showcase__metrix">
+                    <p class="showcase__metrix-number"><span>+</span>50%</p>
+                    <p class="showcase__metrix-text">increase in conversion rates</p>
                     <a href="http://www.traveltripper.com/blog/travel-tripper-rate-match-is-a-2016-techovation-finalist/" class="btn btn-primary">see how we did it</a>
                 </div>
-                <div class="showcase__right">
+                <div class="showcase__description">
                     <p>A New York hotel saw its conversion rate jump almost 50% within 10 days of implementing Rate Match.</p>
                 </div>
             </div>

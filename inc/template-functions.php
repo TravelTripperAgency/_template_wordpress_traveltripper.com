@@ -181,6 +181,21 @@ function resources_custom_tag() {
 
 
 /**
+ * Get the current page URL
+ */
+function get_current_url() {
+    // Check protocol
+    $url = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' ) ? 'https://' : 'http://';
+    // Append server
+    $url .= $_SERVER['SERVER_NAME'];
+    // Append URI
+    $url .= $_SERVER['REQUEST_URI'];
+
+    return trailingslashit( $url );
+}
+
+
+/**
  * Exclude featured posts from the main query
  *
  * The filter works, but is breaking pagination so the add_action is commented.

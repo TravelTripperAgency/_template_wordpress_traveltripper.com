@@ -212,7 +212,7 @@
         }
       }
 
-      .showcase__left {
+      .showcase__metrix {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -235,7 +235,7 @@
 
       }
 
-      .showcase__increase {
+      .showcase__metrix-number {
         font-size: 58px;
         font-weight: 700;
         line-height: 55.89px;
@@ -253,7 +253,7 @@
 
       }
 
-      .showcase__revenue {
+      .showcase__metrix-text {
         margin-bottom: 8px;
         font-size: 11px;
         font-weight: 700;
@@ -268,7 +268,7 @@
         }
       }
 
-      .showcase__right {
+      .showcase__description {
         margin-right: 24px;
         margin-left: 24px;
         text-align: center;

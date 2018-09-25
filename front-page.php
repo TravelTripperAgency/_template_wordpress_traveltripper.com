@@ -33,14 +33,14 @@ get_header(); ?>
 
                 <div class="video-container">
                     <div class="laptop">
-                        <video class="d-sm-block" muted autoplay>
+                        <video id="laptop-video" class="d-sm-block" muted>
                             <source src="<?php echo get_template_directory_uri(); ?>/video/laptop.webm" type="video/webm">
                             <source src="<?php echo get_template_directory_uri(); ?>/video/laptop.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="phone-container">
                         <div class="phone">
-                            <video class="d-sm-block" muted autoplay>
+                            <video id="phone-video" class="d-sm-block" muted>
                                 <source src="<?php echo get_template_directory_uri(); ?>/video/phone.webm" type="video/webm">
                                 <source src="<?php echo get_template_directory_uri(); ?>/video/phone.mp4" type="video/mp4">
                             </video>
@@ -88,7 +88,7 @@ get_header(); ?>
         <div class="showcase__metrix">
           <p class="showcase__metrix-number"><span>+</span>84%</p>
           <p class="showcase__metrix-text">direct website revenue</p>
-          <a href="#" class="btn btn-primary">see how we did it</a>
+          <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Mayfair-Case-Study-091918.pdf" class="btn btn-primary">see how we did it</a>
         </div>
         <div class="showcase__description">
           <p>The Mayfair Hotel & Spa increased their direct website revenue 84% after partnering with Travel Tripper.</p>

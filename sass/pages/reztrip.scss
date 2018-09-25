@@ -229,6 +229,12 @@
   .why {
     margin-bottom: 128px;
 
+    .wrap {
+      @include breakpoint($max-sm) {
+        max-width: 456px;
+      }
+    }
+
     .section-title {
       position: relative;
       margin-right: auto;
@@ -460,6 +466,12 @@
           flex: 0 0 span(1 of 4);
           max-width: span(1 of 4);
         }
+
+        img {
+          width: 100%;
+          max-width: 145px;
+        }
+
       }
 
     }

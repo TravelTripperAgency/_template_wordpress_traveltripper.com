@@ -6,8 +6,8 @@
  */
 
 // Register Resources Tags
-add_action( 'init', 'resources_tags', 0 );
-function resources_tags() {
+add_action( 'init', 'register_resource_tag', 0 );
+function register_resource_tag() {
 	register_taxonomy( 'resource_tag', 'resources', array(
 		'labels'            => array(
     		'name'                       => _x( 'Resource Tags', 'Taxonomy General Name', 'traveltripper' ),

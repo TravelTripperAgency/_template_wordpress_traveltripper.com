@@ -187,6 +187,12 @@
       padding-bottom: 120px;
     }
 
+    .wrap {
+      @include breakpoint($max-sm) {
+        max-width: 456px;
+      }
+    }
+
     .section-title {
       position: relative;
       margin-bottom: 48px;
@@ -415,8 +421,10 @@
       @include breakpoint($sm) {
         max-width: 560px;
         margin-right: initial;
-        margin-bottom: 0;
         margin-left: initial;
+      }
+      @include breakpoint($lg) {
+        max-width: 624px;
       }
 
       .cite {

@@ -140,7 +140,7 @@ get_header(); ?>
       <div class="showcase__metrix">
         <p class="showcase__metrix-number"><span>+</span>54%</p>
         <p class="showcase__metrix-text">increase in conversion rates</p>
-        <a href="#" class="btn btn-primary">see how we did it</a>
+        <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/StayWell-Hotels-case-study-Travel-Tripper.pdf" class="btn btn-primary">see how we did it</a>
       </div>
     </div>
 

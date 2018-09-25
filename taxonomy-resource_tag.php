@@ -6,14 +6,18 @@
  * @package Travel_Tripper
  */
 
-get_header(); ?>
+get_header();
+
+if ( function_exists( 'yoast_breadcrumb' ) ) {
+   yoast_breadcrumb( '<div class="breadcrumbs wrap">','</div>' );
+} ?>
 
 <div class="content-sidebar-wrap">
 
     <main class="content"> <?php
 
         the_archive_title( '<h1 class="page-title">', '</h1>' );
-        
+
 		if ( have_posts() ) :
 
             // Start the Loop

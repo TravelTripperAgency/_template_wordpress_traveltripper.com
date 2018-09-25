@@ -30,7 +30,7 @@
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
             </div> <?php
 
-            // Should we decide to write a custom Walker, we might use this.
+            // Once we write a custom Walker, we will use this.
             // wp_nav_menu( array(
             //     'theme_location' => 'menu-header',
             //     'container' => 'nav',

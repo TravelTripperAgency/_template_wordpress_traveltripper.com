@@ -184,10 +184,20 @@
   text-align: center;
   border-top: 1px solid $blue-light;
 
+  .mobile-nav & {
+    border: 0;
+  }
+
   ul {
     margin: 0 auto;
     padding-right: 16px;
     padding-left: 16px;
+
+    .mobile-nav & {
+      padding-right: 0;
+      padding-left: 0;      
+    }
+
   }
 
   .menu-item {

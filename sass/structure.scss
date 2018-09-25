@@ -34,6 +34,15 @@
     justify-content: space-between;
   }
 
+  .single-post & {
+    padding-right: 32px;
+    padding-left: 32px;
+    @include breakpoint($md) {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+
   .content {
     position: relative;
     width: 100%;
@@ -56,8 +65,8 @@
 
     .single-resources & {
       @include breakpoint($lg) {
-        flex: 0 0 span(3 of 4, $double-gutters);
-        max-width: span(3 of 4, $double-gutters);
+        flex: 0 0 calc(128px + ((85% - 192px) / 4 * 3));
+        max-width: calc(128px + ((85% - 192px) / 4 * 3));
       }
     }
 

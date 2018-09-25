@@ -48,6 +48,11 @@ $sm: 900px;
 $md: 1200px;
 $lg: 1440px;
 $xl: 1800px;
+$max-xs: max-width 599px;
+$max-sm: max-width 899px;
+$max-md: max-width 1199px;
+$max-lg: max-width 1439px;
+$max-xl: max-width 1799px;
 // Usage:
 //  @include breakpoint($lg) {
 //    code

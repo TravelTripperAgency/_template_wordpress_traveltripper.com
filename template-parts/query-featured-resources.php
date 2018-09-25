@@ -1,30 +1,41 @@
 <?php
 /**
- * Custom loop for featured resources in custom templates.
+ * Loop for featured resources in custom templates.
  *
  * @package Travel_Tripper
  */
 
-$featured_category = get_field( 'featured_category' );
+if ( is_front_page() || is_page_template( array( 'page-templates/digital-marketing.php', 'page-templates/reztrip.php', 'page-templates/ttweb.php' ) ) ) {
 
-$query_resource_args = array(
-    'cat' => $featured_category,
-    'posts_per_page' => 4
-);
+    $featured_taxonomy = get_field( 'featured_category' );
+    $query_resource_args = array(
+        'cat' => $featured_taxonomy,
+        'posts_per_page' => 4
+    );
+
+} else {
+
+    $featured_taxonomy = get_field( 'featured_tag' );
+    $query_resource_args = array(
+        'tag_id' => $featured_taxonomy,
+        'posts_per_page' => 4
+    );
+
+}
+
 $query_resource = new WP_Query( $query_resource_args );
 
-if ( isset( $featured_category ) && $query_resource->have_posts() ) { ?>
+if ( isset( $featured_taxonomy ) && $query_resource->have_posts() ) { ?>
 
     <section class="featured-resources">
         <div class="wrap">
 
-            <div class="featured-resources__title"><h3><?php echo get_cat_name( $featured_category );?> Resources</h3></div>
+            <div class="featured-resources__title"><h3><?php echo get_term( $featured_taxonomy )->name; ?> Resources</h3></div>
 
             <div class="featured-resources__wrap"> <?php
 
             	// Start the Loop
-            	while ( $query_resource->have_posts() ) :
-            		$query_resource->the_post(); ?>
+            	while ( $query_resource->have_posts() ) : $query_resource->the_post(); ?>
 
                     <div class="resource">
                       <a href="<?php esc_url( the_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
@@ -36,7 +47,7 @@ if ( isset( $featured_category ) && $query_resource->have_posts() ) { ?>
             </div>
 
             <div class="btn-wrap">
-                <a class="btn btn-primary-white" href="<?php echo get_term_link( $featured_category ); ?>">view all</a>
+                <a class="btn btn-primary-white" href="<?php echo get_term_link( $featured_taxonomy ); ?>">view all</a>
             </div>
 
         </div>

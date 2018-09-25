@@ -4,15 +4,14 @@
  *
  * @package Travel_Tripper
  */
-
- $current_url = get_current_url(); ?>
+?>
 
 <nav class="site-header__nav">
     <ul>
-        <li class="menu-item menu-item-has-children<?php if ( $current_url == get_site_url() . '/solutions/' ) { echo ' current-menu-item'; } ?>">
+        <li class="menu-item menu-item-has-children<?php if ( get_current_url() == get_site_url() . '/solutions/' ) { echo ' current-menu-item'; } ?>">
             <a href="<?php echo get_site_url(); ?>/solutions/">Solutions</a>
             <ul class="sub-menu">
-                <li class="menu-item<?php if ( $current_url == get_site_url() . '/solutions/booking-engine/' ) { echo ' current-menu-item'; } ?>">
+                <li class="menu-item<?php if ( get_current_url() == get_site_url() . '/solutions/booking-engine/' ) { echo ' current-menu-item'; } ?>">
                     <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">
                         <div class="sub-menu__icon">
                     <div class="background-icon reztrip"></div>
@@ -58,7 +57,7 @@
                 </li>
             </ul>
         </li>
-        <li class="menu-item menu-item-has-children<?php if ( $current_url == get_site_url() . '/who-we-serve/' ) { echo ' current-menu-item'; } ?>">
+        <li class="menu-item menu-item-has-children<?php if ( get_current_url() == get_site_url() . '/who-we-serve/' ) { echo ' current-menu-item'; } ?>">
             <a href="<?php echo get_site_url(); ?>/who-we-serve/">Who We Serve</a>
             <ul class="sub-menu">
                 <li class="menu-item">
@@ -107,7 +106,7 @@
                 </li>
             </ul>
         </li>
-        <li class="menu-item menu-item-has-children<?php if ( $current_url == get_site_url() . '/resources/' ) { echo ' current-menu-item'; } ?>">
+        <li class="menu-item menu-item-has-children<?php if ( get_current_url() == get_site_url() . '/resources/' ) { echo ' current-menu-item'; } ?>">
             <a href="<?php echo get_site_url(); ?>/resources/">Resources</a>
             <ul class="sub-menu">
                 <li class="menu-item">
@@ -147,10 +146,10 @@
                 </li>
             </ul>
         </li>
-        <li class="menu-item<?php if ( $current_url == get_site_url() . '/blog/' ) { echo ' current-menu-item'; } ?>">
+        <li class="menu-item<?php if ( get_current_url() == get_site_url() . '/blog/' ) { echo ' current-menu-item'; } ?>">
             <a href="<?php echo get_site_url(); ?>/blog/">Blog</a>
         </li>
-        <li class="menu-item menu-item-has-children<?php if ( $current_url == get_site_url() . '/about/' ) { echo ' current-menu-item'; } ?>">
+        <li class="menu-item menu-item-has-children<?php if ( get_current_url() == get_site_url() . '/about/' ) { echo ' current-menu-item'; } ?>">
             <a href="<?php echo get_site_url(); ?>/about/">About</a>
             <ul class="sub-menu">
                 <li class="menu-item">

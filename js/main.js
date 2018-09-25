@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
   });
   wow.init();
 
-  // fitVids target
+  //* fitVids target
   $(".post").fitVids();
 
   //* Add toggle button
@@ -16,9 +16,11 @@ jQuery(document).ready(function() {
   //* Main menu toggle function
   $('.menu-toggle-open').click(function(){
     $('.mobile-nav').addClass('open');
+    $('body').css('overflow', 'hidden');
   });
   $('.menu-toggle-close').click(function(){
     $('.mobile-nav').removeClass('open');
+    $('body').css('overflow', '');
   });
 
   //* Sub menu toggle function
@@ -26,13 +28,6 @@ jQuery(document).ready(function() {
     // TODO: This toggle is fucked. There is no sliding transition. I can't get it to work with jQuery or CSS.
     $(this).toggleClass('open');
     $(this).parent().next('.sub-menu').toggleClass('d-flex');
-
-    // TODO: This "close siblings" is completely fucked. I have no words for it.
-    // others = $(this).closest('.menu-item').siblings();
-    // others = $(this).closest('.menu-item');
-    // others.find('.sub-menu-toggle').removeClass('open');
-    // others.find('.sub-menu').removeClass('d-flex');
-    // others.find('.sub-menu').slideUp('fast');
   });
 
   //* Clients slider on homepage
@@ -71,3 +66,32 @@ jQuery(window).scroll(function() {
   }
 
 });
+
+//* Play homepage header video only after the animation slide-in has finished.
+(function() {
+  var e = document.getElementsByClassName('page-header__feature')[0];
+
+  function whichTransitionEvent() {
+    var t;
+    var el = document.createElement('fakeelement');
+    var animations = {
+      'animation': 'animationend',
+      'OAnimation': 'oAnimationEnd',
+      'MozAnimation': 'animationend',
+      'WebkitAnimation': 'webkitAnimationEnd'
+    };
+
+    for (t in animations) {
+      if (el.style[t] !== undefined) {
+        return animations[t];
+      }
+    }
+  }
+
+  var transitionEvent = whichTransitionEvent();
+  transitionEvent && e.addEventListener(transitionEvent, function() {
+    document.getElementById('laptop-video').play();
+    document.getElementById('phone-video').play();
+  });
+
+})();

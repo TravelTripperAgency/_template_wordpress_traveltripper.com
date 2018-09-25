@@ -91,6 +91,7 @@
     }
 
     li {
+      margin-bottom: 1em;
       font-size: 16px;
       line-height: 21px;
     }
@@ -143,11 +144,17 @@
 
     .testimonial {
       max-width: 613px;
+      @include breakpoint($sm) {
+        max-width: 750px;
+      }
       @include breakpoint($md) {
         max-width: 485px;
       }
+      @include breakpoint($lg) {
+        max-width: 565px;
+      }
       @include breakpoint($xl) {
-        max-width: 613px;
+        max-width: 750px;
       }
     }
 

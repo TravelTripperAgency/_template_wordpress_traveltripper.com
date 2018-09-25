@@ -78,6 +78,7 @@
       }
 
       li {
+        margin-bottom: 1em;
         font-size: 16px;
         line-height: 21px;
       }
@@ -233,7 +234,10 @@
       margin-bottom: 0;
     }
     @include breakpoint($lg) {
-      max-width: 485px;
+      max-width: 565px;
+    }
+    @include breakpoint($xl) {
+      max-width: 724px;
     }
 
     .cite {

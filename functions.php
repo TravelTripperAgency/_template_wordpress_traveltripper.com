@@ -117,7 +117,7 @@ add_action( 'widgets_init', 'traveltripper_widgets_init' );
 function traveltripper_widgets_init() {
     // Primary Sidebar
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'traveltripper' ),
+		'name'          => esc_html__( 'Sidebar - Blog', 'traveltripper' ),
 		'id'            => 'sidebar-primary',
 		'description'   => esc_html__( 'Add widgets here.', 'traveltripper' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -126,10 +126,10 @@ function traveltripper_widgets_init() {
 		'after_title'   => '</h3>'
 	) );
 
-    // Secondary Sidebar
+    // Resources Sidebar
 	// register_sidebar( array(
-	// 	'name'          => esc_html__( 'Sidebar - Author', 'traveltripper' ),
-	// 	'id'            => 'sidebar-secondary',
+	// 	'name'          => esc_html__( 'Sidebar - Resources', 'traveltripper' ),
+	// 	'id'            => 'sidebar-resources',
 	// 	'description'   => esc_html__( 'Add widgets here.', 'traveltripper' ),
 	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
 	// 	'after_widget'  => '</section>'
@@ -140,7 +140,7 @@ function traveltripper_widgets_init() {
 /**
  * Allow PHP in the Text widget.
  */
-add_filter( 'widget_text', 'execute_php', 100 );
+// add_filter( 'widget_text', 'execute_php', 100 );
 function execute_php( $html ) {
     if ( strpos( $html, "<" . "?php" ) !== false ) {
         ob_start();
@@ -187,6 +187,7 @@ function tt_acf_show_admin( $show ) {
         return true;
     }
 }
+
 
 /**
  * Implement the Custom Header feature.

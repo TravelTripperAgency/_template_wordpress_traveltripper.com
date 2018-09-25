@@ -164,7 +164,7 @@ get_header(); ?>
       <p class="cite">KUNAL PATEL, Director of Revenue Management, ROW NYC</p>
     </div>
 
-    <img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report.png" alt="Hotel Tech Report Reviews">
+    <a href="https://hoteltechreport.com/company/travel-tripper-digital-agency"><img srcset="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency.png, <?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency@2x.png" alt="Hotel Tech Award"></a>
 
   </div>
 

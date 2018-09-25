@@ -18,16 +18,4 @@ if( function_exists('acf_add_options_page') ) {
         'updated_message'	=> __("Global Ad Updated", 'acf')
 	));
 
-	// acf_add_options_sub_page(array(
-	// 	'page_title' 	=> 'Brad Header Settings',
-	// 	'menu_title'	=> 'Header',
-	// 	'parent_slug'	=> 'brad-menu-yo',
-	// ));
-
-	// acf_add_options_sub_page(array(
-	// 	'page_title' 	=> 'Brad Footer Settings',
-	// 	'menu_title'	=> 'Footer',
-	// 	'parent_slug'	=> 'brad-menu-yo',
-	// ));
-
 }

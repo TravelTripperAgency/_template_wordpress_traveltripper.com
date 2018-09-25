@@ -132,7 +132,7 @@ get_header(); ?>
         <div class="showcase__metrix">
           <p class="showcase__metrix-number"><span>+</span>51%</p>
           <p class="showcase__metrix-text">increase in direct bookings</p>
-          <a href="#" class="btn btn-primary">see how we did it</a>
+          <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Galt-House-case-study-Travel-Tripper.pdf" class="btn btn-primary">see how we did it</a>
         </div>
         <div class="showcase__description">
           <p>Galt House Hotel increased their direct bookings by 51% since launching with RezTrip CRS & Booking Engine in Sept. 2017</p>
@@ -171,7 +171,7 @@ get_header(); ?>
         <p class="cite">- Independent Hotel Marketing Manager on Hotel Tech Report</p>
       </div>
 
-      <img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report.png" alt="hotel tech report">
+      <a href="https://hoteltechreport.com/s/travel%20tripper"><img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report.png" alt="hotel tech report"></a>
 
     </div>
 

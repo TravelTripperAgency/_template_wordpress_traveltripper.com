@@ -78,7 +78,7 @@ get_header(); ?>
         <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-library-hotel.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-library-hotel@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-library-hotel@2x.png" alt="">
       </div>
       <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-kk.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-kk@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-kk@2x.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/clients/bellstar.png" alt="">
       </div>
       <div class="col">
         <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-golden-nugget.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-golden-nugget@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-golden-nugget@2x.png" alt="">

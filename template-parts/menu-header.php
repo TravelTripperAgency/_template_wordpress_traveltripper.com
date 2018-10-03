@@ -174,7 +174,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide">
+                    <a href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide" rel="nofollow" target="_blank">
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Careers</p>
                         </div>

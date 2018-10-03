@@ -125,9 +125,9 @@ get_header(); ?>
 
     <div class="col-left">
       <div class="wrap">
-        <h2 class="section-title"><a href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide">We are growing—join us!</a></h2>
+        <h2 class="section-title"><a href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide" rel="nofollow" target="_blank">We are growing—join us!</a></h2>
         <p>Travel Tripper is a dynamic, fast-growing company with 150+ employees across three offices in New York, London, and Hyderabad. Our talented team comprises professionals with diverse backgrounds and expertise in the fields of hospitality, technology, marketing, web and product development, analytics and more.</p>
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/about-bestplaces-hotel-tech-award-min.png, <?php echo get_template_directory_uri(); ?>/images/about-bestplaces-hotel-tech-award@2x-min 2x" src="<?php echo get_template_directory_uri(); ?>/images/about-bestplaces-hotel-tech-award@2x-min" alt="Hotel Tech Awards">
+        <img srcset="<?php echo get_template_directory_uri(); ?>/images/about-bestplaces-hotel-tech-award.png, <?php echo get_template_directory_uri(); ?>/images/about-bestplaces-hotel-tech-award@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/about-bestplaces-hotel-tech-award@2x.png" alt="Hotel Tech Awards">
       </div>
     </div>
 

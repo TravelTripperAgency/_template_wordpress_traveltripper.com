@@ -29,30 +29,30 @@ get_header(); ?>
 
   <div class="col">
     <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-hotel-groups-hover.svg" alt="">
-    <p class="title">Hotel Groups and Management Companies</p>
+    <p class="title"><a href="<?php echo get_site_url(); ?>/who-we-serve/management-companies/">Hotel Groups and Management Companies</a></p>
     <p class="description">Stay ahead of marketing and distribution trends with our scalable multi-property solution.</p>
-    <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
+    <p class="arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/management-companies/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
   </div>
 
   <div class="col">
     <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-casinos-hover.svg" alt="">
-    <p class="title">Casino and Gaming Properties</p>
+    <p class="title"><a href="<?php echo get_site_url(); ?>/who-we-serve/casinos/">Casino and Gaming Properties</a></p>
     <p class="description">Serve your most loyal guests just as easily online as offline.</p>
-    <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
+    <p class="arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/casinos/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
   </div>
 
   <div class="col">
     <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-independent-hotels-hover.svg" alt="">
-    <p class="title">Independent and Boutique Hotels</p>
+    <p class="title"><a href="<?php echo get_site_url(); ?>/who-we-serve/independents/">Independent and Boutique Hotels</a></p>
     <p class="description">Power your hotel's e-commerce with a partner invested in your success.</p>
-    <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
+    <p class="arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/independents/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
   </div>
 
   <div class="col">
     <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-partners-hover.svg" alt="">
-    <p class="title">Partners</p>
+    <p class="title"><a href="<?php echo get_site_url(); ?>/who-we-serve/partners/">Partners</a></p>
     <p class="description">Join the Travel Tripper partner network.</p>
-    <p class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
+    <p class="arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/partners/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
   </div>
 
 </section>

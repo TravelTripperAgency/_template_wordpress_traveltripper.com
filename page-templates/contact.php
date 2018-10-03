@@ -52,7 +52,7 @@ get_header(); ?>
 
       <div class="email__careers">
         <p class="title">Career Inquiries</p>
-        <p>To learn about open career opportunities, please visit our <a href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide">LinkedIn page</a>.</p>
+        <p>To learn about open career opportunities, please visit our <a href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide" rel="nofollow" target="_blank">LinkedIn page</a>.</p>
       </div>
 
     </div>

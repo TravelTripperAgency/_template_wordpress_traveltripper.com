@@ -95,24 +95,24 @@ get_header(); ?>
   <div class="row wrap">
     <div class="service reztrip">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip-hover.svg" alt="">
-      <p class="service__title">RezTrip</p>
+      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">RezTrip</a></p>
       <p class="service__subtitle">CRS & Booking Engine</p>
       <p class="service__description">Shift bookings from high-commission OTA channels to direct bookings using smart rate and revenue management tools.</p>
-      <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
+      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
     </div>
     <div class="service web">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-hover.svg" alt="">
-      <p class="service__title">Travel Tripper Web</p>
+      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">Travel Tripper Web</a></p>
       <p class="service__subtitle">Website Platform and Agency</p>
       <p class="service__description">Change lookers into bookers with beautiful design and smart content like live rates and special offers.</p>
-      <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
+      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
     </div>
     <div class="service dgs">
       <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-hover.svg" alt="">
-      <p class="service__title">Digital Marketing</p>
+      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></p>
       <p class="service__subtitle">Full Service Agency</p>
       <p class="service__description">Maximize ROI across all online advertising channels with cutting edge technology and strategy, including our award-winning Real Time Ads for hotels.</p>
-      <p class="service__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
+      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
     </div>
   </div>
 
@@ -130,12 +130,12 @@ get_header(); ?>
 
       <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
         <div class="showcase__metrix">
-          <p class="showcase__metrix-number"><span>+</span>51%</p>
+          <p class="showcase__metrix-number"><span>+</span>45%</p>
           <p class="showcase__metrix-text">increase in direct bookings</p>
           <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Galt-House-case-study-Travel-Tripper.pdf" class="btn btn-primary">see how we did it</a>
         </div>
         <div class="showcase__description">
-          <p>Galt House Hotel increased their direct bookings by 51% since launching with RezTrip CRS & Booking Engine in Sept. 2017</p>
+          <p>Beach Terrace Inn increased their direct website revenue by 45% YOY after launching with Travel Tripper in Oct 2017.</p>
         </div>
       </div>
 

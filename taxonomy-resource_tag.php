@@ -42,7 +42,7 @@ if ( function_exists( 'yoast_breadcrumb' ) ) {
 
     </main> <?php
 
-    get_sidebar( 'primary' ); ?>
+    get_sidebar( 'resources' ); ?>
 
 </div> <?php
 

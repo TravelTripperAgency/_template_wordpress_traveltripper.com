@@ -1,5 +1,12 @@
 .page-template-about {
 
+
+  .page-header .page-header__features li:before {
+    @include breakpoint($sm) {
+      top: 9px;
+    }
+  }
+
   .hoteliers {
     display: flex;
     flex-wrap: wrap;

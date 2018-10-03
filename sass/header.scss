@@ -138,7 +138,8 @@
   color: #fff;
   background-image: url('images/background-header.png');
   background-repeat: no-repeat;
-  background-position: center;
+  // background-position: center;
+  background-position: top left;
   background-size: cover;
 
   .home &,
@@ -150,7 +151,14 @@
   .page-template-digital-marketing &,
   .page-template-management-companies & {
     background-image: url('images/background-header-featured.png');
-    background-position: bottom center;
+    // background-position: top left;
+    background-position-y: -16em;
+    @include breakpoint($sm) {
+      background-position-y: -8em;
+    }
+    @include breakpoint($md) {
+      background-position-y: -5em;
+    }
   }
 
   .single-post &,
@@ -272,7 +280,7 @@
     font-size: 48px;
     font-weight: bold;
     line-height: 56px;
-    color: rgba(255,255,255,1);
+    color: #fff;
 
     .home & {
       font-size: 64px;
@@ -308,9 +316,9 @@
       justify-content: flex-end;
     }
 
-    @supports (-ms-ime-align: auto) {
-      overflow: hidden;
-    }
+    // @supports (-ms-ime-align: auto) {
+    //   overflow: hidden;
+    // }
 
     .home & {
       position: relative;
@@ -453,6 +461,7 @@
       margin-left: 30px;
       font-size: 14px;
       font-weight: 600;
+      line-height: 1.5em;
       letter-spacing: .79px;
       @include breakpoint($sm) {
         flex: 0 0 span(1 of 3, $double-gutters);
@@ -461,7 +470,7 @@
 
       &:before {
         position: absolute;
-        top: 13px;
+        top: 10px;
         // top: 50%;
         left: -28px;
         width: 20px;

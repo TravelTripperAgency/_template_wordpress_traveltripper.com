@@ -41,7 +41,9 @@ if ( function_exists( 'yoast_breadcrumb' ) ) {
           </div>
         </div> <?php
 
-        related_posts(); ?>
+        if ( !empty( TTRP_VERSION ) ) {
+            related_posts();
+        } ?>
 
     </main> <?php
 

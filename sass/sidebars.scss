@@ -1,4 +1,5 @@
-.sidebar-primary {
+.sidebar-primary,
+.sidebar-resources {
   display: none;
   @include breakpoint($md) {
     position: relative;
@@ -25,6 +26,10 @@
     @include breakpoint($md) {
       margin-bottom: 0;
     }
+  }
+
+  .tag-filter {
+    margin-bottom: 32px;
   }
 
   // .single-post & {
@@ -74,4 +79,34 @@
     max-width: span(1 of 6, $double-gutters);
     order: 1;
   }
+}
+
+.sidebar__nav {
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu-item {
+    padding: 17px 0 18px;
+    font-size: 16px;
+    line-height: 16px;
+    border-bottom: 1px solid #d8d8d8;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    a {
+      color: #9b9b9b;
+    }
+
+  }
+
+  .current-menu-item a {
+    color: $red;
+  }
+
 }

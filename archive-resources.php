@@ -51,9 +51,9 @@ get_header(); ?>
                     }
                     echo resources_custom_tag();
                     if ( get_field( 'resource_link' ) ) { ?>
-                        <p class="post__title"><a href="<?php esc_url( the_field( 'resource_link' ) ); ?>"><?php the_title(); ?></a></p> <?php
+                        <p class="entry-title"><a href="<?php esc_url( the_field( 'resource_link' ) ); ?>"><?php the_title(); ?></a></p> <?php
                     } else { ?>
-                        <p class="post__title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p> <?php
+                        <p class="entry-title"><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></p> <?php
                     } ?>
                 </article> <?php
 

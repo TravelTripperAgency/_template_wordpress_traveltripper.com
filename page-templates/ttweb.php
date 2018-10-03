@@ -207,7 +207,7 @@ get_header(); ?>
   <div class="wrap row">
 
     <div class="title-row">
-      <h2 class="section-title">Power up direct bookings by integrating Travel Tripper Web with RezTrip and Digital Marketing</h2>
+      <h2 class="section-title">Power up direct bookings by integrating Travel Tripper Web with <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">RezTrip</a> and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></h2>
       <p class="section-subtitle">Travel Tripper's suite of solutions together create a robust hotel e-commerce platform designed to maximize your hotel's direct distribution strategy.</p>
     </div>
 

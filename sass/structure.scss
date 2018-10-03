@@ -1,11 +1,9 @@
 %wrap {
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding-right: 16px;
   padding-left: 16px;
-  // @include breakpoint($xs) {
-  //   max-width: 568px;
-  // }
   @include breakpoint($sm) {
     max-width: 856px;
   }

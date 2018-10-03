@@ -32,9 +32,8 @@ get_header(); ?>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/agilysys.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/atrio.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/autoclerk.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/cheerze.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/epitome.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/guest-centrix.png" alt=""></div>
+    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/infor.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/innfinity.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/innsuites.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/lodgical-solution.png" alt=""></div>
@@ -46,7 +45,6 @@ get_header(); ?>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/silverbyte.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/protel.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/resort-data-processing.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/resort-share.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/reznext.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/room-key-pms.png" alt=""></div>
     <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/roommaster.png" alt=""></div>

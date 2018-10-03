@@ -155,7 +155,7 @@ get_header(); ?>
     <div class="col-left__wrap">
 
       <h2 class="section-title">Integrated with the systems you already work with</h2>
-      <a href="#" class="btn btn-secondary-dark">View all Integrations & Partners</a>
+      <a href="<?php echo get_site_url(); ?>/solutions/integrations/" class="btn btn-secondary-dark">View all Integrations & Partners</a>
 
       <div class="row">
         <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/oracle.png" alt="integration logo"></div>

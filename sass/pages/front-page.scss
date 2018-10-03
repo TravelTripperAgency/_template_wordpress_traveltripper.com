@@ -1,5 +1,43 @@
 .home {
 
+  .page-header__feature {
+
+    .video-fallback {
+      @include breakpoint($md) {
+        display: none;
+      }
+    }
+
+    // IE 11
+    @media all and (-ms-high-contrast: none) {
+
+      img {
+        display: block !important;
+        width: 100%;
+      }
+
+      .video-container {
+        display: none;
+      }
+
+    }
+
+    // Edge
+    @supports (-ms-ime-align: auto) {
+
+      img {
+        display: block !important;
+        width: 100%;
+      }
+
+      .video-container {
+        display: none;
+      }
+
+    }
+
+  }
+
   .video-container {
     position: relative;
     display: none;
@@ -31,11 +69,8 @@
 
     .phone-container {
       position: absolute;
-      right: -10px;
+      right: -20px;
       bottom: -20px;
-      @include breakpoint($lg) {
-        right: 50px;
-      }
 
       .phone {
         width: 247px;
@@ -133,6 +168,14 @@
 
       .section-title {
         margin-bottom: 16px;
+      }
+
+      .testimonial {
+        @include breakpoint($md) {
+          @media all and (-ms-high-contrast: none) {
+            margin-top: 200px;
+          }
+        }
       }
 
     }
@@ -327,6 +370,10 @@
         padding-top: 0;
       }
 
+      @media all and (-ms-high-contrast: none) {
+        margin-top: 500px;
+      }
+
       &:after {
         position: absolute;
         right: 0;
@@ -411,6 +458,16 @@
 
     .service__arrow {
       margin-bottom: 0;
+
+      img {
+        transition: transform .3s ease;
+
+        &:hover {
+          transform: translate3d(.8em, 0, 0);
+        }
+
+      }
+
     }
 
   }
@@ -550,6 +607,16 @@
 
     .customer__arrow {
       margin-bottom: 0;
+
+      img {
+        transition: transform .3s ease;
+
+        &:hover {
+          transform: translate3d(.8em, 0, 0);
+        }
+
+      }
+
     }
 
   }

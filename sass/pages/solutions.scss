@@ -100,6 +100,16 @@
 
     .arrow {
       margin-bottom: 0;
+
+      img {
+        transition: transform .3s ease;
+
+        &:hover {
+          transform: translate3d(.8em, 0, 0);
+        }
+
+      }
+
     }
 
   }

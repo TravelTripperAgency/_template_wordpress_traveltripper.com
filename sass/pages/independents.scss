@@ -39,22 +39,22 @@
         margin-left: 30px;
         font-size: 14px;
         font-weight: 600;
+        line-height: 1.5em;
         letter-spacing: .79px;
         @include breakpoint($md) {
           flex: 0 0 span(1 of 3, $double-gutters);
-          align-self: center;
+          // align-self: center;
           max-width: span(1 of 3, $double-gutters);
         }
 
         &:before {
           position: absolute;
-          top: 50%;
+          top: 10px;
           left: -28px;
           width: 20px;
           height: 2px;
           content: '';
           background-color: $red;
-          transform: translateY(-50%);
         }
 
         // + p {
@@ -243,6 +243,10 @@
         margin-top: 4px;
       }
 
+      a {
+        color: $gray-dark;
+      }
+
     }
 
     .service__subtitle {
@@ -278,14 +282,26 @@
 
     .service__arrow {
       margin-bottom: 0;
+
+      img {
+        transition: transform .3s ease;
+
+        &:hover {
+          transform: translate3d(.8em, 0, 0);
+        }
+
+      }
+
     }
 
   }
 
   .integrations {
     min-height: 2400px;
-    margin-bottom: 96px;
-    background: url('images/background-blue-2.png') no-repeat 50%, linear-gradient($background-white, #fff);
+    // margin-bottom: 96px;
+    // background: url('images/background-blue-2.png') no-repeat 50%, linear-gradient($background-white, #fff);
+    background-color: $background-white;
+    background-image: url('images/background-blue-3.png');
     background-size: cover;
     @include breakpoint($sm) {
       min-height: 2000px;
@@ -322,12 +338,11 @@
       @include breakpoint($md) {
         flex: 0 0 span(5 of 12, $double-gutters);
         max-width: span(5 of 12, $double-gutters);
-        padding-top: 120px;
+        padding-top: 300px;
       }
       @include breakpoint($lg) {
         flex: 0 0 span(1 of 2, $triple-gutters);
         max-width: span(1 of 2, $triple-gutters);
-        padding-top: 0;
       }
 
       .col-right__col-left {
@@ -377,8 +392,8 @@
             max-width: span(1 of 2, $double-gutters);
           }
           @include breakpoint($lg) {
-            flex: 0 0 span(1 of 3, $double-gutters);
-            max-width: span(1 of 3, $double-gutters);
+            flex: 0 0 span(1 of 4);
+            max-width: span(1 of 4);
           }
         }
 
@@ -395,9 +410,11 @@
 
     .col-bottom {
       flex-direction: column;
+      align-items: center;
       margin-top: 56px;
       @include breakpoint($sm) {
         flex-direction: row;
+        align-items: normal;
         justify-content: center;
       }
       @include breakpoint($xl) {
@@ -428,17 +445,8 @@
       }
 
       .cite {
-        background-color: #365f88;
+        background-color: #303e60;
         border-color: #fff;
-        @include breakpoint($xs) {
-          background-color: #314c72;
-        }
-        @include breakpoint($sm) {
-          background-color: #386d99;
-        }
-        @include breakpoint($md) {
-          background-color: #37648d;
-        }
       }
 
     }

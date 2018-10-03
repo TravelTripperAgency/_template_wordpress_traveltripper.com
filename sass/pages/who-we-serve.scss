@@ -51,6 +51,11 @@
       font-size: 24px;
       font-weight: 700;
       line-height: 27px;
+
+      a {
+        color: $gray-dark;
+      }
+
     }
 
     .description {
@@ -76,6 +81,16 @@
 
     .arrow {
       margin-bottom: 0;
+
+      img {
+        transition: transform .3s ease;
+
+        &:hover {
+          transform: translate3d(.8em, 0, 0);
+        }
+
+      }
+
     }
 
   }

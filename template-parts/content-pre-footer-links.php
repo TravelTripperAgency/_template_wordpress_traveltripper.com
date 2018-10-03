@@ -24,7 +24,7 @@
       <p class="pre-footer-link__arrow"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></p>
     </div>
   </a>
-  <a class="pre-footer-link" href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide">
+  <a class="pre-footer-link" href="https://www.linkedin.com/jobs/search/?f_C=242998&locationId=OTHERS.worldwide" rel="nofollow" target="_blank">
     <div class="pre-footer-link__wrapper">
       <img class="pre-footer-link__image" src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-careers.svg" alt="Careers icon">
       <div class="pre-footer-link__headline"><p>Careers</p></div>

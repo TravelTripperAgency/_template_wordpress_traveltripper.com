@@ -214,7 +214,7 @@
     min-height: 1900px;
     margin-top: -600px;
     color: #fff;
-    background-image: url('images/background-blue-2.png');
+    background-image: url('images/background-blue-3.png');
     @include breakpoint($xs) {
       min-height: 1350px;
     }
@@ -295,45 +295,41 @@
         flex: 0 0 span(1 of 4);
         max-width: span(1 of 4);
       }
-      @include breakpoint($md) {
-        flex: 0 0 span(1 of 3);
-        max-width: span(1 of 3);
-      }
     }
 
   }
 
-  .express-suite {
-
-    .col-right {
-      position: relative;
-      width: 100%;
-      margin-bottom: 64px;
-      @include breakpoint($md) {
-        flex: 0 0 span(5 of 12);
-        max-width: span(5 of 12);
-        margin-bottom: 0;
-        order: 2;
-      }
-    }
-
-    .col-left {
-      position: relative;
-      width: 100%;
-      @include breakpoint($md) {
-        flex: 0 0 span(7 of 12);
-        max-width: span(7 of 12);
-      }
-    }
-
-    .section-title {
-      margin-bottom: 16px;
-    }
-
-    p {
-      margin-bottom: 16px;
-    }
-
-  }
+  // .express-suite {
+  //
+  //   .col-right {
+  //     position: relative;
+  //     width: 100%;
+  //     margin-bottom: 64px;
+  //     @include breakpoint($md) {
+  //       flex: 0 0 span(5 of 12);
+  //       max-width: span(5 of 12);
+  //       margin-bottom: 0;
+  //       order: 2;
+  //     }
+  //   }
+  //
+  //   .col-left {
+  //     position: relative;
+  //     width: 100%;
+  //     @include breakpoint($md) {
+  //       flex: 0 0 span(7 of 12);
+  //       max-width: span(7 of 12);
+  //     }
+  //   }
+  //
+  //   .section-title {
+  //     margin-bottom: 16px;
+  //   }
+  //
+  //   p {
+  //     margin-bottom: 16px;
+  //   }
+  //
+  // }
 
 }

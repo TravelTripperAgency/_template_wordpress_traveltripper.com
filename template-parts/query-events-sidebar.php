@@ -19,7 +19,7 @@ if ( $query_event->have_posts() ) { ?>
     <section class="widget widget-events events">
         <div class="wrap">
 
-            <div class="widget-title"><h3>Upcoming Events</h3></div>
+            <h3 class="widget-title">Upcoming Events</h3>
 
             <div class="row"> <?php
 
@@ -30,7 +30,7 @@ if ( $query_event->have_posts() ) { ?>
                         } ?>
                         <p class="event__title"><?php
                             if ( get_field( 'event_link' ) ) { ?>
-                                <a href="<?php the_field( 'event_link' );  ?>"><?php the_title(); ?></a> <?php
+                                <a href="<?php the_field( 'event_link' );  ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a> <?php
                             } else {
                                 the_title();
                             } ?>

@@ -21,7 +21,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="http://try.traveltripper.com/request-demo/?utm_source=website&utm_content=ratematch">request a demo</a>
+                <a class="btn btn-primary" href="https://try.traveltripper.com/rate-match-request-demo/?utm_source=website&utm_content=ratematch_button">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
@@ -51,9 +51,14 @@ get_header(); ?>
 
 </section>
 
-<section class="video">
+<section class="video wrap">
     <div class="video-container">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/rta-onscreen.jpg">
+        <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                <iframe src="https://fast.wistia.net/embed/iframe/xik8exh5a1?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe>
+            </div>
+        </div>
+        <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
     </div>
 </section>
 
@@ -142,7 +147,7 @@ get_header(); ?>
                 <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ribbon.svg" alt="ribbon icon">Offer additional discounts to guarantee to the lowest price</p>
                 <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-tools.svg" alt="tools icon">Set rate match offers terms and conditions</p>
             </div>
-            <a class="btn btn-primary" href="#">schedule a demo</a>
+            <a class="btn btn-primary" href="https://try.traveltripper.com/rate-match-request-demo/?utm_source=website&utm_content=ratematch">schedule a demo</a>
         </div>
     </div>
 

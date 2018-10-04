@@ -1038,7 +1038,8 @@ img {
   color: #fff;
 }
 
-.btn {
+.btn,
+.gform_button {
   display: inline-block;
   padding: 12px 24px;
   line-height: 19px;
@@ -1048,7 +1049,8 @@ img {
   border-width: 1px;
 }
 
-.btn:hover {
+.btn:hover,
+.gform_button:hover {
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
@@ -1056,11 +1058,13 @@ img {
   transform: translateY(-1px);
 }
 
-.btn:focus {
+.btn:focus,
+.gform_button:focus {
   outline: 0;
 }
 
-.btn-primary {
+.btn-primary,
+.gform_button {
   background-color: #ff533d;
   border-color: #ff533d;
 }
@@ -1224,6 +1228,18 @@ img {
   background-size: cover;
 }
 
+@media (min-width: 1200px) {
+  .page-header {
+    background-position: center;
+  }
+}
+
+@media (min-width: 1800px) {
+  .page-header {
+    background-position: top left;
+  }
+}
+
 .home .page-header,
 .page-template-reztrip .page-header,
 .page-template-ttweb .page-header,
@@ -1258,7 +1274,46 @@ img {
   .page-template-casinos .page-header,
   .page-template-digital-marketing .page-header,
   .page-template-management-companies .page-header {
+    background-position-y: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home .page-header,
+  .page-template-reztrip .page-header,
+  .page-template-ttweb .page-header,
+  .page-template-independents .page-header,
+  .page-template-rate-match .page-header,
+  .page-template-casinos .page-header,
+  .page-template-digital-marketing .page-header,
+  .page-template-management-companies .page-header {
+    background-position-y: -3em;
+  }
+}
+
+@media (min-width: 1800px) {
+  .home .page-header,
+  .page-template-reztrip .page-header,
+  .page-template-ttweb .page-header,
+  .page-template-independents .page-header,
+  .page-template-rate-match .page-header,
+  .page-template-casinos .page-header,
+  .page-template-digital-marketing .page-header,
+  .page-template-management-companies .page-header {
     background-position-y: -5em;
+  }
+}
+
+@media (min-width: 2048px) {
+  .home .page-header,
+  .page-template-reztrip .page-header,
+  .page-template-ttweb .page-header,
+  .page-template-independents .page-header,
+  .page-template-rate-match .page-header,
+  .page-template-casinos .page-header,
+  .page-template-digital-marketing .page-header,
+  .page-template-management-companies .page-header {
+    background-position-y: -8em;
   }
 }
 
@@ -1310,8 +1365,8 @@ img {
 
 @media (min-width: 1200px) {
   .home .page-header .page-header__title-area {
+    top: 3em;
     flex: 0 0 calc(((100% - 64px) / 3 * 1));
-    justify-content: center;
     max-width: calc(((100% - 64px) / 3 * 1));
     padding-bottom: 146px;
   }
@@ -1326,10 +1381,10 @@ img {
 
 .page-template-reztrip .page-header .page-header__title-area,
 .page-template-ttweb .page-header .page-header__title-area,
-.page-template-independents .page-header .page-header__title-area,
 .page-template-rate-match .page-header .page-header__title-area,
-.page-template-casinos .page-header .page-header__title-area,
 .page-template-digital-marketing .page-header .page-header__title-area,
+.page-template-independents .page-header .page-header__title-area,
+.page-template-casinos .page-header .page-header__title-area,
 .page-template-management-companies .page-header .page-header__title-area {
   position: relative;
   width: 100%;
@@ -1338,10 +1393,10 @@ img {
 @media (min-width: 900px) {
   .page-template-reztrip .page-header .page-header__title-area,
   .page-template-ttweb .page-header .page-header__title-area,
-  .page-template-independents .page-header .page-header__title-area,
   .page-template-rate-match .page-header .page-header__title-area,
-  .page-template-casinos .page-header .page-header__title-area,
   .page-template-digital-marketing .page-header .page-header__title-area,
+  .page-template-independents .page-header .page-header__title-area,
+  .page-template-casinos .page-header .page-header__title-area,
   .page-template-management-companies .page-header .page-header__title-area {
     padding-bottom: 0;
   }
@@ -1350,10 +1405,10 @@ img {
 @media (min-width: 1200px) {
   .page-template-reztrip .page-header .page-header__title-area,
   .page-template-ttweb .page-header .page-header__title-area,
-  .page-template-independents .page-header .page-header__title-area,
   .page-template-rate-match .page-header .page-header__title-area,
-  .page-template-casinos .page-header .page-header__title-area,
   .page-template-digital-marketing .page-header .page-header__title-area,
+  .page-template-independents .page-header .page-header__title-area,
+  .page-template-casinos .page-header .page-header__title-area,
   .page-template-management-companies .page-header .page-header__title-area {
     flex: 0 0 calc(((100% - 64px) / 3 * 1));
     justify-content: center;
@@ -4716,7 +4771,38 @@ table td:before {
   line-height: 32px;
 }
 
-.contact-details .form-label {
+.contact-details .gform_fields {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-details .ginput_container_name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-details .ginput_container_name .name_first,
+.contact-details .ginput_container_name .name_last {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .contact-details .ginput_container_name .name_first,
+  .contact-details .ginput_container_name .name_last {
+    flex: 0 0 calc(((100% - 32px) / 2 * 1));
+    max-width: calc(((100% - 32px) / 2 * 1));
+  }
+}
+
+.contact-details .ginput_container_name .name_first label,
+.contact-details .ginput_container_name .name_last label {
+  display: none;
+}
+
+.contact-details .gfield_label {
   display: block;
   margin-top: 32px;
   margin-bottom: 8px;
@@ -4724,68 +4810,44 @@ table td:before {
   line-height: 20px;
 }
 
-.contact-details .row input:first-child {
+.contact-details .name_first {
   margin-bottom: 32px;
 }
 
 @media (min-width: 1200px) {
-  .contact-details .row input:first-child {
+  .contact-details .name_first {
     margin-bottom: 0;
   }
 }
 
-.contact-details .form-textbox,
-.contact-details .form-textarea {
+.contact-details .ginput_container input {
   width: 100%;
   padding: 6px 8px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   background-color: #fff;
   border: 1px solid #9b9b9b;
   border-radius: 3px;
 }
 
-.contact-details .form-textbox {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-.contact-details .form-textbox::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
+.contact-details .ginput_container input::placeholder {
   color: #526173;
   opacity: .25;
 }
 
-.contact-details .form-textbox:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
+.contact-details .ginput_container input:-ms-input-placeholder {
   color: #526173;
   opacity: .25;
 }
 
-.contact-details .form-textbox::-ms-input-placeholder {
-  /* Microsoft Edge */
+.contact-details .ginput_container input::-ms-input-placeholder {
   color: #526173;
   opacity: .25;
 }
 
-.contact-details .form-textarea {
-  width: 100%;
-  margin-bottom: 24px;
-}
-
-.contact-details .form-wn-wrap {
+.contact-details .ginput_container select {
   position: relative;
-  width: 100%;
-}
-
-.contact-details .form-wn-wrap:after {
-  position: absolute;
-  top: 8px;
-  right: 11px;
-  width: 12px;
-  content: url("images/icons/icon-form-wn.svg");
-}
-
-.contact-details .form-dropdown {
   width: 100%;
   padding: 7px 8px 9px;
   font-family: "Source Sans Pro", sans-serif;
@@ -4793,17 +4855,19 @@ table td:before {
   color: #4a4a4a;
   background-color: #fff;
   border: 1px solid #9b9b9b;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   border-radius: 3px;
 }
 
-.contact-details .form-dropdown::-ms-expand {
-  display: none;
+.contact-details .ginput_container textarea {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 6px 8px 10px;
+  background-color: #fff;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
 }
 
-.contact-details .form-submit-button {
+.contact-details .gform_button {
   float: right;
   font-family: Recta, sans-serif;
   font-size: 18px;

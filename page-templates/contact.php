@@ -57,49 +57,12 @@ get_header(); ?>
 
     </div>
 
-    <div class="form">
+    <div class="form"> <?php
 
-        <p>For all other inquiries, please use the following form:</p>
-
-        <form action="https://submit.jotform.me/submit/71853446382462/" method="post" name="form_71853446382462"
-            id="71853446382462" accept-charset="utf-8">
-            <input type="hidden" name="formID" value="71853446382462">
-
-            <label class="form-label form-label-top" id="label_15" for="input_15">Your Name<span class="form-required">*</span></label>
-
-            <div class="row">
-                <input type="text" id="first_13" name="q13_name[first]" class="col-md-6 form-textbox validate[required]" size="10" value="" data-component="first" placeholder="First Name" required>
-                <input type="text" id="last_13" name="q13_name[last]" class="col-md-6 form-textbox validate[required]" size="15" value="" data-component="last" placeholder="Last Name" required>
-            </div>
-
-            <label class="form-label form-label-top form-label-auto" id="label_16" for="input_16">E-mail Address<span class="form-required">*</span></label>
-            <input type="email" id="input_14" name="q14_email" class="form-textbox validate[required, Email]" size="30" value="" data-component="email" required>
-
-            <label class="form-label form-label-top form-label-auto" id="label_26" for="input_26">Subject<span class="form-required">*</span></label>
-            <div class="form-dropdown-wrap">
-                <select class="form-dropdown" id="input_26" name="q26_howCan">
-                    <option value="I'm interested in using Travel Tripper products and services">I'm interested in using Travel Tripper products and services</option>
-                    <option value="I'm a current client and I need help with my account">I'm a current client and I need help with my account</option>
-                    <option value="I'm interested in offering my products or services to Travel Tripper">I'm interested in offering my products or services to Travel Tripper</option>
-                    <option value="I have an issue with my hotel reservation">I have an issue with my hotel reservation</option>
-                    <option value="I'm in the media and have a question">I'm in the media and have a question</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <label class="form-label form-label-top form-label-auto" id="label_17" for="input_17">Your Message<span class="form-required">*</span></label>
-            <textarea id="input_7" class="form-textarea validate[required]" name="q7_yourMessage" cols="40" rows="6" data-component="textarea" required></textarea>
-
-            <button id="input_2" type="submit" class="btn btn-primary form-submit-button" data-component="button">Send Message</button>
-
-            <input type="hidden" id="simple_spc" name="simple_spc" value="71853446382462">
-
-            <script type="text/javascript">
-                document.getElementById("si" + "mple" + "_spc").value = "71853446382462-71853446382462";
-            </script>
-        </form>
-
-        <script type="text/javascript">JotForm.ownerView=true;</script>
+        if ( is_plugin_active( 'gravityforms/gravityforms.php' ) ) { ?>
+            <p>For all other inquiries, please use the following form:</p> <?php
+            gravity_form( 1, false, false, false, '', false );
+        } ?>
 
     </div>
 

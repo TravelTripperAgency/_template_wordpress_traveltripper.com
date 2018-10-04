@@ -132,7 +132,7 @@ get_header(); ?>
         <div class="showcase__metrix">
           <p class="showcase__metrix-number"><span>+</span>45%</p>
           <p class="showcase__metrix-text">increase in direct bookings</p>
-          <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Galt-House-case-study-Travel-Tripper.pdf" class="btn btn-primary">see how we did it</a>
+          <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/10/Beach-Terrace-Inn-case-study-Travel-Tripper.pdf" class="btn btn-primary">see how we did it</a>
         </div>
         <div class="showcase__description">
           <p>Beach Terrace Inn increased their direct website revenue by 45% YOY after launching with Travel Tripper in Oct 2017.</p>

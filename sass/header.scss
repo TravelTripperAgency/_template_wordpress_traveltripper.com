@@ -138,9 +138,14 @@
   color: #fff;
   background-image: url('images/background-header.png');
   background-repeat: no-repeat;
-  // background-position: center;
   background-position: top left;
   background-size: cover;
+  @include breakpoint($md) {
+    background-position: center;
+  }
+  @include breakpoint($xl) {
+    background-position: top left;
+  }
 
   .home &,
   .page-template-reztrip &,
@@ -157,7 +162,16 @@
       background-position-y: -8em;
     }
     @include breakpoint($md) {
+      background-position-y: 0;
+    }
+    @include breakpoint($lg) {
+      background-position-y: -3em;
+    }
+    @include breakpoint($xl) {
       background-position-y: -5em;
+    }
+    @media (min-width: 2048px) {
+      background-position-y: -8em;
     }
   }
 
@@ -196,8 +210,9 @@
         padding-bottom: 0;
       }
       @include breakpoint($md) {
+        top: 3em;
         flex: 0 0 span(1 of 3);
-        justify-content: center;
+        // justify-content: center;
         max-width: span(1 of 3);
         padding-bottom: 146px;
       }
@@ -209,10 +224,10 @@
 
     .page-template-reztrip &,
     .page-template-ttweb &,
-    .page-template-independents &,
     .page-template-rate-match &,
-    .page-template-casinos &,
     .page-template-digital-marketing &,
+    .page-template-independents &,
+    .page-template-casinos &,
     .page-template-management-companies & {
       position: relative;
       width: 100%;

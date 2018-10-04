@@ -41,7 +41,7 @@ if ( function_exists( 'yoast_breadcrumb' ) ) {
           </div>
         </div> <?php
 
-        if ( !empty( TTRP_VERSION ) ) {
+        if ( is_plugin_active( 'travel-tripper-related-posts/ttrp.php' ) ) {
             related_posts();
         } ?>
 

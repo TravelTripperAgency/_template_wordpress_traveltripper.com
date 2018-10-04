@@ -1,4 +1,5 @@
-.btn {
+.btn,
+.gform_button {
   display: inline-block;
   padding: 12px 24px;
   line-height: 19px;
@@ -22,7 +23,8 @@
 
 }
 
-.btn-primary {
+.btn-primary,
+.gform_button {
   background-color: $red;
   border-color: $red;
 }

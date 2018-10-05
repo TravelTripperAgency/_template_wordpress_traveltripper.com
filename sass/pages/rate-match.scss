@@ -5,9 +5,9 @@
     @include breakpoint($sm) {
       margin-bottom: 64px;
     }
-    @include breakpoint($md) {
-      margin-top: -80px;
-    }
+    // @include breakpoint($md) {
+    //   margin-top: -80px;
+    // }
     @include breakpoint($lg) {
       margin-bottom: 130px;
     }
@@ -24,7 +24,7 @@
       }
       @include breakpoint($md) {
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         justify-content: center;
       }
 

@@ -140,23 +140,15 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
-  @include breakpoint($md) {
-    background-position: center;
-  }
-  @include breakpoint($xl) {
-    background-position: top left;
-  }
 
   .home &,
   .page-template-reztrip &,
   .page-template-ttweb &,
   .page-template-independents &,
-  .page-template-rate-match &,
   .page-template-casinos &,
   .page-template-digital-marketing &,
   .page-template-management-companies & {
     background-image: url('images/background-header-featured.png');
-    // background-position: top left;
     background-position-y: -16em;
     @include breakpoint($sm) {
       background-position-y: -8em;
@@ -171,6 +163,23 @@
       background-position-y: -5em;
     }
     @media (min-width: 2048px) {
+      background-position-y: -8em;
+    }
+  }
+
+  .page-template-rate-match & {
+    background-image: url('images/background-header-featured.png');
+    background-position-y: -16em;
+    @include breakpoint($sm) {
+      background-position-y: -8em;
+    }
+    @include breakpoint($md) {
+      background-position-y: 0;
+    }
+    @include breakpoint($lg) {
+      background-position-y: -3em;
+    }
+    @include breakpoint($xl) {
       background-position-y: -8em;
     }
   }
@@ -407,24 +416,47 @@
     }
 
     .page-template-reztrip & img {
-      max-width: 900px;
+      @include breakpoint($sm) {
+        max-width: 735px;
+      }
+      @include breakpoint($md) {
+        max-width: 900px;
+      }
     }
 
     .page-template-ttweb & img {
-      max-width: 880px;
+      @include breakpoint($sm) {
+        max-width: 735px;
+      }
+      @include breakpoint($md) {
+        max-width: 880px;
+      }
     }
 
-    .page-template-independents & img,
+    .page-template-digital-marketing & img {
+      @include breakpoint($sm) {
+        max-width: 680px;
+      }
+      @include breakpoint($md) {
+        max-width: 890px;
+      }
+    }
+
     .page-template-rate-match & img {
+      @include breakpoint($sm) {
+        max-width: 680px;
+      }
+      @include breakpoint($md) {
+        max-width: 860px;
+      }
+    }
+
+    .page-template-independents & img {
       max-width: 860px;
     }
 
     .page-template-casinos & img {
       max-width: 767px;
-    }
-
-    .page-template-digital-marketing & img {
-      max-width: 890px;
     }
 
     .page-template-management-companies & img {

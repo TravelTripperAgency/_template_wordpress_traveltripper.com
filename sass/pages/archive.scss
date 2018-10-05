@@ -47,6 +47,11 @@
     @include breakpoint($sm) {
       margin-bottom: 64px;
     }
+
+    @media all and (-ms-high-contrast: none) {
+      display: inline;
+    }
+
   }
 
   .featured-articles__title,
@@ -68,12 +73,24 @@
       margin-bottom: 54px;
     }
 
-    // &.last {
-    //   margin-bottom: 32px;
-    //   @include breakpoint($sm) {
-    //     margin-bottom: 0;
-    //   }
-    // }
+    @media all and (-ms-high-contrast: none) {
+      float: left;
+
+      &:nth-child(3) {
+        margin-left: 32px;
+      }
+
+      &:nth-child(4) {
+        max-width: span(1 of 3);
+      }
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        max-width: span(1 of 3);
+        margin-left: 32px;
+      }
+
+    }
 
     &:nth-child(n+4) {
       @include breakpoint($lg) {

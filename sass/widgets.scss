@@ -171,6 +171,10 @@
     margin-top: 32px;
   }
 
+  @media all and (-ms-high-contrast: none) {
+    float: left;
+  }
+
   .widget-cta__type {
     display: inline-block;
     margin-bottom: 32px;

@@ -78,7 +78,7 @@
                         </div>
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">Casinos & Gaming</p>
-                            <p class="sub-menu__link-description">Serve you most loyal guests just as easily online as offline</p>
+                            <p class="sub-menu__link-description">Serve your most loyal guests just as easily online as offline</p>
                         </div>
                     </a>
                 </li>

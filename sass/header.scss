@@ -291,7 +291,9 @@
       }
     }
 
-    .page-template-contact & {
+    .page-template-contact &,
+    .page-template-support &,
+    .page-template-support-thank-you & {
       padding-bottom: 16px;
     }
 

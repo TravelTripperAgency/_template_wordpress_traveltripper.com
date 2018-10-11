@@ -32,7 +32,6 @@ function blog_meta_callback( $post ) {
     wp_nonce_field( basename( __FILE__ ), 'blog_nonce' );
     $blog_stored_meta = get_post_meta( $post->ID ); ?>
      <p>
-        <!-- <span class="blog-row-title"><?php // _e( 'Check if this is a featured post:', 'traveltripper' )?></span> -->
         <div class="blog-row-content">
             <label for="featured-checkbox">
                 <input type="checkbox" name="featured-checkbox" id="featured-checkbox" value="yes" <?php if ( isset ( $blog_stored_meta['featured-checkbox'] ) ) checked( $blog_stored_meta['featured-checkbox'][0], 'yes' ); ?>>
@@ -148,6 +147,17 @@ function custom_search_form( $form ) {
 
 
 /**
+ * Change number of posts for Resources archive
+ */
+add_action( 'pre_get_posts', 'resources_posts_per_page' );
+function resources_posts_per_page( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'resources' ) ) {
+    $query->set( 'posts_per_page', '12' );
+  }
+}
+
+
+/**
  * Get Resources tag name for archive-resources.php template
  */
 function resources_custom_tag() {
@@ -193,35 +203,3 @@ function get_current_url() {
 
     return trailingslashit( $url );
 }
-
-
-/**
- * Exclude featured posts from the main query
- *
- * The filter works, but is breaking pagination so the add_action is commented.
- * We are leaving it here for reference should we need it.
- */
-// add_action( 'pre_get_posts', 'exclude_featured_post' );
-// function exclude_featured_post( $query ) {
-//     if ( $query->is_home() && $query->is_main_query()) {
-//         if ( $query->is_main_query()) {
-//             // In case there is already a meta query set somewhere else...
-//             $meta_query = $query->get('meta_query')? : [];
-//
-//             // append this one.
-//             $meta_query[] = [
-//                 'meta_query' => array(
-//                     array(
-//                         'key' => 'featured-checkbox',
-//                         'value' => 'yes'
-//                     )
-//                 )
-//             ];
-//
-//             $query->set('meta_query', $meta_query);
-//
-//         }
-//
-//     }
-//
-// }

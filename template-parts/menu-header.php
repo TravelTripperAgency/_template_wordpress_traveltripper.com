@@ -189,14 +189,14 @@
             <a>Client Login</a>
             <ul class="sub-menu">
                 <li class="menu-item">
-                    <a href="https://us.reztripadmin.com/">
+                    <a href="https://us.reztripadmin.com/" rel="nofollow">
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">RezTrip</p>
                         </div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="https://asia.reztripadmin.com/">
+                    <a href="https://asia.reztripadmin.com/" rel="nofollow">
                         <div class="sub-menu__text">
                             <p class="sub-menu__link-text">RezTrip - Asia</p>
                         </div>

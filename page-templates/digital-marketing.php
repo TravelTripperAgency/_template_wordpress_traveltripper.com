@@ -21,7 +21,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="https://try.traveltripper.com/request-demo/?utm_source=website&utm_content=digitalmarketing">request a demo</a>
+                <a class="btn btn-primary" href="http://try.traveltripper.com/request-demo/">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
@@ -96,7 +96,16 @@ get_header(); ?>
     </div>
   </div>
 
-  <div class="col-right"></div>
+  <div class="col-right">
+      <div class="video-container">
+          <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+              <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                  <iframe src="https://fast.wistia.net/embed/iframe/3h1qik8fdc?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe>
+              </div>
+          </div>
+          <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+      </div>
+  </div>
 
 </section>
 

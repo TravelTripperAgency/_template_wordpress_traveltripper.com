@@ -183,21 +183,34 @@
 
     .col-right {
       position: relative;
+      display: flex;
       width: 100%;
-      min-height: 460px;
-      background-image: url('images/solutions-dgs-rta@2x.png');
-      background-repeat: no-repeat;
-      background-position: top;
-      background-size: 100%;
+      min-height: 520px;
+      // background-image: url('images/solutions-dgs-rta@2x.png');
+      // background-repeat: no-repeat;
+      // background-position: top;
+      // background-size: 100%;
       @include breakpoint($xs) {
-        min-height: 800px;
+        // align-items: center;
+        min-height: 680px;
       }
       @include breakpoint($sm) {
-        min-height: 1044px;
+        min-height: 700px;
       }
       @include breakpoint($md) {
         flex: 0 0 span(7 of 12);
         max-width: span(7 of 12);
+        min-height: 1100px;
+      }
+    }
+
+    .video-container {
+      flex-grow: 1;
+      max-width: calc(725px + (16px * 2));
+      margin: 0 auto;
+      padding: 0 16px;
+      @include breakpoint($xs) {
+        margin: 80px auto 0;
       }
     }
 

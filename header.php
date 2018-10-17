@@ -48,7 +48,7 @@
                 <div class="page-header__cta">
                     <p>Become an expert hotel marketer with our free resources.</p>
                     <div class="btn-holder">
-                        <a class="btn btn-secondary-white" href="http://eepurl.com/bI-pnv">subscribe</a>
+                        <a class="btn btn-secondary-white" href="http://eepurl.com/bI-pnv" rel="nofollow">subscribe</a>
                     </div>
                 </div>
             </div>

@@ -21,10 +21,10 @@
             <div class="logo-social">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo-footer.svg" alt="Travel Tripper Logo">
                 <ul>
-                    <li><a class="background-image linkedin" href="https://www.linkedin.com/company/travel-tripper/"></a></li>
-                    <li><a class="background-image facebook" href="<?php if ( wp_is_mobile() ) { echo 'fb://traveltripper'; } else { echo 'https://www.facebook.com/traveltripper/'; } ?>"></a></li>
-                    <li><a class="background-image twitter" href="https://twitter.com/Travel_Tripper"></a></li>
-                    <li><a class="background-image youtube" href="https://www.youtube.com/channel/UCyZzis2vQHWeUj2_XHP1-mg"></a></li>
+                    <li><a class="background-image linkedin" href="https://www.linkedin.com/company/travel-tripper/" rel="nofollow"></a></li>
+                    <li><a class="background-image facebook" href="<?php if ( wp_is_mobile() ) { echo 'fb://traveltripper'; } else { echo 'https://www.facebook.com/traveltripper/'; } ?>" rel="nofollow"></a></li>
+                    <li><a class="background-image twitter" href="https://twitter.com/Travel_Tripper" rel="nofollow"></a></li>
+                    <li><a class="background-image youtube" href="https://www.youtube.com/channel/UCyZzis2vQHWeUj2_XHP1-mg" rel="nofollow"></a></li>
                 </ul>
             </div>
 

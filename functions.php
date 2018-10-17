@@ -164,9 +164,11 @@ function traveltripper_scripts() {
 
     wp_enqueue_script( 'traveltripper-javascript', get_template_directory_uri() . '/js/main.min.js', array(), null, true);
 
-    if ( is_page_template( array( 'page-templates/solutions.php', 'page-templates/reztrip.php', 'page-templates/ttweb.php', 'page-templates/digital-marketing.php', 'page-templates/rate-match.php' ) ) ) {
-        wp_enqueue_script( 'unbounce-javascript', 'https://58b1f8f7754642a9a92d909305e6d42c.js.ubembed.com', array(), null, true);
-    }
+    // if ( is_page_template( array( 'page-templates/solutions.php', 'page-templates/reztrip.php', 'page-templates/ttweb.php', 'page-templates/digital-marketing.php', 'page-templates/rate-match.php' ) ) ) {
+    //     wp_enqueue_script( 'unbounce-javascript', 'https://58b1f8f7754642a9a92d909305e6d42c.js.ubembed.com', array(), null, true);
+    // }
+
+	wp_enqueue_script( 'unbounce', 'https://58b1f8f7754642a9a92d909305e6d42c.js.ubembed.com', array(), null, true );
 
 	// wp_enqueue_script( 'traveltripper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

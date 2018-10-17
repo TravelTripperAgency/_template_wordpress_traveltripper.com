@@ -21,7 +21,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="https://try.traveltripper.com/rate-match-request-demo/?utm_source=website&utm_content=ratematch_button">request a demo</a>
+                <a class="btn btn-primary" href="https://try.traveltripper.com/rate-match-request-demo/">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php

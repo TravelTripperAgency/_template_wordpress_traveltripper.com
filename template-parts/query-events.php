@@ -38,7 +38,7 @@ if ( $query_event->have_posts() ) { ?>
                         } ?>
                         <p class="event__title"><?php
                             if ( get_field( 'event_link' ) ) { ?>
-                                <a href="<?php the_field( 'event_link' );  ?>"><?php the_title(); ?></a> <?php
+                                <a href="<?php the_field( 'event_link' );  ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a> <?php
                             } else {
                                 the_title();
                             } ?>

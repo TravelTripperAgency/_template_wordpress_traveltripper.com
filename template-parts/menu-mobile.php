@@ -202,10 +202,10 @@
     <p class="request-demo"><a href="http://try.traveltripper.com/request-demo/?utm_source=website&utm_content=navbar">Request a Demo</a></p>
 
     <ul class="mobile-nav__social">
-        <li><a class="background-image linkedin" href="https://www.linkedin.com/company/travel-tripper/"></a></li>
-        <li><a class="background-image facebook" href="<?php if ( wp_is_mobile() ) { echo 'fb://traveltripper'; } else { echo 'https://www.facebook.com/traveltripper/'; } ?>"></a></li>
-        <li><a class="background-image twitter" href="https://twitter.com/Travel_Tripper"></a></li>
-        <li><a class="background-image youtube" href="https://www.youtube.com/channel/UCyZzis2vQHWeUj2_XHP1-mg"></a></li>
+        <li><a class="background-image linkedin" href="https://www.linkedin.com/company/travel-tripper/" rel="nofollow"></a></li>
+        <li><a class="background-image facebook" href="<?php if ( wp_is_mobile() ) { echo 'fb://traveltripper'; } else { echo 'https://www.facebook.com/traveltripper/'; } ?>" rel="nofollow"></a></li>
+        <li><a class="background-image twitter" href="https://twitter.com/Travel_Tripper" rel="nofollow"></a></li>
+        <li><a class="background-image youtube" href="https://www.youtube.com/channel/UCyZzis2vQHWeUj2_XHP1-mg" rel="nofollow"></a></li>
     </ul> <?php
 
     wp_nav_menu( array(
@@ -214,13 +214,4 @@
         'container_class' => 'site-footer__bottom'
     ) ); ?>
 
-    <!-- <nav class="mobile-nav__footer">
-        <div class="wrap">
-            <ul>
-                <li class="menu-item"><a href="<?php echo get_site_url(); ?>">Terms of Use</a></li>
-                <li class="menu-item"><a href="<?php echo get_site_url(); ?>/privacypolicy/">Privacy Policy</a></li>
-                <li class="menu-item"><a href="<?php echo get_site_url(); ?>/">GDPR</a></li>
-            </ul>
-        </div>
-    </nav> -->
 </div>

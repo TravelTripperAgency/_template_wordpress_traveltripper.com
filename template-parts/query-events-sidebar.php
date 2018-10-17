@@ -5,12 +5,20 @@
  * @package Travel_Tripper
  */
 
+$today = date('Ymd');
 $query_event_args = array(
     'post_type' => 'events',
     'posts_per_page' => 4,
     'meta_key' => 'event_start_date',
     'orderby' => 'meta_value',
-    'order' => 'ASC'
+    'order' => 'ASC',
+    'meta_query' => array(
+	     array(
+	        'key'		=> 'event_end_date',
+	        'compare'	=> '>=',
+	        'value'		=> $today,
+	    )
+    )
 );
 $query_event = new WP_Query( $query_event_args );
 
@@ -25,10 +33,11 @@ if ( $query_event->have_posts() ) { ?>
 
                 while ( $query_event->have_posts() ) : $query_event->the_post(); ?>
                     <div class="event"> <?php
+
                         if ( get_field( 'event_dates' ) ) { ?>
                             <p class="event__date"><?php the_field( 'event_dates' ); ?></p> <?php
                         } ?>
-                        <p class="event__title"><?php
+                        <p class="event__title"> <?php
                             if ( get_field( 'event_link' ) ) { ?>
                                 <a href="<?php the_field( 'event_link' );  ?>" rel="nofollow" target="_blank"><?php the_title(); ?></a> <?php
                             } else {

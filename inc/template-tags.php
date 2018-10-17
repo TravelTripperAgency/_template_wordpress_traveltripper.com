@@ -7,10 +7,10 @@
  * @package Travel_Tripper
  */
 
+/**
+ * Prints HTML with meta information for the current post-date/time.
+ */
 if ( ! function_exists( 'traveltripper_posted_on' ) ) :
-	/**
-	 * Prints HTML with meta information for the current post-date/time.
-	 */
 	function traveltripper_posted_on() {
 
 		$time_string = '<time class="entry-time" datetime="%1$s">%2$s</time>';
@@ -27,10 +27,10 @@ if ( ! function_exists( 'traveltripper_posted_on' ) ) :
 	}
 endif;
 
+/**
+ * Prints HTML with meta information for the current author.
+ */
 // if ( ! function_exists( 'traveltripper_posted_by' ) ) :
-// 	/**
-// 	 * Prints HTML with meta information for the current author.
-// 	 */
 // 	function traveltripper_posted_by() {
 // 		$byline = sprintf(
 // 			/* translators: %s: post author. */
@@ -43,10 +43,10 @@ endif;
 // 	}
 // endif;
 
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
 if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
-	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
-	 */
 	function traveltripper_entry_footer() {
 
 		if ( get_post_type() === 'post' ) { ?>
@@ -113,12 +113,62 @@ if ( ! function_exists( 'traveltripper_entry_footer' ) ) :
 	}
 endif;
 
+/**
+ * Output the default image.
+ * For use in single posts that do not have a featured image set.
+ */
 if ( ! function_exists( 'traveltripper_default_thumbnail' ) ) :
-	/**
-	 * Output the default image.
-     * For use in single posts that do not have a featured image set.
-	 */
 	function traveltripper_default_thumbnail() {
         echo '<img width="1378" height="776" src="' . get_site_url() . '/wp-content/uploads/2018/08/default@2x.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Travel Tripper" srcset="' . get_site_url() . '/wp-content/uploads/2018/08/default@2x.jpg 1378w, ' . get_site_url() . '/wp-content/uploads/2018/08/default@2x-300x169.jpg 300w, ' . get_site_url() . '/wp-content/uploads/2018/08/default@2x-768x432.jpg 768w, ' . get_site_url() . '/wp-content/uploads/2018/08/default@2x-1024x577.jpg 1024w" sizes="(max-width: 1378px) 100vw, 1378px">';
 	}
+endif;
+
+/**
+ * Get Resources tag name for archive-resources.php template
+ */
+if ( ! function_exists( 'resources_custom_tag' ) ) :
+    function resources_custom_tag() {
+        // Get post by post ID.
+        if ( !$post = get_post() ) {
+            return '';
+        }
+
+        // Get post type taxonomies.
+        $taxonomies = get_object_taxonomies( $post->post_type, 'objects' );
+
+        $output = array();
+
+        foreach ( $taxonomies as $taxonomy_name => $taxonomy ) {
+            // Get the terms.
+            $terms = get_the_terms( $post->ID, $taxonomy_name );
+            if ( !empty( $terms ) ) {
+                $counter = 1;
+                foreach ( $terms as $term ) {
+                    if ( $counter = 1 ) {
+                        $output[] = sprintf( '<p class="entry-category">%1$s</p>',
+                            esc_html( $term->name )
+                        );
+                    }
+                    $counter = $counter + 1;
+                }
+            }
+        }
+        return implode( '', $output );
+    }
+endif;
+
+/**
+ * Get the current page URL
+ */
+if ( ! function_exists( 'get_current_url' ) ) :
+    function get_current_url() {
+        // Check protocol
+        $url = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' ) ? 'https://' : 'http://';
+        // Append server
+        $url .= $_SERVER['SERVER_NAME'];
+        // Append URI
+        $url .= $_SERVER['REQUEST_URI'];
+
+        return trailingslashit( $url );
+    }
 endif;

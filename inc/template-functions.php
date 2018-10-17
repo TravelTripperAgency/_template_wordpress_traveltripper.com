@@ -158,48 +158,28 @@ function resources_posts_per_page( $query ) {
 
 
 /**
- * Get Resources tag name for archive-resources.php template
+ * Add custom header scripts to wp_head()
  */
-function resources_custom_tag() {
-    // Get post by post ID.
-    if ( !$post = get_post() ) {
-        return '';
+add_action( 'wp_head', 'traveltripper_header_scripts', 999 );
+function traveltripper_header_scripts() {
+    if ( get_field( 'page_header_scripts' ) ) {
+        the_field( 'page_header_scripts' );
     }
-
-    // Get post type taxonomies.
-    $taxonomies = get_object_taxonomies( $post->post_type, 'objects' );
-
-    $output = array();
-
-    foreach ( $taxonomies as $taxonomy_name => $taxonomy ) {
-        // Get the terms.
-        $terms = get_the_terms( $post->ID, $taxonomy_name );
-        if ( !empty( $terms ) ) {
-            $counter = 1;
-            foreach ( $terms as $term ) {
-                if ( $counter = 1 ) {
-                    $output[] = sprintf( '<p class="entry-category">%1$s</p>',
-                        esc_html( $term->name )
-                    );
-                }
-                $counter = $counter + 1;
-            }
-        }
+    if ( get_field( 'global_header_scripts', 'options' ) ) {
+        the_field( 'global_header_scripts', 'options' );
     }
-    return implode( '', $output );
 }
 
 
 /**
- * Get the current page URL
+ * Add custom footer scripts to wp_footer()
  */
-function get_current_url() {
-    // Check protocol
-    $url = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' ) ? 'https://' : 'http://';
-    // Append server
-    $url .= $_SERVER['SERVER_NAME'];
-    // Append URI
-    $url .= $_SERVER['REQUEST_URI'];
-
-    return trailingslashit( $url );
+add_action( 'wp_footer', 'traveltripper_footer_scripts', 999 );
+function traveltripper_footer_scripts() {
+    if ( get_field( 'page_footer_scripts' ) ) {
+        the_field( 'page_footer_scripts' );
+    }
+    if ( get_field( 'global_footer_scripts', 'options' ) ) {
+        the_field( 'global_footer_scripts', 'options' );
+    }
 }

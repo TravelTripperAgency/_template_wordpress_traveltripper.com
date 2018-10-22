@@ -7,7 +7,11 @@
  * @package Travel_Tripper
  */
 
-get_header(); ?>
+get_header();
+
+if ( function_exists( 'yoast_breadcrumb' ) ) {
+   yoast_breadcrumb( '<div class="breadcrumbs wrap">','</div>' );
+} ?>
 
 <div class="content-sidebar-wrap">
 

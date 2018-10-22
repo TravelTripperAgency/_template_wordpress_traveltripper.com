@@ -132,19 +132,7 @@ get_header(); ?>
 
     <h2 class="section-title"><?php the_field( 'slider_section_title' ); ?></h2> <?php
 
-    if ( have_rows( 'slider_images' ) ) { ?>
-
-        <div class="owl-carousel client-slider"> <?php
-
-            while ( have_rows( 'slider_images' ) ) : the_row(); ?>
-
-                <div class="item background-image" style="background-image: url('<?php the_sub_field( 'slider_image' ); ?>');"></div> <?php
-
-            endwhile; ?>
-
-        </div> <?php
-
-    } ?>
+    get_template_part( 'template-parts/content', 'client-slider' ); ?>
 
 </section>
 

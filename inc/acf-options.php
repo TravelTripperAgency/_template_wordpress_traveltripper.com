@@ -24,6 +24,7 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
 		'page_title' => 'Scripts',
         'position' => 82,
+        'menu_slug' 	=> 'global-scripts',
         'icon_url' => 'dashicons-editor-code',
         // 'update_button'		=> __('Publish', 'acf'),
         'updated_message'	=> __("Global Scripts Updated", 'acf')

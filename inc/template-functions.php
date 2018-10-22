@@ -183,3 +183,20 @@ function traveltripper_footer_scripts() {
         the_field( 'global_footer_scripts', 'options' );
     }
 }
+
+
+/**
+ * Add GTM script
+ */
+add_action( 'wp_head', 'google_tag_manager_script', 1 );
+function google_tag_manager_script() {
+    if ( get_field( 'google_tag_manager', 'options' ) ) {
+        the_field( 'google_tag_manager', 'options' );
+    }
+}
+function google_tag_manager_noscript() {
+    // function called in header.php
+    if ( get_field( 'google_tag_manager_noscript', 'options' ) && get_field( 'google_tag_manager', 'options' ) ) {
+        the_field( 'google_tag_manager_noscript', 'options' );
+    }
+}

@@ -19,7 +19,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>> <?php
+
+    google_tag_manager_noscript(); ?>
 
     <header class="site-header">
         <div class="wrap">

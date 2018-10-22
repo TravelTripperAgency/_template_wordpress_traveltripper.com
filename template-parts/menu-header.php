@@ -11,10 +11,10 @@
         <li class="menu-item menu-item-has-children<?php if ( get_current_url() == get_site_url() . '/solutions/' ) { echo ' current-menu-item'; } ?>">
             <a href="<?php echo get_site_url(); ?>/solutions/">Solutions</a>
             <ul class="sub-menu">
-                <li class="menu-item<?php if ( get_current_url() == get_site_url() . '/solutions/booking-engine/' ) { echo ' current-menu-item'; } ?>">
+                <li class="menu-item">
                     <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">
-                        <div class="sub-menu__icon">
-                    <div class="background-icon reztrip"></div>
+                    <div class="sub-menu__icon">
+                        <div class="background-icon reztrip"></div>
                     </div>
                     <div class="sub-menu__text">
                         <p class="sub-menu__link-text">RezTrip CRS & Booking Engine</p>
@@ -183,7 +183,7 @@
             </ul>
         </li>
         <li class="btn-header menu-item">
-            <a href="http://try.traveltripper.com/request-demo/?utm_source=website&utm_content=navbar">Request a Demo</a>
+            <a href="http://try.traveltripper.com/request-demo/">Request a Demo</a>
         </li>
         <li class="client-login menu-item menu-item-has-children">
             <a>Client Login</a>

@@ -147,7 +147,7 @@ get_header(); ?>
                 <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ribbon.svg" alt="ribbon icon">Offer additional discounts to guarantee to the lowest price</p>
                 <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-tools.svg" alt="tools icon">Set rate match offers terms and conditions</p>
             </div>
-            <a class="btn btn-primary" href="https://try.traveltripper.com/rate-match-request-demo/?utm_source=website&utm_content=ratematch">schedule a demo</a>
+            <a class="btn btn-primary" href="https://try.traveltripper.com/rate-match-request-demo/">schedule a demo</a>
         </div>
     </div>
 

@@ -199,7 +199,7 @@
         </ul>
     </nav>
     <img src="<?php echo get_template_directory_uri(); ?>/images/logo-footer.svg" alt="Travel Tripper Logo">
-    <p class="request-demo"><a href="http://try.traveltripper.com/request-demo/?utm_source=website&utm_content=navbar">Request a Demo</a></p>
+    <p class="request-demo"><a href="http://try.traveltripper.com/request-demo/">Request a Demo</a></p>
 
     <ul class="mobile-nav__social">
         <li><a class="background-image linkedin" href="https://www.linkedin.com/company/travel-tripper/" rel="nofollow"></a></li>

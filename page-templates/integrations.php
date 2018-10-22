@@ -19,112 +19,47 @@ get_header(); ?>
             } ?>
         </div>
     </div>
-</section>
-
-<section class="pms-integrations wrap row">
-
-  <div class="col-left">
-    <h2 class="section-title">PMS Integrations</h2>
-    <p>Don't see an integration listed here that you need? <a href="<?php echo get_site_url(); ?>/contact/">Contact us</a> for more information.</p>
-  </div>
-
-  <div class="col-right row">
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/agilysys.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/atrio.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/autoclerk.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/guest-centrix.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/infor.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/innfinity.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/innsuites.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/lodgical-solution.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/maestro.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/maximojo.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/msi.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/newbook.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/oracle.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/silverbyte.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/protel.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/resort-data-processing.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/reznext.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/room-key-pms.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/roommaster.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/sms.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/stay-n-touch.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/webrezpro.png" alt=""></div>
-  </div>
-
-</section>
-
-<section class="distribution-partners wrap row">
-
-  <div class="col-left">
-    <h2 class="section-title">Distribution Partners</h2>
-  </div>
-
-  <div class="col-right row">
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/amadeus.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/best-western.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/ctrip.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/derbysoft.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/dhisco.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/hotel-availabilities.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/kognitiv.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/leonardo.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/rategain.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/rate-tiger.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/sabre.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/seekda.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/siteminder.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/travelport.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/wihp.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/yieldplanet.png" alt=""></div>
-  </div>
-
-</section>
-
-<section class="revenue-management wrap row">
-
-  <div class="col-left">
-    <h2 class="section-title">Revenue Management</h2>
-  </div>
-
-  <div class="col-right row justify-content-start">
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/ideas.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/lodgiq.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/rainmaker.png" alt=""></div>
-  </div>
-
-</section>
-
-<section class="payment-gateways wrap row">
-
-  <div class="col-left">
-    <h2 class="section-title">Payment Gateways</h2>
-  </div>
-
-  <div class="col-right row justify-content-start">
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/jcc-payments.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/shift4.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/simple-pay.png" alt=""></div>
-  </div>
-
-</section>
-
-<section class="additional-connections wrap row">
-
-  <div class="col-left">
-    <h2 class="section-title">Additional Connections</h2>
-  </div>
-
-  <div class="col-right row justify-content-start">
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/aristocrat.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/flip-to.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/nor1.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/scientific-games.png" alt=""></div>
-    <div class="integrations__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/stay-wanderful.png" alt=""></div>
-  </div>
-
 </section> <?php
+
+if ( have_rows( 'integrations_page_section' ) ) :
+    while ( have_rows( 'integrations_page_section' ) ) : the_row(); ?>
+
+        <section class="integrations-section wrap row">
+
+            <div class="col-left">
+                <h2 class="section-title"><?php the_sub_field( 'integrations_section_title' ); ?></h2> <?php
+                if ( get_sub_field( 'integrations_section_description' ) ) {
+                    the_sub_field( 'integrations_section_description' );
+                } ?>
+            </div>
+
+            <div class="col-right"> <?php
+                if ( have_rows( 'integrations_section_logos' ) ) :
+                    while ( have_rows( 'integrations_section_logos' ) ) : the_row();
+
+                        $image = get_sub_field( 'integration_logo' );
+                        $size = 'medium'; // (thumbnail, medium, large, full or custom size)
+
+                        if ( $image ) { ?>
+                            <div class="integrations__logo"> <?php
+                                if ( get_sub_field( 'integration_link' ) ) { ?>
+                                    <a href="<?php the_sub_field( 'integration_link' ) ?>"> <?php
+                                }
+                                echo wp_get_attachment_image( $image, $size );
+                                if ( get_sub_field( 'integration_link' ) ) { ?>
+                                    </a> <?php
+                                } ?>
+                            </div> <?php
+                        }
+
+                    endwhile;
+                endif; ?>
+            </div>
+
+        </section> <?php
+
+    endwhile;
+endif;
 
 get_template_part( 'template-parts/content', 'pre-footer-links-solutions' );
 

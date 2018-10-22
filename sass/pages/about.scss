@@ -190,7 +190,9 @@
         }
 
         .media__logo {
+          display: flex;
           flex: 0 0 span(1 of 3);
+          align-items: center;
           margin-bottom: 45px;
           @include breakpoint($lg) {
             flex: 1;
@@ -209,24 +211,65 @@
       .award {
         margin-bottom: 80px;
 
-        .row {
-          justify-content: space-between;
-
-          &:after {
+        .row:after {
+          content: '';
+          @include breakpoint($sm) {
             flex: 0 0 span(1 of 3);
-            content: '';
-            @include breakpoint($lg) {
-              flex: 0 0 span(1 of 4);
-            }
+          }
+          @include breakpoint($md) {
+            flex: 0 0 span(1 of 4);
           }
         }
 
         .award__logo {
-          flex: 0 0 span(1 of 3);
+          display: flex;
+          flex: 0 0 span(1 of 2, $double-gutters);
+          align-items: center;
+          justify-content: center;
+          // float: left;
+          max-width: span(1 of 2, $double-gutters);
+          // height: 120px;
           margin-bottom: 45px;
-          @include breakpoint($lg) {
-            flex: 0 0 span(1 of 4);
+          @include breakpoint($sm) {
+            flex: 0 0 span(1 of 3, $double-gutters);
+            max-width: span(1 of 3, $double-gutters);
           }
+          @include breakpoint($md) {
+            flex: 0 0 span(1 of 4, $double-gutters);
+            max-width: span(1 of 4, $double-gutters);
+          }
+
+          + .award__logo {
+            margin-left: 60px;
+          }
+
+          &:nth-child(2n+3) {
+            @include breakpoint($max-sm) {
+              margin-left: 0;
+            }
+          }
+
+          &:nth-child(3n+4) {
+            @include breakpoint($sm) {
+              margin-left: 60px;
+            }
+            @include breakpoint($max-md) {
+              margin-left: 0;
+            }
+          }
+
+          &:nth-child(4n+5) {
+            @include breakpoint($md) {
+              margin-left: 0;
+            }
+          }
+
+          img {
+            width: auto;
+            // max-width: 180px;
+            max-height: 120px;
+          }
+
         }
 
       }
@@ -332,6 +375,7 @@
       top: calc(100% - 105px);
       left: 50%;
       z-index: 1;
+      max-width: 210px;
       transform: translateX(-50%);
       @include breakpoint($md) {
         top: 50%;

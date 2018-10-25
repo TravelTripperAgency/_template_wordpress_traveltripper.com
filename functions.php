@@ -46,8 +46,8 @@ if ( ! function_exists( 'traveltripper_setup' ) ) {
          * Register navigation menu for use with wp_nav_menu()
          */
 		register_nav_menus( array(
-			// 'menu-header' => esc_html__( 'Header Main', 'traveltripper' ),
-			// 'menu-mobile' => esc_html__( 'Mobile', 'traveltripper' ),
+			'menu-header' => esc_html__( 'Header', 'traveltripper' ),
+			'menu-mobile' => esc_html__( 'Mobile', 'traveltripper' ),
 			'menu-footer-1' => esc_html__( 'Footer Solutions', 'traveltripper' ),
 			'menu-footer-2' => esc_html__( 'Footer Who We Serve', 'traveltripper' ),
 			'menu-footer-3' => esc_html__( 'Footer About', 'traveltripper' ),

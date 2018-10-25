@@ -32,14 +32,7 @@
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
             </div> <?php
 
-            // Once we write a custom Walker, we will use this.
-            // wp_nav_menu( array(
-            //     'theme_location' => 'menu-header',
-            //     'container' => 'nav',
-            //     'container_class' => 'site-header__nav'
-            // ) );
-
-            get_template_part( 'template-parts/menu', 'header' ); ?>
+            traveltripper_custom_menu( 'menu-header' ) ?>
 
         </div>
     </header> <?php

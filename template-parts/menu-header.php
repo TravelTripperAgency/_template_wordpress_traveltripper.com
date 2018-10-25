@@ -13,13 +13,13 @@
             <ul class="sub-menu">
                 <li class="menu-item">
                     <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">
-                    <div class="sub-menu__icon">
-                        <div class="background-icon reztrip"></div>
-                    </div>
-                    <div class="sub-menu__text">
-                        <p class="sub-menu__link-text">RezTrip CRS & Booking Engine</p>
-                        <p class="sub-menu__link-description">The industry's most innovative reservations system and booking engine</p>
-                    </div>
+                        <div class="sub-menu__icon">
+                            <div class="background-icon reztrip"></div>
+                        </div>
+                        <div class="sub-menu__text">
+                            <p class="sub-menu__link-text">RezTrip CRS & Booking Engine</p>
+                            <p class="sub-menu__link-description">The industry's most innovative reservations system and booking engine</p>
+                        </div>
                     </a>
                 </li>
                 <li class="menu-item">

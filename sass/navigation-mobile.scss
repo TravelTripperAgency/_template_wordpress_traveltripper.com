@@ -106,9 +106,11 @@
       padding-bottom: 24px;
 
       @at-root .mobile-nav__main .inline-children .sub-menu .menu-item {
-        flex: unset;
-        float: left;
-        max-width: 100%;
+        @include breakpoint($xs) {
+          flex: unset;
+          float: left;
+          max-width: 100%;
+        }
 
         + .menu-item {
           @include breakpoint($xs) {

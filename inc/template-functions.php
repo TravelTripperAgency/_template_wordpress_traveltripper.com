@@ -200,3 +200,156 @@ function google_tag_manager_noscript() {
         the_field( 'google_tag_manager_noscript', 'options' );
     }
 }
+
+
+/**
+ * Custom navigation menu function
+ *
+ * Example usage: `traveltripper_custom_menu( 'header' )`;
+ * Check register_nav_menus() in functions.php for menu names
+ */
+function traveltripper_custom_menu( $theme_location ) {
+    if ( ( $theme_location ) && ( $locations = get_nav_menu_locations() ) && isset( $locations[$theme_location] ) ) {
+        $menu = get_term( $locations[$theme_location], 'nav_menu' );
+        $menu_items = wp_get_nav_menu_items( $menu->term_id );
+        $count = 0;
+        $submenu = false;
+        $custom_classes = '';
+
+        // Loop all the items to check for current page
+        $current_post_id = get_the_id();
+        $current_menu_id = '';
+        foreach ( $menu_items as $current_item ) {
+            if ( $current_post_id == $current_item->object_id ) {
+                if ( !$current_item->menu_item_parent ) {
+                    $current_post_id = $current_item->ID;
+                } else {
+                    $current_post_id = $current_item->menu_item_parent;
+                }
+                $current_menu_id = $current_item->ID;
+                break;
+            }
+        }
+
+        // Add container class
+        if ( $theme_location == 'menu-header' ) {
+            $menu_list = '<nav class="site-header__nav">' . "\n";
+        } elseif ( $theme_location == 'menu-mobile' ) {
+            $menu_list = '<nav class="mobile-nav__main">' . "\n";
+        } else {
+            $menu_list = '<nav>' . "\n";
+        }
+
+        $menu_list .= '<ul>' ."\n";
+
+        // Start the menu loop
+        foreach ( $menu_items as $menu_item ) {
+
+            $title = $menu_item->title;
+            $link = $menu_item->url;
+
+            // Check for "Open link in a new tab"
+            $target = '';
+            if ( !empty( $menu_item->target ) ) {
+                $target = ' target="_blank"';
+            }
+
+            $description = $menu_item->description;
+            $icon = get_field( 'navigation_icon', $menu_item );
+            $class_names = 'menu-item';
+
+            // Check for custom classes and add to $class_names
+            $custom_classes = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
+            if ( !empty( $custom_classes ) ) {
+                $class_names .= ' ' . $custom_classes;
+            }
+
+            // If this $menu_item is the current page add `current-menu-item` to $class_names
+            $menu_item->ID == $current_menu_id ? $class_names .= ' current-menu-item' : $class_names .= '';
+
+            // Check for "Link Relationship (XFN)"
+            $xfn = $menu_item->xfn;
+            $relationship = '';
+            if ( !empty( $xfn ) ) {
+                $relationship = ' rel="' . $xfn . '"';
+            }
+
+            // if $menu_item does _not_ have a parent
+            if ( !$menu_item->menu_item_parent ) {
+                $parent_id = $menu_item->ID;
+
+                // Check for children
+                if ( !empty( $menu_items[$count + 1] ) && $menu_items[ $count + 1 ]->menu_item_parent == $parent_id ) {
+                    $menu_list .= '<li class="' . $class_names . ' menu-item-has-children">' . "\n";
+                } else {
+                    $menu_list .= '<li class="' . $class_names . '">' . "\n";
+                }
+
+                if ( $theme_location == 'menu-mobile' ) {
+                    $menu_list .= '<div class="menu-item__category">'. "\n";
+                }
+
+                if ( $link == '#' ) {
+                    $menu_list .= '<a>' . $title . '</a>' . "\n";
+                } else {
+                    $menu_list .= '<a href="' . $link . '"' . $relationship . $target . '>' . $title . '</a>' . "\n";
+                }
+
+                if ( $theme_location == 'menu-mobile' ) {
+                    if ( !empty( $menu_items[$count + 1] ) && $menu_items[ $count + 1 ]->menu_item_parent == $parent_id ) {
+                        $menu_list .= '<a class="sub-menu-toggle"></a>' . "\n";
+                    }
+                    $menu_list .= '</div>' . "\n";
+                }
+
+            }
+
+            // if $menu_item has a parent (build the sub-menu)
+            if ( $parent_id == $menu_item->menu_item_parent ) {
+
+                if ( !$submenu ) {
+                    $submenu = true;
+                    $menu_list .= '<ul class="sub-menu">' . "\n";
+                }
+
+                $menu_list .= '<li class="' . $class_names . '">' . "\n";
+                $menu_list .= '<a href="' . $link . '"' . $relationship . $target . '>' . "\n";
+
+                if ( $icon ) {
+                    $menu_list .= '<div class="sub-menu__icon"><div class="background-icon ' . $icon . '"></div></div>' . "\n";
+                }
+
+                $menu_list .= '<div class="sub-menu__text">' . "\n";
+                $menu_list .= '<p class="sub-menu__link-text">' . $title . '</p>' . "\n";
+
+                if ( $description ) {
+                    $menu_list .= '<p class="sub-menu__link-description">' . $description . '</p>' . "\n";
+                }
+
+                $menu_list .= '</div>' . "\n";
+                $menu_list .= '</a>' . "\n";
+                $menu_list .= '</li>' ."\n";
+
+                if ( empty( $menu_items[$count + 1] ) || $menu_items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ) {
+                    $menu_list .= '</ul>' ."\n";
+                    $submenu = false;
+                }
+
+            }
+
+            if ( empty( $menu_items[$count + 1] ) || $menu_items[ $count + 1 ]->menu_item_parent != $parent_id ) {
+                $menu_list .= '</li>' ."\n";
+                $submenu = false;
+            }
+
+            $count++;
+        }
+
+        $menu_list .= '</ul>' ."\n";
+        $menu_list .= '</nav>' ."\n";
+
+    } else {
+        $menu_list = '<!-- no menu defined in location "' . $theme_location . '" -->';
+    }
+    echo $menu_list;
+}

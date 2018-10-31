@@ -353,3 +353,11 @@ function traveltripper_custom_menu( $theme_location ) {
     }
     echo $menu_list;
 }
+
+
+/**
+ * Move the Yoast SEO page/post settings to the bottom of all other settings.
+ */
+add_filter( 'wpseo_metabox_prio', function() {
+    return 'low';
+} );

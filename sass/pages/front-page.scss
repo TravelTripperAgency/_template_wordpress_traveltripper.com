@@ -303,9 +303,9 @@
         line-height: 19.87px;
         color: $blue-light;
         text-transform: uppercase;
-        @include breakpoint($xs) {
-          margin-bottom: 44px;
-        }
+        // @include breakpoint($xs) {
+        //   margin-bottom: 44px;
+        // }
         @include breakpoint($sm) {
           font-size: 15px;
         }

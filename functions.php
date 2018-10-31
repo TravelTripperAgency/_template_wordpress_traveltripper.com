@@ -157,7 +157,8 @@ function execute_php( $html ) {
  */
 add_action( 'wp_enqueue_scripts', 'traveltripper_scripts' );
 function traveltripper_scripts() {
-	wp_enqueue_style( 'traveltripper', get_stylesheet_uri() );
+	wp_enqueue_style( 'traveltripper', get_stylesheet_uri(), array(), null );
+    // NOTE: Remove the `, array(), null` to turn on versioning. (better caching for returning visitors)
 
     //* Add Google fonts
     wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,600i,700');

@@ -23,13 +23,21 @@ get_header(); ?>
 
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
 
-            if ( wp_is_mobile() ) { ?>
+            if ( wp_is_mobile() ) {
 
-                <img src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image"> <?php
+                if ( has_post_thumbnail() ) {
+                    the_post_thumbnail();
+                } else { ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image"> <?php
+                }
 
-            } else { ?>
+            } else {
 
-                <img class="video-fallback" src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image">
+                if ( has_post_thumbnail() ) {
+                    the_post_thumbnail( 'full', array( 'class' => 'video-fallback' ) );
+                } else { ?>
+                    <img class="video-fallback" src="<?php echo get_template_directory_uri(); ?>/images/home-header.png" alt="Travel Tripper Demo Image"> <?php
+                } ?>
 
                 <div class="video-container">
                     <div class="laptop">
@@ -47,10 +55,10 @@ get_header(); ?>
                 </div> <?php
             } ?>
 
-            <ul class="page-header__features">
-                <li>Generate Demand</li>
-                <li>Optimize Conversions</li>
-                <li>Maximize Revenue</li>
+            <ul class="page-header__features"> <?php
+                while ( have_rows( 'header_features' ) ) : the_row(); ?>
+                    <li><?php the_sub_field( 'header_feature' ); ?></li> <?php
+                endwhile; ?>
             </ul>
 
         </div>
@@ -64,13 +72,13 @@ get_header(); ?>
     <div class="col-right">
       <div class="col-right__wrap">
         <div class="col-right__col-left<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInUp'; } ?>">
-          <h2 class="section-title">Dominate from search to stay.</h2>
-          <p>Travel Tripper's powerful <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">hotel booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">website services</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing solutions</a> help you to maximize revenue from your direct channel.</p>
+          <h2 class="section-title"><?php the_field( 'frontpage_intro_section_title' ); ?></h2> <?php
+          the_field( 'frontpage_intro_section_text' ); ?>
         </div>
         <div class="col-right__col-right<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
           <div class="testimonial">
-            <p class="quote">"This software is the best software out there when you want to fight the OTA battle."</p>
-            <p class="cite">- VP Revenue Management, Miami Hotel</p>
+            <p class="quote"><?php the_field( 'frontpage_intro_testimonial_quote' ); ?></p>
+            <p class="cite"><?php the_field( 'frontpage_intro_testimonial_attribution' ); ?></p>
           </div>
         </div>
       </div>
@@ -78,18 +86,19 @@ get_header(); ?>
 
     <div class="col-left">
 
-      <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>>
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/home-showcase.png, <?php echo get_template_directory_uri(); ?>/images/home-showcase@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/home-showcase@2x.png" alt="Travel Tripper Website Example">
+      <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>> <?php
+        $showcase_image = get_field( 'frontpage_intro_showcase_image' );
+        echo wp_get_attachment_image( $showcase_image, 'full' ); ?>
       </figure>
 
       <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
         <div class="showcase__metrix">
-          <p class="showcase__metrix-number"><span>+</span>84%</p>
-          <p class="showcase__metrix-text">direct website revenue</p>
-          <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Mayfair-Case-Study-091918.pdf" class="btn btn-primary">see how we did it</a>
+          <p class="showcase__metrix-number"><?php the_field( 'frontpage_intro_showcase_metric_number' ); ?></p>
+          <p class="showcase__metrix-text"><?php the_field( 'frontpage_intro_showcase_metric_text' ); ?></p>
+          <a href="<?php esc_url( the_field( 'frontpage_intro_showcase_button_link' ) ); ?>" class="btn btn-primary"><?php the_field( 'frontpage_intro_showcase_button_text' ); ?></a>
         </div>
         <div class="showcase__description">
-          <p>The Mayfair Hotel & Spa increased their direct website revenue 84% after partnering with Travel Tripper.</p>
+          <p><?php the_field( 'frontpage_intro_showcase_description' ); ?></p>
         </div>
       </div>
 
@@ -100,37 +109,40 @@ get_header(); ?>
 
 <section class="services background-image">
 
-  <h2 class="section-title">Three dynamic solutions to power your hotel bookings</h2>
+    <h2 class="section-title"><?php the_field( 'frontpage_solutions_section_title' ); ?></h2>
 
-  <div class="row wrap">
-    <div class="service reztrip">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip-home.svg" alt="">
-      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">RezTrip</a></p>
-      <p class="service__subtitle">CRS & Booking Engine</p>
-      <p class="service__description">Shift bookings from high-commission OTA channels to direct bookings using smart rate and revenue management tools.</p>
-      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></a></p>
+    <div class="row wrap">
+        <div class="service"> <?php
+            $solution_1_image = get_field( 'frontpage_solutions_solution_1_image' );
+            echo wp_get_attachment_image( $solution_1_image, 'full' ); ?>
+            <p class="service__title"><a href="<?php the_field( 'frontpage_solutions_solution_1_link' ); ?>"><?php the_field( 'frontpage_solutions_solution_1_title' ); ?></a></p>
+            <p class="service__subtitle"><?php the_field( 'frontpage_solutions_solution_1_subtitle' ); ?></p>
+            <p class="service__description"><?php the_field( 'frontpage_solutions_solution_1_description' ); ?></p>
+            <p class="service__arrow"><a href="<?php the_field( 'frontpage_solutions_solution_1_link' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></a></p>
+        </div>
+        <div class="service"> <?php
+            $solution_2_image = get_field( 'frontpage_solutions_solution_2_image' );
+            echo wp_get_attachment_image( $solution_2_image, 'full' ); ?>
+            <p class="service__title"><a href="<?php the_field( 'frontpage_solutions_solution_2_link' ); ?>"><?php the_field( 'frontpage_solutions_solution_2_title' ); ?></a></p>
+            <p class="service__subtitle"><?php the_field( 'frontpage_solutions_solution_2_subtitle' ); ?></p>
+            <p class="service__description"><?php the_field( 'frontpage_solutions_solution_2_description' ); ?></p>
+            <p class="service__arrow"><a href="<?php the_field( 'frontpage_solutions_solution_2_link' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></a></p>
+        </div>
+        <div class="service"> <?php
+            $solution_3_image = get_field( 'frontpage_solutions_solution_3_image' );
+            echo wp_get_attachment_image( $solution_3_image, 'full' ); ?>
+            <p class="service__title"><a href="<?php the_field( 'frontpage_solutions_solution_3_link' ); ?>"><?php the_field( 'frontpage_solutions_solution_3_title' ); ?></a></p>
+            <p class="service__subtitle"><?php the_field( 'frontpage_solutions_solution_3_subtitle' ); ?></p>
+            <p class="service__description"><?php the_field( 'frontpage_solutions_solution_3_description' ); ?></p>
+            <p class="service__arrow"><a href="<?php the_field( 'frontpage_solutions_solution_3_link' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></a></p>
+        </div>
     </div>
-    <div class="service web">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-home.svg" alt="">
-      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">Travel Tripper Web</a></p>
-      <p class="service__subtitle">Website Platform and Agency</p>
-      <p class="service__description">Change lookers into bookers with beautiful design and smart content like live rates and special offers.</p>
-      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></a></p>
-    </div>
-    <div class="service dgs">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-home.svg" alt="">
-      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></p>
-      <p class="service__subtitle">Full-Service Agency</p>
-      <p class="service__description">Maximize ROI across all online advertising channels with cutting edge technology and strategy, including our award-winning Real Time Ads for hotels.</p>
-      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow-white.svg"></a></p>
-    </div>
-  </div>
 
 </section>
 
 <section class="clients">
 
-    <h2 class="section-title"><?php the_field( 'slider_section_title' ); ?></h2> <?php
+    <h2 class="section-title"><?php the_field( 'frontpage_client_slider_section_title' ); ?></h2> <?php
 
     get_template_part( 'template-parts/content', 'client-slider' ); ?>
 
@@ -140,42 +152,46 @@ get_header(); ?>
 
 <section class="customers">
 
-  <div class="wrap">
-    <p class="section-title">Direct revenue, simplifed for all</p>
-    <p class="section-subtitle">Travel Tripper's packaged and custom solutions are ideal for:</p>
-  </div>
-
-  <div class="row wrap">
-
-    <div class="customer groups">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-hotel-groups-home.svg" alt="Hotel Groups Icon">
-      <p class="customer__title"><a href="<?php echo get_site_url(); ?>/who-we-serve/management-companies/">Hotel Groups and Management Companies</a></p>
-      <p class="customer__description">Flexible multi-property solution with powerful analytics to help you increase ROI in all your online distribution channels.</p>
-      <p class="customer__arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/management-companies/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+    <div class="wrap">
+        <p class="section-title"><?php the_field( 'frontpage_who_section_title' ); ?></p>
+        <p class="section-subtitle"><?php the_field( 'frontpage_who_section_subtitle' ); ?></p>
     </div>
 
-    <div class="customer casinos">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-casinos-home.svg" alt="Casinos Icon">
-      <p class="customer__title"><a href="<?php echo get_site_url(); ?>/who-we-serve/casinos/">Casinos and Gaming</a></p>
-      <p class="customer__description">Specialized booking features to better serve your most loyal players and core clientele.</p>
-      <p class="customer__arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/casinos/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
+    <div class="row wrap">
 
-    <div class="customer independents">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-independent-hotels-home.svg" alt="Independent Hotels Icon">
-      <p class="customer__title"><a href="<?php echo get_site_url(); ?>/who-we-serve/independents/">Independent and Boutique Hotels</a></p>
-      <p class="customer__description">The direct booking partner that your team has been looking for.</p>
-      <p class="customer__arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/independents/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
+        <div class="customer"> <?php
+            $customer_1_image = get_field( 'frontpage_who_we_serve_1_image' );
+            echo wp_get_attachment_image( $customer_1_image, 'full' ); ?>
+            <p class="customer__title"><a href="<?php the_field( 'frontpage_who_we_serve_1_href' ); ?>"><?php the_field( 'frontpage_who_we_serve_1_title' ); ?></a></p>
+            <p class="customer__description"><?php the_field( 'frontpage_who_we_serve_1_description' ); ?></p>
+            <p class="customer__arrow"><a href="<?php the_field( 'frontpage_who_we_serve_1_href' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+        </div>
 
-    <div class="customer partners">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-partners-home.svg" alt="Partners Icon">
-      <p class="customer__title"><a href="<?php echo get_site_url(); ?>/who-we-serve/partners/">Partners</a></p>
-      <p class="customer__description">Become a partner to help hotels build the perfect digital solution for their booking and marketing needs.</p>
-      <p class="customer__arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/partners/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
+        <div class="customer"> <?php
+            $customer_2_image = get_field( 'frontpage_who_we_serve_2_image' );
+            echo wp_get_attachment_image( $customer_2_image, 'full' ); ?>
+            <p class="customer__title"><a href="<?php the_field( 'frontpage_who_we_serve_2_href' ); ?>"><?php the_field( 'frontpage_who_we_serve_2_title' ); ?></a></p>
+            <p class="customer__description"><?php the_field( 'frontpage_who_we_serve_2_description' ); ?></p>
+            <p class="customer__arrow"><a href="<?php the_field( 'frontpage_who_we_serve_2_href' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+        </div>
 
-  </div>
+        <div class="customer"> <?php
+            $customer_3_image = get_field( 'frontpage_who_we_serve_3_image' );
+            echo wp_get_attachment_image( $customer_3_image, 'full' ); ?>
+            <p class="customer__title"><a href="<?php the_field( 'frontpage_who_we_serve_3_href' ); ?>"><?php the_field( 'frontpage_who_we_serve_3_title' ); ?></a></p>
+            <p class="customer__description"><?php the_field( 'frontpage_who_we_serve_3_description' ); ?></p>
+            <p class="customer__arrow"><a href="<?php the_field( 'frontpage_who_we_serve_3_href' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+        </div>
+
+        <div class="customer"> <?php
+            $customer_4_image = get_field( 'frontpage_who_we_serve_4_image' );
+            echo wp_get_attachment_image( $customer_4_image, 'full' ); ?>
+            <p class="customer__title"><a href="<?php the_field( 'frontpage_who_we_serve_4_href' ); ?>"><?php the_field( 'frontpage_who_we_serve_4_title' ); ?></a></p>
+            <p class="customer__description"><?php the_field( 'frontpage_who_we_serve_4_description' ); ?></p>
+            <p class="customer__arrow"><a href="<?php the_field( 'frontpage_who_we_serve_4_href' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+        </div>
+
+    </div>
 
 </section> <?php
 

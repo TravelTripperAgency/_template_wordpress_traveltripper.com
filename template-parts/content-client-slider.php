@@ -7,6 +7,8 @@
 
 if ( is_front_page() ) {
     $rows = 'frontpage_client_slider_images';
+} elseif ( is_page_template( 'page-templates/ttweb.php' ) ) {
+    $rows = 'ttweb_client_slider_images';
 } else {
     $rows = 'slider_images';
 }

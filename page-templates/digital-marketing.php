@@ -30,10 +30,10 @@ get_header(); ?>
             } else { ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/solutions-dgs-header.png"> <?php
             } ?>
-            <ul class="page-header__features">
-                <li>Maximize ROI/ROAS across all channels</li>
-                <li>Compete effectively against OTAs</li>
-                <li>Complete data transparency</li>
+            <ul class="page-header__features"> <?php
+                while ( have_rows( 'header_features' ) ) : the_row(); ?>
+                    <li><?php the_sub_field( 'header_feature' ); ?></li> <?php
+                endwhile; ?>
             </ul>
         </div>
     </div>
@@ -41,34 +41,31 @@ get_header(); ?>
 
 <section class="intro row">
 
-  <div class="col-right">
-    <div class="col-right__wrap">
+    <div class="col-right">
+        <div class="col-right__wrap">
 
-      <h2 class="section-title">Get in front of your audience and stay ahead of the OTAs with intelligent marketing</h2>
+            <h2 class="section-title"><?php the_field( 'dgs_intro_section_title' ); ?></h2> <?php
 
-      <p>Compete effectively for online traffic against OTAs and travel companies with bigger marketing budgets using Travel Tripper's innovative technology and forward-thinking strategy. </p>
+            the_field( 'dgs_intro_section_description' ); ?>
 
-      <div class="row">
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-magnifying-glass.svg" alt="magnifying glass icon">Search engine marketing</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-dispaly-ad.svg" alt="ad icon">Display marketing & Retargeting</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-meta.svg" alt="search ads icon">Metasearch marketing</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-social.svg" alt="social icon">Social media marketing</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pencil-ruler.svg" alt="ruler pencil icon">Display ad creative services</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-booking-panel.svg" alt="dashboard icon">Keyword monitoring platform</p>
-      </div>
+            <div class="row"> <?php
+                while ( have_rows( 'dgs_intro_services' ) ) : the_row(); ?>
+                    <p><?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'full' ); the_sub_field( 'text' ); ?></p> <?php
+                endwhile; ?>
+            </div>
 
-      <div class="btn-holder">
-        <a href="javascript:void(0)" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download our Digital Marketing features sheet</a>
-      </div>
+            <div class="btn-holder">
+                <a href="<?php if ( get_field ( 'dgs_intro_button_link' ) ) { the_field( 'dgs_intro_button_link' ); } else { echo 'javascript:void(0);'; } ?>" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon"><?php the_field( 'dgs_intro_button_text' ); ?></a>
+            </div>
 
+        </div>
     </div>
-  </div>
 
-  <div class="col-left">
-    <figure>
-      <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-dgs-intro.png, <?php echo get_template_directory_uri(); ?>/images/solutions-dgs-intro@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-dgs-intro@2x.png" alt="display of iPhones">
-    </figure>
-  </div>
+    <div class="col-left">
+        <figure> <?php
+            echo wp_get_attachment_image( get_field( 'dgs_intro_section_image' ), 'full' ); ?>
+        </figure>
+    </div>
 
 </section>
 
@@ -79,67 +76,50 @@ get_header(); ?>
   <div class="col-left">
     <div class="col-left__wrap">
 
-      <h2 class="section-title">Award-winning & industry-first innovations that achieve record-breaking returns on your ad spend</h2>
-      <p class="blue">Real Time Ads (RTAs) use real-time information populated directly from the booking engine into Google AdWords.</p>
-      <p>Now we can display your current room rate, occupancy rate, rooms available, and number of recently booked rooms directly within Google search ads. Our studies show that by using Real Time Ads, you’ll see significant increases in conversion rates and decreases in cost per conversion, and you can expect to more than double your return on ad spend.</p>
+      <h2 class="section-title"><?php the_field( 'dgs_rta_section_title' ); ?></h2>
+      <p class="blue"><?php the_field( 'dgs_rta_section_subtitle' ); ?></p>
+      <p><?php the_field( 'dgs_rta_section_description' ); ?></p>
 
-      <div class="row">
-        <div class="col"><img src="<?php echo get_template_directory_uri(); ?>/images/awards/awards-w3@2x.png" alt="w3 award"></div>
-        <div class="col"><img src="<?php echo get_template_directory_uri(); ?>/images/awards/awards-Landys@2x.png" alt="landys award"></div>
-        <div class="col"><img src="<?php echo get_template_directory_uri(); ?>/images/awards/awards-adrian-hsmai@2x.png" alt="adrian awards"></div>
+      <div class="row"> <?php
+          while ( have_rows( 'dgs_rta_awards' ) ) : the_row(); ?>
+              <div class="col"><?php echo wp_get_attachment_image( get_sub_field( 'award' ), 'full' ); ?></div> <?php
+          endwhile; ?>
       </div>
 
       <div class="btn-holder">
-        <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Google-RTA-case-study-TT-and-ROW-NYC.pdf" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download our case study on RTAs</a>
+        <a href="<?php the_field( 'dgs_rta_button_link' ); ?>" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon"><?php the_field( 'dgs_rta_button_text' ); ?></a>
       </div>
 
     </div>
   </div>
 
-  <div class="col-right">
-      <div class="video-container">
-          <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-              <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                  <iframe src="https://fast.wistia.net/embed/iframe/3h1qik8fdc?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe>
-              </div>
-          </div>
-          <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
-      </div>
-  </div>
+    <div class="col-right">
+        <div class="video-container"> <?php
+            the_field( 'dgs_rta_video' ); ?>
+        </div>
+    </div>
 
 </section>
 
 <section class="why background-image">
   <div class="wrap">
 
-    <h2 class="section-title">Why work with Travel Tripper</h2>
+    <h2 class="section-title"><?php the_field( 'dgs_why_section_title' ); ?></h2>
 
-    <div class="reasons">
-
-      <div class="col">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-lightbulb-white.svg" alt="lightbult icon">
-        <p class="title">Innovation</p>
-        <p class="description">From Google Real Time Ads to Yelp listings, Travel Tripper is leading the hospitality industry on innovative techniques and tools in digital marketing.</p>
-      </div>
-
-      <div class="col">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-magnifying-glass-white.svg" alt="magnifying glass icon">
-        <p class="title">Transparency</p>
-        <p class="description">You own and access your raw data direct from the source. No hidden fees, no proprietary dashboards, no questionable attribution models.</p>
-      </div>
-
-      <div class="col">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-expertise.svg" alt="gear head icon">
-        <p class="title">Expertise</p>
-        <p class="description">Hotels that use RezTrip and Travel Tripper Web can take advantage of integrated data to better tailor their marketing campaigns and achieve higher ROI.</p>
-      </div>
-
+    <div class="reasons"> <?php
+        while ( have_rows( 'dgs_why_reasons' ) ) : the_row(); ?>
+            <div class="col"> <?php
+                echo wp_get_attachment_image( get_sub_field( 'image' ), 'full' ); ?>
+                <p class="title"><?php the_sub_field( 'title' ); ?></p>
+                <p class="description"><?php the_sub_field( 'description' ); ?></p>
+            </div> <?php
+        endwhile; ?>
     </div>
 
-    <div class="partners">
-      <div class="col"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/partner-google@2x.png" alt="Google Partner logo"></div>
-      <div class="col"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/partner-Yelp_Badge@2x.png" alt="Yelp Ad partner"></div>
-      <div class="col"><img src="<?php echo get_template_directory_uri(); ?>/images/partners/partner-bing@2x.png" alt="bing ads"></div>
+    <div class="partners"> <?php
+        while ( have_rows( 'dgs_why_awards' ) ) : the_row(); ?>
+            <div class="col"> <?php echo wp_get_attachment_image( get_sub_field( 'award' ), 'full' ); ?></div> <?php
+        endwhile; ?>
     </div>
 
   </div>
@@ -147,35 +127,41 @@ get_header(); ?>
 
 <section class="conversion row">
 
-  <div class="col-left">
+    <div class="col-left">
 
-    <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>>
-      <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-dgs-adwords.png, <?php echo get_template_directory_uri(); ?>/images/solutions-dgs-adwords@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-dgs-adwords@2x.png" alt="Google Adwords">
-    </figure>
+        <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>> <?php
+            echo wp_get_attachment_image( get_field( 'dgs_case_study_showcase_image' ), 'full' ); ?>
+        </figure>
 
-    <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-      <div class="showcase__metrix">
-        <p class="showcase__metrix-number">7X<span>+</span></p>
-        <p class="showcase__metrix-text">increase on roas</p>
-        <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/ROW-NYC-Real-Time-Search-Ads-091918.pdf" class="btn btn-primary">see how we did it</a>
-      </div>
-      <div class="showcase__description">
-        <p>We helped ROW NYC increase their return on ad spend by sevenfold using Real-Time Ads with real-time pricing and availability pulled directly from RezTrip.</p>
-      </div>
+        <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
+            <div class="showcase__metrix">
+                <p class="showcase__metrix-number"><?php the_field( 'dgs_case_study_showcase_metric_number' ); ?></p>
+                <p class="showcase__metrix-text"><?php the_field( 'dgs_case_study_showcase_metric_text' ); ?></p>
+                <a href="<?php the_field( 'dgs_case_study_showcase_button_link' ); ?>" class="btn btn-primary"><?php the_field( 'dgs_case_study_showcase_button_text' ); ?></a>
+            </div>
+            <div class="showcase__description">
+                <p><?php the_field( 'dgs_case_study_showcase_description' ); ?></p>
+            </div>
+        </div>
+
     </div>
 
-  </div>
+    <div class="col-right">
 
-  <div class="col-right">
+        <div class="testimonial<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
+            <p class="quote"><?php the_field( 'dgs_case_study_testimonial_quote' ); ?></p>
+            <p class="cite"><?php the_field( 'dgs_case_study_testimonial_attribution' ); ?></p>
+        </div> <?php
 
-    <div class="testimonial<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
-      <p class="quote">With real-time ads, we see a leap in returns and a reduction in wasted spend.</p>
-      <p class="cite">KUNAL PATEL, Director of Revenue Management, ROW NYC</p>
+        if ( get_field( 'dgs_case_study_award_link' ) ) { ?>
+            <a href="<?php the_field( 'dgs_case_study_award_link' ); ?>"> <?php
+        }
+        echo wp_get_attachment_image( get_field( 'dgs_case_study_award_image' ), 'full' );
+        if ( get_field( 'dgs_case_study_award_link' ) ) { ?>
+            </a> <?php
+        } ?>
+
     </div>
-
-    <a href="https://hoteltechreport.com/company/travel-tripper-digital-agency"><img srcset="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency.png, <?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-agency@2x.png" alt="Hotel Tech Award"></a>
-
-  </div>
 
 </section>
 
@@ -185,12 +171,12 @@ get_header(); ?>
   <div class="wrap row">
 
     <div class="title-row">
-      <h2 class="section-title">Power up direct bookings by integrating Digital Marketing with <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">RezTrip</a> and <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">Travel Tripper Web</a></h2>
-      <p class="section-subtitle">Travel Tripper's suite of solutions together create a robust hotel e-commerce platform designed to maximize your hotel's direct distribution strategy.</p>
+        <h2 class="section-title"><?php echo strip_tags( get_field( 'dgs_other_solutions_section_title' ), '<a><em>' ); ?></h2>
+        <p class="section-subtitle"><?php echo strip_tags( get_field( 'dgs_other_solutions_section_description' ), '<a><em><strong>' ); ?></p>
     </div>
 
-    <figure>
-      <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-pre-footer-promo.png, <?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-pre-footer-promo@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-pre-footer-promo@2x.png" alt="Services Example">
+    <figure> <?php
+        echo wp_get_attachment_image( get_field( 'dgs_other_solutions_image' ), 'full' ); ?>
     </figure>
 
     <div class="row">

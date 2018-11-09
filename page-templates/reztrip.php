@@ -32,10 +32,10 @@ get_header(); ?>
             } else { ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-header.png"> <?php
             } ?>
-            <ul class="page-header__features">
-                <li>Powerful booking engine</li>
-                <li>Robust central reservation system</li>
-                <li>Comprehensive distribution solution</li>
+            <ul class="page-header__features"> <?php
+                while ( have_rows( 'header_features' ) ) : the_row(); ?>
+                    <li><?php the_sub_field( 'header_feature' ); ?></li> <?php
+                endwhile; ?>
             </ul>
         </div>
 
@@ -43,177 +43,168 @@ get_header(); ?>
 </section>
 
 <section class="intro">
-  <div class="wrap row">
+    <div class="wrap row">
 
-    <div class="col-right">
+        <div class="col-right">
 
-      <h2 class="section-title">Designed to be direct</h2>
+            <h2 class="section-title"><?php the_field( 'reztrip_intro_section_title' ); ?></h2>
 
-      <div class="row col-right__top">
-        <p>We've created the industry's most innovative CRS and booking engine—intuitive, elegant, and packed with features to help you convert lookers into bookers. Hotels that switch to RezTrip routinely see significant increases in direct bookings and conversion rates.</p>
-      </div>
+            <div class="row col-right__top"> <?php
+                the_field( 'reztrip_intro_section_description' ); ?>
+            </div>
 
-      <div class="row col-right__middle">
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-sale.svg" alt="pricing icon">Strikethrough pricing</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-hourglass.svg" alt="hourglass icon">Rooms remaining</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-geo-targeting.svg" alt="geo location icon">Dynamic Pricing Rules with geo-targeting</p>
-        <p><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-price-match.svg" alt="rate match icon">Integrated rate match</p>
-      </div>
+            <div class="row col-right__middle"> <?php
+                while ( have_rows( 'reztrip_intro_services' ) ) : the_row(); ?>
+                    <p><?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'full' ); the_sub_field( 'text' ); ?></p> <?php
+                endwhile; ?>
+            </div>
 
-      <div class="row col-right__bottom">
-        <ul>
-          <li>Merchandising opportunities</li>
-          <li>Automated email retargeting</li>
-          <li>Multi-room and multi-rate plan booking</li>
-          <li>Multi-currency and multilingual options</li>
-          <li>Custom room categories filter</li>
-        </ul>
-      </div>
+            <div class="row col-right__bottom">
+                <ul> <?php
+                    while ( have_rows( 'reztrip_intro_services_bullets' ) ) : the_row(); ?>
+                        <li><?php the_sub_field( 'text' ); ?></li> <?php
+                    endwhile; ?>
+                </ul>
+            </div>
 
-      <div class="btn-holder">
-        <a href="javascript:void(0)" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon">Download the full RezTrip feature and spec sheet.</a>
-      </div>
+            <div class="btn-holder">
+                <a href="<?php if ( get_field ( 'reztrip_intro_button_link' ) ) { the_field( 'reztrip_intro_button_link' ); } else { echo 'javascript:void(0);'; } ?>" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon"><?php the_field( 'reztrip_intro_button_text' ); ?></a>
+            </div>
+
+        </div>
+
+        <div class="col-left">
+            <figure> <?php
+                echo wp_get_attachment_image( get_field( 'reztrip_intro_section_image' ), 'full' ); ?>
+            </figure>
+        </div>
 
     </div>
-
-    <div class="col-left">
-      <figure>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-intro.png" alt="Reztrip Example">
-      </figure>
-    </div>
-
-  </div>
 </section>
 
 <section class="spacer background-image"></section>
 
 <section class="distribution">
-  <div class="wrap row">
+    <div class="wrap row">
 
-    <div class="col-left">
-      <div class="text-wrap">
-        <h2 class="section-title">Comprehensive hotel distribution</h2>
-        <p>In addition to your hotel website, RezTrip also offers distribution through channel managers, OTAs, GDS, consortia, metasearch, and call center. Manage all rates and inventory through one seamless  reservation system.</p>
-      </div>
-      <div class="text-center">
-         <a href="https://hoteltechreport.com/company/travel-tripper-crs"><img srcset="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-crs.png, <?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-crs@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report-crs@2x.png" alt="HotelTechAwards"></a>
-      </div>
+        <div class="col-left">
+
+            <div class="text-wrap">
+                <h2 class="section-title"><?php the_field( 'reztrip_distribution_section_title' ); ?></h2> <?php
+                the_field( 'reztrip_distribution_section_description' ); ?>
+            </div>
+
+            <div class="text-center"> <?php
+                if ( get_field( 'reztrip_distribution_image_left_link' ) ) { ?>
+                    <a href="<?php the_field( 'reztrip_distribution_image_left_link' ); ?>"> <?php
+                }
+                echo wp_get_attachment_image( get_field( 'reztrip_distribution_image_left' ), 'full' );
+                if ( get_field( 'reztrip_distribution_image_left_link' ) ) { ?>
+                    </a> <?php
+                } ?>
+            </div>
+
+        </div>
+
+        <div class="col-right">
+            <figure> <?php
+                echo wp_get_attachment_image( get_field( 'reztrip_distribution_section_image' ), 'full' ); ?>
+            </figure>
+        </div>
+
     </div>
-
-    <div class="col-right">
-      <figure>
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-comprehensive-distribution.png, <?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-comprehensive-distribution@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-comprehensive-distribution@2x.png" alt="Reztrip distribution graphic">
-      </figure>
-    </div>
-
-  </div>
 </section>
 
 <section class="spacer-2 background-image"></section>
 
 <section class="why">
 
-  <h2 class="section-title">Why choose Travel Tripper</h2>
+    <h2 class="section-title"><?php the_field( 'reztrip_why_section_title' ); ?></h2>
 
-  <div class="wrap row">
-
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-roi-blue.svg" alt="ROI icon">
-      <p class="title">Better ROI</p>
-      <p class="description">Shift bookings from high-commission channels to direct bookings through RezTrip tools</p>
+    <div class="wrap row"> <?php
+        while ( have_rows( 'reztrip_why_reasons' ) ) : the_row(); ?>
+            <div class="col"> <?php
+                echo wp_get_attachment_image( get_sub_field( 'image' ), 'full' ); ?>
+                <p class="title"><?php the_sub_field( 'title' ); ?></p>
+                <p class="description"><?php the_sub_field( 'description' ); ?></p>
+            </div> <?php
+        endwhile; ?>
     </div>
-
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-lightbulb-blue.svg" alt="lightbulb icon">
-      <p class="title">Better decisions</p>
-      <p class="description">Whether you operate one hotel or oversee many, easily make the smartest revenue strategy decisions for your hotel</p>
-    </div>
-
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-resources-blue.svg" alt="briefcase icon">
-      <p class="title">Expert support</p>
-      <p class="description">Tap into a trove of expert resources to power your success</p>
-    </div>
-
-  </div>
 
 </section>
 
 <section class="conversion row">
 
-  <div class="col-right wrap<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
-    <div class="testimonial">
-      <p class="quote">RezTrip is by far the best online booking engine available for hotels right now. Our direct bookings instantly increased once we launched RezTrip across our portfolio of 18 hotels.</p>
-      <p class="cite">MATTHEW THOMAS – Director, Meriton Group</p>
-    </div>
-  </div>
-
-  <div class="col-left">
-
-    <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>>
-      <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-conversion-ipad.png, <?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-conversion-ipad@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-conversion-ipad@2x.png" alt="Conversion Rate iPad">
-    </figure>
-
-    <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-      <div class="showcase__metrix">
-        <p class="showcase__metrix-number">2X<span>+</span></p>
-        <p class="showcase__metrix-text">conversion rate in four months</p>
-        <a href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/Stratosphere-case-study-091918.pdf" class="btn btn-primary">see how we did it</a>
-      </div>
-      <div class="showcase__description">
-        <p>The Stratosphere Hotel increased their conversion rate over 2x within 4 months after integrating RezTrip with their existing system.</p>
-      </div>
+    <div class="col-right wrap<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
+        <div class="testimonial">
+            <p class="quote"><?php the_field( 'reztrip_case_study_testimonial_quote' ); ?></p>
+            <p class="cite"><?php the_field( 'reztrip_case_study_testimonial_attribution' ); ?></p>
+        </div>
     </div>
 
-  </div>
+    <div class="col-left">
+
+        <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>> <?php
+            echo wp_get_attachment_image( get_field( 'reztrip_case_study_showcase_image' ), 'full' ); ?>
+        </figure>
+
+        <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
+            <div class="showcase__metrix">
+                <p class="showcase__metrix-number"><?php the_field( 'reztrip_case_study_showcase_metric_number' ); ?></p>
+                <p class="showcase__metrix-text"><?php the_field( 'reztrip_case_study_showcase_metric_text' ); ?></p>
+                <a href="<?php the_field( 'reztrip_case_study_showcase_button_link' ); ?>" class="btn btn-primary"><?php the_field( 'reztrip_case_study_showcase_button_text' ); ?></a>
+            </div>
+            <div class="showcase__description">
+                <p><?php the_field( 'reztrip_case_study_showcase_description' ); ?></p>
+            </div>
+        </div>
+
+    </div>
 
 </section>
 
 <section class="integrations background-image">
-  <div class="row wrap">
+    <div class="row wrap">
 
-    <div class="col-left">
-      <h2 class="section-title">Seamless reservation delivery and integrations with your PMS, channel manager, and revenue management systems</h2>
-      <a href="<?php echo get_site_url(); ?>/solutions/integrations/" class="btn btn-secondary-dark">view all integrations & partners</a>
+        <div class="col-left">
+            <h2 class="section-title"><?php the_field( 'reztrip_partners_section_title' ); ?></h2>
+            <a href="<?php the_field( 'reztrip_partners_button_link' ); ?>" class="btn btn-secondary-dark"><?php the_field( 'reztrip_partners_button_text' ); ?></a>
+        </div>
+
+        <div class="col-right row"> <?php
+            while ( have_rows( 'reztrip_partners_partners' ) ) : the_row(); ?>
+                <div class="img-container"> <?php
+                    if ( get_sub_field( 'link' ) ) { ?>
+                        <a href="<?php the_sub_field( 'link' ); ?>"> <?php
+                    }
+                    echo wp_get_attachment_image( get_sub_field( 'logo' ), 'full' );
+                    if ( get_sub_field( 'link' ) ) { ?>
+                        </a> <?php
+                    } ?>
+                </div> <?php
+            endwhile; ?>
+        </div>
+
     </div>
-
-    <div class="col-right row">
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/siteminder.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/oracle.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/agilysys.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/rategain.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/hotelavailabilities.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/infor.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/resortshare.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/room-master.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/lodgical-solutions.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/webrezpro.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/ideas.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/rainmaker.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/autoclerk.png" alt="integration logo"></div>
-      <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/maestro.png" alt="integration logo"></div>
-    </div>
-
-  </div>
 </section>
 
 <section class="team">
-  <div class="row wrap">
+    <div class="row wrap">
 
-    <div class="col-left">
-      <figure>
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/news-details-2.png, <?php echo get_template_directory_uri(); ?>/images/news-details-2@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/news-details-2@2x.png" alt="Travel Tripper Team">
-      </figure>
+        <div class="col-left">
+            <figure> <?php
+                echo wp_get_attachment_image( get_field( 'reztrip_team_image' ), 'full' ); ?>
+            </figure>
+        </div>
+
+        <div class="col-right">
+            <div class="col-right__wrap">
+                <h2 class="section-title"><?php the_field( 'reztrip_team_section_title' ); ?></h2> <?php
+                the_field( 'reztrip_team_section_description' ); ?></a>
+            </div>
+        </div>
+
     </div>
-
-    <div class="col-right">
-      <div class="col-right__wrap">
-        <h2 class="section-title">Dedicated and personal account service from our expert team</h2>
-        <p>Travel Tripper's CRS is supported by dedicated team of revenue optimization and marketing experts that will guide your hotel to success. Our integrated client services and customer support teams allow for a single point of contact so you can quickly get the answers and help that you need.</p>
-      </div>
-    </div>
-
-  </div>
 </section>
 
 <section class="spacer-3 background-image"></section>
@@ -222,12 +213,12 @@ get_header(); ?>
   <div class="wrap row">
 
     <div class="text-center">
-      <h2 class="section-title">Power up direct bookings by integrating RezTrip with <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">TT Web</a> and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></h2>
-      <p>Travel Tripper's suite of solutions together create a robust hotel e-commerce platform designed to maximize your hotel's direct distribution strategy.</p>
+      <h2 class="section-title"><?php echo strip_tags( get_field( 'reztrip_other_solutions_section_title' ), '<a><em>' ); ?></h2>
+      <p><?php echo strip_tags( get_field( 'reztrip_other_solutions_section_description' ), '<a><em><strong>' ); ?></p>
     </div>
 
-    <figure>
-      <img srcset="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-pre-footer-promo.png, <?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-pre-footer-promo@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/solutions-reztrip-pre-footer-promo@2x.png" alt="Services Example">
+    <figure> <?php
+        echo wp_get_attachment_image( get_field( 'reztrip_other_solutions_image' ), 'full' ); ?>
     </figure>
 
     <div class="row">

@@ -55,6 +55,20 @@ jQuery(document).ready(function() {
 
 });
 
+// Adds the background image to the bottom section on the Rate Match page.
+jQuery(window).on('load resize', function() {
+  if( $(window).width() > 1200 ) {
+    $('#advantages').css( 'background-image', background_image );
+  } else {
+    $('#advantages').css( 'background-image', 'none' );
+  }
+  if( $(window).width() < 1200 ) {
+    $('#advantages-col').css( 'background-image', background_image );
+  } else {
+    $('#advantages-col').css( 'background-image', 'none' );
+  }
+});
+
 //* Header menu scroll function
 jQuery(window).scroll(function() {
   var scroll = $(window).scrollTop();

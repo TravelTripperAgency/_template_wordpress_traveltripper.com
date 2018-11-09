@@ -123,7 +123,7 @@ get_header(); ?>
 
     <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>" data-wow-delay=".5s">
       <div class="showcase__description">
-        <p>El Dorado Resorts has consistently seen increases in conversion rates across its property websites since going live with RezTrip in 2016.</p>
+        <p>Eldorado Resorts has consistently seen increases in conversion rates across its property websites since going live with RezTrip in 2016.</p>
       </div>
       <div class="showcase__metrix">
         <p class="showcase__metrix-number"><span>+</span>54%</p>

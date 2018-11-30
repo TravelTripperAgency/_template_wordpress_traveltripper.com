@@ -21,7 +21,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="https://try.traveltripper.com/rate-match-request-demo/">request a demo</a>
+                <a class="btn btn-primary" id="demo-click-8" href="https://try.traveltripper.com/rate-match-request-demo/">request a demo</a>
             </div>
         </div>
         <div class="page-header__feature<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>"> <?php
@@ -64,7 +64,7 @@ get_header(); ?>
         endwhile; ?>
     </ol>
     <div class="btn-holder">
-        <a href="<?php if ( get_field ( 'rate_match_intro_button_link' ) ) { the_field( 'rate_match_intro_button_link' ); } else { echo 'javascript:void(0);'; } ?>" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon"><?php the_field( 'rate_match_intro_button_text' ); ?></a>
+        <a href="<?php if ( get_field ( 'rate_match_intro_button_link' ) ) { the_field( 'rate_match_intro_button_link' ); } else { echo 'javascript:void(0);'; } ?>" id="product-specs-view-3" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon"><?php the_field( 'rate_match_intro_button_text' ); ?></a>
     </div>
 </section>
 
@@ -149,7 +149,7 @@ get_header(); ?>
                     <p><?php echo wp_get_attachment_image( get_sub_field( 'image' ), 'full' ); the_sub_field( 'text' ); ?></p> <?php
                 endwhile; ?>
             </div>
-            <a class="btn btn-primary" href="<?php the_field( 'rate_match_advantages_button_link' ); ?>"><?php the_field( 'rate_match_advantages_button_text' ); ?></a>
+            <a class="btn btn-primary" id="demo-click-9" href="<?php the_field( 'rate_match_advantages_button_link' ); ?>"><?php the_field( 'rate_match_advantages_button_text' ); ?></a>
         </div>
     </div>
 

@@ -82,6 +82,10 @@ blockquote {
   border-left: 2px solid #3a75a2;
 }
 
+.ui-datepicker-calendar {
+  background-color: #fff;
+}
+
 .wrap, .content-sidebar-wrap {
   width: 100%;
   max-width: 100%;
@@ -1048,7 +1052,9 @@ img {
 }
 
 .btn,
-.gform_button {
+.gform_button,
+.gform_next_button,
+.gform_previous_button {
   display: inline-block;
   padding: 12px 24px;
   line-height: 19px;
@@ -1059,7 +1065,9 @@ img {
 }
 
 .btn:hover,
-.gform_button:hover {
+.gform_button:hover,
+.gform_next_button:hover,
+.gform_previous_button:hover {
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
@@ -1068,12 +1076,16 @@ img {
 }
 
 .btn:focus,
-.gform_button:focus {
+.gform_button:focus,
+.gform_next_button:focus,
+.gform_previous_button:focus {
   outline: 0;
 }
 
 .btn-primary,
-.gform_button {
+.gform_button,
+.gform_next_button,
+.gform_previous_button {
   background-color: #ff533d;
   border-color: #ff533d;
 }
@@ -5012,6 +5024,148 @@ table td:before {
   margin-bottom: 16px;
 }
 
+.page-template-web-form .form {
+  max-width: 688px;
+  margin-top: 72px;
+  margin-bottom: 80px;
+}
+
+.page-template-web-form .gf_progressbar {
+  display: none;
+}
+
+.page-template-web-form .gform_fields {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-template-web-form .ginput_container_name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-template-web-form .ginput_container_name .name_first,
+.page-template-web-form .ginput_container_name .name_last {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .page-template-web-form .ginput_container_name .name_first,
+  .page-template-web-form .ginput_container_name .name_last {
+    flex: 0 0 calc(((100% - 32px) / 2 * 1));
+    max-width: calc(((100% - 32px) / 2 * 1));
+  }
+}
+
+.page-template-web-form .ginput_container_name .name_first label,
+.page-template-web-form .ginput_container_name .name_last label {
+  display: none;
+}
+
+.page-template-web-form .gfield_label {
+  display: block;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.page-template-web-form .name_first {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1200px) {
+  .page-template-web-form .name_first {
+    margin-bottom: 0;
+  }
+}
+
+.page-template-web-form .ginput_container input {
+  width: 100%;
+  padding: 6px 8px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #fff;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
+}
+
+.page-template-web-form .ginput_container input::placeholder {
+  color: #526173;
+  opacity: .25;
+}
+
+.page-template-web-form .ginput_container input:-ms-input-placeholder {
+  color: #526173;
+  opacity: .25;
+}
+
+.page-template-web-form .ginput_container input::-ms-input-placeholder {
+  color: #526173;
+  opacity: .25;
+}
+
+.page-template-web-form .ginput_container select {
+  position: relative;
+  width: 100%;
+  padding: 7px 8px 9px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  color: #4a4a4a;
+  background-color: #fff;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
+}
+
+.page-template-web-form .ginput_container .gfield_radio,
+.page-template-web-form .ginput_container .gfield_checkbox {
+  padding: 0;
+  list-style: none;
+}
+
+.page-template-web-form .ginput_container .gfield_radio li,
+.page-template-web-form .ginput_container .gfield_checkbox li {
+  display: flex;
+  align-items: center;
+}
+
+.page-template-web-form .ginput_container .gfield_radio li input,
+.page-template-web-form .ginput_container .gfield_checkbox li input {
+  flex: 34px 0 0;
+}
+
+.page-template-web-form .ginput_container textarea {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 6px 8px 10px;
+  background-color: #fff;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
+}
+
+.page-template-web-form .gform_page_fields {
+  margin-bottom: 24px;
+}
+
+.page-template-web-form .gform_button,
+.page-template-web-form .gform_next_button {
+  float: right;
+  font-family: Recta, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.page-template-web-form .gform_previous_button {
+  font-family: Recta, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .page-template-support .form {
   max-width: 704px;
   margin: 72px auto 80px;
@@ -7070,10 +7224,10 @@ table td:before {
 
 .page-template-ttweb .intro .video-container {
   position: relative;
-  top: 50%;
+  top: 30%;
   max-width: 725px;
   margin: 0 auto;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
 }
 
 .page-template-ttweb .intro .section-title {

@@ -186,6 +186,15 @@ function traveltripper_footer_scripts() {
 
 
 /**
+ * Move Gravity Forms scripts to the footer
+ */
+add_filter( 'gform_init_scripts_footer', 'init_scripts' );
+function init_scripts() {
+    return true;
+}
+
+
+/**
  * Add GTM script
  */
 add_action( 'wp_head', 'google_tag_manager_script', 1 );
@@ -198,6 +207,21 @@ function google_tag_manager_noscript() {
     // function called in header.php
     if ( get_field( 'google_tag_manager_noscript', 'options' ) && get_field( 'google_tag_manager', 'options' ) ) {
         the_field( 'google_tag_manager_noscript', 'options' );
+    }
+}
+
+
+/**
+ * Add ID to menu attributes when using the wp_nav_menu() function
+ */
+add_filter( 'nav_menu_link_attributes', 'traveltripper_nav_menu_link_attributes', 10, 3 );
+function traveltripper_nav_menu_link_attributes( $atts, $item, $args ) {
+    foreach ( $item as $items ) {
+        $atts_id = get_field( 'navigation_id', $item );
+        if ( !empty( $atts_id ) ) {
+            $atts['id'] = $atts_id;
+        }
+        return $atts;
     }
 }
 
@@ -264,6 +288,13 @@ function traveltripper_custom_menu( $theme_location ) {
                 $class_names .= ' ' . $custom_classes;
             }
 
+            // Check for custom IDs and add to $id_name
+            $custom_id = get_field( 'navigation_id', $menu_item );
+            $id_name = '';
+            if ( !empty( $custom_id ) ) {
+                $id_name = ' id="' . $custom_id . '"';
+            }
+
             // If this $menu_item is the current page add `current-menu-item` to $class_names
             $menu_item->ID == $current_menu_id ? $class_names .= ' current-menu-item' : $class_names .= '';
 
@@ -292,7 +323,7 @@ function traveltripper_custom_menu( $theme_location ) {
                 if ( $link == '#' ) {
                     $menu_list .= '<a>' . $title . '</a>' . "\n";
                 } else {
-                    $menu_list .= '<a href="' . $link . '"' . $relationship . $target . '>' . $title . '</a>' . "\n";
+                    $menu_list .= '<a' . $id_name . ' href="' . $link . '"' . $relationship . $target . '>' . $title . '</a>' . "\n";
                 }
 
                 if ( $theme_location == 'menu-mobile' ) {
@@ -313,7 +344,7 @@ function traveltripper_custom_menu( $theme_location ) {
                 }
 
                 $menu_list .= '<li class="' . $class_names . '">' . "\n";
-                $menu_list .= '<a href="' . $link . '"' . $relationship . $target . '>' . "\n";
+                $menu_list .= '<a' . $id_name . ' href="' . $link . '"' . $relationship . $target . '>' . "\n";
 
                 if ( $icon ) {
                     $menu_list .= '<div class="sub-menu__icon"><div class="background-icon ' . $icon . '"></div></div>' . "\n";

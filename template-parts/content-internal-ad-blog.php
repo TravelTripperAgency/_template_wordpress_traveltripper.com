@@ -16,7 +16,7 @@ if ( get_field( 'ad_title_page', get_option( 'page_for_posts' ) ) ) { ?>
             <div class="widget-cta__time"><p><?php the_field( 'ad_time_page', get_option( 'page_for_posts' ) ) ?></p></div> <?php
         }
         if ( get_field( 'ad_button_link_page', get_option( 'page_for_posts' ) ) && get_field( 'ad_button_text_page', get_option( 'page_for_posts' ) ) ) { ?>
-            <a href="<?php the_field( 'ad_button_link_page', get_option( 'page_for_posts' ) ) ?>" class="btn btn-primary"><?php the_field( 'ad_button_text_page', get_option( 'page_for_posts' ) ) ?></a> <?php
+            <a id="internal-ad-click-7" href="<?php the_field( 'ad_button_link_page', get_option( 'page_for_posts' ) ) ?>" class="btn btn-primary"><?php the_field( 'ad_button_text_page', get_option( 'page_for_posts' ) ) ?></a> <?php
         } ?>
     </section> <?php
 
@@ -31,7 +31,7 @@ if ( get_field( 'ad_title_page', get_option( 'page_for_posts' ) ) ) { ?>
             <div class="widget-cta__time"><p><?php the_field( 'ad_time_global', 'options' ) ?></p></div> <?php
         }
         if ( get_field( 'ad_button_link_global', 'options' ) && get_field( 'ad_button_text_global', 'options' ) ) { ?>
-            <a href="<?php the_field( 'ad_button_link_global', 'options' ) ?>" class="btn btn-primary"><?php the_field( 'ad_button_text_global', 'options' ) ?></a> <?php
+            <a id="internal-ad-click-7" href="<?php the_field( 'ad_button_link_global', 'options' ) ?>" class="btn btn-primary"><?php the_field( 'ad_button_text_global', 'options' ) ?></a> <?php
         } ?>
     </section> <?php
 

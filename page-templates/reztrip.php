@@ -22,7 +22,7 @@ get_header(); ?>
                 <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
             } ?>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="http://try.traveltripper.com/request-demo/">request a demo</a>
+                <a class="btn btn-primary" id="demo-click-2" href="http://try.traveltripper.com/request-demo/">request a demo</a>
             </div>
         </div>
 
@@ -68,7 +68,7 @@ get_header(); ?>
             </div>
 
             <div class="btn-holder">
-                <a href="<?php if ( get_field ( 'reztrip_intro_button_link' ) ) { the_field( 'reztrip_intro_button_link' ); } else { echo 'javascript:void(0);'; } ?>" id="download-button" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon"><?php the_field( 'reztrip_intro_button_text' ); ?></a>
+                <a href="<?php if ( get_field ( 'reztrip_intro_button_link' ) ) { the_field( 'reztrip_intro_button_link' ); } else { echo 'javascript:void(0);'; } ?>" id="product-specs-view-0" class="btn btn-primary-white"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-pdf.svg" alt="pdf icon"><?php the_field( 'reztrip_intro_button_text' ); ?></a>
             </div>
 
         </div>
@@ -152,7 +152,7 @@ get_header(); ?>
             <div class="showcase__metrix">
                 <p class="showcase__metrix-number"><?php the_field( 'reztrip_case_study_showcase_metric_number' ); ?></p>
                 <p class="showcase__metrix-text"><?php the_field( 'reztrip_case_study_showcase_metric_text' ); ?></p>
-                <a href="<?php the_field( 'reztrip_case_study_showcase_button_link' ); ?>" class="btn btn-primary"><?php the_field( 'reztrip_case_study_showcase_button_text' ); ?></a>
+                <a id="case-click-1" href="<?php the_field( 'reztrip_case_study_showcase_button_link' ); ?>" class="btn btn-primary"><?php the_field( 'reztrip_case_study_showcase_button_text' ); ?></a>
             </div>
             <div class="showcase__description">
                 <p><?php the_field( 'reztrip_case_study_showcase_description' ); ?></p>

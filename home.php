@@ -20,7 +20,7 @@ get_header(); ?>
     <div class="page-header__cta">
       <p>Become an expert hotel marketer with our free resources.</p>
       <div class="btn-holder">
-        <a class="btn btn-white" href="http://eepurl.com/bI-pnv" rel="nofollow">subscribe</a>
+        <a class="btn btn-white" id="subscribe-2" href="http://eepurl.com/bI-pnv" rel="nofollow">subscribe</a>
       </div>
     </div>
   </div>

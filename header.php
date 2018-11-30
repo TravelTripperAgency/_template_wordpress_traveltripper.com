@@ -37,13 +37,23 @@
         </div>
     </header> <?php
 
+    if ( ( is_archive() && !is_post_type_archive( array( 'resources', 'news-and-press' ) ) && !is_tax( 'resource_tag' ) ) || ( is_single() && !is_singular( array( 'news-and-press', 'resources' ) ) ) ) {
+        // Blog
+        $id = 'id="subscribe-2" ';
+    } elseif ( is_singular( 'resources' ) || is_tax( 'resource_tag' ) ) {
+        // Resources
+        $id = 'id="subscribe-1" ';
+    } else {
+        $id = '';
+    }
+
     if ( ( is_single() && !is_singular( 'news-and-press' ) ) || ( is_archive() && !is_post_type_archive( array( 'resources', 'news-and-press' ) ) ) || is_search() || ( is_page() && !is_page_template() && !is_front_page() ) ) { ?>
         <section id="skip-link-content" class="page-header">
             <div class="wrap row">
                 <div class="page-header__cta">
                     <p>Become an expert hotel marketer with our free resources.</p>
                     <div class="btn-holder">
-                        <a class="btn btn-secondary-white" href="http://eepurl.com/bI-pnv" rel="nofollow">subscribe</a>
+                        <a class="btn btn-secondary-white" <?php echo $id; ?>href="http://eepurl.com/bI-pnv" rel="nofollow">subscribe</a>
                     </div>
                 </div>
             </div>

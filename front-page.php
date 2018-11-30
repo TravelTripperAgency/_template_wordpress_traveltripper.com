@@ -17,7 +17,7 @@ get_header(); ?>
             <h1 class="page-header__title"><?php the_title(); ?></h1>
             <p class="page-header__description"><?php the_field( 'header_description' ); ?></p>
             <div class="btn-holder">
-                <a class="btn btn-primary" href="<?php echo get_site_url(); ?>/solutions/">learn more</a>
+                <a class="btn btn-primary" id="learn-more" href="<?php echo get_site_url(); ?>/solutions/">learn more</a>
             </div>
         </div>
 
@@ -95,7 +95,7 @@ get_header(); ?>
         <div class="showcase__metrix">
           <p class="showcase__metrix-number"><?php the_field( 'frontpage_intro_showcase_metric_number' ); ?></p>
           <p class="showcase__metrix-text"><?php the_field( 'frontpage_intro_showcase_metric_text' ); ?></p>
-          <a href="<?php esc_url( the_field( 'frontpage_intro_showcase_button_link' ) ); ?>" class="btn btn-primary"><?php the_field( 'frontpage_intro_showcase_button_text' ); ?></a>
+          <a id="case-click-0" href="<?php esc_url( the_field( 'frontpage_intro_showcase_button_link' ) ); ?>" class="btn btn-primary"><?php the_field( 'frontpage_intro_showcase_button_text' ); ?></a>
         </div>
         <div class="showcase__description">
           <p><?php the_field( 'frontpage_intro_showcase_description' ); ?></p>

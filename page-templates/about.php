@@ -81,12 +81,10 @@ get_header(); ?>
         <div class="media">
             <div class="d-flex"><p class="title"><?php the_field( 'about_page_press_featured_title' ); ?></p></div>
             <div class="row"> <?php
-	            while( have_rows( 'about_page_press_featured_logos' ) ) : the_row();
+	            while( have_rows( 'about_page_press_featured_logos' ) ) : the_row(); ?>
 
-                    $image = get_sub_field( 'logo' );
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size) ?>
                     <div class="media__logo"> <?php
-                        echo wp_get_attachment_image( $image, $size ); ?>
+                        echo wp_get_attachment_image( get_sub_field( 'logo' ), 'full' ); ?>
                     </div> <?php
 
                 endwhile; ?>
@@ -96,12 +94,10 @@ get_header(); ?>
         <div class="award">
             <div class="d-flex"><p class="title"><?php the_field( 'about_page_press_awards_title' ); ?></p></div>
             <div class="row"> <?php
-                while( have_rows( 'about_page_press_awards_logos' ) ) : the_row();
+                while( have_rows( 'about_page_press_awards_logos' ) ) : the_row(); ?>
 
-                    $image = get_sub_field( 'logo' );
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size) ?>
                     <div class="award__logo"> <?php
-                        echo wp_get_attachment_image( $image, $size ); ?>
+                        echo wp_get_attachment_image( get_sub_field( 'logo' ), 'full' ); ?>
                     </div> <?php
 
                 endwhile; ?>
@@ -129,8 +125,7 @@ get_header(); ?>
 
         the_field( 'about_page_team_text' );
 
-        $image = get_field( 'about_page_team_center_image' );
-        echo wp_get_attachment_image( $image, 'full' ); ?>
+        echo wp_get_attachment_image( get_field( 'about_page_team_center_image' ), 'full' ); ?>
 
       </div>
     </div>

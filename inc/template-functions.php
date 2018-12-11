@@ -195,6 +195,12 @@ function init_scripts() {
 
 
 /**
+ * Scroll to the top of form when there are validation errors
+ */
+add_filter( 'gform_confirmation_anchor', '__return_true' );
+
+
+/**
  * Add GTM script
  */
 add_action( 'wp_head', 'google_tag_manager_script', 1 );

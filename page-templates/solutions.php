@@ -25,80 +25,57 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="intro wrap">
+<section class="intro wrap"> <?php
 
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip-hover.svg" alt="">
-      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">RezTrip</a></p>
-      <p class="subtitle">CRS & Booking Engine</p>
-      <p class="description">Shift bookings from high-commission OTA channels to direct bookings using smart rate and revenue management tools.</p>
-      <p class="arrow"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
+    while ( have_rows( 'solutions_solutions' ) ) : the_row();
 
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-hover.svg" alt="">
-      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">Travel Tripper Web</a></p>
-      <p class="subtitle">Website Platform and Agency</p>
-      <p class="description">Change lookers into bookers with beautiful design and dynamic content like live rates and special offers.</p>
-      <p class="arrow"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
+        // Get the post ID from the page title field
+        $post_id = get_sub_field( 'title', false, false ); ?>
 
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-hover.svg" alt="">
-      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></p>
-      <p class="subtitle">Full-Service Agency</p>
-      <p class="description">Maximize your ROI across all online advertising channels with cutting edge technology and strategy.</p>
-      <p class="arrow"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
+        <div class="col"> <?php
+            echo wp_get_attachment_image( get_sub_field( 'icon' ), 'full' ); ?>
+            <p class="title"><a href="<?php echo get_the_permalink( $post_id ); ?>"><?php echo get_the_title($post_id); ?></a></p> <?php
+            if ( get_sub_field( 'subtitle' ) ) { ?>
+                <p class="subtitle"><?php the_sub_field( 'subtitle' ); ?></p> <?php
+            } ?>
+            <p class="description"><?php the_sub_field( 'description' ); ?></p>
+            <p class="arrow"><a href="<?php echo get_the_permalink( $post_id ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+        </div> <?php
 
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-rate-match-hover.svg" alt="">
-      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/rate-match/">Rate Match</a></p>
-      <p class="description">Give your guests the confidence to book direct with an innovative price-checking and rate-matching tool that integrates directly into your website.</p>
-      <p class="arrow"><a href="<?php echo get_site_url(); ?>/solutions/rate-match/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
-
-    <div class="col">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-integrations-hover.svg" alt="">
-      <p class="title"><a href="<?php echo get_site_url(); ?>/solutions/integrations/">Integrations</a></p>
-      <p class="description">With more than 50+ PMS and hotel technology partners, Travel Tripper integrates well with your existing tech stack.</p>
-      <p class="arrow"><a href="<?php echo get_site_url(); ?>/solutions/integrations/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
+    endwhile; ?>
 
 </section>
 
 <section class="choose">
     <div class="wrap">
 
-      <h2 class="section-title">Why choose Travel Tripper?</h2>
+        <h2 class="section-title"><?php the_field( 'solutions_why_section_title' ); ?></h2>
 
-      <div class="row">
+        <div class="row">
 
-        <div class="col-left">
-          <div class="why">
-            <p class="title">Dedicated Service</p>
-            <p>Travel Tripper's integrated client services ensures that you'll get hands-on support on all your questions from a dedicated account team.</p>
-          </div>
-          <div class="why">
-            <p class="title">Unparalleled Expertise</p>
-            <p>We're built for hoteliers by hoteliers—our team will provide the expertise and insights needed to make sure your hotel succeeds.</p>
-          </div>
-          <div class="why">
-            <p class="title">Constant Innovation</p>
-            <p>At Travel Tripper, our success depends directly on yours. We never stop striving to make our solutions better, faster, and more powerful.</p>
-          </div>
+            <div class="col-left"> <?php
+
+                while ( have_rows( 'solutions_why_reasons' ) ) : the_row(); ?>
+
+                    <div class="why">
+                        <p class="title"><?php the_sub_field( 'title' ); ?></p> <?php
+                        the_sub_field( 'description' ); ?>
+                    </div> <?php
+
+                endwhile; ?>
+
+            </div>
+
+            <div class="col-right">
+                <a href="<?php the_field( 'solutions_why_image_link' ); ?>"><?php echo wp_get_attachment_image( get_field( 'solutions_why_image' ), 'full' ); ?></a>
+            </div>
+
         </div>
 
-        <div class="col-right">
-          <a href="https://hoteltechreport.com/s/travel%20tripper"><img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report.png" alt="hotel tech report"></a>
+        <div class="testimonial">
+            <p class="quote"><?php the_field( 'solutions_why_testimonial' ); ?></p>
+            <p class="cite"><?php the_field( 'solutions_why_testimonial_cite' ); ?></p>
         </div>
-
-      </div>
-
-      <div class="testimonial">
-        <p class="quote">We have enjoyed using Travel Tripper's Reztrip booking engine and central reservations system for the past 3 years. It is simple to use yet packs a powerful punch when it comes to technology and innovation... Compared to several other CR systems that I've worked with, Reztrip admin is by far the friendliest and easiest to manage. We continuously look forward to what Travel Tripper will think of next.</p>
-        <p class="cite">STACEY YAMASHITA, Revenue Distribution Manager, Pacific Beach Hotel</p>
-      </div>
 
     </div>
 </section> <?php

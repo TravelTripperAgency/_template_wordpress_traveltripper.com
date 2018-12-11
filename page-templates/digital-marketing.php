@@ -118,7 +118,7 @@ get_header(); ?>
 
     <div class="partners"> <?php
         while ( have_rows( 'dgs_why_awards' ) ) : the_row(); ?>
-            <div class="col"> <?php echo wp_get_attachment_image( get_sub_field( 'award' ), 'full' ); ?></div> <?php
+            <div class="col"><?php echo wp_get_attachment_image( get_sub_field( 'award' ), 'full' ); ?></div> <?php
         endwhile; ?>
     </div>
 

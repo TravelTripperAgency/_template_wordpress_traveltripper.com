@@ -147,6 +147,7 @@
   .page-template-independents &,
   .page-template-casinos &,
   .page-template-digital-marketing &,
+  .page-template-ada &,
   .page-template-management-companies & {
     background-image: url('images/background-header-featured.png');
     background-position-y: -16em;
@@ -164,6 +165,15 @@
     }
     @media (min-width: 2048px) {
       background-position-y: -8em;
+    }
+  }
+
+  .page-template-ada & {
+    @include breakpoint($xl) {
+      background-position-y: -6em;
+    }
+    @media (min-width: 2048px) {
+      background-position-y: -14em;
     }
   }
 
@@ -235,6 +245,7 @@
     .page-template-ttweb &,
     .page-template-rate-match &,
     .page-template-digital-marketing &,
+    .page-template-ada &,
     .page-template-independents &,
     .page-template-casinos &,
     .page-template-management-companies & {
@@ -384,6 +395,7 @@
     .page-template-rate-match &,
     .page-template-casinos &,
     .page-template-digital-marketing &,
+    .page-template-ada &,
     .page-template-management-companies & {
       position: relative;
       flex-direction: row;
@@ -435,7 +447,8 @@
       }
     }
 
-    .page-template-digital-marketing & img {
+    .page-template-digital-marketing & img,
+    .page-template-ada & img {
       @include breakpoint($sm) {
         max-width: 680px;
       }
@@ -547,7 +560,8 @@
       .home &,
       .page-template-reztrip &,
       .page-template-ttweb &,
-      .page-template-digital-marketing & {
+      .page-template-digital-marketing &,
+      .page-template-ada & {
         margin-bottom: 24px;
         color: $gray-dark;
         @include breakpoint($sm) {

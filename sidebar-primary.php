@@ -20,30 +20,29 @@
         get_search_form(); ?>
     </section> <?php
 
-    get_template_part( 'template-parts/query', 'popular-articles' ); ?>
+    get_template_part( 'template-parts/query', 'popular-articles' );
 
-    <section class="widget widget_categories">
-        <h3 class="widget-title">Filter by Category</h3>
-        <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
-            <label class="screen-reader-text" for="cat">Filter by Category</label>
-            <div class="dropdown-wrap"> <?php
-                wp_dropdown_categories( array(
-                    'show_option_none' => __( 'Select category' ),
-                    'orderby' => 'name',
-                    'value_field' => 'term_id'
-                ) ); ?>
-            </div>
-        </form>
-        <script>
-            var dropdown = document.getElementById('cat');
-            function onCatChange() {
-                if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
-                    location.href = "<?php echo esc_url( home_url( '/' ) ); ?>?cat="+dropdown.options[dropdown.selectedIndex].value;
-                }
-            }
-            dropdown.onchange = onCatChange;
-        </script>
-    </section> <?php
+    $categories = get_categories();
+    if ( !empty( $categories ) ) { ?>
+        <section class="widget widget_categories">
+
+            <h3 class="widget-title">Filter by Category</h3>
+
+            <nav class="sidebar__nav">
+                <ul> <?php
+
+                    foreach ( $categories as $category ) :
+                        $term_link = esc_url( get_category_link( $category->term_id ) ); ?>
+                        <li class="menu-item<?php if ( get_current_url() == $term_link ) { echo ' current-menu-item'; } ?>"><a href="<?php echo $term_link; ?>"><?php echo esc_html( $category->name ); ?></a></li> <?php
+                    endforeach;
+
+                    wp_reset_postdata(); ?>
+
+                </ul>
+            </nav>
+
+        </section> <?php
+    }
 
     get_template_part( 'template-parts/query', 'events-sidebar' ); ?>
 

@@ -11,8 +11,9 @@
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "breakpoint-sass": "^2.7.1",
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.26.3",
     "node-sass": "^4.9.2",
+    "onchange": "^5.1.3",
     "owl.carousel": "^2.3.4",
     "parallelshell": "^3.0.2",
     "postcss-cli": "^6.0.0",
@@ -25,7 +26,8 @@
     "css:production": "node-sass --output-style compressed sass/style.scss style-input.css",
     "prefix": "postcss style-input.css --use autoprefixer -b '> 1%, last 2 versions' --no-map --output style.css",
     "css:watch": "node-sass --output-style expanded --watch sass/style.scss style.css",
-    "js:uglify": "uglifyjs js/jquery-3.3.1.js js/owl.carousel.js js/wow.js js/fitvids.js js/main.js -c -m -o js/main.min.js",
+    "js:uglify": "uglifyjs js/jquery-3.3.1.js js/owl.carousel.js js/wow.js js/fitvids.js js/order-form.js js/main.js -c -m -o js/main.min.js",
+    "js:watch": "onchange \"js/**/*.js\" -e \"js/main.min.js\" -- npm run js:uglify",
     "watch": "parallelshell 'npm run css:watch' 'npm run browsersync'"
   }
 }

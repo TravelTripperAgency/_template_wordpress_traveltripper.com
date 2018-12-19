@@ -21,21 +21,25 @@
 
 <body <?php body_class(); ?>> <?php
 
-    google_tag_manager_noscript(); ?>
+    google_tag_manager_noscript();
 
-    <header class="site-header">
-        <div class="wrap">
+    if ( !is_page_template( 'page-templates/web-form.php' ) ) { ?>
 
-            <a class="skip-link screen-reader-text" href="#skip-link-content"><?php esc_html_e( 'Skip to content', 'traveltripper' ); ?></a>
+        <header class="site-header">
+            <div class="wrap">
 
-            <div class="site-header__logo">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-            </div> <?php
+                <a class="skip-link screen-reader-text" href="#skip-link-content"><?php esc_html_e( 'Skip to content', 'traveltripper' ); ?></a>
 
-            traveltripper_custom_menu( 'menu-header' ) ?>
+                <div class="site-header__logo">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+                </div> <?php
 
-        </div>
-    </header> <?php
+                traveltripper_custom_menu( 'menu-header' ) ?>
+
+            </div>
+        </header> <?php
+
+    }
 
     if ( ( is_archive() && !is_post_type_archive( array( 'resources', 'news-and-press' ) ) && !is_tax( 'resource_tag' ) ) || ( is_single() && !is_singular( array( 'news-and-press', 'resources' ) ) ) ) {
         // Blog

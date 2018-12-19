@@ -5,6 +5,10 @@
 }
 
 // Spacing
+.mb-1 {
+  margin-bottom: $spacer !important;
+}
+
 .mb-2 {
   margin-bottom: $spacer * 2 !important;
 }

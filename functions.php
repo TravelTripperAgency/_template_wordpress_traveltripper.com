@@ -99,13 +99,13 @@ add_action( 'after_setup_theme', 'traveltripper_setup' );
  *
  * @global int $content_width
  */
+add_action( 'after_setup_theme', 'traveltripper_content_width', 0 );
 function traveltripper_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'traveltripper_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'traveltripper_content_width', 0 );
 
 
 /**
@@ -165,11 +165,7 @@ function traveltripper_scripts() {
 
     wp_enqueue_script( 'traveltripper-javascript', get_template_directory_uri() . '/js/main.min.js', array(), null, true);
 
-    // if ( is_page_template( array( 'page-templates/solutions.php', 'page-templates/reztrip.php', 'page-templates/ttweb.php', 'page-templates/digital-marketing.php', 'page-templates/rate-match.php' ) ) ) {
-    //     wp_enqueue_script( 'unbounce-javascript', 'https://58b1f8f7754642a9a92d909305e6d42c.js.ubembed.com', array(), null, true);
-    // }
-
-	wp_enqueue_script( 'unbounce', 'https://58b1f8f7754642a9a92d909305e6d42c.js.ubembed.com', array(), null, true );
+    wp_enqueue_script( 'unbounce', 'https://58b1f8f7754642a9a92d909305e6d42c.js.ubembed.com', array(), null, true );
 
 	// wp_enqueue_script( 'traveltripper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

@@ -16,6 +16,13 @@ $no-gutters: (
   'container-spread': 'narrow'
 );
 
+$half-gutters: (
+  'columns': susy-repeat(12),
+  'gutters': 16px,
+  'spread': 'narrow',
+  'container-spread': 'narrow'
+);
+
 $double-gutters: (
   'columns': susy-repeat(12),
   'gutters': 64px,

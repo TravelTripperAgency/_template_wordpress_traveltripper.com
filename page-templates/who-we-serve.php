@@ -25,35 +25,21 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="intro wrap">
+<section class="intro wrap"> <?php
 
-  <div class="col">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-hotel-groups-hover.svg" alt="">
-    <p class="title"><a href="<?php echo get_site_url(); ?>/who-we-serve/management-companies/">Hotel Groups and Management Companies</a></p>
-    <p class="description">Stay ahead of marketing and distribution trends with our scalable multi-property solution.</p>
-    <p class="arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/management-companies/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-  </div>
+    while( have_rows( 'who_who' ) ) : the_row();
 
-  <div class="col">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-casinos-hover.svg" alt="">
-    <p class="title"><a href="<?php echo get_site_url(); ?>/who-we-serve/casinos/">Casino and Gaming Properties</a></p>
-    <p class="description">Serve your most loyal guests just as easily online as offline.</p>
-    <p class="arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/casinos/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-  </div>
+        // Get the post ID from the page title field
+        $post_id = get_sub_field( 'title', false, false ); ?>
 
-  <div class="col">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-independent-hotels-hover.svg" alt="">
-    <p class="title"><a href="<?php echo get_site_url(); ?>/who-we-serve/independents/">Independent and Boutique Hotels</a></p>
-    <p class="description">Power your hotel's e-commerce with a partner invested in your success.</p>
-    <p class="arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/independents/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-  </div>
+        <div class="col"> <?php
+            echo wp_get_attachment_image( get_sub_field( 'icon' ), 'full' ); ?>
+            <p class="title"><a href="<?php echo get_the_permalink( $post_id ); ?>"><?php echo get_the_title($post_id); ?></a></p>
+            <p class="description"><?php the_sub_field( 'description' ); ?></p>
+            <p class="arrow"><a href="<?php echo get_the_permalink( $post_id ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+        </div> <?php
 
-  <div class="col">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-partners-hover.svg" alt="">
-    <p class="title"><a href="<?php echo get_site_url(); ?>/who-we-serve/partners/">Partners</a></p>
-    <p class="description">Join the Travel Tripper partner network.</p>
-    <p class="arrow"><a href="<?php echo get_site_url(); ?>/who-we-serve/partners/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-  </div>
+    endwhile; ?>
 
 </section>
 
@@ -61,55 +47,26 @@ get_header(); ?>
   <div class="wrap">
 
     <header class="section-header">
-      <h2 class="section-title">Global Clientele</h2>
+      <h2 class="section-title"><?php the_field( 'who_clientele_section_title' ); ?></h2>
       <img src="<?php echo get_template_directory_uri(); ?>/images/earth-map.png" alt="Map of Earth">
-      <p>Travel Tripper exclusively serves the hospitality industry with notable clients around the world.</p>
+      <p><?php the_field( 'who_clientele_description' ); ?></p>
     </header>
 
-    <div class="row">
+    <div class="row"> <?php
 
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-eldorado.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-eldorado@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-eldorado@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-ic.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-ic@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-ic@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-library-hotel.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-library-hotel@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-library-hotel@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/clients/bellstar.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-golden-nugget.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-golden-nugget@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-golden-nugget@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-menin.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-menin@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-menin@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-tsokkos.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-tsokkos@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-tsokkos@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-stay-well.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-stay-well@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-stay-well@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-kokua.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-kokua@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-kokua@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-elite.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-elite@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-elite@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-high-gate.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-high-gate@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-high-gate@2x.png" alt="">
-      </div>
-      <div class="col">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-meriton.png, <?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-meriton@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/clients/logo-global-client-meriton@2x.png" alt="">
-      </div>
+        while ( have_rows( 'who_clientele_client_logos' ) ) : the_row(); ?>
+
+            <div class="col"> <?php
+                echo wp_get_attachment_image( get_sub_field( 'client_logo' ), 'full' ); ?>
+            </div> <?php
+
+        endwhile; ?>
 
     </div>
 
     <div class="testimonial">
-        <p class="quote">I really love working with the team at Travel Tripper. Everyone from our account manager, to our client support team, to the product specialists have just been a dream to work with. It's been like night and day in comparison to previous vendors that we've had in similar space.</p>
-        <p class="cite">ERIC GOODEN - Marketing Manager, Bellstar Hotels & Resorts</p>
+        <p class="quote"><?php the_field( 'who_clientele_testimonial' ); ?></p>
+        <p class="cite"><?php the_field( 'who_clientele_testimonial_cite' ); ?></p>
     </div>
 
   </div>

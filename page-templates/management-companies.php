@@ -27,9 +27,10 @@ get_header(); ?>
             } else { ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/management-companies-header.png"> <?php
             } ?>
-            <ul class="page-header__features">
-                <li>Best-in-class brand and multi-property management</li>
-                <li>Revenue-maximizing features to stay ahead of the competition</li>
+            <ul class="page-header__features"> <?php
+                while ( have_rows( 'header_features' ) ) : the_row(); ?>
+                    <li><?php the_sub_field( 'header_feature' ); ?></li> <?php
+                endwhile; ?>
             </ul>
         </div>
     </div>
@@ -37,71 +38,41 @@ get_header(); ?>
 
 <section class="intro row wrap">
 
-  <div class="col-left">
-    <h2 class="section-title">Best-in-class brand and multi-property management</h2>
-  </div>
+    <div class="col-left">
+        <h2 class="section-title"><?php the_field( 'management_companies_intro_section_title' ); ?></h2>
+    </div>
 
-  <div class="col-right">
-    <p>Hotel groups need a flexible and featured-packed multi-property solution that keeps them ahead of the competition when it comes to hotel distribution and marketing trends.</p>
-    <p>Travel Tripper's solutions easily allow revenue and marketing managers to manage one, several, or a hundred hotels with ease through our <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">CRS</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing</a> platforms.</p>
-  </div>
+    <div class="col-right"> <?php
+        the_field( 'management_companies_intro_section_description' ); ?>
+    </div>
 
 </section>
 
 <section class="feature wrap">
-  <figure>
-    <img srcset="<?php echo get_template_directory_uri(); ?>/images/management-companies-feature.png, <?php echo get_template_directory_uri(); ?>/images/management-companies-feature@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/management-companies-feature@2x.png" alt="Featured image">
-  </figure>
+    <figure> <?php
+        echo wp_get_attachment_image( get_field( 'management_companies_intro_section_image' ), 'full' ); ?>
+    </figure>
 </section>
 
-<section class="services row wrap">
-
-  <div class="col">
-    <div class="title-container">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip-gray.svg" alt="">
-      <h3 class="column-title">Revenue Management</h3>
-    </div>
-    <ul>
-      <li>Rates and rooms by channel</li>
-      <li>Geographic pricing</li>
-      <li>Dynamic pricing rules and enhanced formula-based pricing controls</li>
-      <li>Copy-and-paste rate plan management</li>
-      <li>Integrated rate-shopping and price-matching with Travel Tripper Rate Match</li>
-      <li>Detailed reporting and strategy planning available</li>
-    </ul>
-  </div>
-
-  <div class="col">
-    <div class="title-container">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-shopping-cart.svg" alt="">
-      <h3 class="column-title">Distribution & E-Commerce</h3>
-    </div>
-    <ul>
-      <li>Comprehensive distribution to all major direct and third-party channels</li>
-      <li>Brand and hotel group booking portals available</li>
-      <li>Multi-room and multi-rate plan bookings</li>
-      <li>Integration with major loyalty programs</li>
-    </ul>
-  </div>
-
-  <div class="col">
-    <div class="title-container">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-gray.svg" alt="">
-      <h3 class="column-title">Marketing</h3>
-    </div>
-    <ul>
-      <li>Brand and multi-property websites</li>
-      <li>WCAG- and ADA-compliant website and booking engine</li>
-      <li>Full-service digital marketing management</li>
-      <li>Transparent and detailed marketing analytics and reporting across properties</li>
-    </ul>
-  </div>
-
+<section class="services row wrap"> <?php
+    while ( have_rows( 'management_companies_intro_services' ) ) : the_row(); ?>
+        <div class="col">
+            <div class="title-container"> <?php
+                echo wp_get_attachment_image( get_sub_field( 'icon' ), 'full' ); ?>
+                <h3 class="column-title"><?php the_sub_field( 'title' ); ?></h3>
+            </div>
+            <ul> <?php
+                while ( have_rows( 'bullets' ) ) : the_row(); ?>
+                    <li><?php the_sub_field( 'bullet' ); ?></li> <?php
+                endwhile; ?>
+            </ul>
+        </div> <?php
+    endwhile; ?>
 </section>
 
 <section class="clients">
 
-    <h2 class="section-title"><?php the_field( 'slider_section_title' ); ?></h2> <?php
+    <h2 class="section-title"><?php the_field( 'management_companies_client_slider_title' ); ?></h2> <?php
 
     get_template_part( 'template-parts/content', 'client-slider' ); ?>
 
@@ -110,55 +81,49 @@ get_header(); ?>
 <section class="testimonials row<?php if ( !wp_is_mobile() ) { echo ' animated wow fadeIn'; } ?>" data-wow-delay=".5s">
   <div class="col-left">
     <div class="testimonial">
-      <p class="quote">We're running independent resorts. Every resort has its own unique brand. And because of that, we have multiple marketing campaigns that are running in various markets congruently at all times of the year. Those campaigns are aimed at transient vacationers, companies that are booking corporate events, associations that are booking annual conferences, and weddings, and family gatherings. Travel Tripper is a product that helps us achieve our goals for those campaigns.</p>
-      <p class="cite">ERIC GOODEN - Marketing Manager, Bellstar Hotels & Resorts</p>
+        <p class="quote"><?php the_field( 'management_companies_study_testimonial_quote' ); ?></p>
+        <p class="cite"><?php the_field( 'management_companies_study_testimonial_attribution' ); ?></p>
     </div>
   </div>
 </section>
 
 <section class="conversions">
-  <div class="col-right">
+    <div class="col-right">
 
-    <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInRight"'; } ?>>
-      <img srcset="<?php echo get_template_directory_uri(); ?>/images/management-companies-showcase.png, <?php echo get_template_directory_uri(); ?>/images/management-companies-showcase@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/management-companies-showcase@2x.png" alt="StayWell iPad">
-    </figure>
+        <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInRight"'; } ?>> <?php
+            echo wp_get_attachment_image( get_field( 'management_companies_study_showcase_image' ), 'full' ); ?>
+        </figure>
 
-    <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>" data-wow-delay=".5s">
-      <div class="showcase__description">
-        <p>Since switching to Travel Tripper in 2016, StayWell hotels have experienced consistent increases in rooms, nights, and ADR across all properties.</p>
-      </div>
-      <div class="showcase__metrix">
-        <p class="showcase__metrix-number"><span>+</span>30%</p>
-        <p class="showcase__metrix-text"> increase in direct website revenue</p>
-        <a id="case-click-5" href="http://ttripper.wpengine.com/wp-content/uploads/2018/09/StayWell-Hotels-case-study-Travel-Tripper.pdf" class="btn btn-primary">see how we did it</a>
-      </div>
+        <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInRight'; } ?>" data-wow-delay=".5s">
+            <div class="showcase__description">
+                <p><?php the_field( 'management_companies_study_showcase_description' ); ?></p>
+            </div>
+            <div class="showcase__metrix">
+                <p class="showcase__metrix-number"><?php the_field( 'management_companies_study_showcase_metric_number' ); ?></p>
+                <p class="showcase__metrix-text"><?php the_field( 'management_companies_study_showcase_metric_text' ); ?></p>
+                <a id="case-click-5" href="<?php the_field( 'management_companies_study_showcase_button_link' ); ?>" class="btn btn-primary"><?php the_field( 'management_companies_study_showcase_button_text' ); ?></a>
+            </div>
+        </div>
+
     </div>
-
-  </div>
 </section>
 
 <section class="integrations background-image">
 
-  <div class="col-left">
-    <div class="col-left__wrap">
+    <div class="col-left">
+        <div class="col-left__wrap">
 
-      <h2 class="section-title">Integrated with the systems you already work with</h2>
-      <a href="<?php echo get_site_url(); ?>/solutions/integrations/" class="btn btn-secondary-dark">View all Integrations & Partners</a>
+            <h2 class="section-title"><?php the_field( 'management_companies_integrations_section_title' ); ?></h2>
+            <a href="<?php the_field( 'management_companies_integrations_button_link' ); ?>" class="btn btn-secondary-dark"><?php the_field( 'management_companies_integrations_button_text' ); ?></a>
 
-      <div class="row">
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/oracle.png" alt="integration logo"></div>
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/agilysys.png" alt="integration logo"></div>
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/autoclerk.png" alt="integration logo"></div>
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/innquest.png" alt="integration logo"></div>
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/lodgical-solutions.png" alt="integration logo"></div>
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/rategain.png" alt="integration logo"></div>
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/resortshare.png" alt="integration logo"></div>
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/siteminder.png" alt="integration logo"></div>
-        <div class="img-container"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/webrezpro.png" alt="integration logo"></div>
-      </div>
+            <div class="row"> <?php
+                while ( have_rows( 'management_companies_integrations_logos' ) ) : the_row(); ?>
+                    <div class="img-container"><?php echo wp_get_attachment_image( get_sub_field( 'logo' ), 'full' ); ?></div> <?php
+                endwhile; ?>
+            </div>
 
+        </div>
     </div>
-  </div>
 
 </section> <?php
 

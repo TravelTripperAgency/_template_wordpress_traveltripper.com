@@ -11,81 +11,54 @@
 get_header(); ?>
 
 <section id="skip-link-content" class="page-header">
-  <div class="wrap">
-    <div class="page-header__title-area">
-      <h1 class="page-header__title"><?php the_title(); ?></h1> <?php
-      if ( get_field( 'header_description' ) ) { ?>
-          <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
-      } ?>
-      <div class="btn-holder">
-        <a class="btn btn-primary" href="<?php echo get_site_url(); ?>/contact/">work with us</a>
-      </div>
+    <div class="wrap">
+        <div class="page-header__title-area">
+            <h1 class="page-header__title"><?php the_title(); ?></h1> <?php
+            if ( get_field( 'header_description' ) ) { ?>
+                <p class="page-header__description"><?php the_field( 'header_description' ); ?></p> <?php
+            } ?>
+            <div class="btn-holder">
+                <a class="btn btn-primary" href="<?php echo get_site_url(); ?>/contact/">work with us</a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <section class="partners-join">
 
-  <div class="col-left">
-    <div class="col-left__inner">
-      <h2 class="section-title">Become a Partner</h2>
-      <p>Travel Tripper works together with numerous tech vendors, partners, consultants, and agencies to help hotels build the perfect digital solution for their operational and marketing needs.</p>
-      <ul>
-        <li>Join the Travel Tripper partner network</li>
-        <li>Become a reseller</li>
-        <li>API integrations and developer assistance</li>
-        <li>Strategic planning and RFP assistance</li>
-        <li>Product resources and training</li>
-        <li>Development of custom and packaged hotel solutions</li>
-      </ul>
+    <div class="col-left">
+        <div class="col-left__inner">
+            <h2 class="section-title"><?php the_field( 'partners_intro_section_title' ); ?></h2> <?php
+            the_field( 'partners_intro_content' ); ?>
+        </div>
     </div>
-  </div>
 
-  <div class="col-right background-image"></div>
+    <div class="col-right background-image" style="background-image: url('<?php
+    the_field( 'partners_intro_image' ); ?>')"></div>
 
 </section>
 
 <section class="partner-integrations">
 
-  <div class="col-right">
-    <div class="col-right__inner">
-      <h2 class="section-title">Integrations</h2>
-      <p>Travel Tripper integrates with many of the leading hotel technology platforms in the industry, including PMS, channel managers, payment gateways, CRMs, revenue management systems, loyalty programs, data and analytics platforms, advertising platforms and more.</p>
-      <a class="btn btn-secondary-white" href="<?php echo get_site_url(); ?>/solutions/integrations/">View all Integrations & Partners</a>
+    <div class="col-right">
+        <div class="col-right__inner">
+            <h2 class="section-title"><?php the_field( 'partners_integrations_section_title' ); ?></h2> <?php
+            the_field( 'partners_integrations_content' ); ?>
+            <a class="btn btn-secondary-white" href="<?php the_field( 'partners_integrations_button_link' ); ?>"><?php the_field( 'partners_integrations_button_text' ); ?></a>
+        </div>
     </div>
-  </div>
 
-  <div class="col-left">
-    <div class="col-left__inner">
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/agilysys.png" alt="">
-      </div>
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/amadeus.png" alt="">
-      </div>
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/dhisco.png" alt="">
-      </div>
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/ideas.png" alt="">
-      </div>
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/jcc-payments.png" alt="">
-      </div>
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/kognitiv.png" alt="">
-      </div>
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/scientific-games.png" alt="">
-      </div>
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/siteminder.png" alt="">
-      </div>
-      <div class="integrations__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/integrations/webrezpro.png" alt="">
-      </div>
+    <div class="col-left">
+        <div class="col-left__inner"> <?php
+            while( have_rows( 'partners_integrations_logos' ) ) : the_row(); ?>
+
+                <div class="integrations__logo"> <?php
+                    echo wp_get_attachment_image( get_sub_field( 'logo' ), 'full' ); ?>
+                </div> <?php
+
+            endwhile; ?>
+        </div>
     </div>
-  </div>
 
 </section> <?php
 

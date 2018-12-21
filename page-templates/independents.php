@@ -33,18 +33,18 @@ get_header(); ?>
 
 <section class="intro row wrap">
 
-  <div class="col-right">
-    <div class="col-right__wrap">
-      <p>Complete booking and e-commerce solutions</p>
-      <p>Dedicated account management</p>
-      <p>Build direct relationships with your guests</p>
+    <div class="col-right">
+        <div class="col-right__wrap"> <?php
+            while ( have_rows( 'header_features' ) ) : the_row(); ?>
+                <p><?php the_sub_field( 'header_feature' ); ?></p> <?php
+            endwhile; ?>
+        </div>
     </div>
-  </div>
 
-  <div class="col-left">
-    <h2 class="section-title">Competing digitally just got a lot easier.</h2>
-    <p>Independent and boutique hotels face a lot of upward battles when it comes to online distribution—high competition, a rapidly changing marketplace, limited resources and time. With Travel Tripper, you'll have a strategic e-commerce partner invested in your hotel's success.</p>
-  </div>
+    <div class="col-left">
+        <h2 class="section-title"><?php the_field( 'independents_intro_section_title' ); ?></h2> <?php
+            the_field( 'independents_intro_section_description' ); ?>
+    </div>
 
 </section>
 
@@ -60,15 +60,14 @@ get_header(); ?>
 
 <section class="ecommerce wrap row">
 
-  <div class="col-right">
-    <h2 class="section-title">All-in-one complete e-commerce solution</h2>
-    <p>We offer <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">distribution</a>, <a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">booking engine</a>, <a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">website</a>, and <a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">digital marketing</a> so you are covered from search to stay with one point of contact when you need to get things done.</p>
-    <p>Work closely with an expert team of revenue optimization and marketing specialists to help you maximize revenue and hit your direct booking goals.</p>
-  </div>
+    <div class="col-right">
+        <h2 class="section-title"><?php the_field( 'independents_services_section_title' ); ?></h2> <?php
+        the_field( 'independents_services_section_description' ); ?>
+    </div>
 
-  <div class="col-left">
-    <img srcset="<?php echo get_template_directory_uri(); ?>/images/independent-ecommerce.png, <?php echo get_template_directory_uri(); ?>/images/independent-ecommerce@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/independent-ecommerce@2x.png" alt="">
-  </div>
+    <div class="col-left"> <?php
+        echo wp_get_attachment_image( get_field( 'independents_services_image' ), 'full' ); ?>
+    </div>
 
 </section>
 
@@ -76,90 +75,84 @@ get_header(); ?>
 
 <section class="solutions">
 
-  <div class="wrap text-center">
-    <h2 class="section-title">Three dynamic solutions to power your hotel bookings</h2>
-  </div>
+    <div class="wrap text-center">
+        <h2 class="section-title"><?php the_field( 'independents_solutions_section_title' ); ?></h2>
+    </div>
 
-  <div class="row wrap">
-    <div class="service reztrip">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-reztrip-hover.svg" alt="">
-      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/">RezTrip</a></p>
-      <p class="service__subtitle">CRS & Booking Engine</p>
-      <p class="service__description">Shift bookings from high-commission OTA channels to direct bookings using smart rate and revenue management tools.</p>
-      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/booking-engine/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+    <div class="row wrap"> <?php
+        while ( have_rows( 'independents_solutions_solutions' ) ) : the_row();
+
+            $post_id = get_sub_field( 'title', false, false ); ?>
+
+            <div class="service"> <?php
+                echo wp_get_attachment_image( get_sub_field( 'image' ), 'full' ); ?>
+                <p class="service__title"><a href="<?php echo get_the_permalink( $post_id ); ?>"><?php echo get_the_title( $post_id ); ?></a></p> <?php
+                if ( the_sub_field( 'sub_title' ) ) { ?>
+                    <p class="service__subtitle"><?php the_sub_field( 'sub_title' ); ?></p> <?php
+                } ?>
+                <p class="service__description"><?php the_sub_field( 'description' ); ?></p>
+                <p class="service__arrow"><a href="<?php echo get_the_permalink( $post_id ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
+            </div> <?php
+
+        endwhile; ?>
     </div>
-    <div class="service web">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-ttweb-hover.svg" alt="">
-      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/">Travel Tripper Web</a></p>
-      <p class="service__subtitle">Website Platform and Agency</p>
-      <p class="service__description">Change lookers into bookers with beautiful design and smart content like live rates and special offers.</p>
-      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/hotel-website-design/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
-    <div class="service dgs">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-digital-marketing-hover.svg" alt="">
-      <p class="service__title"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/">Digital Marketing</a></p>
-      <p class="service__subtitle">Full Service Agency</p>
-      <p class="service__description">Maximize ROI across all online advertising channels with cutting edge technology and strategy, including our award-winning Real Time Ads for hotels.</p>
-      <p class="service__arrow"><a href="<?php echo get_site_url(); ?>/solutions/hotel-digital-marketing/"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/icon-arrow.svg"></a></p>
-    </div>
-  </div>
 
 </section>
 
 <section class="integrations">
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-left">
+        <div class="col-left">
 
-      <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>>
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/independent-showcase.png, <?php echo get_template_directory_uri(); ?>/images/independent-showcase@2x.png 2x" src="<?php echo get_template_directory_uri(); ?>/images/independent-showcase@2x.png" alt="Travel Tripper Website Example">
-      </figure>
+            <figure<?php if ( !wp_is_mobile() ) { echo ' class="animated wow slideInLeft"'; } ?>> <?php
+                echo wp_get_attachment_image( get_field( 'independents_case_study_showcase_image' ), 'full' ); ?>
+            </figure>
 
-      <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
-        <div class="showcase__metrix">
-          <p class="showcase__metrix-number"><span>+</span>45%</p>
-          <p class="showcase__metrix-text">increase in direct bookings</p>
-          <a id="case-click-6" href="http://ttripper.wpengine.com/wp-content/uploads/2018/10/Beach-Terrace-Inn-case-study-Travel-Tripper.pdf" class="btn btn-primary">see how we did it</a>
+            <div class="showcase<?php if ( !wp_is_mobile() ) { echo ' animated wow slideInLeft'; } ?>" data-wow-delay=".5s">
+                <div class="showcase__metrix">
+                    <p class="showcase__metrix-number"><?php the_field( 'independents_case_study_showcase_metric_number' ); ?></p>
+                    <p class="showcase__metrix-text"><?php the_field( 'independents_case_study_showcase_metric_text' ); ?></p>
+                    <a id="case-click-6" href="<?php the_field( 'independents_case_study_showcase_button_link' ); ?>" class="btn btn-primary"><?php the_field( 'independents_case_study_showcase_button_text' ); ?></a>
+                </div>
+                <div class="showcase__description">
+                    <p><?php the_field( 'independents_case_study_showcase_description' ); ?></p>
+                </div>
+            </div>
+
         </div>
-        <div class="showcase__description">
-          <p>Beach Terrace Inn increased their direct website revenue by 45% YOY after launching with Travel Tripper in Oct 2017.</p>
+
+        <div class="col-right row wrap">
+
+            <div class="col-right__col-left">
+                <h2 class="section-title"><?php the_field( 'independents_integrations_section_title' ); ?></h2>
+                <a href="<?php the_field( 'independents_integrations_button_link' ); ?>" class="btn btn-secondary-dark"><?php the_field( 'independents_integrations_button_text' ); ?></a>
+            </div>
+
+            <div class="col-right__col-right row"> <?php
+                while ( have_rows( 'independents_integrations_integrations' ) ) : the_row(); ?>
+                    <div class="integration-logo"> <?php echo wp_get_attachment_image( get_sub_field( 'logo' ), 'full' ); ?></div> <?php
+                endwhile; ?>
+            </div>
+
         </div>
-      </div>
 
     </div>
 
-    <div class="col-right row wrap">
+    <div class="col-bottom row wrap">
 
-      <div class="col-right__col-left">
-        <h2 class="section-title">Integrated with the systems you work with</h2>
-        <a href="#" class="btn btn-secondary-dark">View all Integrations & Partners</a>
-      </div>
+        <div class="testimonial">
+            <p class="quote"><?php the_field( 'independents_case_study_testimonial_quote' ); ?></p>
+            <p class="cite"><?php the_field( 'independents_case_study_testimonial_attribution' ); ?></p>
+        </div> <?php
 
-      <div class="col-right__col-right row">
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/agilysys.png" alt=""></div>
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/autoclerk.png" alt=""></div>
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/hotelavailabilities.png" alt=""></div>
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/innquest.png" alt=""></div>
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/lodgical-solutions.png" alt=""></div>
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/rategain.png" alt=""></div>
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/resortshare.png" alt=""></div>
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/siteminder.png" alt=""></div>
-        <div class="integration-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/integrations/white/webrezpro.png" alt=""></div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="col-bottom row wrap">
-
-      <div class="testimonial">
-        <p class="quote">The support & responsiveness from the team is great. Travel Tripper's focus on improving direct revenues with new features allows us to keep common efforts easily aligned.</p>
-        <p class="cite">- Independent Hotel Marketing Manager on Hotel Tech Report</p>
-      </div>
-
-      <a href="https://hoteltechreport.com/s/travel%20tripper"><img src="<?php echo get_template_directory_uri(); ?>/images/hotel-tech-report.png" alt="hotel tech report"></a>
+        if ( get_field( 'independents_case_study_review_image_link' ) ) { ?>
+            <a href="<?php the_field( 'independents_case_study_review_image_link' ); ?>"> <?php
+        }
+        echo wp_get_attachment_image( get_field( 'independents_case_study_review_image' ), 'full' );
+        if ( get_field( 'independents_case_study_review_image_link' ) ) { ?>
+            </a> <?php
+        } ?>
 
     </div>
 
